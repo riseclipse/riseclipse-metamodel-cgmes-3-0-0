@@ -25,6 +25,7 @@ import java.util.Optional;
 import org.eclipse.emf.common.util.URI;
 
 import fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.CimPackage;
+import fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.eu.EuPackage;
 import fr.centralesupelec.edf.riseclipse.cim.util.cimxml.AbstractCimResourceSet;
 import fr.centralesupelec.edf.riseclipse.util.IRiseClipseResource;
 import fr.centralesupelec.edf.riseclipse.util.RiseClipseMetamodel;
@@ -41,8 +42,10 @@ public class CimResourceSet extends AbstractCimResourceSet {
     @Override
     protected IRiseClipseResource createRiseClipseResource( URI uri, String contentType ) {
         Optional< String > metamodel = RiseClipseMetamodel.findMetamodelFor( uri );
-        if( metamodel.isPresent() && CimPackage.eNS_URI.equals( metamodel.get() )) {
-            return resourceFactory.createResource( uri );
+        if( metamodel.isPresent() ) {
+            if( CimPackage.eNS_URI.equals( metamodel.get() ) || EuPackage.eNS_URI.equals( metamodel.get() )) {
+                return resourceFactory.createResource( uri );
+            }
         }
         return null;
     }

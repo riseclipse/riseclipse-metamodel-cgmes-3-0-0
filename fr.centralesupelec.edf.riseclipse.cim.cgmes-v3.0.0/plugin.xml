@@ -63,9 +63,19 @@
          point="fr.centralesupelec.edf.riseclipse.main.meta_models">
       <meta_model
             name="ENTSOE CGMES v3.0.0"
-            resourceFactory="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.util.CimResourceFactoryImpl"
+            resourceFactory   ="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.util.CimResourceFactoryImpl"
             resourceSetFactory="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.util.CimResourceSetFactory"
             uri="http://iec.ch/TC57/CIM100">
+      </meta_model>
+   </extension>
+
+   <extension
+         point="fr.centralesupelec.edf.riseclipse.main.meta_models">
+      <meta_model
+            name="ENTSOE CGMES v3.0.0 (European namespace)"
+            resourceFactory   ="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.eu.util.EuResourceFactoryImpl"
+            resourceSetFactory="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.eu.util.EuResourceSetFactory"
+            uri="http://iec.ch/TC57/CIM100-European">
       </meta_model>
    </extension>
 

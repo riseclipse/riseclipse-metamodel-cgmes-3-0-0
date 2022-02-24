@@ -20,18 +20,18 @@
 package fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.eu.util;
 
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.impl.ResourceFactoryImpl;
-import org.eclipse.emf.ecore.xmi.XMLResource;
+import fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.util.CimResourceHandler;
+import fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.util.CimResourceImpl;
+import fr.centralesupelec.edf.riseclipse.cim.util.cimxml.AbstractCimResourceFactory;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Resource Factory</b> associated with the package.
  * <!-- end-user-doc -->
  * @see fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.eu.util.EuResourceImpl
- * @generated
+ * @generated NOT
  */
-public class EuResourceFactoryImpl extends ResourceFactoryImpl {
+public class EuResourceFactoryImpl extends AbstractCimResourceFactory {
     /**
      * Creates an instance of the resource factory.
      * <!-- begin-user-doc -->
@@ -42,25 +42,14 @@ public class EuResourceFactoryImpl extends ResourceFactoryImpl {
         super();
     }
 
-    /**
-     * Creates an instance of the resource.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     @Override
-    public Resource createResource( URI uri ) {
-        XMLResource result = new EuResourceImpl( uri );
-        result.getDefaultSaveOptions().put( XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE );
-        result.getDefaultLoadOptions().put( XMLResource.OPTION_EXTENDED_META_DATA, Boolean.TRUE );
+    protected CimResourceImpl createCimResource( URI uri ) {
+        return new CimResourceImpl( uri );
+    }
 
-        result.getDefaultSaveOptions().put( XMLResource.OPTION_SCHEMA_LOCATION, Boolean.TRUE );
-
-        result.getDefaultLoadOptions().put( XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE );
-        result.getDefaultSaveOptions().put( XMLResource.OPTION_USE_ENCODED_ATTRIBUTE_STYLE, Boolean.TRUE );
-
-        result.getDefaultLoadOptions().put( XMLResource.OPTION_USE_LEXICAL_HANDLER, Boolean.TRUE );
-        return result;
+    @Override
+    protected CimResourceHandler createCimResourceHandler() {
+        return new CimResourceHandler();
     }
 
 } //EuResourceFactoryImpl
