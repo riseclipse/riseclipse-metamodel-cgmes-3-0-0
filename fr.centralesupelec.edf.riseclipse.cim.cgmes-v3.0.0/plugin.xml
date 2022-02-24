@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+   Copyright (c) 2016-2022 CentraleSupélec & EDF.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v2.0
+  which accompanies this distribution, and is available at
+  https://www.eclipse.org/legal/epl-v20.html
+ 
+  This file is part of the RiseClipse tool
+  
+  Contributors:
+      Computer Science Department, CentraleSupélec
+      EDF R&D
+  Contacts:
+      dominique.marcadet@centralesupelec.fr
+      aurelie.dehouck-neveu@edf.fr
+  Web site:
+      https://riseclipse.github.io/
+ 
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cgmes-v3.0.0 -->
+      <package
+            uri="http://iec.ch/TC57/CIM100"
+            class="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.CimPackage"
+            genModel="model/cim.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated cgmes-v3.0.0 -->
+      <parser
+            type="cim"
+            class="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.util.CimResourceFactoryImpl"/>
+      <parser
+            type="cimxml"
+            class="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.util.CimResourceFactoryImpl"/>
+      <parser
+            type="xml"
+            class="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.util.CimResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cgmes-v3.0.0 -->
+      <package
+            uri="http://iec.ch/TC57/CIM100-European"
+            class="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.eu.EuPackage"
+            genModel="model/cim.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated cgmes-v3.0.0 -->
+      <parser
+            type="eu"
+            class="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.eu.util.EuResourceFactoryImpl"/>
+   </extension>
+
+   <extension
+         point="fr.centralesupelec.edf.riseclipse.main.meta_models">
+      <meta_model
+            name="ENTSOE CGMES v3.0.0"
+            resourceFactory="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.util.CimResourceFactoryImpl"
+            resourceSetFactory="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.util.CimResourceSetFactory"
+            uri="http://iec.ch/TC57/CIM100">
+      </meta_model>
+   </extension>
+
+</plugin>

@@ -1,0 +1,713 @@
+/**
+ *   Copyright (c) 2016-2022 CentraleSupélec & EDF.
+ *  All rights reserved. This program and the accompanying materials
+ *  are made available under the terms of the Eclipse Public License v2.0
+ *  which accompanies this distribution, and is available at
+ *  https://www.eclipse.org/legal/epl-v20.html
+ *
+ *  This file is part of the RiseClipse tool
+ *
+ *  Contributors:
+ *      Computer Science Department, CentraleSupélec
+ *      EDF R&D
+ *  Contacts:
+ *      dominique.marcadet@centralesupelec.fr
+ *      aurelie.dehouck-neveu@edf.fr
+ *  Web site:
+ *      https://riseclipse.github.io/
+ *
+ */
+package fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.CimPackage;
+import fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.RotatingMachineDynamics;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Rotating Machine Dynamics</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.impl.RotatingMachineDynamicsImpl#getSaturationFactor <em>Saturation Factor</em>}</li>
+ *   <li>{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.impl.RotatingMachineDynamicsImpl#getStatorLeakageReactance <em>Stator Leakage Reactance</em>}</li>
+ *   <li>{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.impl.RotatingMachineDynamicsImpl#getStatorResistance <em>Stator Resistance</em>}</li>
+ *   <li>{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.impl.RotatingMachineDynamicsImpl#getDamping <em>Damping</em>}</li>
+ *   <li>{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.impl.RotatingMachineDynamicsImpl#getSaturationFactor120 <em>Saturation Factor120</em>}</li>
+ *   <li>{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.impl.RotatingMachineDynamicsImpl#getInertia <em>Inertia</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class RotatingMachineDynamicsImpl extends DynamicsFunctionBlockImpl implements RotatingMachineDynamics {
+    /**
+     * The default value of the '{@link #getSaturationFactor() <em>Saturation Factor</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSaturationFactor()
+     * @generated
+     * @ordered
+     */
+    protected static final Double SATURATION_FACTOR_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getSaturationFactor() <em>Saturation Factor</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSaturationFactor()
+     * @generated
+     * @ordered
+     */
+    protected Double saturationFactor = SATURATION_FACTOR_EDEFAULT;
+
+    /**
+     * This is true if the Saturation Factor attribute has been set.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    protected boolean saturationFactorESet;
+
+    /**
+     * The default value of the '{@link #getStatorLeakageReactance() <em>Stator Leakage Reactance</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getStatorLeakageReactance()
+     * @generated
+     * @ordered
+     */
+    protected static final Double STATOR_LEAKAGE_REACTANCE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getStatorLeakageReactance() <em>Stator Leakage Reactance</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getStatorLeakageReactance()
+     * @generated
+     * @ordered
+     */
+    protected Double statorLeakageReactance = STATOR_LEAKAGE_REACTANCE_EDEFAULT;
+
+    /**
+     * This is true if the Stator Leakage Reactance attribute has been set.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    protected boolean statorLeakageReactanceESet;
+
+    /**
+     * The default value of the '{@link #getStatorResistance() <em>Stator Resistance</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getStatorResistance()
+     * @generated
+     * @ordered
+     */
+    protected static final Double STATOR_RESISTANCE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getStatorResistance() <em>Stator Resistance</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getStatorResistance()
+     * @generated
+     * @ordered
+     */
+    protected Double statorResistance = STATOR_RESISTANCE_EDEFAULT;
+
+    /**
+     * This is true if the Stator Resistance attribute has been set.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    protected boolean statorResistanceESet;
+
+    /**
+     * The default value of the '{@link #getDamping() <em>Damping</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getDamping()
+     * @generated
+     * @ordered
+     */
+    protected static final Double DAMPING_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getDamping() <em>Damping</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getDamping()
+     * @generated
+     * @ordered
+     */
+    protected Double damping = DAMPING_EDEFAULT;
+
+    /**
+     * This is true if the Damping attribute has been set.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    protected boolean dampingESet;
+
+    /**
+     * The default value of the '{@link #getSaturationFactor120() <em>Saturation Factor120</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSaturationFactor120()
+     * @generated
+     * @ordered
+     */
+    protected static final Double SATURATION_FACTOR120_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getSaturationFactor120() <em>Saturation Factor120</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSaturationFactor120()
+     * @generated
+     * @ordered
+     */
+    protected Double saturationFactor120 = SATURATION_FACTOR120_EDEFAULT;
+
+    /**
+     * This is true if the Saturation Factor120 attribute has been set.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    protected boolean saturationFactor120ESet;
+
+    /**
+     * The default value of the '{@link #getInertia() <em>Inertia</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getInertia()
+     * @generated
+     * @ordered
+     */
+    protected static final Double INERTIA_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getInertia() <em>Inertia</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getInertia()
+     * @generated
+     * @ordered
+     */
+    protected Double inertia = INERTIA_EDEFAULT;
+
+    /**
+     * This is true if the Inertia attribute has been set.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    protected boolean inertiaESet;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected RotatingMachineDynamicsImpl() {
+        super();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return CimPackage.eINSTANCE.getRotatingMachineDynamics();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Double getSaturationFactor() {
+        return saturationFactor;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setSaturationFactor( Double newSaturationFactor ) {
+        Double oldSaturationFactor = saturationFactor;
+        saturationFactor = newSaturationFactor;
+        boolean oldSaturationFactorESet = saturationFactorESet;
+        saturationFactorESet = true;
+        if( eNotificationRequired() )
+            eNotify( new ENotificationImpl( this, Notification.SET,
+                    CimPackage.ROTATING_MACHINE_DYNAMICS__SATURATION_FACTOR, oldSaturationFactor, saturationFactor,
+                    !oldSaturationFactorESet ) );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void unsetSaturationFactor() {
+        Double oldSaturationFactor = saturationFactor;
+        boolean oldSaturationFactorESet = saturationFactorESet;
+        saturationFactor = SATURATION_FACTOR_EDEFAULT;
+        saturationFactorESet = false;
+        if( eNotificationRequired() )
+            eNotify( new ENotificationImpl( this, Notification.UNSET,
+                    CimPackage.ROTATING_MACHINE_DYNAMICS__SATURATION_FACTOR, oldSaturationFactor,
+                    SATURATION_FACTOR_EDEFAULT, oldSaturationFactorESet ) );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean isSetSaturationFactor() {
+        return saturationFactorESet;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Double getStatorLeakageReactance() {
+        return statorLeakageReactance;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setStatorLeakageReactance( Double newStatorLeakageReactance ) {
+        Double oldStatorLeakageReactance = statorLeakageReactance;
+        statorLeakageReactance = newStatorLeakageReactance;
+        boolean oldStatorLeakageReactanceESet = statorLeakageReactanceESet;
+        statorLeakageReactanceESet = true;
+        if( eNotificationRequired() )
+            eNotify( new ENotificationImpl( this, Notification.SET,
+                    CimPackage.ROTATING_MACHINE_DYNAMICS__STATOR_LEAKAGE_REACTANCE, oldStatorLeakageReactance,
+                    statorLeakageReactance, !oldStatorLeakageReactanceESet ) );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void unsetStatorLeakageReactance() {
+        Double oldStatorLeakageReactance = statorLeakageReactance;
+        boolean oldStatorLeakageReactanceESet = statorLeakageReactanceESet;
+        statorLeakageReactance = STATOR_LEAKAGE_REACTANCE_EDEFAULT;
+        statorLeakageReactanceESet = false;
+        if( eNotificationRequired() )
+            eNotify( new ENotificationImpl( this, Notification.UNSET,
+                    CimPackage.ROTATING_MACHINE_DYNAMICS__STATOR_LEAKAGE_REACTANCE, oldStatorLeakageReactance,
+                    STATOR_LEAKAGE_REACTANCE_EDEFAULT, oldStatorLeakageReactanceESet ) );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean isSetStatorLeakageReactance() {
+        return statorLeakageReactanceESet;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Double getStatorResistance() {
+        return statorResistance;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setStatorResistance( Double newStatorResistance ) {
+        Double oldStatorResistance = statorResistance;
+        statorResistance = newStatorResistance;
+        boolean oldStatorResistanceESet = statorResistanceESet;
+        statorResistanceESet = true;
+        if( eNotificationRequired() )
+            eNotify( new ENotificationImpl( this, Notification.SET,
+                    CimPackage.ROTATING_MACHINE_DYNAMICS__STATOR_RESISTANCE, oldStatorResistance, statorResistance,
+                    !oldStatorResistanceESet ) );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void unsetStatorResistance() {
+        Double oldStatorResistance = statorResistance;
+        boolean oldStatorResistanceESet = statorResistanceESet;
+        statorResistance = STATOR_RESISTANCE_EDEFAULT;
+        statorResistanceESet = false;
+        if( eNotificationRequired() )
+            eNotify( new ENotificationImpl( this, Notification.UNSET,
+                    CimPackage.ROTATING_MACHINE_DYNAMICS__STATOR_RESISTANCE, oldStatorResistance,
+                    STATOR_RESISTANCE_EDEFAULT, oldStatorResistanceESet ) );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean isSetStatorResistance() {
+        return statorResistanceESet;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Double getDamping() {
+        return damping;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setDamping( Double newDamping ) {
+        Double oldDamping = damping;
+        damping = newDamping;
+        boolean oldDampingESet = dampingESet;
+        dampingESet = true;
+        if( eNotificationRequired() )
+            eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.ROTATING_MACHINE_DYNAMICS__DAMPING,
+                    oldDamping, damping, !oldDampingESet ) );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void unsetDamping() {
+        Double oldDamping = damping;
+        boolean oldDampingESet = dampingESet;
+        damping = DAMPING_EDEFAULT;
+        dampingESet = false;
+        if( eNotificationRequired() )
+            eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.ROTATING_MACHINE_DYNAMICS__DAMPING,
+                    oldDamping, DAMPING_EDEFAULT, oldDampingESet ) );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean isSetDamping() {
+        return dampingESet;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Double getSaturationFactor120() {
+        return saturationFactor120;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setSaturationFactor120( Double newSaturationFactor120 ) {
+        Double oldSaturationFactor120 = saturationFactor120;
+        saturationFactor120 = newSaturationFactor120;
+        boolean oldSaturationFactor120ESet = saturationFactor120ESet;
+        saturationFactor120ESet = true;
+        if( eNotificationRequired() )
+            eNotify( new ENotificationImpl( this, Notification.SET,
+                    CimPackage.ROTATING_MACHINE_DYNAMICS__SATURATION_FACTOR120, oldSaturationFactor120,
+                    saturationFactor120, !oldSaturationFactor120ESet ) );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void unsetSaturationFactor120() {
+        Double oldSaturationFactor120 = saturationFactor120;
+        boolean oldSaturationFactor120ESet = saturationFactor120ESet;
+        saturationFactor120 = SATURATION_FACTOR120_EDEFAULT;
+        saturationFactor120ESet = false;
+        if( eNotificationRequired() )
+            eNotify( new ENotificationImpl( this, Notification.UNSET,
+                    CimPackage.ROTATING_MACHINE_DYNAMICS__SATURATION_FACTOR120, oldSaturationFactor120,
+                    SATURATION_FACTOR120_EDEFAULT, oldSaturationFactor120ESet ) );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean isSetSaturationFactor120() {
+        return saturationFactor120ESet;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Double getInertia() {
+        return inertia;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setInertia( Double newInertia ) {
+        Double oldInertia = inertia;
+        inertia = newInertia;
+        boolean oldInertiaESet = inertiaESet;
+        inertiaESet = true;
+        if( eNotificationRequired() )
+            eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.ROTATING_MACHINE_DYNAMICS__INERTIA,
+                    oldInertia, inertia, !oldInertiaESet ) );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void unsetInertia() {
+        Double oldInertia = inertia;
+        boolean oldInertiaESet = inertiaESet;
+        inertia = INERTIA_EDEFAULT;
+        inertiaESet = false;
+        if( eNotificationRequired() )
+            eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.ROTATING_MACHINE_DYNAMICS__INERTIA,
+                    oldInertia, INERTIA_EDEFAULT, oldInertiaESet ) );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean isSetInertia() {
+        return inertiaESet;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Object eGet( int featureID, boolean resolve, boolean coreType ) {
+        switch( featureID ) {
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__SATURATION_FACTOR:
+            return getSaturationFactor();
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__STATOR_LEAKAGE_REACTANCE:
+            return getStatorLeakageReactance();
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__STATOR_RESISTANCE:
+            return getStatorResistance();
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__DAMPING:
+            return getDamping();
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__SATURATION_FACTOR120:
+            return getSaturationFactor120();
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__INERTIA:
+            return getInertia();
+        }
+        return super.eGet( featureID, resolve, coreType );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eSet( int featureID, Object newValue ) {
+        switch( featureID ) {
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__SATURATION_FACTOR:
+            setSaturationFactor( ( Double ) newValue );
+            return;
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__STATOR_LEAKAGE_REACTANCE:
+            setStatorLeakageReactance( ( Double ) newValue );
+            return;
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__STATOR_RESISTANCE:
+            setStatorResistance( ( Double ) newValue );
+            return;
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__DAMPING:
+            setDamping( ( Double ) newValue );
+            return;
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__SATURATION_FACTOR120:
+            setSaturationFactor120( ( Double ) newValue );
+            return;
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__INERTIA:
+            setInertia( ( Double ) newValue );
+            return;
+        }
+        super.eSet( featureID, newValue );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void eUnset( int featureID ) {
+        switch( featureID ) {
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__SATURATION_FACTOR:
+            unsetSaturationFactor();
+            return;
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__STATOR_LEAKAGE_REACTANCE:
+            unsetStatorLeakageReactance();
+            return;
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__STATOR_RESISTANCE:
+            unsetStatorResistance();
+            return;
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__DAMPING:
+            unsetDamping();
+            return;
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__SATURATION_FACTOR120:
+            unsetSaturationFactor120();
+            return;
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__INERTIA:
+            unsetInertia();
+            return;
+        }
+        super.eUnset( featureID );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public boolean eIsSet( int featureID ) {
+        switch( featureID ) {
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__SATURATION_FACTOR:
+            return isSetSaturationFactor();
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__STATOR_LEAKAGE_REACTANCE:
+            return isSetStatorLeakageReactance();
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__STATOR_RESISTANCE:
+            return isSetStatorResistance();
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__DAMPING:
+            return isSetDamping();
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__SATURATION_FACTOR120:
+            return isSetSaturationFactor120();
+        case CimPackage.ROTATING_MACHINE_DYNAMICS__INERTIA:
+            return isSetInertia();
+        }
+        return super.eIsSet( featureID );
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public String toString() {
+        if( eIsProxy() ) return super.toString();
+
+        StringBuilder result = new StringBuilder( super.toString() );
+        result.append( " (saturationFactor: " );
+        if( saturationFactorESet )
+            result.append( saturationFactor );
+        else
+            result.append( "<unset>" );
+        result.append( ", statorLeakageReactance: " );
+        if( statorLeakageReactanceESet )
+            result.append( statorLeakageReactance );
+        else
+            result.append( "<unset>" );
+        result.append( ", statorResistance: " );
+        if( statorResistanceESet )
+            result.append( statorResistance );
+        else
+            result.append( "<unset>" );
+        result.append( ", damping: " );
+        if( dampingESet )
+            result.append( damping );
+        else
+            result.append( "<unset>" );
+        result.append( ", saturationFactor120: " );
+        if( saturationFactor120ESet )
+            result.append( saturationFactor120 );
+        else
+            result.append( "<unset>" );
+        result.append( ", inertia: " );
+        if( inertiaESet )
+            result.append( inertia );
+        else
+            result.append( "<unset>" );
+        result.append( ')' );
+        return result.toString();
+    }
+
+} //RotatingMachineDynamicsImpl
