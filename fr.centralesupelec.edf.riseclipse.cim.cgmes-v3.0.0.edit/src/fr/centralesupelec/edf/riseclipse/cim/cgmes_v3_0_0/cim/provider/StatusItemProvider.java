@@ -20,9 +20,8 @@
 package fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.provider;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
-
-import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
@@ -191,7 +190,7 @@ public class StatusItemProvider
      */
     @Override
     public String getText( Object object ) {
-        XMLGregorianCalendar labelValue = ( ( Status ) object ).getDateTime();
+        Date labelValue = ( ( Status ) object ).getDateTime();
         String label = labelValue == null ? null : labelValue.toString();
         return label == null || label.length() == 0 ? getString( "_UI_Status_type" )
                 : getString( "_UI_Status_type" ) + " " + label;

@@ -19,7 +19,7 @@
  */
 package fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.impl;
 
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -60,7 +60,7 @@ public class ControlImpl extends IOPointImpl implements Control {
      * @generated
      * @ordered
      */
-    protected static final XMLGregorianCalendar TIME_STAMP_EDEFAULT = null;
+    protected static final Date TIME_STAMP_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getTimeStamp() <em>Time Stamp</em>}' attribute.
@@ -70,7 +70,7 @@ public class ControlImpl extends IOPointImpl implements Control {
      * @generated
      * @ordered
      */
-    protected XMLGregorianCalendar timeStamp = TIME_STAMP_EDEFAULT;
+    protected Date timeStamp = TIME_STAMP_EDEFAULT;
 
     /**
      * This is true if the Time Stamp attribute has been set.
@@ -241,7 +241,7 @@ public class ControlImpl extends IOPointImpl implements Control {
      * @generated
      */
     @Override
-    public XMLGregorianCalendar getTimeStamp() {
+    public Date getTimeStamp() {
         return timeStamp;
     }
 
@@ -251,8 +251,8 @@ public class ControlImpl extends IOPointImpl implements Control {
      * @generated
      */
     @Override
-    public void setTimeStamp( XMLGregorianCalendar newTimeStamp ) {
-        XMLGregorianCalendar oldTimeStamp = timeStamp;
+    public void setTimeStamp( Date newTimeStamp ) {
+        Date oldTimeStamp = timeStamp;
         timeStamp = newTimeStamp;
         boolean oldTimeStampESet = timeStampESet;
         timeStampESet = true;
@@ -268,7 +268,7 @@ public class ControlImpl extends IOPointImpl implements Control {
      */
     @Override
     public void unsetTimeStamp() {
-        XMLGregorianCalendar oldTimeStamp = timeStamp;
+        Date oldTimeStamp = timeStamp;
         boolean oldTimeStampESet = timeStampESet;
         timeStamp = TIME_STAMP_EDEFAULT;
         timeStampESet = false;
@@ -674,7 +674,7 @@ public class ControlImpl extends IOPointImpl implements Control {
     public void eSet( int featureID, Object newValue ) {
         switch( featureID ) {
         case CimPackage.CONTROL__TIME_STAMP:
-            setTimeStamp( ( XMLGregorianCalendar ) newValue );
+            setTimeStamp( ( Date ) newValue );
             return;
         case CimPackage.CONTROL__CONTROL_TYPE:
             setControlType( ( String ) newValue );

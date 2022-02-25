@@ -19,7 +19,7 @@
  */
 package fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim;
 
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -150,13 +150,13 @@ public interface RegularIntervalSchedule extends BasicIntervalSchedule {
      * @return the value of the '<em>End Time</em>' attribute.
      * @see #isSetEndTime()
      * @see #unsetEndTime()
-     * @see #setEndTime(XMLGregorianCalendar)
+     * @see #setEndTime(Date)
      * @see fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.CimPackage#getRegularIntervalSchedule_EndTime()
      * @model unsettable="true" dataType="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.DateTime" transient="true" ordered="false"
      *        extendedMetaData="name='RegularIntervalSchedule.endTime' kind='element' namespace='http://iec.ch/TC57/CIM100'"
      * @generated
      */
-    XMLGregorianCalendar getEndTime();
+    Date getEndTime();
 
     /**
      * Sets the value of the '{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.RegularIntervalSchedule#getEndTime <em>End Time</em>}' attribute.
@@ -168,7 +168,7 @@ public interface RegularIntervalSchedule extends BasicIntervalSchedule {
      * @see #getEndTime()
      * @generated
      */
-    void setEndTime( XMLGregorianCalendar value );
+    void setEndTime( Date value );
 
     /**
      * Unsets the value of the '{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.RegularIntervalSchedule#getEndTime <em>End Time</em>}' attribute.
@@ -176,7 +176,7 @@ public interface RegularIntervalSchedule extends BasicIntervalSchedule {
      * <!-- end-user-doc -->
      * @see #isSetEndTime()
      * @see #getEndTime()
-     * @see #setEndTime(XMLGregorianCalendar)
+     * @see #setEndTime(Date)
      * @generated
      */
     void unsetEndTime();
@@ -188,7 +188,7 @@ public interface RegularIntervalSchedule extends BasicIntervalSchedule {
      * @return whether the value of the '<em>End Time</em>' attribute is set.
      * @see #unsetEndTime()
      * @see #getEndTime()
-     * @see #setEndTime(XMLGregorianCalendar)
+     * @see #setEndTime(Date)
      * @generated
      */
     boolean isSetEndTime();

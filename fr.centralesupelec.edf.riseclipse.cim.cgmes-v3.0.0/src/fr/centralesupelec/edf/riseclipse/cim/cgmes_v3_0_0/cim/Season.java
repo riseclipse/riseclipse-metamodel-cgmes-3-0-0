@@ -58,7 +58,7 @@ public interface Season extends IdentifiedObject {
      * @see #unsetStartDate()
      * @see #setStartDate(XMLGregorianCalendar)
      * @see fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.CimPackage#getSeason_StartDate()
-     * @model unsettable="true" dataType="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.MonthDay" transient="true" ordered="false"
+     * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.GMonthDay" transient="true" ordered="false"
      *        extendedMetaData="name='Season.startDate' kind='element' namespace='http://iec.ch/TC57/CIM100'"
      * @generated
      */
@@ -152,7 +152,7 @@ public interface Season extends IdentifiedObject {
      * @see #unsetEndDate()
      * @see #setEndDate(XMLGregorianCalendar)
      * @see fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.CimPackage#getSeason_EndDate()
-     * @model unsettable="true" dataType="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.MonthDay" transient="true" ordered="false"
+     * @model unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.GMonthDay" transient="true" ordered="false"
      *        extendedMetaData="name='Season.endDate' kind='element' namespace='http://iec.ch/TC57/CIM100'"
      * @generated
      */

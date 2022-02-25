@@ -19,7 +19,7 @@
  */
 package fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim;
 
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.Date;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,13 +57,13 @@ public interface Control extends IOPoint {
      * @return the value of the '<em>Time Stamp</em>' attribute.
      * @see #isSetTimeStamp()
      * @see #unsetTimeStamp()
-     * @see #setTimeStamp(XMLGregorianCalendar)
+     * @see #setTimeStamp(Date)
      * @see fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.CimPackage#getControl_TimeStamp()
      * @model unsettable="true" dataType="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.DateTime" transient="true" ordered="false"
      *        extendedMetaData="name='Control.timeStamp' kind='element' namespace='http://iec.ch/TC57/CIM100'"
      * @generated
      */
-    XMLGregorianCalendar getTimeStamp();
+    Date getTimeStamp();
 
     /**
      * Sets the value of the '{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.Control#getTimeStamp <em>Time Stamp</em>}' attribute.
@@ -75,7 +75,7 @@ public interface Control extends IOPoint {
      * @see #getTimeStamp()
      * @generated
      */
-    void setTimeStamp( XMLGregorianCalendar value );
+    void setTimeStamp( Date value );
 
     /**
      * Unsets the value of the '{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.Control#getTimeStamp <em>Time Stamp</em>}' attribute.
@@ -83,7 +83,7 @@ public interface Control extends IOPoint {
      * <!-- end-user-doc -->
      * @see #isSetTimeStamp()
      * @see #getTimeStamp()
-     * @see #setTimeStamp(XMLGregorianCalendar)
+     * @see #setTimeStamp(Date)
      * @generated
      */
     void unsetTimeStamp();
@@ -95,7 +95,7 @@ public interface Control extends IOPoint {
      * @return whether the value of the '<em>Time Stamp</em>' attribute is set.
      * @see #unsetTimeStamp()
      * @see #getTimeStamp()
-     * @see #setTimeStamp(XMLGregorianCalendar)
+     * @see #setTimeStamp(Date)
      * @generated
      */
     boolean isSetTimeStamp();

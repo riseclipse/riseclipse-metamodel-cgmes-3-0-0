@@ -19,7 +19,7 @@
  */
 package fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim;
 
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.Date;
 
 /**
  * <!-- begin-user-doc -->
@@ -166,13 +166,13 @@ public interface BasicIntervalSchedule extends IdentifiedObject {
      * @return the value of the '<em>Start Time</em>' attribute.
      * @see #isSetStartTime()
      * @see #unsetStartTime()
-     * @see #setStartTime(XMLGregorianCalendar)
+     * @see #setStartTime(Date)
      * @see fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.CimPackage#getBasicIntervalSchedule_StartTime()
      * @model unsettable="true" dataType="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.DateTime" transient="true" ordered="false"
      *        extendedMetaData="name='BasicIntervalSchedule.startTime' kind='element' namespace='http://iec.ch/TC57/CIM100'"
      * @generated
      */
-    XMLGregorianCalendar getStartTime();
+    Date getStartTime();
 
     /**
      * Sets the value of the '{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.BasicIntervalSchedule#getStartTime <em>Start Time</em>}' attribute.
@@ -184,7 +184,7 @@ public interface BasicIntervalSchedule extends IdentifiedObject {
      * @see #getStartTime()
      * @generated
      */
-    void setStartTime( XMLGregorianCalendar value );
+    void setStartTime( Date value );
 
     /**
      * Unsets the value of the '{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.BasicIntervalSchedule#getStartTime <em>Start Time</em>}' attribute.
@@ -192,7 +192,7 @@ public interface BasicIntervalSchedule extends IdentifiedObject {
      * <!-- end-user-doc -->
      * @see #isSetStartTime()
      * @see #getStartTime()
-     * @see #setStartTime(XMLGregorianCalendar)
+     * @see #setStartTime(Date)
      * @generated
      */
     void unsetStartTime();
@@ -204,7 +204,7 @@ public interface BasicIntervalSchedule extends IdentifiedObject {
      * @return whether the value of the '<em>Start Time</em>' attribute is set.
      * @see #unsetStartTime()
      * @see #getStartTime()
-     * @see #setStartTime(XMLGregorianCalendar)
+     * @see #setStartTime(Date)
      * @generated
      */
     boolean isSetStartTime();

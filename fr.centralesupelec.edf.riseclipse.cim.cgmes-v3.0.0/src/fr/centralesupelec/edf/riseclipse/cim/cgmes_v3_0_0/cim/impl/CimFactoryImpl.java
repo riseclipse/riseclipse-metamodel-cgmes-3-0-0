@@ -21,8 +21,7 @@ package fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.impl;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.Date;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -1068,8 +1067,6 @@ public class CimFactoryImpl extends EFactoryImpl implements CimFactory {
             return createDateFromString( eDataType, initialValue );
         case CimPackage.INTEGER:
             return createIntegerFromString( eDataType, initialValue );
-        case CimPackage.MONTH_DAY:
-            return createMonthDayFromString( eDataType, initialValue );
         case CimPackage.DATE_TIME:
             return createDateTimeFromString( eDataType, initialValue );
         case CimPackage.FLOAT:
@@ -1252,8 +1249,6 @@ public class CimFactoryImpl extends EFactoryImpl implements CimFactory {
             return convertDateToString( eDataType, instanceValue );
         case CimPackage.INTEGER:
             return convertIntegerToString( eDataType, instanceValue );
-        case CimPackage.MONTH_DAY:
-            return convertMonthDayToString( eDataType, instanceValue );
         case CimPackage.DATE_TIME:
             return convertDateTimeToString( eDataType, instanceValue );
         case CimPackage.FLOAT:
@@ -7050,8 +7045,8 @@ public class CimFactoryImpl extends EFactoryImpl implements CimFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public XMLGregorianCalendar createDateFromString( EDataType eDataType, String initialValue ) {
-        return ( XMLGregorianCalendar ) super.createFromString( eDataType, initialValue );
+    public Date createDateFromString( EDataType eDataType, String initialValue ) {
+        return ( Date ) super.createFromString( eDataType, initialValue );
     }
 
     /**
@@ -7271,8 +7266,8 @@ public class CimFactoryImpl extends EFactoryImpl implements CimFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public XMLGregorianCalendar createDateTimeFromString( EDataType eDataType, String initialValue ) {
-        return ( XMLGregorianCalendar ) super.createFromString( eDataType, initialValue );
+    public Date createDateTimeFromString( EDataType eDataType, String initialValue ) {
+        return ( Date ) super.createFromString( eDataType, initialValue );
     }
 
     /**
@@ -7281,24 +7276,6 @@ public class CimFactoryImpl extends EFactoryImpl implements CimFactory {
      * @generated
      */
     public String convertDateTimeToString( EDataType eDataType, Object instanceValue ) {
-        return super.convertToString( eDataType, instanceValue );
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public XMLGregorianCalendar createMonthDayFromString( EDataType eDataType, String initialValue ) {
-        return ( XMLGregorianCalendar ) super.createFromString( eDataType, initialValue );
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public String convertMonthDayToString( EDataType eDataType, Object instanceValue ) {
         return super.convertToString( eDataType, instanceValue );
     }
 

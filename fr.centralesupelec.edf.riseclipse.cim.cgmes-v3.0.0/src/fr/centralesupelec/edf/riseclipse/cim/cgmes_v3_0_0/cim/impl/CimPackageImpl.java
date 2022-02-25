@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 import fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.CimFactory;
 import fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.CimPackage;
@@ -3503,13 +3504,6 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    private EDataType monthDayEDataType = null;
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
     private EDataType floatEDataType = null;
 
     /**
@@ -3755,6 +3749,9 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
 
         isInited = true;
 
+        // Initialize simple dependencies
+        XMLTypePackage.eINSTANCE.eClass();
+
         // Obtain or create and register interdependencies
         Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage( EuPackage.eNS_URI );
         EuPackageImpl theEuPackage = ( EuPackageImpl ) ( registeredPackage instanceof EuPackageImpl ? registeredPackage
@@ -3808,7 +3805,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getEquivalentInjection() {
         if( equivalentInjectionEClass == null ) {
             equivalentInjectionEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 187 );
+                    .getEClassifiers().get( 186 );
         }
         return equivalentInjectionEClass;
     }
@@ -3982,7 +3979,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getHydroPowerPlant() {
         if( hydroPowerPlantEClass == null ) {
             hydroPowerPlantEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 54 );
+                    .getEClassifiers().get( 53 );
         }
         return hydroPowerPlantEClass;
     }
@@ -4026,7 +4023,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getEnergySource() {
         if( energySourceEClass == null ) {
             energySourceEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 193 );
+                    .getEClassifiers().get( 192 );
         }
         return energySourceEClass;
     }
@@ -4180,7 +4177,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTapSchedule() {
         if( tapScheduleEClass == null ) {
             tapScheduleEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 98 );
+                    .getEClassifiers().get( 97 );
         }
         return tapScheduleEClass;
     }
@@ -4204,7 +4201,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCSeriesDevice() {
         if( dcSeriesDeviceEClass == null ) {
             dcSeriesDeviceEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 77 );
+                    .getEClassifiers().get( 76 );
         }
         return dcSeriesDeviceEClass;
     }
@@ -4238,7 +4235,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExternalNetworkInjection() {
         if( externalNetworkInjectionEClass == null ) {
             externalNetworkInjectionEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 92 );
+                    .getEClassifiers().get( 91 );
         }
         return externalNetworkInjectionEClass;
     }
@@ -4432,7 +4429,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getOperationalLimit() {
         if( operationalLimitEClass == null ) {
             operationalLimitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 71 );
+                    .getEClassifiers().get( 70 );
         }
         return operationalLimitEClass;
     }
@@ -4466,7 +4463,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getRatioTapChanger() {
         if( ratioTapChangerEClass == null ) {
             ratioTapChangerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 65 );
+                    .getEClassifiers().get( 64 );
         }
         return ratioTapChangerEClass;
     }
@@ -4510,7 +4507,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getReportingGroup() {
         if( reportingGroupEClass == null ) {
             reportingGroupEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 172 );
+                    .getEClassifiers().get( 171 );
         }
         return reportingGroupEClass;
     }
@@ -4544,7 +4541,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCurveData() {
         if( curveDataEClass == null ) {
             curveDataEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 81 );
+                    .get( 80 );
         }
         return curveDataEClass;
     }
@@ -4598,7 +4595,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getNonlinearShuntCompensator() {
         if( nonlinearShuntCompensatorEClass == null ) {
             nonlinearShuntCompensatorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 158 );
+                    .getEClassifiers().get( 157 );
         }
         return nonlinearShuntCompensatorEClass;
     }
@@ -4622,7 +4619,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getConnectivityNodeContainer() {
         if( connectivityNodeContainerEClass == null ) {
             connectivityNodeContainerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 199 );
+                    .getEClassifiers().get( 198 );
         }
         return connectivityNodeContainerEClass;
     }
@@ -4656,7 +4653,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getConformLoadSchedule() {
         if( conformLoadScheduleEClass == null ) {
             conformLoadScheduleEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 205 );
+                    .getEClassifiers().get( 204 );
         }
         return conformLoadScheduleEClass;
     }
@@ -4680,7 +4677,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getConnector() {
         if( connectorEClass == null ) {
             connectorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 79 );
+                    .get( 78 );
         }
         return connectorEClass;
     }
@@ -4694,7 +4691,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCLineSegment() {
         if( dcLineSegmentEClass == null ) {
             dcLineSegmentEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 127 );
+                    .getEClassifiers().get( 126 );
         }
         return dcLineSegmentEClass;
     }
@@ -4748,7 +4745,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPhaseTapChangerSymmetrical() {
         if( phaseTapChangerSymmetricalEClass == null ) {
             phaseTapChangerSymmetricalEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 143 );
+                    .getEClassifiers().get( 142 );
         }
         return phaseTapChangerSymmetricalEClass;
     }
@@ -4762,7 +4759,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getBatteryUnit() {
         if( batteryUnitEClass == null ) {
             batteryUnitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 159 );
+                    .getEClassifiers().get( 158 );
         }
         return batteryUnitEClass;
     }
@@ -4806,7 +4803,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getRatioTapChangerTable() {
         if( ratioTapChangerTableEClass == null ) {
             ratioTapChangerTableEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 136 );
+                    .getEClassifiers().get( 135 );
         }
         return ratioTapChangerTableEClass;
     }
@@ -4840,7 +4837,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getActivePowerLimit() {
         if( activePowerLimitEClass == null ) {
             activePowerLimitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 76 );
+                    .getEClassifiers().get( 75 );
         }
         return activePowerLimitEClass;
     }
@@ -4874,7 +4871,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPhaseTapChangerTable() {
         if( phaseTapChangerTableEClass == null ) {
             phaseTapChangerTableEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 121 );
+                    .getEClassifiers().get( 120 );
         }
         return phaseTapChangerTableEClass;
     }
@@ -4908,7 +4905,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getEnergyArea() {
         if( energyAreaEClass == null ) {
             energyAreaEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 200 );
+                    .get( 199 );
         }
         return energyAreaEClass;
     }
@@ -4932,7 +4929,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGroundDisconnector() {
         if( groundDisconnectorEClass == null ) {
             groundDisconnectorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 97 );
+                    .getEClassifiers().get( 96 );
         }
         return groundDisconnectorEClass;
     }
@@ -4946,7 +4943,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCBaseTerminal() {
         if( dcBaseTerminalEClass == null ) {
             dcBaseTerminalEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 122 );
+                    .getEClassifiers().get( 121 );
         }
         return dcBaseTerminalEClass;
     }
@@ -4980,7 +4977,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getReactiveCapabilityCurve() {
         if( reactiveCapabilityCurveEClass == null ) {
             reactiveCapabilityCurveEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 160 );
+                    .getEClassifiers().get( 159 );
         }
         return reactiveCapabilityCurveEClass;
     }
@@ -5014,7 +5011,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCBusbar() {
         if( dcBusbarEClass == null ) {
             dcBusbarEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 53 );
+                    .get( 52 );
         }
         return dcBusbarEClass;
     }
@@ -5028,7 +5025,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDayType() {
         if( dayTypeEClass == null ) {
             dayTypeEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 50 );
+                    .get( 49 );
         }
         return dayTypeEClass;
     }
@@ -5052,7 +5049,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSwitchSchedule() {
         if( switchScheduleEClass == null ) {
             switchScheduleEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 116 );
+                    .getEClassifiers().get( 115 );
         }
         return switchScheduleEClass;
     }
@@ -5076,7 +5073,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCBreaker() {
         if( dcBreakerEClass == null ) {
             dcBreakerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 101 );
+                    .get( 100 );
         }
         return dcBreakerEClass;
     }
@@ -5090,7 +5087,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTieFlow() {
         if( tieFlowEClass == null ) {
             tieFlowEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 177 );
+                    .get( 176 );
         }
         return tieFlowEClass;
     }
@@ -5134,7 +5131,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLoadGroup() {
         if( loadGroupEClass == null ) {
             loadGroupEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 93 );
+                    .get( 92 );
         }
         return loadGroupEClass;
     }
@@ -5158,7 +5155,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getEquipmentContainer() {
         if( equipmentContainerEClass == null ) {
             equipmentContainerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 99 );
+                    .getEClassifiers().get( 98 );
         }
         return equipmentContainerEClass;
     }
@@ -5182,7 +5179,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getStationSupply() {
         if( stationSupplyEClass == null ) {
             stationSupplyEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 130 );
+                    .getEClassifiers().get( 129 );
         }
         return stationSupplyEClass;
     }
@@ -5196,7 +5193,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getACLineSegment() {
         if( acLineSegmentEClass == null ) {
             acLineSegmentEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 126 );
+                    .getEClassifiers().get( 125 );
         }
         return acLineSegmentEClass;
     }
@@ -5320,7 +5317,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGround() {
         if( groundEClass == null ) {
             groundEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 118 );
+                    .get( 117 );
         }
         return groundEClass;
     }
@@ -5334,7 +5331,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCut() {
         if( cutEClass == null ) {
             cutEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 150 );
+                    .get( 149 );
         }
         return cutEClass;
     }
@@ -5368,7 +5365,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCogenerationPlant() {
         if( cogenerationPlantEClass == null ) {
             cogenerationPlantEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 201 );
+                    .getEClassifiers().get( 200 );
         }
         return cogenerationPlantEClass;
     }
@@ -5392,7 +5389,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSurgeArrester() {
         if( surgeArresterEClass == null ) {
             surgeArresterEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 78 );
+                    .getEClassifiers().get( 77 );
         }
         return surgeArresterEClass;
     }
@@ -5406,7 +5403,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getEquivalentBranch() {
         if( equivalentBranchEClass == null ) {
             equivalentBranchEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 102 );
+                    .getEClassifiers().get( 101 );
         }
         return equivalentBranchEClass;
     }
@@ -5580,7 +5577,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getHydroPump() {
         if( hydroPumpEClass == null ) {
             hydroPumpEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 72 );
+                    .get( 71 );
         }
         return hydroPumpEClass;
     }
@@ -5614,7 +5611,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getConformLoadGroup() {
         if( conformLoadGroupEClass == null ) {
             conformLoadGroupEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 107 );
+                    .getEClassifiers().get( 106 );
         }
         return conformLoadGroupEClass;
     }
@@ -5648,7 +5645,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getNonConformLoad() {
         if( nonConformLoadEClass == null ) {
             nonConformLoadEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 174 );
+                    .getEClassifiers().get( 173 );
         }
         return nonConformLoadEClass;
     }
@@ -5672,7 +5669,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCAESPlant() {
         if( caesPlantEClass == null ) {
             caesPlantEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 113 );
+                    .get( 112 );
         }
         return caesPlantEClass;
     }
@@ -5696,7 +5693,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getBreaker() {
         if( breakerEClass == null ) {
             breakerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 67 );
+                    .get( 66 );
         }
         return breakerEClass;
     }
@@ -5710,7 +5707,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGroundingImpedance() {
         if( groundingImpedanceEClass == null ) {
             groundingImpedanceEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 173 );
+                    .getEClassifiers().get( 172 );
         }
         return groundingImpedanceEClass;
     }
@@ -5734,7 +5731,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getOperationalLimitType() {
         if( operationalLimitTypeEClass == null ) {
             operationalLimitTypeEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 203 );
+                    .getEClassifiers().get( 202 );
         }
         return operationalLimitTypeEClass;
     }
@@ -5798,7 +5795,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getControlAreaGeneratingUnit() {
         if( controlAreaGeneratingUnitEClass == null ) {
             controlAreaGeneratingUnitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 114 );
+                    .getEClassifiers().get( 113 );
         }
         return controlAreaGeneratingUnitEClass;
     }
@@ -5832,7 +5829,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getBusNameMarker() {
         if( busNameMarkerEClass == null ) {
             busNameMarkerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 192 );
+                    .getEClassifiers().get( 191 );
         }
         return busNameMarkerEClass;
     }
@@ -5876,7 +5873,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getStaticVarCompensator() {
         if( staticVarCompensatorEClass == null ) {
             staticVarCompensatorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 61 );
+                    .getEClassifiers().get( 60 );
         }
         return staticVarCompensatorEClass;
     }
@@ -5960,7 +5957,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getConductor() {
         if( conductorEClass == null ) {
             conductorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 120 );
+                    .get( 119 );
         }
         return conductorEClass;
     }
@@ -5984,7 +5981,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCLine() {
         if( dcLineEClass == null ) {
             dcLineEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 133 );
+                    .get( 132 );
         }
         return dcLineEClass;
     }
@@ -6008,7 +6005,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPhaseTapChangerTabular() {
         if( phaseTapChangerTabularEClass == null ) {
             phaseTapChangerTabularEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 191 );
+                    .getEClassifiers().get( 190 );
         }
         return phaseTapChangerTabularEClass;
     }
@@ -6032,7 +6029,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getEquipment() {
         if( equipmentEClass == null ) {
             equipmentEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 75 );
+                    .get( 74 );
         }
         return equipmentEClass;
     }
@@ -6096,7 +6093,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCChopper() {
         if( dcChopperEClass == null ) {
             dcChopperEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 117 );
+                    .get( 116 );
         }
         return dcChopperEClass;
     }
@@ -6110,7 +6107,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTapChangerControl() {
         if( tapChangerControlEClass == null ) {
             tapChangerControlEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 74 );
+                    .getEClassifiers().get( 73 );
         }
         return tapChangerControlEClass;
     }
@@ -6134,7 +6131,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getEarthFaultCompensator() {
         if( earthFaultCompensatorEClass == null ) {
             earthFaultCompensatorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 186 );
+                    .getEClassifiers().get( 185 );
         }
         return earthFaultCompensatorEClass;
     }
@@ -6158,7 +6155,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getFaultIndicator() {
         if( faultIndicatorEClass == null ) {
             faultIndicatorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 52 );
+                    .getEClassifiers().get( 51 );
         }
         return faultIndicatorEClass;
     }
@@ -6172,7 +6169,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCConverterUnit() {
         if( dcConverterUnitEClass == null ) {
             dcConverterUnitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 184 );
+                    .getEClassifiers().get( 183 );
         }
         return dcConverterUnitEClass;
     }
@@ -6206,7 +6203,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCurve() {
         if( curveEClass == null ) {
             curveEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 128 );
+                    .get( 127 );
         }
         return curveEClass;
     }
@@ -6270,7 +6267,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVsConverter() {
         if( vsConverterEClass == null ) {
             vsConverterEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 57 );
+                    .getEClassifiers().get( 56 );
         }
         return vsConverterEClass;
     }
@@ -6434,7 +6431,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getHydroGeneratingUnit() {
         if( hydroGeneratingUnitEClass == null ) {
             hydroGeneratingUnitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 179 );
+                    .getEClassifiers().get( 178 );
         }
         return hydroGeneratingUnitEClass;
     }
@@ -6488,7 +6485,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getRegulationSchedule() {
         if( regulationScheduleEClass == null ) {
             regulationScheduleEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 73 );
+                    .getEClassifiers().get( 72 );
         }
         return regulationScheduleEClass;
     }
@@ -6512,7 +6509,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getEnergyConnection() {
         if( energyConnectionEClass == null ) {
             energyConnectionEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 109 );
+                    .getEClassifiers().get( 108 );
         }
         return energyConnectionEClass;
     }
@@ -6526,7 +6523,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getEquivalentEquipment() {
         if( equivalentEquipmentEClass == null ) {
             equivalentEquipmentEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 196 );
+                    .getEClassifiers().get( 195 );
         }
         return equivalentEquipmentEClass;
     }
@@ -6550,7 +6547,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getFossilFuel() {
         if( fossilFuelEClass == null ) {
             fossilFuelEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 169 );
+                    .get( 168 );
         }
         return fossilFuelEClass;
     }
@@ -6584,7 +6581,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLoadArea() {
         if( loadAreaEClass == null ) {
             loadAreaEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 108 );
+                    .get( 107 );
         }
         return loadAreaEClass;
     }
@@ -6608,7 +6605,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCombinedCyclePlant() {
         if( combinedCyclePlantEClass == null ) {
             combinedCyclePlantEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 135 );
+                    .getEClassifiers().get( 134 );
         }
         return combinedCyclePlantEClass;
     }
@@ -6632,7 +6629,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getConductingEquipment() {
         if( conductingEquipmentEClass == null ) {
             conductingEquipmentEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 167 );
+                    .getEClassifiers().get( 166 );
         }
         return conductingEquipmentEClass;
     }
@@ -6676,7 +6673,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getClamp() {
         if( clampEClass == null ) {
             clampEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 140 );
+                    .get( 139 );
         }
         return clampEClass;
     }
@@ -6710,7 +6707,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getApparentPowerLimit() {
         if( apparentPowerLimitEClass == null ) {
             apparentPowerLimitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 56 );
+                    .getEClassifiers().get( 55 );
         }
         return apparentPowerLimitEClass;
     }
@@ -6744,7 +6741,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getNuclearGeneratingUnit() {
         if( nuclearGeneratingUnitEClass == null ) {
             nuclearGeneratingUnitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 155 );
+                    .getEClassifiers().get( 154 );
         }
         return nuclearGeneratingUnitEClass;
     }
@@ -6758,7 +6755,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPetersenCoil() {
         if( petersenCoilEClass == null ) {
             petersenCoilEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 131 );
+                    .getEClassifiers().get( 130 );
         }
         return petersenCoilEClass;
     }
@@ -6842,7 +6839,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLoadResponseCharacteristic() {
         if( loadResponseCharacteristicEClass == null ) {
             loadResponseCharacteristicEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 55 );
+                    .getEClassifiers().get( 54 );
         }
         return loadResponseCharacteristicEClass;
     }
@@ -6976,7 +6973,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPowerTransformerEnd() {
         if( powerTransformerEndEClass == null ) {
             powerTransformerEndEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 134 );
+                    .getEClassifiers().get( 133 );
         }
         return powerTransformerEndEClass;
     }
@@ -7120,7 +7117,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTerminal() {
         if( terminalEClass == null ) {
             terminalEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 87 );
+                    .get( 86 );
         }
         return terminalEClass;
     }
@@ -7264,7 +7261,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getBay() {
         if( bayEClass == null ) {
             bayEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 112 );
+                    .get( 111 );
         }
         return bayEClass;
     }
@@ -7288,7 +7285,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getRegulatingControl() {
         if( regulatingControlEClass == null ) {
             regulatingControlEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 156 );
+                    .getEClassifiers().get( 155 );
         }
         return regulatingControlEClass;
     }
@@ -7412,7 +7409,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSeriesCompensator() {
         if( seriesCompensatorEClass == null ) {
             seriesCompensatorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 85 );
+                    .getEClassifiers().get( 84 );
         }
         return seriesCompensatorEClass;
     }
@@ -7496,7 +7493,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getProtectedSwitch() {
         if( protectedSwitchEClass == null ) {
             protectedSwitchEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 132 );
+                    .getEClassifiers().get( 131 );
         }
         return protectedSwitchEClass;
     }
@@ -7510,7 +7507,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTapChangerTablePoint() {
         if( tapChangerTablePointEClass == null ) {
             tapChangerTablePointEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 90 );
+                    .getEClassifiers().get( 89 );
         }
         return tapChangerTablePointEClass;
     }
@@ -7584,7 +7581,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getBusbarSection() {
         if( busbarSectionEClass == null ) {
             busbarSectionEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 51 );
+                    .getEClassifiers().get( 50 );
         }
         return busbarSectionEClass;
     }
@@ -7608,7 +7605,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPhotoVoltaicUnit() {
         if( photoVoltaicUnitEClass == null ) {
             photoVoltaicUnitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 147 );
+                    .getEClassifiers().get( 146 );
         }
         return photoVoltaicUnitEClass;
     }
@@ -7622,7 +7619,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLine() {
         if( lineEClass == null ) {
             lineEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 66 );
+                    .get( 65 );
         }
         return lineEClass;
     }
@@ -7646,7 +7643,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSeason() {
         if( seasonEClass == null ) {
             seasonEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 176 );
+                    .get( 175 );
         }
         return seasonEClass;
     }
@@ -7690,7 +7687,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getRegularIntervalSchedule() {
         if( regularIntervalScheduleEClass == null ) {
             regularIntervalScheduleEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 198 );
+                    .getEClassifiers().get( 197 );
         }
         return regularIntervalScheduleEClass;
     }
@@ -7734,7 +7731,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getNonConformLoadGroup() {
         if( nonConformLoadGroupEClass == null ) {
             nonConformLoadGroupEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 188 );
+                    .getEClassifiers().get( 187 );
         }
         return nonConformLoadGroupEClass;
     }
@@ -7768,7 +7765,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getOperationalLimitSet() {
         if( operationalLimitSetEClass == null ) {
             operationalLimitSetEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 70 );
+                    .getEClassifiers().get( 69 );
         }
         return operationalLimitSetEClass;
     }
@@ -7812,7 +7809,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPhaseTapChanger() {
         if( phaseTapChangerEClass == null ) {
             phaseTapChangerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 129 );
+                    .getEClassifiers().get( 128 );
         }
         return phaseTapChangerEClass;
     }
@@ -7836,7 +7833,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCEquipmentContainer() {
         if( dcEquipmentContainerEClass == null ) {
             dcEquipmentContainerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 91 );
+                    .getEClassifiers().get( 90 );
         }
         return dcEquipmentContainerEClass;
     }
@@ -7870,7 +7867,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPhaseTapChangerAsymmetrical() {
         if( phaseTapChangerAsymmetricalEClass == null ) {
             phaseTapChangerAsymmetricalEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 69 );
+                    .getEClassifiers().get( 68 );
         }
         return phaseTapChangerAsymmetricalEClass;
     }
@@ -7894,7 +7891,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getConnectivityNode() {
         if( connectivityNodeEClass == null ) {
             connectivityNodeEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 144 );
+                    .getEClassifiers().get( 143 );
         }
         return connectivityNodeEClass;
     }
@@ -7948,7 +7945,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSensor() {
         if( sensorEClass == null ) {
             sensorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 157 );
+                    .get( 156 );
         }
         return sensorEClass;
     }
@@ -7962,7 +7959,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLoadBreakSwitch() {
         if( loadBreakSwitchEClass == null ) {
             loadBreakSwitchEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 138 );
+                    .getEClassifiers().get( 137 );
         }
         return loadBreakSwitchEClass;
     }
@@ -7976,7 +7973,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSeasonDayTypeSchedule() {
         if( seasonDayTypeScheduleEClass == null ) {
             seasonDayTypeScheduleEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 149 );
+                    .getEClassifiers().get( 148 );
         }
         return seasonDayTypeScheduleEClass;
     }
@@ -8010,7 +8007,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDisconnectingCircuitBreaker() {
         if( disconnectingCircuitBreakerEClass == null ) {
             disconnectingCircuitBreakerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 64 );
+                    .getEClassifiers().get( 63 );
         }
         return disconnectingCircuitBreakerEClass;
     }
@@ -8024,7 +8021,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCSwitch() {
         if( dcSwitchEClass == null ) {
             dcSwitchEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 123 );
+                    .get( 122 );
         }
         return dcSwitchEClass;
     }
@@ -8038,7 +8035,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDisconnector() {
         if( disconnectorEClass == null ) {
             disconnectorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 68 );
+                    .getEClassifiers().get( 67 );
         }
         return disconnectorEClass;
     }
@@ -8052,7 +8049,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCNode() {
         if( dcNodeEClass == null ) {
             dcNodeEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 162 );
+                    .get( 161 );
         }
         return dcNodeEClass;
     }
@@ -8096,7 +8093,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSolarGeneratingUnit() {
         if( solarGeneratingUnitEClass == null ) {
             solarGeneratingUnitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 94 );
+                    .getEClassifiers().get( 93 );
         }
         return solarGeneratingUnitEClass;
     }
@@ -8120,7 +8117,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSubstation() {
         if( substationEClass == null ) {
             substationEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 125 );
+                    .get( 124 );
         }
         return substationEClass;
     }
@@ -8164,7 +8161,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getNonlinearShuntCompensatorPoint() {
         if( nonlinearShuntCompensatorPointEClass == null ) {
             nonlinearShuntCompensatorPointEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 163 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 162 );
         }
         return nonlinearShuntCompensatorPointEClass;
     }
@@ -8238,7 +8235,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getIdentifiedObject() {
         if( identifiedObjectEClass == null ) {
             identifiedObjectEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 137 );
+                    .getEClassifiers().get( 136 );
         }
         return identifiedObjectEClass;
     }
@@ -8312,7 +8309,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPowerSystemResource() {
         if( powerSystemResourceEClass == null ) {
             powerSystemResourceEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 178 );
+                    .getEClassifiers().get( 177 );
         }
         return powerSystemResourceEClass;
     }
@@ -8356,7 +8353,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSubGeographicalRegion() {
         if( subGeographicalRegionEClass == null ) {
             subGeographicalRegionEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 115 );
+                    .getEClassifiers().get( 114 );
         }
         return subGeographicalRegionEClass;
     }
@@ -8410,7 +8407,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getThermalGeneratingUnit() {
         if( thermalGeneratingUnitEClass == null ) {
             thermalGeneratingUnitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 110 );
+                    .getEClassifiers().get( 109 );
         }
         return thermalGeneratingUnitEClass;
     }
@@ -8464,7 +8461,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPotentialTransformer() {
         if( potentialTransformerEClass == null ) {
             potentialTransformerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 59 );
+                    .getEClassifiers().get( 58 );
         }
         return potentialTransformerEClass;
     }
@@ -8478,7 +8475,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVsCapabilityCurve() {
         if( vsCapabilityCurveEClass == null ) {
             vsCapabilityCurveEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 58 );
+                    .getEClassifiers().get( 57 );
         }
         return vsCapabilityCurveEClass;
     }
@@ -8502,7 +8499,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCGround() {
         if( dcGroundEClass == null ) {
             dcGroundEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 151 );
+                    .get( 150 );
         }
         return dcGroundEClass;
     }
@@ -8536,7 +8533,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getRegulatingCondEq() {
         if( regulatingCondEqEClass == null ) {
             regulatingCondEqEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 86 );
+                    .getEClassifiers().get( 85 );
         }
         return regulatingCondEqEClass;
     }
@@ -8570,7 +8567,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getEnergyConsumer() {
         if( energyConsumerEClass == null ) {
             energyConsumerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 180 );
+                    .getEClassifiers().get( 179 );
         }
         return energyConsumerEClass;
     }
@@ -8664,7 +8661,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGeographicalRegion() {
         if( geographicalRegionEClass == null ) {
             geographicalRegionEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 204 );
+                    .getEClassifiers().get( 203 );
         }
         return geographicalRegionEClass;
     }
@@ -8688,7 +8685,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getEquivalentNetwork() {
         if( equivalentNetworkEClass == null ) {
             equivalentNetworkEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 106 );
+                    .getEClassifiers().get( 105 );
         }
         return equivalentNetworkEClass;
     }
@@ -8712,7 +8709,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGrossToNetActivePowerCurve() {
         if( grossToNetActivePowerCurveEClass == null ) {
             grossToNetActivePowerCurveEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 105 );
+                    .getEClassifiers().get( 104 );
         }
         return grossToNetActivePowerCurveEClass;
     }
@@ -8736,7 +8733,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getBaseVoltage() {
         if( baseVoltageEClass == null ) {
             baseVoltageEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 168 );
+                    .getEClassifiers().get( 167 );
         }
         return baseVoltageEClass;
     }
@@ -8800,7 +8797,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCShunt() {
         if( dcShuntEClass == null ) {
             dcShuntEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 82 );
+                    .get( 81 );
         }
         return dcShuntEClass;
     }
@@ -8834,7 +8831,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCsConverter() {
         if( csConverterEClass == null ) {
             csConverterEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 62 );
+                    .getEClassifiers().get( 61 );
         }
         return csConverterEClass;
     }
@@ -8998,7 +8995,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCConductingEquipment() {
         if( dcConductingEquipmentEClass == null ) {
             dcConductingEquipmentEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 139 );
+                    .getEClassifiers().get( 138 );
         }
         return dcConductingEquipmentEClass;
     }
@@ -9032,7 +9029,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getJumper() {
         if( jumperEClass == null ) {
             jumperEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 141 );
+                    .get( 140 );
         }
         return jumperEClass;
     }
@@ -9046,7 +9043,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCurrentLimit() {
         if( currentLimitEClass == null ) {
             currentLimitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 89 );
+                    .getEClassifiers().get( 88 );
         }
         return currentLimitEClass;
     }
@@ -9080,7 +9077,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTransformerEnd() {
         if( transformerEndEClass == null ) {
             transformerEndEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 103 );
+                    .getEClassifiers().get( 102 );
         }
         return transformerEndEClass;
     }
@@ -9174,7 +9171,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getNonConformLoadSchedule() {
         if( nonConformLoadScheduleEClass == null ) {
             nonConformLoadScheduleEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 104 );
+                    .getEClassifiers().get( 103 );
         }
         return nonConformLoadScheduleEClass;
     }
@@ -9198,7 +9195,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getRotatingMachine() {
         if( rotatingMachineEClass == null ) {
             rotatingMachineEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 111 );
+                    .getEClassifiers().get( 110 );
         }
         return rotatingMachineEClass;
     }
@@ -9282,7 +9279,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getEnergySchedulingType() {
         if( energySchedulingTypeEClass == null ) {
             energySchedulingTypeEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 183 );
+                    .getEClassifiers().get( 182 );
         }
         return energySchedulingTypeEClass;
     }
@@ -9306,7 +9303,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPhaseTapChangerLinear() {
         if( phaseTapChangerLinearEClass == null ) {
             phaseTapChangerLinearEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 84 );
+                    .getEClassifiers().get( 83 );
         }
         return phaseTapChangerLinearEClass;
     }
@@ -9350,7 +9347,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getBasicIntervalSchedule() {
         if( basicIntervalScheduleEClass == null ) {
             basicIntervalScheduleEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 195 );
+                    .getEClassifiers().get( 194 );
         }
         return basicIntervalScheduleEClass;
     }
@@ -9394,7 +9391,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getACDCConverterDCTerminal() {
         if( acdcConverterDCTerminalEClass == null ) {
             acdcConverterDCTerminalEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 153 );
+                    .getEClassifiers().get( 152 );
         }
         return acdcConverterDCTerminalEClass;
     }
@@ -9428,7 +9425,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCurrentTransformer() {
         if( currentTransformerEClass == null ) {
             currentTransformerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 80 );
+                    .getEClassifiers().get( 79 );
         }
         return currentTransformerEClass;
     }
@@ -9442,7 +9439,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPowerElectronicsWindUnit() {
         if( powerElectronicsWindUnitEClass == null ) {
             powerElectronicsWindUnitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 154 );
+                    .getEClassifiers().get( 153 );
         }
         return powerElectronicsWindUnitEClass;
     }
@@ -9456,7 +9453,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPowerTransformer() {
         if( powerTransformerEClass == null ) {
             powerTransformerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 202 );
+                    .getEClassifiers().get( 201 );
         }
         return powerTransformerEClass;
     }
@@ -9540,7 +9537,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWaveTrap() {
         if( waveTrapEClass == null ) {
             waveTrapEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 175 );
+                    .get( 174 );
         }
         return waveTrapEClass;
     }
@@ -9554,7 +9551,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getEquivalentShunt() {
         if( equivalentShuntEClass == null ) {
             equivalentShuntEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 119 );
+                    .getEClassifiers().get( 118 );
         }
         return equivalentShuntEClass;
     }
@@ -9588,7 +9585,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLinearShuntCompensator() {
         if( linearShuntCompensatorEClass == null ) {
             linearShuntCompensatorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 189 );
+                    .getEClassifiers().get( 188 );
         }
         return linearShuntCompensatorEClass;
     }
@@ -9642,7 +9639,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getControlArea() {
         if( controlAreaEClass == null ) {
             controlAreaEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 142 );
+                    .getEClassifiers().get( 141 );
         }
         return controlAreaEClass;
     }
@@ -9716,7 +9713,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSynchronousMachine() {
         if( synchronousMachineEClass == null ) {
             synchronousMachineEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 95 );
+                    .getEClassifiers().get( 94 );
         }
         return synchronousMachineEClass;
     }
@@ -9960,7 +9957,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAuxiliaryEquipment() {
         if( auxiliaryEquipmentEClass == null ) {
             auxiliaryEquipmentEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 171 );
+                    .getEClassifiers().get( 170 );
         }
         return auxiliaryEquipmentEClass;
     }
@@ -9984,7 +9981,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVoltageLevel() {
         if( voltageLevelEClass == null ) {
             voltageLevelEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 161 );
+                    .getEClassifiers().get( 160 );
         }
         return voltageLevelEClass;
     }
@@ -10048,7 +10045,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTapChanger() {
         if( tapChangerEClass == null ) {
             tapChangerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 100 );
+                    .get( 99 );
         }
         return tapChangerEClass;
     }
@@ -10172,7 +10169,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getConformLoad() {
         if( conformLoadEClass == null ) {
             conformLoadEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 146 );
+                    .getEClassifiers().get( 145 );
         }
         return conformLoadEClass;
     }
@@ -10196,7 +10193,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getRatioTapChangerTablePoint() {
         if( ratioTapChangerTablePointEClass == null ) {
             ratioTapChangerTablePointEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 185 );
+                    .getEClassifiers().get( 184 );
         }
         return ratioTapChangerTablePointEClass;
     }
@@ -10220,7 +10217,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCTerminal() {
         if( dcTerminalEClass == null ) {
             dcTerminalEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 60 );
+                    .get( 59 );
         }
         return dcTerminalEClass;
     }
@@ -10244,7 +10241,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPostLineSensor() {
         if( postLineSensorEClass == null ) {
             postLineSensorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 190 );
+                    .getEClassifiers().get( 189 );
         }
         return postLineSensorEClass;
     }
@@ -10258,7 +10255,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGeneratingUnit() {
         if( generatingUnitEClass == null ) {
             generatingUnitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 194 );
+                    .getEClassifiers().get( 193 );
         }
         return generatingUnitEClass;
     }
@@ -10462,7 +10459,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindGeneratingUnit() {
         if( windGeneratingUnitEClass == null ) {
             windGeneratingUnitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 148 );
+                    .getEClassifiers().get( 147 );
         }
         return windGeneratingUnitEClass;
     }
@@ -10496,7 +10493,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getJunction() {
         if( junctionEClass == null ) {
             junctionEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 165 );
+                    .get( 164 );
         }
         return junctionEClass;
     }
@@ -10510,7 +10507,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPowerElectronicsUnit() {
         if( powerElectronicsUnitEClass == null ) {
             powerElectronicsUnitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 145 );
+                    .getEClassifiers().get( 144 );
         }
         return powerElectronicsUnitEClass;
     }
@@ -10554,7 +10551,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getRegularTimePoint() {
         if( regularTimePointEClass == null ) {
             regularTimePointEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 197 );
+                    .getEClassifiers().get( 196 );
         }
         return regularTimePointEClass;
     }
@@ -10608,7 +10605,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPowerElectronicsConnection() {
         if( powerElectronicsConnectionEClass == null ) {
             powerElectronicsConnectionEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 181 );
+                    .getEClassifiers().get( 180 );
         }
         return powerElectronicsConnectionEClass;
     }
@@ -10702,7 +10699,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getACDCConverter() {
         if( acdcConverterEClass == null ) {
             acdcConverterEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 96 );
+                    .getEClassifiers().get( 95 );
         }
         return acdcConverterEClass;
     }
@@ -10926,7 +10923,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSwitch() {
         if( switchEClass == null ) {
             switchEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 170 );
+                    .get( 169 );
         }
         return switchEClass;
     }
@@ -11010,7 +11007,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCDisconnector() {
         if( dcDisconnectorEClass == null ) {
             dcDisconnectorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 164 );
+                    .getEClassifiers().get( 163 );
         }
         return dcDisconnectorEClass;
     }
@@ -11024,7 +11021,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getACDCTerminal() {
         if( acdcTerminalEClass == null ) {
             acdcTerminalEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 63 );
+                    .getEClassifiers().get( 62 );
         }
         return acdcTerminalEClass;
     }
@@ -11088,7 +11085,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSubLoadArea() {
         if( subLoadAreaEClass == null ) {
             subLoadAreaEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 83 );
+                    .getEClassifiers().get( 82 );
         }
         return subLoadAreaEClass;
     }
@@ -11122,7 +11119,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPhaseTapChangerNonLinear() {
         if( phaseTapChangerNonLinearEClass == null ) {
             phaseTapChangerNonLinearEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 166 );
+                    .getEClassifiers().get( 165 );
         }
         return phaseTapChangerNonLinearEClass;
     }
@@ -11166,7 +11163,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVoltageLimit() {
         if( voltageLimitEClass == null ) {
             voltageLimitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 152 );
+                    .getEClassifiers().get( 151 );
         }
         return voltageLimitEClass;
     }
@@ -11200,7 +11197,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getFuse() {
         if( fuseEClass == null ) {
             fuseEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 124 );
+                    .get( 123 );
         }
         return fuseEClass;
     }
@@ -11214,7 +11211,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAsynchronousMachine() {
         if( asynchronousMachineEClass == null ) {
             asynchronousMachineEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 88 );
+                    .getEClassifiers().get( 87 );
         }
         return asynchronousMachineEClass;
     }
@@ -11338,7 +11335,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPhaseTapChangerTablePoint() {
         if( phaseTapChangerTablePointEClass == null ) {
             phaseTapChangerTablePointEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 182 );
+                    .getEClassifiers().get( 181 );
         }
         return phaseTapChangerTablePointEClass;
     }
@@ -11372,7 +11369,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getShuntCompensator() {
         if( shuntCompensatorEClass == null ) {
             shuntCompensatorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 206 );
+                    .getEClassifiers().get( 205 );
         }
         return shuntCompensatorEClass;
     }
@@ -11466,7 +11463,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVisibilityLayer() {
         if( visibilityLayerEClass == null ) {
             visibilityLayerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 208 );
+                    .getEClassifiers().get( 207 );
         }
         return visibilityLayerEClass;
     }
@@ -11500,7 +11497,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDiagramObjectGluePoint() {
         if( diagramObjectGluePointEClass == null ) {
             diagramObjectGluePointEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 209 );
+                    .getEClassifiers().get( 208 );
         }
         return diagramObjectGluePointEClass;
     }
@@ -11524,7 +11521,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDiagram() {
         if( diagramEClass == null ) {
             diagramEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 210 );
+                    .get( 209 );
         }
         return diagramEClass;
     }
@@ -11608,7 +11605,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDiagramObjectStyle() {
         if( diagramObjectStyleEClass == null ) {
             diagramObjectStyleEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 211 );
+                    .getEClassifiers().get( 210 );
         }
         return diagramObjectStyleEClass;
     }
@@ -11632,7 +11629,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTextDiagramObject() {
         if( textDiagramObjectEClass == null ) {
             textDiagramObjectEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 212 );
+                    .getEClassifiers().get( 211 );
         }
         return textDiagramObjectEClass;
     }
@@ -11656,7 +11653,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDiagramObject() {
         if( diagramObjectEClass == null ) {
             diagramObjectEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 213 );
+                    .getEClassifiers().get( 212 );
         }
         return diagramObjectEClass;
     }
@@ -11770,7 +11767,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDiagramStyle() {
         if( diagramStyleEClass == null ) {
             diagramStyleEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 214 );
+                    .getEClassifiers().get( 213 );
         }
         return diagramStyleEClass;
     }
@@ -11794,7 +11791,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDiagramObjectPoint() {
         if( diagramObjectPointEClass == null ) {
             diagramObjectPointEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 215 );
+                    .getEClassifiers().get( 214 );
         }
         return diagramObjectPointEClass;
     }
@@ -11868,7 +11865,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getUnderexcitationLimiterUserDefined() {
         if( underexcitationLimiterUserDefinedEClass == null ) {
             underexcitationLimiterUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 239 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 238 );
         }
         return underexcitationLimiterUserDefinedEClass;
     }
@@ -11902,7 +11899,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPssIEEE3B() {
         if( pssIEEE3BEClass == null ) {
             pssIEEE3BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 240 );
+                    .get( 239 );
         }
         return pssIEEE3BEClass;
     }
@@ -12086,7 +12083,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPssIEEE2B() {
         if( pssIEEE2BEClass == null ) {
             pssIEEE2BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 241 );
+                    .get( 240 );
         }
         return pssIEEE2BEClass;
     }
@@ -12370,7 +12367,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDiscontinuousExcitationControlUserDefined() {
         if( discontinuousExcitationControlUserDefinedEClass == null ) {
             discontinuousExcitationControlUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 242 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 241 );
         }
         return discontinuousExcitationControlUserDefinedEClass;
     }
@@ -12404,7 +12401,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcPIC() {
         if( excPICEClass == null ) {
             excPICEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 243 );
+                    .get( 242 );
         }
         return excPICEClass;
     }
@@ -12648,7 +12645,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPssIEEE4B() {
         if( pssIEEE4BEClass == null ) {
             pssIEEE4BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 244 );
+                    .get( 243 );
         }
         return pssIEEE4BEClass;
     }
@@ -13332,7 +13329,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDiscontinuousExcitationControlDynamics() {
         if( discontinuousExcitationControlDynamicsEClass == null ) {
             discontinuousExcitationControlDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 245 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 244 );
         }
         return discontinuousExcitationControlDynamicsEClass;
     }
@@ -13366,7 +13363,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPssIEEE1A() {
         if( pssIEEE1AEClass == null ) {
             pssIEEE1AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 246 );
+                    .get( 245 );
         }
         return pssIEEE1AEClass;
     }
@@ -13500,7 +13497,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVSCUserDefined() {
         if( vscUserDefinedEClass == null ) {
             vscUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 247 );
+                    .getEClassifiers().get( 246 );
         }
         return vscUserDefinedEClass;
     }
@@ -13534,7 +13531,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovGAST() {
         if( govGASTEClass == null ) {
             govGASTEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 248 );
+                    .get( 247 );
         }
         return govGASTEClass;
     }
@@ -13648,7 +13645,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPssWECC() {
         if( pssWECCEClass == null ) {
             pssWECCEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 249 );
+                    .get( 248 );
         }
         return pssWECCEClass;
     }
@@ -13842,7 +13839,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindAeroOneDimIEC() {
         if( windAeroOneDimIECEClass == null ) {
             windAeroOneDimIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 250 );
+                    .getEClassifiers().get( 249 );
         }
         return windAeroOneDimIECEClass;
     }
@@ -13886,7 +13883,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSynchronousMachineSimplified() {
         if( synchronousMachineSimplifiedEClass == null ) {
             synchronousMachineSimplifiedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 251 );
+                    .getEClassifiers().get( 250 );
         }
         return synchronousMachineSimplifiedEClass;
     }
@@ -13900,7 +13897,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAsynchronousMachineEquivalentCircuit() {
         if( asynchronousMachineEquivalentCircuitEClass == null ) {
             asynchronousMachineEquivalentCircuitEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 252 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 251 );
         }
         return asynchronousMachineEquivalentCircuitEClass;
     }
@@ -13964,7 +13961,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEST1A() {
         if( excIEEEST1AEClass == null ) {
             excIEEEST1AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 253 );
+                    .getEClassifiers().get( 252 );
         }
         return excIEEEST1AEClass;
     }
@@ -14168,7 +14165,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTurbineLoadControllerDynamics() {
         if( turbineLoadControllerDynamicsEClass == null ) {
             turbineLoadControllerDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 254 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 253 );
         }
         return turbineLoadControllerDynamicsEClass;
     }
@@ -14192,7 +14189,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSynchronousMachineDetailed() {
         if( synchronousMachineDetailedEClass == null ) {
             synchronousMachineDetailedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 255 );
+                    .getEClassifiers().get( 254 );
         }
         return synchronousMachineDetailedEClass;
     }
@@ -14246,7 +14243,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEST2A() {
         if( excIEEEST2AEClass == null ) {
             excIEEEST2AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 256 );
+                    .getEClassifiers().get( 255 );
         }
         return excIEEEST2AEClass;
     }
@@ -14390,7 +14387,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcHU() {
         if( excHUEClass == null ) {
             excHUEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 257 );
+                    .get( 256 );
         }
         return excHUEClass;
     }
@@ -14524,7 +14521,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcCZ() {
         if( excCZEClass == null ) {
             excCZEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 258 );
+                    .get( 257 );
         }
         return excCZEClass;
     }
@@ -14638,7 +14635,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getMechanicalLoadDynamics() {
         if( mechanicalLoadDynamicsEClass == null ) {
             mechanicalLoadDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 259 );
+                    .getEClassifiers().get( 258 );
         }
         return mechanicalLoadDynamicsEClass;
     }
@@ -14672,7 +14669,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPss2ST() {
         if( pss2STEClass == null ) {
             pss2STEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 260 );
+                    .get( 259 );
         }
         return pss2STEClass;
     }
@@ -14866,7 +14863,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcSCRX() {
         if( excSCRXEClass == null ) {
             excSCRXEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 261 );
+                    .get( 260 );
         }
         return excSCRXEClass;
     }
@@ -14960,7 +14957,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovGASTWD() {
         if( govGASTWDEClass == null ) {
             govGASTWDEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 262 );
+                    .get( 261 );
         }
         return govGASTWDEClass;
     }
@@ -15304,7 +15301,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindType3or4UserDefined() {
         if( windType3or4UserDefinedEClass == null ) {
             windType3or4UserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 263 );
+                    .getEClassifiers().get( 262 );
         }
         return windType3or4UserDefinedEClass;
     }
@@ -15338,7 +15335,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydro1() {
         if( govHydro1EClass == null ) {
             govHydro1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 264 );
+                    .get( 263 );
         }
         return govHydro1EClass;
     }
@@ -15492,7 +15489,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydro2() {
         if( govHydro2EClass == null ) {
             govHydro2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 265 );
+                    .get( 264 );
         }
         return govHydro2EClass;
     }
@@ -15796,7 +15793,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydro3() {
         if( govHydro3EClass == null ) {
             govHydro3EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 266 );
+                    .get( 265 );
         }
         return govHydro3EClass;
     }
@@ -16170,7 +16167,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydro4() {
         if( govHydro4EClass == null ) {
             govHydro4EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 267 );
+                    .get( 266 );
         }
         return govHydro4EClass;
     }
@@ -16574,7 +16571,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getProprietaryParameterDynamics() {
         if( proprietaryParameterDynamicsEClass == null ) {
             proprietaryParameterDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 268 );
+                    .getEClassifiers().get( 267 );
         }
         return proprietaryParameterDynamicsEClass;
     }
@@ -16838,7 +16835,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcNI() {
         if( excNIEClass == null ) {
             excNIEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 269 );
+                    .get( 268 );
         }
         return excNIEClass;
     }
@@ -16952,7 +16949,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindTurbineType4IEC() {
         if( windTurbineType4IECEClass == null ) {
             windTurbineType4IECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 270 );
+                    .getEClassifiers().get( 269 );
         }
         return windTurbineType4IECEClass;
     }
@@ -16976,7 +16973,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovSteam2() {
         if( govSteam2EClass == null ) {
             govSteam2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 271 );
+                    .get( 270 );
         }
         return govSteam2EClass;
     }
@@ -17070,7 +17067,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovSteam1() {
         if( govSteam1EClass == null ) {
             govSteam1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 272 );
+                    .get( 271 );
         }
         return govSteam1EClass;
     }
@@ -17474,7 +17471,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovSteam0() {
         if( govSteam0EClass == null ) {
             govSteam0EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 273 );
+                    .get( 272 );
         }
         return govSteam0EClass;
     }
@@ -17568,7 +17565,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydroR() {
         if( govHydroREClass == null ) {
             govHydroREClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 274 );
+                    .get( 273 );
         }
         return govHydroREClass;
     }
@@ -18002,7 +17999,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTurbineGovernorDynamics() {
         if( turbineGovernorDynamicsEClass == null ) {
             turbineGovernorDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 275 );
+                    .getEClassifiers().get( 274 );
         }
         return turbineGovernorDynamicsEClass;
     }
@@ -18046,7 +18043,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLoadMotor() {
         if( loadMotorEClass == null ) {
             loadMotorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 276 );
+                    .get( 275 );
         }
         return loadMotorEClass;
     }
@@ -18200,7 +18197,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindContQIEC() {
         if( windContQIECEClass == null ) {
             windContQIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 277 );
+                    .getEClassifiers().get( 276 );
         }
         return windContQIECEClass;
     }
@@ -18454,7 +18451,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindGenType3aIEC() {
         if( windGenType3aIECEClass == null ) {
             windGenType3aIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 278 );
+                    .getEClassifiers().get( 277 );
         }
         return windGenType3aIECEClass;
     }
@@ -18498,7 +18495,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcSK() {
         if( excSKEClass == null ) {
             excSKEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 279 );
+                    .get( 278 );
         }
         return excSKEClass;
     }
@@ -18832,7 +18829,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getRotatingMachineDynamics() {
         if( rotatingMachineDynamicsEClass == null ) {
             rotatingMachineDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 280 );
+                    .getEClassifiers().get( 279 );
         }
         return rotatingMachineDynamicsEClass;
     }
@@ -18906,7 +18903,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVoltageAdjusterDynamics() {
         if( voltageAdjusterDynamicsEClass == null ) {
             voltageAdjusterDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 281 );
+                    .getEClassifiers().get( 280 );
         }
         return voltageAdjusterDynamicsEClass;
     }
@@ -18930,7 +18927,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPFVArControllerType2Dynamics() {
         if( pfvArControllerType2DynamicsEClass == null ) {
             pfvArControllerType2DynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 282 );
+                    .getEClassifiers().get( 281 );
         }
         return pfvArControllerType2DynamicsEClass;
     }
@@ -18954,7 +18951,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVoltageCompensatorUserDefined() {
         if( voltageCompensatorUserDefinedEClass == null ) {
             voltageCompensatorUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 283 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 282 );
         }
         return voltageCompensatorUserDefinedEClass;
     }
@@ -18988,7 +18985,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindPitchContPowerIEC() {
         if( windPitchContPowerIECEClass == null ) {
             windPitchContPowerIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 284 );
+                    .getEClassifiers().get( 283 );
         }
         return windPitchContPowerIECEClass;
     }
@@ -19102,7 +19099,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindGenTurbineType1aIEC() {
         if( windGenTurbineType1aIECEClass == null ) {
             windGenTurbineType1aIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 285 );
+                    .getEClassifiers().get( 284 );
         }
         return windGenTurbineType1aIECEClass;
     }
@@ -19126,7 +19123,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindProtectionIEC() {
         if( windProtectionIECEClass == null ) {
             windProtectionIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 286 );
+                    .getEClassifiers().get( 285 );
         }
         return windProtectionIECEClass;
     }
@@ -19240,7 +19237,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindRefFrameRotIEC() {
         if( windRefFrameRotIECEClass == null ) {
             windRefFrameRotIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 287 );
+                    .getEClassifiers().get( 286 );
         }
         return windRefFrameRotIECEClass;
     }
@@ -19294,7 +19291,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLoadGenericNonLinear() {
         if( loadGenericNonLinearEClass == null ) {
             loadGenericNonLinearEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 288 );
+                    .getEClassifiers().get( 287 );
         }
         return loadGenericNonLinearEClass;
     }
@@ -19378,7 +19375,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindTurbineType1or2IEC() {
         if( windTurbineType1or2IECEClass == null ) {
             windTurbineType1or2IECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 289 );
+                    .getEClassifiers().get( 288 );
         }
         return windTurbineType1or2IECEClass;
     }
@@ -19412,7 +19409,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindGenTurbineType2IEC() {
         if( windGenTurbineType2IECEClass == null ) {
             windGenTurbineType2IECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 290 );
+                    .getEClassifiers().get( 289 );
         }
         return windGenTurbineType2IECEClass;
     }
@@ -19446,7 +19443,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindGenType3IEC() {
         if( windGenType3IECEClass == null ) {
             windGenType3IECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 291 );
+                    .getEClassifiers().get( 290 );
         }
         return windGenType3IECEClass;
     }
@@ -19500,7 +19497,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindContPType3IEC() {
         if( windContPType3IECEClass == null ) {
             windContPType3IECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 292 );
+                    .getEClassifiers().get( 291 );
         }
         return windContPType3IECEClass;
     }
@@ -19764,7 +19761,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getUnderexcLim2Simplified() {
         if( underexcLim2SimplifiedEClass == null ) {
             underexcLim2SimplifiedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 293 );
+                    .getEClassifiers().get( 292 );
         }
         return underexcLim2SimplifiedEClass;
     }
@@ -19848,7 +19845,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindPlantIEC() {
         if( windPlantIECEClass == null ) {
             windPlantIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 294 );
+                    .getEClassifiers().get( 293 );
         }
         return windPlantIECEClass;
     }
@@ -19882,7 +19879,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPss5() {
         if( pss5EClass == null ) {
             pss5EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 295 );
+                    .get( 294 );
         }
         return pss5EClass;
     }
@@ -20066,7 +20063,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAsynchronousMachineTimeConstantReactance() {
         if( asynchronousMachineTimeConstantReactanceEClass == null ) {
             asynchronousMachineTimeConstantReactanceEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 296 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 295 );
         }
         return asynchronousMachineTimeConstantReactanceEClass;
     }
@@ -20130,7 +20127,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPssSTAB2A() {
         if( pssSTAB2AEClass == null ) {
             pssSTAB2AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 297 );
+                    .get( 296 );
         }
         return pssSTAB2AEClass;
     }
@@ -20224,7 +20221,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPss1() {
         if( pss1EClass == null ) {
             pss1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 298 );
+                    .get( 297 );
         }
         return pss1EClass;
     }
@@ -20388,7 +20385,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindTurbineType4bIEC() {
         if( windTurbineType4bIECEClass == null ) {
             windTurbineType4bIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 299 );
+                    .getEClassifiers().get( 298 );
         }
         return windTurbineType4bIECEClass;
     }
@@ -20432,7 +20429,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPFVArControllerType2UserDefined() {
         if( pfvArControllerType2UserDefinedEClass == null ) {
             pfvArControllerType2UserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 300 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 299 );
         }
         return pfvArControllerType2UserDefinedEClass;
     }
@@ -20466,7 +20463,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydroPID2() {
         if( govHydroPID2EClass == null ) {
             govHydroPID2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 301 );
+                    .getEClassifiers().get( 300 );
         }
         return govHydroPID2EClass;
     }
@@ -20700,7 +20697,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydroFrancis() {
         if( govHydroFrancisEClass == null ) {
             govHydroFrancisEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 302 );
+                    .getEClassifiers().get( 301 );
         }
         return govHydroFrancisEClass;
     }
@@ -20984,7 +20981,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCSCDynamics() {
         if( cscDynamicsEClass == null ) {
             cscDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 303 );
+                    .getEClassifiers().get( 302 );
         }
         return cscDynamicsEClass;
     }
@@ -21008,7 +21005,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getOverexcitationLimiterDynamics() {
         if( overexcitationLimiterDynamicsEClass == null ) {
             overexcitationLimiterDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 304 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 303 );
         }
         return overexcitationLimiterDynamicsEClass;
     }
@@ -21032,7 +21029,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcRQB() {
         if( excRQBEClass == null ) {
             excRQBEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 305 );
+                    .get( 304 );
         }
         return excRQBEClass;
     }
@@ -21176,7 +21173,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcANS() {
         if( excANSEClass == null ) {
             excANSEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 306 );
+                    .get( 305 );
         }
         return excANSEClass;
     }
@@ -21330,7 +21327,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLoadAggregate() {
         if( loadAggregateEClass == null ) {
             loadAggregateEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 307 );
+                    .getEClassifiers().get( 306 );
         }
         return loadAggregateEClass;
     }
@@ -21364,7 +21361,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindGenType3bIEC() {
         if( windGenType3bIECEClass == null ) {
             windGenType3bIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 308 );
+                    .getEClassifiers().get( 307 );
         }
         return windGenType3bIECEClass;
     }
@@ -21418,7 +21415,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovSteamIEEE1() {
         if( govSteamIEEE1EClass == null ) {
             govSteamIEEE1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 309 );
+                    .getEClassifiers().get( 308 );
         }
         return govSteamIEEE1EClass;
     }
@@ -21642,7 +21639,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getUnderexcitationLimiterDynamics() {
         if( underexcitationLimiterDynamicsEClass == null ) {
             underexcitationLimiterDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 310 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 309 );
         }
         return underexcitationLimiterDynamicsEClass;
     }
@@ -21676,7 +21673,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydroWEH() {
         if( govHydroWEHEClass == null ) {
             govHydroWEHEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 311 );
+                    .getEClassifiers().get( 310 );
         }
         return govHydroWEHEClass;
     }
@@ -22200,7 +22197,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcDC3A1() {
         if( excDC3A1EClass == null ) {
             excDC3A1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 312 );
+                    .get( 311 );
         }
         return excDC3A1EClass;
     }
@@ -22354,7 +22351,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindTurbineType1or2Dynamics() {
         if( windTurbineType1or2DynamicsEClass == null ) {
             windTurbineType1or2DynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 313 );
+                    .getEClassifiers().get( 312 );
         }
         return windTurbineType1or2DynamicsEClass;
     }
@@ -22388,7 +22385,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getOverexcitationLimiterUserDefined() {
         if( overexcitationLimiterUserDefinedEClass == null ) {
             overexcitationLimiterUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 314 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 313 );
         }
         return overexcitationLimiterUserDefinedEClass;
     }
@@ -22422,7 +22419,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTurbineLoadControllerUserDefined() {
         if( turbineLoadControllerUserDefinedEClass == null ) {
             turbineLoadControllerUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 315 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 314 );
         }
         return turbineLoadControllerUserDefinedEClass;
     }
@@ -22456,7 +22453,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindContPitchAngleIEC() {
         if( windContPitchAngleIECEClass == null ) {
             windContPitchAngleIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 316 );
+                    .getEClassifiers().get( 315 );
         }
         return windContPitchAngleIECEClass;
     }
@@ -22580,7 +22577,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcBBC() {
         if( excBBCEClass == null ) {
             excBBCEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 317 );
+                    .get( 316 );
         }
         return excBBCEClass;
     }
@@ -22704,7 +22701,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getOverexcLimIEEE() {
         if( overexcLimIEEEEClass == null ) {
             overexcLimIEEEEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 318 );
+                    .getEClassifiers().get( 317 );
         }
         return overexcLimIEEEEClass;
     }
@@ -22778,7 +22775,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindTurbineType3or4Dynamics() {
         if( windTurbineType3or4DynamicsEClass == null ) {
             windTurbineType3or4DynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 319 );
+                    .getEClassifiers().get( 318 );
         }
         return windTurbineType3or4DynamicsEClass;
     }
@@ -22822,7 +22819,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getRemoteInputSignal() {
         if( remoteInputSignalEClass == null ) {
             remoteInputSignalEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 320 );
+                    .getEClassifiers().get( 319 );
         }
         return remoteInputSignalEClass;
     }
@@ -22936,7 +22933,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcAVR1() {
         if( excAVR1EClass == null ) {
             excAVR1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 321 );
+                    .get( 320 );
         }
         return excAVR1EClass;
     }
@@ -23070,7 +23067,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcAVR2() {
         if( excAVR2EClass == null ) {
             excAVR2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 322 );
+                    .get( 321 );
         }
         return excAVR2EClass;
     }
@@ -23214,7 +23211,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcAVR3() {
         if( excAVR3EClass == null ) {
             excAVR3EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 323 );
+                    .get( 322 );
         }
         return excAVR3EClass;
     }
@@ -23348,7 +23345,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcAVR4() {
         if( excAVR4EClass == null ) {
             excAVR4EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 324 );
+                    .get( 323 );
         }
         return excAVR4EClass;
     }
@@ -23502,7 +23499,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcAVR5() {
         if( excAVR5EClass == null ) {
             excAVR5EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 325 );
+                    .get( 324 );
         }
         return excAVR5EClass;
     }
@@ -23546,7 +23543,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcAVR7() {
         if( excAVR7EClass == null ) {
             excAVR7EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 326 );
+                    .get( 325 );
         }
         return excAVR7EClass;
     }
@@ -23770,7 +23767,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPFVArType2IEEEVArController() {
         if( pfvArType2IEEEVArControllerEClass == null ) {
             pfvArType2IEEEVArControllerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 327 );
+                    .getEClassifiers().get( 326 );
         }
         return pfvArType2IEEEVArControllerEClass;
     }
@@ -23854,7 +23851,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEAC2A() {
         if( excIEEEAC2AEClass == null ) {
             excIEEEAC2AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 328 );
+                    .getEClassifiers().get( 327 );
         }
         return excIEEEAC2AEClass;
     }
@@ -24078,7 +24075,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLoadUserDefined() {
         if( loadUserDefinedEClass == null ) {
             loadUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 329 );
+                    .getEClassifiers().get( 328 );
         }
         return loadUserDefinedEClass;
     }
@@ -24112,7 +24109,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getMechanicalLoadUserDefined() {
         if( mechanicalLoadUserDefinedEClass == null ) {
             mechanicalLoadUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 330 );
+                    .getEClassifiers().get( 329 );
         }
         return mechanicalLoadUserDefinedEClass;
     }
@@ -24146,7 +24143,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEAC1A() {
         if( excIEEEAC1AEClass == null ) {
             excIEEEAC1AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 331 );
+                    .getEClassifiers().get( 330 );
         }
         return excIEEEAC1AEClass;
     }
@@ -24340,7 +24337,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydroIEEE0() {
         if( govHydroIEEE0EClass == null ) {
             govHydroIEEE0EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 332 );
+                    .getEClassifiers().get( 331 );
         }
         return govHydroIEEE0EClass;
     }
@@ -24434,7 +24431,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydroIEEE2() {
         if( govHydroIEEE2EClass == null ) {
             govHydroIEEE2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 333 );
+                    .getEClassifiers().get( 332 );
         }
         return govHydroIEEE2EClass;
     }
@@ -24708,7 +24705,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEAC6A() {
         if( excIEEEAC6AEClass == null ) {
             excIEEEAC6AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 334 );
+                    .getEClassifiers().get( 333 );
         }
         return excIEEEAC6AEClass;
     }
@@ -24942,7 +24939,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEAC5A() {
         if( excIEEEAC5AEClass == null ) {
             excIEEEAC5AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 335 );
+                    .getEClassifiers().get( 334 );
         }
         return excIEEEAC5AEClass;
     }
@@ -25096,7 +25093,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCrossCompoundTurbineGovernorDynamics() {
         if( crossCompoundTurbineGovernorDynamicsEClass == null ) {
             crossCompoundTurbineGovernorDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 336 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 335 );
         }
         return crossCompoundTurbineGovernorDynamicsEClass;
     }
@@ -25130,7 +25127,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getStaticVarCompensatorDynamics() {
         if( staticVarCompensatorDynamicsEClass == null ) {
             staticVarCompensatorDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 337 );
+                    .getEClassifiers().get( 336 );
         }
         return staticVarCompensatorDynamicsEClass;
     }
@@ -25154,7 +25151,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEAC4A() {
         if( excIEEEAC4AEClass == null ) {
             excIEEEAC4AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 338 );
+                    .getEClassifiers().get( 337 );
         }
         return excIEEEAC4AEClass;
     }
@@ -25258,7 +25255,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEAC3A() {
         if( excIEEEAC3AEClass == null ) {
             excIEEEAC3AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 339 );
+                    .getEClassifiers().get( 338 );
         }
         return excIEEEAC3AEClass;
     }
@@ -25482,7 +25479,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcitationSystemUserDefined() {
         if( excitationSystemUserDefinedEClass == null ) {
             excitationSystemUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 340 );
+                    .getEClassifiers().get( 339 );
         }
         return excitationSystemUserDefinedEClass;
     }
@@ -25516,7 +25513,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindType1or2UserDefined() {
         if( windType1or2UserDefinedEClass == null ) {
             windType1or2UserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 341 );
+                    .getEClassifiers().get( 340 );
         }
         return windType1or2UserDefinedEClass;
     }
@@ -25550,7 +25547,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovGAST4() {
         if( govGAST4EClass == null ) {
             govGAST4EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 342 );
+                    .get( 341 );
         }
         return govGAST4EClass;
     }
@@ -25674,7 +25671,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovGAST3() {
         if( govGAST3EClass == null ) {
             govGAST3EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 343 );
+                    .get( 342 );
         }
         return govGAST3EClass;
     }
@@ -25898,7 +25895,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovGAST2() {
         if( govGAST2EClass == null ) {
             govGAST2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 344 );
+                    .get( 343 );
         }
         return govGAST2EClass;
     }
@@ -26232,7 +26229,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovGAST1() {
         if( govGAST1EClass == null ) {
             govGAST1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 345 );
+                    .get( 344 );
         }
         return govGAST1EClass;
     }
@@ -26586,7 +26583,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getMechLoad1() {
         if( mechLoad1EClass == null ) {
             mechLoad1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 346 );
+                    .get( 345 );
         }
         return mechLoad1EClass;
     }
@@ -26640,7 +26637,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPFVArType1IEEEVArController() {
         if( pfvArType1IEEEVArControllerEClass == null ) {
             pfvArType1IEEEVArControllerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 347 );
+                    .getEClassifiers().get( 346 );
         }
         return pfvArType1IEEEVArControllerEClass;
     }
@@ -26714,7 +26711,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindContRotorRIEC() {
         if( windContRotorRIECEClass == null ) {
             windContRotorRIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 348 );
+                    .getEClassifiers().get( 347 );
         }
         return windContRotorRIECEClass;
     }
@@ -26828,7 +26825,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPFVArType2IEEEPFController() {
         if( pfvArType2IEEEPFControllerEClass == null ) {
             pfvArType2IEEEPFControllerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 349 );
+                    .getEClassifiers().get( 348 );
         }
         return pfvArType2IEEEPFControllerEClass;
     }
@@ -26912,7 +26909,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVAdjIEEE() {
         if( vAdjIEEEEClass == null ) {
             vAdjIEEEEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 350 );
+                    .get( 349 );
         }
         return vAdjIEEEEClass;
     }
@@ -26986,7 +26983,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSynchronousMachineEquivalentCircuit() {
         if( synchronousMachineEquivalentCircuitEClass == null ) {
             synchronousMachineEquivalentCircuitEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 351 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 350 );
         }
         return synchronousMachineEquivalentCircuitEClass;
     }
@@ -27110,7 +27107,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindPlantDynamics() {
         if( windPlantDynamicsEClass == null ) {
             windPlantDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 352 );
+                    .getEClassifiers().get( 351 );
         }
         return windPlantDynamicsEClass;
     }
@@ -27144,7 +27141,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcELIN1() {
         if( excELIN1EClass == null ) {
             excELIN1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 353 );
+                    .get( 352 );
         }
         return excELIN1EClass;
     }
@@ -27308,7 +27305,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcELIN2() {
         if( excELIN2EClass == null ) {
             excELIN2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 354 );
+                    .get( 353 );
         }
         return excELIN2EClass;
     }
@@ -27592,7 +27589,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAsynchronousMachineUserDefined() {
         if( asynchronousMachineUserDefinedEClass == null ) {
             asynchronousMachineUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 355 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 354 );
         }
         return asynchronousMachineUserDefinedEClass;
     }
@@ -27626,7 +27623,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcST4B() {
         if( excST4BEClass == null ) {
             excST4BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 356 );
+                    .get( 355 );
         }
         return excST4BEClass;
     }
@@ -27830,7 +27827,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcST3A() {
         if( excST3AEClass == null ) {
             excST3AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 357 );
+                    .get( 356 );
         }
         return excST3AEClass;
     }
@@ -28044,7 +28041,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcST2A() {
         if( excST2AEClass == null ) {
             excST2AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 358 );
+                    .get( 357 );
         }
         return excST2AEClass;
     }
@@ -28208,7 +28205,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEAC8B() {
         if( excIEEEAC8BEClass == null ) {
             excIEEEAC8BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 359 );
+                    .getEClassifiers().get( 358 );
         }
         return excIEEEAC8BEClass;
     }
@@ -28402,7 +28399,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcST1A() {
         if( excST1AEClass == null ) {
             excST1AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 360 );
+                    .get( 359 );
         }
         return excST1AEClass;
     }
@@ -28596,7 +28593,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEAC7B() {
         if( excIEEEAC7BEClass == null ) {
             excIEEEAC7BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 361 );
+                    .getEClassifiers().get( 360 );
         }
         return excIEEEAC7BEClass;
     }
@@ -28870,7 +28867,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovSteamSGO() {
         if( govSteamSGOEClass == null ) {
             govSteamSGOEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 362 );
+                    .getEClassifiers().get( 361 );
         }
         return govSteamSGOEClass;
     }
@@ -29004,7 +29001,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindPlantFreqPcontrolIEC() {
         if( windPlantFreqPcontrolIECEClass == null ) {
             windPlantFreqPcontrolIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 363 );
+                    .getEClassifiers().get( 362 );
         }
         return windPlantFreqPcontrolIECEClass;
     }
@@ -29188,7 +29185,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcST7B() {
         if( excST7BEClass == null ) {
             excST7BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 364 );
+                    .get( 363 );
         }
         return excST7BEClass;
     }
@@ -29362,7 +29359,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPowerSystemStabilizerUserDefined() {
         if( powerSystemStabilizerUserDefinedEClass == null ) {
             powerSystemStabilizerUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 365 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 364 );
         }
         return powerSystemStabilizerUserDefinedEClass;
     }
@@ -29396,7 +29393,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDynamicsFunctionBlock() {
         if( dynamicsFunctionBlockEClass == null ) {
             dynamicsFunctionBlockEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 366 );
+                    .getEClassifiers().get( 365 );
         }
         return dynamicsFunctionBlockEClass;
     }
@@ -29420,7 +29417,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydroPID() {
         if( govHydroPIDEClass == null ) {
             govHydroPIDEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 367 );
+                    .getEClassifiers().get( 366 );
         }
         return govHydroPIDEClass;
     }
@@ -29764,7 +29761,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcST6B() {
         if( excST6BEClass == null ) {
             excST6BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 368 );
+                    .get( 367 );
         }
         return excST6BEClass;
     }
@@ -30008,7 +30005,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindContPType4bIEC() {
         if( windContPType4bIECEClass == null ) {
             windContPType4bIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 369 );
+                    .getEClassifiers().get( 368 );
         }
         return windContPType4bIECEClass;
     }
@@ -30072,7 +30069,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydroPelton() {
         if( govHydroPeltonEClass == null ) {
             govHydroPeltonEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 370 );
+                    .getEClassifiers().get( 369 );
         }
         return govHydroPeltonEClass;
     }
@@ -30366,7 +30363,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVSCDynamics() {
         if( vscDynamicsEClass == null ) {
             vscDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 371 );
+                    .getEClassifiers().get( 370 );
         }
         return vscDynamicsEClass;
     }
@@ -30390,7 +30387,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLoadDynamics() {
         if( loadDynamicsEClass == null ) {
             loadDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 372 );
+                    .getEClassifiers().get( 371 );
         }
         return loadDynamicsEClass;
     }
@@ -30414,7 +30411,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPssELIN2() {
         if( pssELIN2EClass == null ) {
             pssELIN2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 373 );
+                    .get( 372 );
         }
         return pssELIN2EClass;
     }
@@ -30538,7 +30535,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSynchronousMachineTimeConstantReactance() {
         if( synchronousMachineTimeConstantReactanceEClass == null ) {
             synchronousMachineTimeConstantReactanceEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 374 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 373 );
         }
         return synchronousMachineTimeConstantReactanceEClass;
     }
@@ -30692,7 +30689,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovCT1() {
         if( govCT1EClass == null ) {
             govCT1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 375 );
+                    .get( 374 );
         }
         return govCT1EClass;
     }
@@ -31056,7 +31053,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovCT2() {
         if( govCT2EClass == null ) {
             govCT2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 376 );
+                    .get( 375 );
         }
         return govCT2EClass;
     }
@@ -31630,7 +31627,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEDC1A() {
         if( excIEEEDC1AEClass == null ) {
             excIEEEDC1AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 377 );
+                    .getEClassifiers().get( 376 );
         }
         return excIEEEDC1AEClass;
     }
@@ -31804,7 +31801,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindContQPQULimIEC() {
         if( windContQPQULimIECEClass == null ) {
             windContQPQULimIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 378 );
+                    .getEClassifiers().get( 377 );
         }
         return windContQPQULimIECEClass;
     }
@@ -31858,7 +31855,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEDC4B() {
         if( excIEEEDC4BEClass == null ) {
             excIEEEDC4BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 379 );
+                    .getEClassifiers().get( 378 );
         }
         return excIEEEDC4BEClass;
     }
@@ -32062,7 +32059,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEDC3A() {
         if( excIEEEDC3AEClass == null ) {
             excIEEEDC3AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 380 );
+                    .getEClassifiers().get( 379 );
         }
         return excIEEEDC3AEClass;
     }
@@ -32186,7 +32183,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEDC2A() {
         if( excIEEEDC2AEClass == null ) {
             excIEEEDC2AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 381 );
+                    .getEClassifiers().get( 380 );
         }
         return excIEEEDC2AEClass;
     }
@@ -32360,7 +32357,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCSCUserDefined() {
         if( cscUserDefinedEClass == null ) {
             cscUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 382 );
+                    .getEClassifiers().get( 381 );
         }
         return cscUserDefinedEClass;
     }
@@ -32394,7 +32391,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLoadStatic() {
         if( loadStaticEClass == null ) {
             loadStaticEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 383 );
+                    .get( 382 );
         }
         return loadStaticEClass;
     }
@@ -32588,7 +32585,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindAeroTwoDimIEC() {
         if( windAeroTwoDimIECEClass == null ) {
             windAeroTwoDimIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 384 );
+                    .getEClassifiers().get( 383 );
         }
         return windAeroTwoDimIECEClass;
     }
@@ -32682,7 +32679,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindContCurrLimIEC() {
         if( windContCurrLimIECEClass == null ) {
             windContCurrLimIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 385 );
+                    .getEClassifiers().get( 384 );
         }
         return windContCurrLimIECEClass;
     }
@@ -32786,7 +32783,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPssPTIST1() {
         if( pssPTIST1EClass == null ) {
             pssPTIST1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 386 );
+                    .get( 385 );
         }
         return pssPTIST1EClass;
     }
@@ -32910,7 +32907,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPssPTIST3() {
         if( pssPTIST3EClass == null ) {
             pssPTIST3EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 387 );
+                    .get( 386 );
         }
         return pssPTIST3EClass;
     }
@@ -33264,7 +33261,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydroWPID() {
         if( govHydroWPIDEClass == null ) {
             govHydroWPIDEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 388 );
+                    .getEClassifiers().get( 387 );
         }
         return govHydroWPIDEClass;
     }
@@ -33498,7 +33495,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPFVArControllerType1Dynamics() {
         if( pfvArControllerType1DynamicsEClass == null ) {
             pfvArControllerType1DynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 389 );
+                    .getEClassifiers().get( 388 );
         }
         return pfvArControllerType1DynamicsEClass;
     }
@@ -33542,7 +33539,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindContQLimIEC() {
         if( windContQLimIECEClass == null ) {
             windContQLimIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 390 );
+                    .getEClassifiers().get( 389 );
         }
         return windContQLimIECEClass;
     }
@@ -33586,7 +33583,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVoltageCompensatorDynamics() {
         if( voltageCompensatorDynamicsEClass == null ) {
             voltageCompensatorDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 391 );
+                    .getEClassifiers().get( 390 );
         }
         return voltageCompensatorDynamicsEClass;
     }
@@ -33620,7 +33617,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSynchronousMachineUserDefined() {
         if( synchronousMachineUserDefinedEClass == null ) {
             synchronousMachineUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 392 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 391 );
         }
         return synchronousMachineUserDefinedEClass;
     }
@@ -33654,7 +33651,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGenICompensationForGenJ() {
         if( genICompensationForGenJEClass == null ) {
             genICompensationForGenJEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 393 );
+                    .getEClassifiers().get( 392 );
         }
         return genICompensationForGenJEClass;
     }
@@ -33708,7 +33705,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcREXS() {
         if( excREXSEClass == null ) {
             excREXSEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 394 );
+                    .get( 393 );
         }
         return excREXSEClass;
     }
@@ -34082,7 +34079,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAsynchronousMachineDynamics() {
         if( asynchronousMachineDynamicsEClass == null ) {
             asynchronousMachineDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 395 );
+                    .getEClassifiers().get( 394 );
         }
         return asynchronousMachineDynamicsEClass;
     }
@@ -34136,7 +34133,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPFVArType2Common1() {
         if( pfvArType2Common1EClass == null ) {
             pfvArType2Common1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 396 );
+                    .getEClassifiers().get( 395 );
         }
         return pfvArType2Common1EClass;
     }
@@ -34200,7 +34197,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindAeroConstIEC() {
         if( windAeroConstIECEClass == null ) {
             windAeroConstIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 397 );
+                    .getEClassifiers().get( 396 );
         }
         return windAeroConstIECEClass;
     }
@@ -34224,7 +34221,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getHVDCDynamics() {
         if( hvdcDynamicsEClass == null ) {
             hvdcDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 398 );
+                    .getEClassifiers().get( 397 );
         }
         return hvdcDynamicsEClass;
     }
@@ -34238,7 +34235,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTurbineGovernorUserDefined() {
         if( turbineGovernorUserDefinedEClass == null ) {
             turbineGovernorUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 399 );
+                    .getEClassifiers().get( 398 );
         }
         return turbineGovernorUserDefinedEClass;
     }
@@ -34272,7 +34269,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPFVArType1IEEEPFController() {
         if( pfvArType1IEEEPFControllerEClass == null ) {
             pfvArType1IEEEPFControllerEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 400 );
+                    .getEClassifiers().get( 399 );
         }
         return pfvArType1IEEEPFControllerEClass;
     }
@@ -34366,7 +34363,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcDC3A() {
         if( excDC3AEClass == null ) {
             excDC3AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 401 );
+                    .get( 400 );
         }
         return excDC3AEClass;
     }
@@ -34540,7 +34537,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPss2B() {
         if( pss2BEClass == null ) {
             pss2BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 402 );
+                    .get( 401 );
         }
         return pss2BEClass;
     }
@@ -34844,7 +34841,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcDC2A() {
         if( excDC2AEClass == null ) {
             excDC2AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 403 );
+                    .get( 402 );
         }
         return excDC2AEClass;
     }
@@ -35038,7 +35035,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindPlantReactiveControlIEC() {
         if( windPlantReactiveControlIECEClass == null ) {
             windPlantReactiveControlIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 404 );
+                    .getEClassifiers().get( 403 );
         }
         return windPlantReactiveControlIECEClass;
     }
@@ -35252,7 +35249,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovSteamCC() {
         if( govSteamCCEClass == null ) {
             govSteamCCEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 405 );
+                    .get( 404 );
         }
         return govSteamCCEClass;
     }
@@ -35436,7 +35433,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcDC1A() {
         if( excDC1AEClass == null ) {
             excDC1AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 406 );
+                    .get( 405 );
         }
         return excDC1AEClass;
     }
@@ -35630,7 +35627,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getOverexcLim2() {
         if( overexcLim2EClass == null ) {
             overexcLim2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 407 );
+                    .getEClassifiers().get( 406 );
         }
         return overexcLim2EClass;
     }
@@ -35684,7 +35681,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovSteamEU() {
         if( govSteamEUEClass == null ) {
             govSteamEUEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 408 );
+                    .get( 407 );
         }
         return govSteamEUEClass;
     }
@@ -36048,7 +36045,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindDynamicsLookupTable() {
         if( windDynamicsLookupTableEClass == null ) {
             windDynamicsLookupTableEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 409 );
+                    .getEClassifiers().get( 408 );
         }
         return windDynamicsLookupTableEClass;
     }
@@ -36192,7 +36189,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPss1A() {
         if( pss1AEClass == null ) {
             pss1AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 410 );
+                    .get( 409 );
         }
         return pss1AEClass;
     }
@@ -36426,7 +36423,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVoltageAdjusterUserDefined() {
         if( voltageAdjusterUserDefinedEClass == null ) {
             voltageAdjusterUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 411 );
+                    .getEClassifiers().get( 410 );
         }
         return voltageAdjusterUserDefinedEClass;
     }
@@ -36460,7 +36457,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSynchronousMachineDynamics() {
         if( synchronousMachineDynamicsEClass == null ) {
             synchronousMachineDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 412 );
+                    .getEClassifiers().get( 411 );
         }
         return synchronousMachineDynamicsEClass;
     }
@@ -36544,7 +36541,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovSteamBB() {
         if( govSteamBBEClass == null ) {
             govSteamBBEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 413 );
+                    .get( 412 );
         }
         return govSteamBBEClass;
     }
@@ -36728,7 +36725,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getUnderexcLimX2() {
         if( underexcLimX2EClass == null ) {
             underexcLimX2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 414 );
+                    .getEClassifiers().get( 413 );
         }
         return underexcLimX2EClass;
     }
@@ -36812,7 +36809,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getUnderexcLimX1() {
         if( underexcLimX1EClass == null ) {
             underexcLimX1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 415 );
+                    .getEClassifiers().get( 414 );
         }
         return underexcLimX1EClass;
     }
@@ -36886,7 +36883,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindGenType4IEC() {
         if( windGenType4IECEClass == null ) {
             windGenType4IECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 416 );
+                    .getEClassifiers().get( 415 );
         }
         return windGenType4IECEClass;
     }
@@ -36960,7 +36957,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPFVArControllerType1UserDefined() {
         if( pfvArControllerType1UserDefinedEClass == null ) {
             pfvArControllerType1UserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 417 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 416 );
         }
         return pfvArControllerType1UserDefinedEClass;
     }
@@ -36994,7 +36991,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcOEX3T() {
         if( excOEX3TEClass == null ) {
             excOEX3TEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 418 );
+                    .get( 417 );
         }
         return excOEX3TEClass;
     }
@@ -37198,7 +37195,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindGenTurbineType1bIEC() {
         if( windGenTurbineType1bIECEClass == null ) {
             windGenTurbineType1bIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 419 );
+                    .getEClassifiers().get( 418 );
         }
         return windGenTurbineType1bIECEClass;
     }
@@ -37222,7 +37219,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPssSB4() {
         if( pssSB4EClass == null ) {
             pssSB4EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 420 );
+                    .get( 419 );
         }
         return pssSB4EClass;
     }
@@ -37346,7 +37343,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLoadComposite() {
         if( loadCompositeEClass == null ) {
             loadCompositeEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 421 );
+                    .getEClassifiers().get( 420 );
         }
         return loadCompositeEClass;
     }
@@ -37470,7 +37467,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcSEXS() {
         if( excSEXSEClass == null ) {
             excSEXSEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 422 );
+                    .get( 421 );
         }
         return excSEXSEClass;
     }
@@ -37584,7 +37581,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindContPType4aIEC() {
         if( windContPType4aIECEClass == null ) {
             windContPType4aIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 423 );
+                    .getEClassifiers().get( 422 );
         }
         return windContPType4aIECEClass;
     }
@@ -37638,7 +37635,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcAC4A() {
         if( excAC4AEClass == null ) {
             excAC4AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 424 );
+                    .get( 423 );
         }
         return excAC4AEClass;
     }
@@ -37742,7 +37739,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcitationSystemDynamics() {
         if( excitationSystemDynamicsEClass == null ) {
             excitationSystemDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 425 );
+                    .getEClassifiers().get( 424 );
         }
         return excitationSystemDynamicsEClass;
     }
@@ -37836,7 +37833,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcAC3A() {
         if( excAC3AEClass == null ) {
             excAC3AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 426 );
+                    .get( 425 );
         }
         return excAC3AEClass;
     }
@@ -38110,7 +38107,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcAC2A() {
         if( excAC2AEClass == null ) {
             excAC2AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 427 );
+                    .get( 426 );
         }
         return excAC2AEClass;
     }
@@ -38404,7 +38401,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcAC1A() {
         if( excAC1AEClass == null ) {
             excAC1AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 428 );
+                    .get( 427 );
         }
         return excAC1AEClass;
     }
@@ -38638,7 +38635,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcAC8B() {
         if( excAC8BEClass == null ) {
             excAC8BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 429 );
+                    .get( 428 );
         }
         return excAC8BEClass;
     }
@@ -38922,7 +38919,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEST7B() {
         if( excIEEEST7BEClass == null ) {
             excIEEEST7BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 430 );
+                    .getEClassifiers().get( 429 );
         }
         return excIEEEST7BEClass;
     }
@@ -39086,7 +39083,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPssRQB() {
         if( pssRQBEClass == null ) {
             pssRQBEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 431 );
+                    .get( 430 );
         }
         return pssRQBEClass;
     }
@@ -39200,7 +39197,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVCompIEEEType1() {
         if( vCompIEEEType1EClass == null ) {
             vCompIEEEType1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 432 );
+                    .getEClassifiers().get( 431 );
         }
         return vCompIEEEType1EClass;
     }
@@ -39244,7 +39241,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcAC6A() {
         if( excAC6AEClass == null ) {
             excAC6AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 433 );
+                    .get( 432 );
         }
         return excAC6AEClass;
     }
@@ -39488,7 +39485,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getVCompIEEEType2() {
         if( vCompIEEEType2EClass == null ) {
             vCompIEEEType2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 434 );
+                    .getEClassifiers().get( 433 );
         }
         return vCompIEEEType2EClass;
     }
@@ -39522,7 +39519,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcAC5A() {
         if( excAC5AEClass == null ) {
             excAC5AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 435 );
+                    .get( 434 );
         }
         return excAC5AEClass;
     }
@@ -39716,7 +39713,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindMechIEC() {
         if( windMechIECEClass == null ) {
             windMechIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 436 );
+                    .getEClassifiers().get( 435 );
         }
         return windMechIECEClass;
     }
@@ -39800,7 +39797,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getOverexcLimX1() {
         if( overexcLimX1EClass == null ) {
             overexcLimX1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 437 );
+                    .getEClassifiers().get( 436 );
         }
         return overexcLimX1EClass;
     }
@@ -39914,7 +39911,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getOverexcLimX2() {
         if( overexcLimX2EClass == null ) {
             overexcLimX2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 438 );
+                    .getEClassifiers().get( 437 );
         }
         return overexcLimX2EClass;
     }
@@ -40038,7 +40035,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getUnderexcLimIEEE2() {
         if( underexcLimIEEE2EClass == null ) {
             underexcLimIEEE2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 439 );
+                    .getEClassifiers().get( 438 );
         }
         return underexcLimIEEE2EClass;
     }
@@ -40452,7 +40449,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getUnderexcLimIEEE1() {
         if( underexcLimIEEE1EClass == null ) {
             underexcLimIEEE1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 440 );
+                    .getEClassifiers().get( 439 );
         }
         return underexcLimIEEE1EClass;
     }
@@ -40616,7 +40613,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEST3A() {
         if( excIEEEST3AEClass == null ) {
             excIEEEST3AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 441 );
+                    .getEClassifiers().get( 440 );
         }
         return excIEEEST3AEClass;
     }
@@ -40830,7 +40827,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPssSH() {
         if( pssSHEClass == null ) {
             pssSHEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 442 );
+                    .get( 441 );
         }
         return pssSHEClass;
     }
@@ -40974,7 +40971,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovHydroDD() {
         if( govHydroDDEClass == null ) {
             govHydroDDEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 443 );
+                    .get( 442 );
         }
         return govHydroDDEClass;
     }
@@ -41338,7 +41335,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPssSK() {
         if( pssSKEClass == null ) {
             pssSKEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 444 );
+                    .get( 443 );
         }
         return pssSKEClass;
     }
@@ -41462,7 +41459,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEST4B() {
         if( excIEEEST4BEClass == null ) {
             excIEEEST4BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 445 );
+                    .getEClassifiers().get( 444 );
         }
         return excIEEEST4BEClass;
     }
@@ -41636,7 +41633,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindTurbineType4aIEC() {
         if( windTurbineType4aIECEClass == null ) {
             windTurbineType4aIECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 446 );
+                    .getEClassifiers().get( 445 );
         }
         return windTurbineType4aIECEClass;
     }
@@ -41670,7 +41667,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEST5B() {
         if( excIEEEST5BEClass == null ) {
             excIEEEST5BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 447 );
+                    .getEClassifiers().get( 446 );
         }
         return excIEEEST5BEClass;
     }
@@ -41854,7 +41851,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getExcIEEEST6B() {
         if( excIEEEST6BEClass == null ) {
             excIEEEST6BEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 448 );
+                    .getEClassifiers().get( 447 );
         }
         return excIEEEST6BEClass;
     }
@@ -42008,7 +42005,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovSteamFV4() {
         if( govSteamFV4EClass == null ) {
             govSteamFV4EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 449 );
+                    .getEClassifiers().get( 448 );
         }
         return govSteamFV4EClass;
     }
@@ -42532,7 +42529,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovSteamFV3() {
         if( govSteamFV3EClass == null ) {
             govSteamFV3EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 450 );
+                    .getEClassifiers().get( 449 );
         }
         return govSteamFV3EClass;
     }
@@ -42856,7 +42853,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getGovSteamFV2() {
         if( govSteamFV2EClass == null ) {
             govSteamFV2EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 451 );
+                    .getEClassifiers().get( 450 );
         }
         return govSteamFV2EClass;
     }
@@ -42990,7 +42987,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPowerSystemStabilizerDynamics() {
         if( powerSystemStabilizerDynamicsEClass == null ) {
             powerSystemStabilizerDynamicsEClass = ( EClass ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 452 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 451 );
         }
         return powerSystemStabilizerDynamicsEClass;
     }
@@ -43024,7 +43021,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDiscExcContIEEEDEC1A() {
         if( discExcContIEEEDEC1AEClass == null ) {
             discExcContIEEEDEC1AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 453 );
+                    .getEClassifiers().get( 452 );
         }
         return discExcContIEEEDEC1AEClass;
     }
@@ -43218,7 +43215,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindTurbineType3IEC() {
         if( windTurbineType3IECEClass == null ) {
             windTurbineType3IECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 454 );
+                    .getEClassifiers().get( 453 );
         }
         return windTurbineType3IECEClass;
     }
@@ -43292,7 +43289,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindPlantUserDefined() {
         if( windPlantUserDefinedEClass == null ) {
             windPlantUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 455 );
+                    .getEClassifiers().get( 454 );
         }
         return windPlantUserDefinedEClass;
     }
@@ -43326,7 +43323,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDiscExcContIEEEDEC3A() {
         if( discExcContIEEEDEC3AEClass == null ) {
             discExcContIEEEDEC3AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 456 );
+                    .getEClassifiers().get( 455 );
         }
         return discExcContIEEEDEC3AEClass;
     }
@@ -43360,7 +43357,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDiscExcContIEEEDEC2A() {
         if( discExcContIEEEDEC2AEClass == null ) {
             discExcContIEEEDEC2AEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 457 );
+                    .getEClassifiers().get( 456 );
         }
         return discExcContIEEEDEC2AEClass;
     }
@@ -43424,7 +43421,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWindTurbineType3or4IEC() {
         if( windTurbineType3or4IECEClass == null ) {
             windTurbineType3or4IECEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 458 );
+                    .getEClassifiers().get( 457 );
         }
         return windTurbineType3or4IECEClass;
     }
@@ -43498,7 +43495,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSVCUserDefined() {
         if( svcUserDefinedEClass == null ) {
             svcUserDefinedEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 459 );
+                    .getEClassifiers().get( 458 );
         }
         return svcUserDefinedEClass;
     }
@@ -43532,7 +43529,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTurbLCFB1() {
         if( turbLCFB1EClass == null ) {
             turbLCFB1EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 460 );
+                    .get( 459 );
         }
         return turbLCFB1EClass;
     }
@@ -43666,7 +43663,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getStreetAddress() {
         if( streetAddressEClass == null ) {
             streetAddressEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 461 );
+                    .getEClassifiers().get( 460 );
         }
         return streetAddressEClass;
     }
@@ -43740,7 +43737,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getStatus() {
         if( statusEClass == null ) {
             statusEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 462 );
+                    .get( 461 );
         }
         return statusEClass;
     }
@@ -43794,7 +43791,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getServiceLocation() {
         if( serviceLocationEClass == null ) {
             serviceLocationEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 463 );
+                    .getEClassifiers().get( 462 );
         }
         return serviceLocationEClass;
     }
@@ -43808,7 +43805,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCoordinateSystem() {
         if( coordinateSystemEClass == null ) {
             coordinateSystemEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 464 );
+                    .getEClassifiers().get( 463 );
         }
         return coordinateSystemEClass;
     }
@@ -43842,7 +43839,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getPositionPoint() {
         if( positionPointEClass == null ) {
             positionPointEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 465 );
+                    .getEClassifiers().get( 464 );
         }
         return positionPointEClass;
     }
@@ -43906,7 +43903,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getStreetDetail() {
         if( streetDetailEClass == null ) {
             streetDetailEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 466 );
+                    .getEClassifiers().get( 465 );
         }
         return streetDetailEClass;
     }
@@ -44050,7 +44047,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getWorkLocation() {
         if( workLocationEClass == null ) {
             workLocationEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 467 );
+                    .getEClassifiers().get( 466 );
         }
         return workLocationEClass;
     }
@@ -44064,7 +44061,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTownDetail() {
         if( townDetailEClass == null ) {
             townDetailEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 468 );
+                    .get( 467 );
         }
         return townDetailEClass;
     }
@@ -44128,7 +44125,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLocation() {
         if( locationEClass == null ) {
             locationEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 469 );
+                    .get( 468 );
         }
         return locationEClass;
     }
@@ -44182,7 +44179,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAnalogValue() {
         if( analogValueEClass == null ) {
             analogValueEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 472 );
+                    .getEClassifiers().get( 471 );
         }
         return analogValueEClass;
     }
@@ -44216,7 +44213,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getCommand() {
         if( commandEClass == null ) {
             commandEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 473 );
+                    .get( 472 );
         }
         return commandEClass;
     }
@@ -44270,7 +44267,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDiscreteValue() {
         if( discreteValueEClass == null ) {
             discreteValueEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 474 );
+                    .getEClassifiers().get( 473 );
         }
         return discreteValueEClass;
     }
@@ -44304,7 +44301,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getMeasurementValueQuality() {
         if( measurementValueQualityEClass == null ) {
             measurementValueQualityEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 475 );
+                    .getEClassifiers().get( 474 );
         }
         return measurementValueQualityEClass;
     }
@@ -44328,7 +44325,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAnalogLimitSet() {
         if( analogLimitSetEClass == null ) {
             analogLimitSetEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 476 );
+                    .getEClassifiers().get( 475 );
         }
         return analogLimitSetEClass;
     }
@@ -44362,7 +44359,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLimit() {
         if( limitEClass == null ) {
             limitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 477 );
+                    .get( 476 );
         }
         return limitEClass;
     }
@@ -44376,7 +44373,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAnalogControl() {
         if( analogControlEClass == null ) {
             analogControlEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 478 );
+                    .getEClassifiers().get( 477 );
         }
         return analogControlEClass;
     }
@@ -44420,7 +44417,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getStringMeasurementValue() {
         if( stringMeasurementValueEClass == null ) {
             stringMeasurementValueEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 479 );
+                    .getEClassifiers().get( 478 );
         }
         return stringMeasurementValueEClass;
     }
@@ -44444,7 +44441,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAccumulatorValue() {
         if( accumulatorValueEClass == null ) {
             accumulatorValueEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 480 );
+                    .getEClassifiers().get( 479 );
         }
         return accumulatorValueEClass;
     }
@@ -44478,7 +44475,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSetPoint() {
         if( setPointEClass == null ) {
             setPointEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 481 );
+                    .get( 480 );
         }
         return setPointEClass;
     }
@@ -44512,7 +44509,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAnalog() {
         if( analogEClass == null ) {
             analogEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 482 );
+                    .get( 481 );
         }
         return analogEClass;
     }
@@ -44556,7 +44553,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getMeasurementValueSource() {
         if( measurementValueSourceEClass == null ) {
             measurementValueSourceEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 483 );
+                    .getEClassifiers().get( 482 );
         }
         return measurementValueSourceEClass;
     }
@@ -44580,7 +44577,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getMeasurementValue() {
         if( measurementValueEClass == null ) {
             measurementValueEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 484 );
+                    .getEClassifiers().get( 483 );
         }
         return measurementValueEClass;
     }
@@ -44634,7 +44631,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getQuality61850() {
         if( quality61850EClass == null ) {
             quality61850EClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 485 );
+                    .getEClassifiers().get( 484 );
         }
         return quality61850EClass;
     }
@@ -44768,7 +44765,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getLimitSet() {
         if( limitSetEClass == null ) {
             limitSetEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 486 );
+                    .get( 485 );
         }
         return limitSetEClass;
     }
@@ -44792,7 +44789,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAccumulatorLimit() {
         if( accumulatorLimitEClass == null ) {
             accumulatorLimitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 487 );
+                    .getEClassifiers().get( 486 );
         }
         return accumulatorLimitEClass;
     }
@@ -44826,7 +44823,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getMeasurement() {
         if( measurementEClass == null ) {
             measurementEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 488 );
+                    .getEClassifiers().get( 487 );
         }
         return measurementEClass;
     }
@@ -44900,7 +44897,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getValueAliasSet() {
         if( valueAliasSetEClass == null ) {
             valueAliasSetEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 489 );
+                    .getEClassifiers().get( 488 );
         }
         return valueAliasSetEClass;
     }
@@ -44954,7 +44951,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAccumulator() {
         if( accumulatorEClass == null ) {
             accumulatorEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 490 );
+                    .getEClassifiers().get( 489 );
         }
         return accumulatorEClass;
     }
@@ -44988,7 +44985,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAccumulatorLimitSet() {
         if( accumulatorLimitSetEClass == null ) {
             accumulatorLimitSetEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 491 );
+                    .getEClassifiers().get( 490 );
         }
         return accumulatorLimitSetEClass;
     }
@@ -45022,7 +45019,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getValueToAlias() {
         if( valueToAliasEClass == null ) {
             valueToAliasEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 492 );
+                    .getEClassifiers().get( 491 );
         }
         return valueToAliasEClass;
     }
@@ -45056,7 +45053,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDiscrete() {
         if( discreteEClass == null ) {
             discreteEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 493 );
+                    .get( 492 );
         }
         return discreteEClass;
     }
@@ -45090,7 +45087,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getRaiseLowerCommand() {
         if( raiseLowerCommandEClass == null ) {
             raiseLowerCommandEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 494 );
+                    .getEClassifiers().get( 493 );
         }
         return raiseLowerCommandEClass;
     }
@@ -45114,7 +45111,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getIOPoint() {
         if( ioPointEClass == null ) {
             ioPointEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 495 );
+                    .get( 494 );
         }
         return ioPointEClass;
     }
@@ -45128,7 +45125,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAccumulatorReset() {
         if( accumulatorResetEClass == null ) {
             accumulatorResetEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 496 );
+                    .getEClassifiers().get( 495 );
         }
         return accumulatorResetEClass;
     }
@@ -45152,7 +45149,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getAnalogLimit() {
         if( analogLimitEClass == null ) {
             analogLimitEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 497 );
+                    .getEClassifiers().get( 496 );
         }
         return analogLimitEClass;
     }
@@ -45186,7 +45183,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getStringMeasurement() {
         if( stringMeasurementEClass == null ) {
             stringMeasurementEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 498 );
+                    .getEClassifiers().get( 497 );
         }
         return stringMeasurementEClass;
     }
@@ -45210,7 +45207,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getControl() {
         if( controlEClass == null ) {
             controlEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 499 );
+                    .get( 498 );
         }
         return controlEClass;
     }
@@ -45284,7 +45281,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getMutualCoupling() {
         if( mutualCouplingEClass == null ) {
             mutualCouplingEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 502 );
+                    .getEClassifiers().get( 501 );
         }
         return mutualCouplingEClass;
     }
@@ -45398,7 +45395,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSvTapStep() {
         if( svTapStepEClass == null ) {
             svTapStepEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 511 );
+                    .get( 510 );
         }
         return svTapStepEClass;
     }
@@ -45432,7 +45429,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTopologicalIsland() {
         if( topologicalIslandEClass == null ) {
             topologicalIslandEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 512 );
+                    .getEClassifiers().get( 511 );
         }
         return topologicalIslandEClass;
     }
@@ -45466,7 +45463,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSvSwitch() {
         if( svSwitchEClass == null ) {
             svSwitchEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 513 );
+                    .get( 512 );
         }
         return svSwitchEClass;
     }
@@ -45500,7 +45497,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSvPowerFlow() {
         if( svPowerFlowEClass == null ) {
             svPowerFlowEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 514 );
+                    .getEClassifiers().get( 513 );
         }
         return svPowerFlowEClass;
     }
@@ -45544,7 +45541,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSvShuntCompensatorSections() {
         if( svShuntCompensatorSectionsEClass == null ) {
             svShuntCompensatorSectionsEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 515 );
+                    .getEClassifiers().get( 514 );
         }
         return svShuntCompensatorSectionsEClass;
     }
@@ -45578,7 +45575,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSvVoltage() {
         if( svVoltageEClass == null ) {
             svVoltageEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 516 );
+                    .get( 515 );
         }
         return svVoltageEClass;
     }
@@ -45622,7 +45619,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCTopologicalIsland() {
         if( dcTopologicalIslandEClass == null ) {
             dcTopologicalIslandEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 517 );
+                    .getEClassifiers().get( 516 );
         }
         return dcTopologicalIslandEClass;
     }
@@ -45646,7 +45643,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getTopologicalNode() {
         if( topologicalNodeEClass == null ) {
             topologicalNodeEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 518 );
+                    .getEClassifiers().get( 517 );
         }
         return topologicalNodeEClass;
     }
@@ -45750,7 +45747,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSvStatus() {
         if( svStatusEClass == null ) {
             svStatusEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 519 );
+                    .get( 518 );
         }
         return svStatusEClass;
     }
@@ -45784,7 +45781,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getSvInjection() {
         if( svInjectionEClass == null ) {
             svInjectionEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 520 );
+                    .getEClassifiers().get( 519 );
         }
         return svInjectionEClass;
     }
@@ -45828,7 +45825,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EClass getDCTopologicalNode() {
         if( dcTopologicalNodeEClass == null ) {
             dcTopologicalNodeEClass = ( EClass ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 521 );
+                    .getEClassifiers().get( 520 );
         }
         return dcTopologicalNodeEClass;
     }
@@ -45882,7 +45879,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getFuelType() {
         if( fuelTypeEEnum == null ) {
             fuelTypeEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 39 );
+                    .get( 38 );
         }
         return fuelTypeEEnum;
     }
@@ -45896,7 +45893,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getSVCControlMode() {
         if( svcControlModeEEnum == null ) {
             svcControlModeEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 42 );
+                    .getEClassifiers().get( 41 );
         }
         return svcControlModeEEnum;
     }
@@ -45910,7 +45907,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getWindGenUnitKind() {
         if( windGenUnitKindEEnum == null ) {
             windGenUnitKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 35 );
+                    .getEClassifiers().get( 34 );
         }
         return windGenUnitKindEEnum;
     }
@@ -45924,7 +45921,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getCurrency() {
         if( currencyEEnum == null ) {
             currencyEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 48 );
+                    .get( 47 );
         }
         return currencyEEnum;
     }
@@ -45938,7 +45935,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getControlAreaTypeKind() {
         if( controlAreaTypeKindEEnum == null ) {
             controlAreaTypeKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 32 );
+                    .getEClassifiers().get( 31 );
         }
         return controlAreaTypeKindEEnum;
     }
@@ -45952,7 +45949,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getRegulatingControlModeKind() {
         if( regulatingControlModeKindEEnum == null ) {
             regulatingControlModeKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 34 );
+                    .getEClassifiers().get( 33 );
         }
         return regulatingControlModeKindEEnum;
     }
@@ -45966,7 +45963,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getPhaseCode() {
         if( phaseCodeEEnum == null ) {
             phaseCodeEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 38 );
+                    .get( 37 );
         }
         return phaseCodeEEnum;
     }
@@ -45980,7 +45977,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getWindingConnection() {
         if( windingConnectionEEnum == null ) {
             windingConnectionEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 41 );
+                    .getEClassifiers().get( 40 );
         }
         return windingConnectionEEnum;
     }
@@ -45994,7 +45991,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getHydroEnergyConversionKind() {
         if( hydroEnergyConversionKindEEnum == null ) {
             hydroEnergyConversionKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 37 );
+                    .getEClassifiers().get( 36 );
         }
         return hydroEnergyConversionKindEEnum;
     }
@@ -46008,7 +46005,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getUnitSymbol() {
         if( unitSymbolEEnum == null ) {
             unitSymbolEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 47 );
+                    .get( 46 );
         }
         return unitSymbolEEnum;
     }
@@ -46022,7 +46019,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getUnitMultiplier() {
         if( unitMultiplierEEnum == null ) {
             unitMultiplierEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 44 );
+                    .getEClassifiers().get( 43 );
         }
         return unitMultiplierEEnum;
     }
@@ -46036,7 +46033,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getCurveStyle() {
         if( curveStyleEEnum == null ) {
             curveStyleEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 49 );
+                    .get( 48 );
         }
         return curveStyleEEnum;
     }
@@ -46050,7 +46047,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getOrientationKind() {
         if( orientationKindEEnum == null ) {
             orientationKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 207 );
+                    .getEClassifiers().get( 206 );
         }
         return orientationKindEEnum;
     }
@@ -46064,7 +46061,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getWindUVRTQcontrolModeKind() {
         if( windUVRTQcontrolModeKindEEnum == null ) {
             windUVRTQcontrolModeKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 220 );
+                    .getEClassifiers().get( 219 );
         }
         return windUVRTQcontrolModeKindEEnum;
     }
@@ -46078,7 +46075,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getExcIEEEST1AUELselectorKind() {
         if( excIEEEST1AUELselectorKindEEnum == null ) {
             excIEEEST1AUELselectorKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 221 );
+                    .getEClassifiers().get( 220 );
         }
         return excIEEEST1AUELselectorKindEEnum;
     }
@@ -46092,7 +46089,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getExcST6BOELselectorKind() {
         if( excST6BOELselectorKindEEnum == null ) {
             excST6BOELselectorKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 222 );
+                    .getEClassifiers().get( 221 );
         }
         return excST6BOELselectorKindEEnum;
     }
@@ -46106,7 +46103,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getWindPlantQcontrolModeKind() {
         if( windPlantQcontrolModeKindEEnum == null ) {
             windPlantQcontrolModeKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 223 );
+                    .getEClassifiers().get( 222 );
         }
         return windPlantQcontrolModeKindEEnum;
     }
@@ -46120,7 +46117,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getGovHydro4ModelKind() {
         if( govHydro4ModelKindEEnum == null ) {
             govHydro4ModelKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 224 );
+                    .getEClassifiers().get( 223 );
         }
         return govHydro4ModelKindEEnum;
     }
@@ -46134,7 +46131,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getIfdBaseKind() {
         if( ifdBaseKindEEnum == null ) {
             ifdBaseKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 225 );
+                    .get( 224 );
         }
         return ifdBaseKindEEnum;
     }
@@ -46148,7 +46145,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getInputSignalKind() {
         if( inputSignalKindEEnum == null ) {
             inputSignalKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 226 );
+                    .getEClassifiers().get( 225 );
         }
         return inputSignalKindEEnum;
     }
@@ -46162,7 +46159,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getGenericNonLinearLoadModelKind() {
         if( genericNonLinearLoadModelKindEEnum == null ) {
             genericNonLinearLoadModelKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 227 );
+                    .getEClassifiers().get( 226 );
         }
         return genericNonLinearLoadModelKindEEnum;
     }
@@ -46176,7 +46173,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getDroopSignalFeedbackKind() {
         if( droopSignalFeedbackKindEEnum == null ) {
             droopSignalFeedbackKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 228 );
+                    .getEClassifiers().get( 227 );
         }
         return droopSignalFeedbackKindEEnum;
     }
@@ -46190,7 +46187,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getExcREXSFeedbackSignalKind() {
         if( excREXSFeedbackSignalKindEEnum == null ) {
             excREXSFeedbackSignalKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 229 );
+                    .getEClassifiers().get( 228 );
         }
         return excREXSFeedbackSignalKindEEnum;
     }
@@ -46204,7 +46201,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getWindLookupTableFunctionKind() {
         if( windLookupTableFunctionKindEEnum == null ) {
             windLookupTableFunctionKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 230 );
+                    .getEClassifiers().get( 229 );
         }
         return windLookupTableFunctionKindEEnum;
     }
@@ -46218,7 +46215,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getWindQcontrolModeKind() {
         if( windQcontrolModeKindEEnum == null ) {
             windQcontrolModeKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 231 );
+                    .getEClassifiers().get( 230 );
         }
         return windQcontrolModeKindEEnum;
     }
@@ -46232,7 +46229,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getExcST7BUELselectorKind() {
         if( excST7BUELselectorKindEEnum == null ) {
             excST7BUELselectorKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 232 );
+                    .getEClassifiers().get( 231 );
         }
         return excST7BUELselectorKindEEnum;
     }
@@ -46246,7 +46243,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getRemoteSignalKind() {
         if( remoteSignalKindEEnum == null ) {
             remoteSignalKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 233 );
+                    .getEClassifiers().get( 232 );
         }
         return remoteSignalKindEEnum;
     }
@@ -46260,7 +46257,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getFrancisGovernorControlKind() {
         if( francisGovernorControlKindEEnum == null ) {
             francisGovernorControlKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 234 );
+                    .getEClassifiers().get( 233 );
         }
         return francisGovernorControlKindEEnum;
     }
@@ -46274,7 +46271,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getRotorKind() {
         if( rotorKindEEnum == null ) {
             rotorKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 235 );
+                    .get( 234 );
         }
         return rotorKindEEnum;
     }
@@ -46288,7 +46285,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getStaticLoadModelKind() {
         if( staticLoadModelKindEEnum == null ) {
             staticLoadModelKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 236 );
+                    .getEClassifiers().get( 235 );
         }
         return staticLoadModelKindEEnum;
     }
@@ -46302,7 +46299,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getExcST7BOELselectorKind() {
         if( excST7BOELselectorKindEEnum == null ) {
             excST7BOELselectorKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 237 );
+                    .getEClassifiers().get( 236 );
         }
         return excST7BOELselectorKindEEnum;
     }
@@ -46316,7 +46313,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getSynchronousMachineModelKind() {
         if( synchronousMachineModelKindEEnum == null ) {
             synchronousMachineModelKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 238 );
+                    .getEClassifiers().get( 237 );
         }
         return synchronousMachineModelKindEEnum;
     }
@@ -46330,7 +46327,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getValidity() {
         if( validityEEnum == null ) {
             validityEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 470 );
+                    .get( 469 );
         }
         return validityEEnum;
     }
@@ -46344,7 +46341,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getSource() {
         if( sourceEEnum == null ) {
             sourceEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 471 );
+                    .get( 470 );
         }
         return sourceEEnum;
     }
@@ -46358,7 +46355,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getShortCircuitRotorKind() {
         if( shortCircuitRotorKindEEnum == null ) {
             shortCircuitRotorKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 500 );
+                    .getEClassifiers().get( 499 );
         }
         return shortCircuitRotorKindEEnum;
     }
@@ -46372,7 +46369,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getPetersenCoilModeKind() {
         if( petersenCoilModeKindEEnum == null ) {
             petersenCoilModeKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 501 );
+                    .getEClassifiers().get( 500 );
         }
         return petersenCoilModeKindEEnum;
     }
@@ -46386,7 +46383,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getVsPpccControlKind() {
         if( vsPpccControlKindEEnum == null ) {
             vsPpccControlKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 504 );
+                    .getEClassifiers().get( 503 );
         }
         return vsPpccControlKindEEnum;
     }
@@ -46400,7 +46397,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getBatteryStateKind() {
         if( batteryStateKindEEnum == null ) {
             batteryStateKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 505 );
+                    .getEClassifiers().get( 504 );
         }
         return batteryStateKindEEnum;
     }
@@ -46414,7 +46411,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getCsPpccControlKind() {
         if( csPpccControlKindEEnum == null ) {
             csPpccControlKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 506 );
+                    .getEClassifiers().get( 505 );
         }
         return csPpccControlKindEEnum;
     }
@@ -46428,7 +46425,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getVsQpccControlKind() {
         if( vsQpccControlKindEEnum == null ) {
             vsQpccControlKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 507 );
+                    .getEClassifiers().get( 506 );
         }
         return vsQpccControlKindEEnum;
     }
@@ -46442,7 +46439,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getSynchronousMachineOperatingMode() {
         if( synchronousMachineOperatingModeEEnum == null ) {
             synchronousMachineOperatingModeEEnum = ( EEnum ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 508 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 507 );
         }
         return synchronousMachineOperatingModeEEnum;
     }
@@ -46456,7 +46453,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getCsOperatingModeKind() {
         if( csOperatingModeKindEEnum == null ) {
             csOperatingModeKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 509 );
+                    .getEClassifiers().get( 508 );
         }
         return csOperatingModeKindEEnum;
     }
@@ -46470,7 +46467,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getAsynchronousMachineKind() {
         if( asynchronousMachineKindEEnum == null ) {
             asynchronousMachineKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 510 );
+                    .getEClassifiers().get( 509 );
         }
         return asynchronousMachineKindEEnum;
     }
@@ -46498,7 +46495,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getSynchronousMachineKind() {
         if( synchronousMachineKindEEnum == null ) {
             synchronousMachineKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 40 );
+                    .getEClassifiers().get( 39 );
         }
         return synchronousMachineKindEEnum;
     }
@@ -46512,7 +46509,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getGeneratorControlSource() {
         if( generatorControlSourceEEnum == null ) {
             generatorControlSourceEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 43 );
+                    .getEClassifiers().get( 42 );
         }
         return generatorControlSourceEEnum;
     }
@@ -46526,7 +46523,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getOperationalLimitDirectionKind() {
         if( operationalLimitDirectionKindEEnum == null ) {
             operationalLimitDirectionKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 46 );
+                    .getEClassifiers().get( 45 );
         }
         return operationalLimitDirectionKindEEnum;
     }
@@ -46540,7 +46537,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getDCPolarityKind() {
         if( dcPolarityKindEEnum == null ) {
             dcPolarityKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 36 );
+                    .getEClassifiers().get( 35 );
         }
         return dcPolarityKindEEnum;
     }
@@ -46554,7 +46551,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getHydroTurbineKind() {
         if( hydroTurbineKindEEnum == null ) {
             hydroTurbineKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 33 );
+                    .getEClassifiers().get( 32 );
         }
         return hydroTurbineKindEEnum;
     }
@@ -46568,7 +46565,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getHydroPlantStorageKind() {
         if( hydroPlantStorageKindEEnum == null ) {
             hydroPlantStorageKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 45 );
+                    .getEClassifiers().get( 44 );
         }
         return hydroPlantStorageKindEEnum;
     }
@@ -46582,7 +46579,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EEnum getDCConverterOperatingModeKind() {
         if( dcConverterOperatingModeKindEEnum == null ) {
             dcConverterOperatingModeKindEEnum = ( EEnum ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 31 );
+                    .getEClassifiers().get( 30 );
         }
         return dcConverterOperatingModeKindEEnum;
     }
@@ -46596,7 +46593,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getString() {
         if( stringEDataType == null ) {
             stringEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 6 );
+                    .getEClassifiers().get( 5 );
         }
         return stringEDataType;
     }
@@ -46610,7 +46607,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getBoolean() {
         if( booleanEDataType == null ) {
             booleanEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 8 );
+                    .getEClassifiers().get( 7 );
         }
         return booleanEDataType;
     }
@@ -46624,7 +46621,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getDecimal() {
         if( decimalEDataType == null ) {
             decimalEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 7 );
+                    .getEClassifiers().get( 6 );
         }
         return decimalEDataType;
     }
@@ -46638,23 +46635,9 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getDateTime() {
         if( dateTimeEDataType == null ) {
             dateTimeEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 4 );
-        }
-        return dateTimeEDataType;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public EDataType getMonthDay() {
-        if( monthDayEDataType == null ) {
-            monthDayEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
                     .getEClassifiers().get( 3 );
         }
-        return monthDayEDataType;
+        return dateTimeEDataType;
     }
 
     /**
@@ -46666,7 +46649,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getFloat() {
         if( floatEDataType == null ) {
             floatEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 5 );
+                    .getEClassifiers().get( 4 );
         }
         return floatEDataType;
     }
@@ -46694,7 +46677,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getInductance() {
         if( inductanceEDataType == null ) {
             inductanceEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 12 );
+                    .getEClassifiers().get( 11 );
         }
         return inductanceEDataType;
     }
@@ -46708,7 +46691,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getPerCent() {
         if( perCentEDataType == null ) {
             perCentEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 18 );
+                    .getEClassifiers().get( 17 );
         }
         return perCentEDataType;
     }
@@ -46722,7 +46705,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getAngleDegrees() {
         if( angleDegreesEDataType == null ) {
             angleDegreesEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 29 );
+                    .getEClassifiers().get( 28 );
         }
         return angleDegreesEDataType;
     }
@@ -46736,7 +46719,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getRealEnergy() {
         if( realEnergyEDataType == null ) {
             realEnergyEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 9 );
+                    .getEClassifiers().get( 8 );
         }
         return realEnergyEDataType;
     }
@@ -46750,7 +46733,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getLength() {
         if( lengthEDataType == null ) {
             lengthEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 26 );
+                    .getEClassifiers().get( 25 );
         }
         return lengthEDataType;
     }
@@ -46764,7 +46747,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getActivePower() {
         if( activePowerEDataType == null ) {
             activePowerEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 19 );
+                    .getEClassifiers().get( 18 );
         }
         return activePowerEDataType;
     }
@@ -46778,7 +46761,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getActivePowerPerCurrentFlow() {
         if( activePowerPerCurrentFlowEDataType == null ) {
             activePowerPerCurrentFlowEDataType = ( EDataType ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 15 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 14 );
         }
         return activePowerPerCurrentFlowEDataType;
     }
@@ -46792,7 +46775,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getSeconds() {
         if( secondsEDataType == null ) {
             secondsEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 30 );
+                    .getEClassifiers().get( 29 );
         }
         return secondsEDataType;
     }
@@ -46806,7 +46789,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getArea() {
         if( areaEDataType == null ) {
             areaEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 216 );
+                    .get( 215 );
         }
         return areaEDataType;
     }
@@ -46820,7 +46803,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getVolumeFlowRate() {
         if( volumeFlowRateEDataType == null ) {
             volumeFlowRateEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 217 );
+                    .getEClassifiers().get( 216 );
         }
         return volumeFlowRateEDataType;
     }
@@ -46834,7 +46817,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getTemperature() {
         if( temperatureEDataType == null ) {
             temperatureEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 218 );
+                    .getEClassifiers().get( 217 );
         }
         return temperatureEDataType;
     }
@@ -46848,7 +46831,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getPU() {
         if( puEDataType == null ) {
             puEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI ).getEClassifiers()
-                    .get( 219 );
+                    .get( 218 );
         }
         return puEDataType;
     }
@@ -46862,7 +46845,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getAngleRadians() {
         if( angleRadiansEDataType == null ) {
             angleRadiansEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 503 );
+                    .getEClassifiers().get( 502 );
         }
         return angleRadiansEDataType;
     }
@@ -46876,7 +46859,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getReactivePower() {
         if( reactivePowerEDataType == null ) {
             reactivePowerEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 27 );
+                    .getEClassifiers().get( 26 );
         }
         return reactivePowerEDataType;
     }
@@ -46890,7 +46873,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getResistance() {
         if( resistanceEDataType == null ) {
             resistanceEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 17 );
+                    .getEClassifiers().get( 16 );
         }
         return resistanceEDataType;
     }
@@ -46904,7 +46887,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getFrequency() {
         if( frequencyEDataType == null ) {
             frequencyEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 22 );
+                    .getEClassifiers().get( 21 );
         }
         return frequencyEDataType;
     }
@@ -46918,7 +46901,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getVoltagePerReactivePower() {
         if( voltagePerReactivePowerEDataType == null ) {
             voltagePerReactivePowerEDataType = ( EDataType ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 25 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 24 );
         }
         return voltagePerReactivePowerEDataType;
     }
@@ -46932,7 +46915,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getMoney() {
         if( moneyEDataType == null ) {
             moneyEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 11 );
+                    .getEClassifiers().get( 10 );
         }
         return moneyEDataType;
     }
@@ -46946,7 +46929,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getApparentPower() {
         if( apparentPowerEDataType == null ) {
             apparentPowerEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 28 );
+                    .getEClassifiers().get( 27 );
         }
         return apparentPowerEDataType;
     }
@@ -46960,7 +46943,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getReactance() {
         if( reactanceEDataType == null ) {
             reactanceEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 20 );
+                    .getEClassifiers().get( 19 );
         }
         return reactanceEDataType;
     }
@@ -46974,7 +46957,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getConductance() {
         if( conductanceEDataType == null ) {
             conductanceEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 10 );
+                    .getEClassifiers().get( 9 );
         }
         return conductanceEDataType;
     }
@@ -46988,7 +46971,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getCurrentFlow() {
         if( currentFlowEDataType == null ) {
             currentFlowEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 23 );
+                    .getEClassifiers().get( 22 );
         }
         return currentFlowEDataType;
     }
@@ -47002,7 +46985,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getActivePowerPerFrequency() {
         if( activePowerPerFrequencyEDataType == null ) {
             activePowerPerFrequencyEDataType = ( EDataType ) EPackage.Registry.INSTANCE
-                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 21 );
+                    .getEPackage( CimPackage.eNS_URI ).getEClassifiers().get( 20 );
         }
         return activePowerPerFrequencyEDataType;
     }
@@ -47016,7 +46999,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getRotationSpeed() {
         if( rotationSpeedEDataType == null ) {
             rotationSpeedEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 14 );
+                    .getEClassifiers().get( 13 );
         }
         return rotationSpeedEDataType;
     }
@@ -47030,7 +47013,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getSusceptance() {
         if( susceptanceEDataType == null ) {
             susceptanceEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 24 );
+                    .getEClassifiers().get( 23 );
         }
         return susceptanceEDataType;
     }
@@ -47044,7 +47027,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getVoltage() {
         if( voltageEDataType == null ) {
             voltageEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 16 );
+                    .getEClassifiers().get( 15 );
         }
         return voltageEDataType;
     }
@@ -47058,7 +47041,7 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     public EDataType getCapacitance() {
         if( capacitanceEDataType == null ) {
             capacitanceEDataType = ( EDataType ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI )
-                    .getEClassifiers().get( 13 );
+                    .getEClassifiers().get( 12 );
         }
         return capacitanceEDataType;
     }

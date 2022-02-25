@@ -19,7 +19,7 @@
  */
 package fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.impl;
 
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -82,7 +82,7 @@ public class BasicIntervalScheduleImpl extends IdentifiedObjectImpl implements B
      * @generated
      * @ordered
      */
-    protected static final XMLGregorianCalendar START_TIME_EDEFAULT = null;
+    protected static final Date START_TIME_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getStartTime() <em>Start Time</em>}' attribute.
@@ -92,7 +92,7 @@ public class BasicIntervalScheduleImpl extends IdentifiedObjectImpl implements B
      * @generated
      * @ordered
      */
-    protected XMLGregorianCalendar startTime = START_TIME_EDEFAULT;
+    protected Date startTime = START_TIME_EDEFAULT;
 
     /**
      * This is true if the Start Time attribute has been set.
@@ -261,7 +261,7 @@ public class BasicIntervalScheduleImpl extends IdentifiedObjectImpl implements B
      * @generated
      */
     @Override
-    public XMLGregorianCalendar getStartTime() {
+    public Date getStartTime() {
         return startTime;
     }
 
@@ -271,8 +271,8 @@ public class BasicIntervalScheduleImpl extends IdentifiedObjectImpl implements B
      * @generated
      */
     @Override
-    public void setStartTime( XMLGregorianCalendar newStartTime ) {
-        XMLGregorianCalendar oldStartTime = startTime;
+    public void setStartTime( Date newStartTime ) {
+        Date oldStartTime = startTime;
         startTime = newStartTime;
         boolean oldStartTimeESet = startTimeESet;
         startTimeESet = true;
@@ -288,7 +288,7 @@ public class BasicIntervalScheduleImpl extends IdentifiedObjectImpl implements B
      */
     @Override
     public void unsetStartTime() {
-        XMLGregorianCalendar oldStartTime = startTime;
+        Date oldStartTime = startTime;
         boolean oldStartTimeESet = startTimeESet;
         startTime = START_TIME_EDEFAULT;
         startTimeESet = false;
@@ -337,7 +337,7 @@ public class BasicIntervalScheduleImpl extends IdentifiedObjectImpl implements B
             setValue2Unit( ( UnitSymbol ) newValue );
             return;
         case CimPackage.BASIC_INTERVAL_SCHEDULE__START_TIME:
-            setStartTime( ( XMLGregorianCalendar ) newValue );
+            setStartTime( ( Date ) newValue );
             return;
         case CimPackage.BASIC_INTERVAL_SCHEDULE__VALUE1_UNIT:
             setValue1Unit( ( UnitSymbol ) newValue );

@@ -19,7 +19,7 @@
  */
 package fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.impl;
 
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -54,7 +54,7 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
      * @generated
      * @ordered
      */
-    protected static final XMLGregorianCalendar DATE_TIME_EDEFAULT = null;
+    protected static final Date DATE_TIME_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getDateTime() <em>Date Time</em>}' attribute.
@@ -64,7 +64,7 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
      * @generated
      * @ordered
      */
-    protected XMLGregorianCalendar dateTime = DATE_TIME_EDEFAULT;
+    protected Date dateTime = DATE_TIME_EDEFAULT;
 
     /**
      * This is true if the Date Time attribute has been set.
@@ -187,7 +187,7 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
      * @generated
      */
     @Override
-    public XMLGregorianCalendar getDateTime() {
+    public Date getDateTime() {
         return dateTime;
     }
 
@@ -197,8 +197,8 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
      * @generated
      */
     @Override
-    public void setDateTime( XMLGregorianCalendar newDateTime ) {
-        XMLGregorianCalendar oldDateTime = dateTime;
+    public void setDateTime( Date newDateTime ) {
+        Date oldDateTime = dateTime;
         dateTime = newDateTime;
         boolean oldDateTimeESet = dateTimeESet;
         dateTimeESet = true;
@@ -214,7 +214,7 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
      */
     @Override
     public void unsetDateTime() {
-        XMLGregorianCalendar oldDateTime = dateTime;
+        Date oldDateTime = dateTime;
         boolean oldDateTimeESet = dateTimeESet;
         dateTime = DATE_TIME_EDEFAULT;
         dateTimeESet = false;
@@ -418,7 +418,7 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
     public void eSet( int featureID, Object newValue ) {
         switch( featureID ) {
         case CimPackage.STATUS__DATE_TIME:
-            setDateTime( ( XMLGregorianCalendar ) newValue );
+            setDateTime( ( Date ) newValue );
             return;
         case CimPackage.STATUS__REASON:
             setReason( ( String ) newValue );

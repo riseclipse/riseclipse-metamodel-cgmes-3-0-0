@@ -655,7 +655,6 @@
     </genEnums>
     <genDataTypes ecoreDataType="cim.ecore#//Date"/>
     <genDataTypes ecoreDataType="cim.ecore#//Integer"/>
-    <genDataTypes ecoreDataType="cim.ecore#//MonthDay"/>
     <genDataTypes ecoreDataType="cim.ecore#//DateTime"/>
     <genDataTypes ecoreDataType="cim.ecore#//Float"/>
     <genDataTypes ecoreDataType="cim.ecore#//String"/>

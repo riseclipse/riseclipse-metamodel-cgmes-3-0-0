@@ -8,7 +8,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="Date" instanceClassName="javax.xml.datatype.XMLGregorianCalendar">
+  <eClassifiers xsi:type="ecore:EDataType" name="Date" instanceClassName="java.util.Date">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Date as &quot;yyyy-mm-dd&quot;, which conforms with ISO 8601. UTC time zone is specified as &quot;yyyy-mm-ddZ&quot;. A local timezone relative UTC is specified as &quot;yyyy-mm-dd(+/-)hh:mm&quot;."/>
     </eAnnotations>
@@ -18,12 +18,7 @@
       <details key="documentation" value="An integer number. The range is unspecified and not limited."/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="MonthDay" instanceClassName="javax.xml.datatype.XMLGregorianCalendar">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="MonthDay format as &quot;--mm-dd&quot;, which conforms with XSD data type gMonthDay."/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="DateTime" instanceClassName="javax.xml.datatype.XMLGregorianCalendar">
+  <eClassifiers xsi:type="ecore:EDataType" name="DateTime" instanceClassName="java.util.Date">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Date and time as &quot;yyyy-mm-ddThh:mm:ss.sss&quot;, which conforms with ISO 8601. UTC time zone is specified as &quot;yyyy-mm-ddThh:mm:ss.sssZ&quot;. A local timezone relative UTC is specified as &quot;yyyy-mm-ddThh:mm:ss.sss-hh:mm&quot;. The second component (shown here as &quot;ss.sss&quot;) could have any number of digits in its fractional part to allow any kind of precision beyond seconds."/>
     </eAnnotations>
@@ -6994,7 +6989,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A specified time period of the year."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" ordered="false" eType="//MonthDay" transient="true" unsettable="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" ordered="false" transient="true" unsettable="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="name" value="Season.endDate"/>
         <details key="kind" value="element"/>
@@ -7003,8 +6998,9 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Date season ends."/>
       </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2003/XMLType#//GMonthDay"/>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false" eType="//MonthDay" transient="true" unsettable="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false" transient="true" unsettable="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="name" value="Season.startDate"/>
         <details key="kind" value="element"/>
@@ -7013,6 +7009,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Date season starts."/>
       </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2003/XMLType#//GMonthDay"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="SeasonDayTypeSchedules" ordered="false" upperBound="-1" eType="//SeasonDayTypeSchedule" transient="true" unsettable="true" eOpposite="//SeasonDayTypeSchedule/Season">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">

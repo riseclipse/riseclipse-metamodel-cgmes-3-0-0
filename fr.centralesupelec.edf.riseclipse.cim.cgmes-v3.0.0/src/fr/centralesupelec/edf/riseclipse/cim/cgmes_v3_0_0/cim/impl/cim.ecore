@@ -10,10 +10,9 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="Date" instanceClassName="javax.xml.datatype.XMLGregorianCalendar"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Date" instanceClassName="java.util.Date"/>
   <eClassifiers xsi:type="ecore:EDataType" name="Integer" instanceClassName="java.math.BigInteger"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="MonthDay" instanceClassName="javax.xml.datatype.XMLGregorianCalendar"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="DateTime" instanceClassName="javax.xml.datatype.XMLGregorianCalendar"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="DateTime" instanceClassName="java.util.Date"/>
   <eClassifiers xsi:type="ecore:EDataType" name="Float" instanceClassName="java.lang.Double"/>
   <eClassifiers xsi:type="ecore:EDataType" name="String" instanceClassName="java.lang.String"/>
   <eClassifiers xsi:type="ecore:EDataType" name="Decimal" instanceClassName="java.math.BigDecimal"/>
@@ -4085,7 +4084,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="WaveTrap" eSuperTypes="#//AuxiliaryEquipment"/>
   <eClassifiers xsi:type="ecore:EClass" name="Season" eSuperTypes="#//IdentifiedObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" ordered="false"
-        eType="#//MonthDay" transient="true" unsettable="true">
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//GMonthDay"
+        transient="true" unsettable="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="name" value="Season.endDate"/>
         <details key="kind" value="element"/>
@@ -4093,7 +4093,8 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"
-        eType="#//MonthDay" transient="true" unsettable="true">
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//GMonthDay"
+        transient="true" unsettable="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="name" value="Season.startDate"/>
         <details key="kind" value="element"/>

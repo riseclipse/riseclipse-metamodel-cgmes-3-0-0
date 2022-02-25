@@ -19,7 +19,7 @@
  */
 package fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim;
 
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.Date;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -57,13 +57,13 @@ public interface Status extends EObject {
      * @return the value of the '<em>Date Time</em>' attribute.
      * @see #isSetDateTime()
      * @see #unsetDateTime()
-     * @see #setDateTime(XMLGregorianCalendar)
+     * @see #setDateTime(Date)
      * @see fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.CimPackage#getStatus_DateTime()
      * @model unsettable="true" dataType="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.DateTime" transient="true" ordered="false"
      *        extendedMetaData="name='Status.dateTime' kind='element' namespace='http://iec.ch/TC57/CIM100'"
      * @generated
      */
-    XMLGregorianCalendar getDateTime();
+    Date getDateTime();
 
     /**
      * Sets the value of the '{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.Status#getDateTime <em>Date Time</em>}' attribute.
@@ -75,7 +75,7 @@ public interface Status extends EObject {
      * @see #getDateTime()
      * @generated
      */
-    void setDateTime( XMLGregorianCalendar value );
+    void setDateTime( Date value );
 
     /**
      * Unsets the value of the '{@link fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.Status#getDateTime <em>Date Time</em>}' attribute.
@@ -83,7 +83,7 @@ public interface Status extends EObject {
      * <!-- end-user-doc -->
      * @see #isSetDateTime()
      * @see #getDateTime()
-     * @see #setDateTime(XMLGregorianCalendar)
+     * @see #setDateTime(Date)
      * @generated
      */
     void unsetDateTime();
@@ -95,7 +95,7 @@ public interface Status extends EObject {
      * @return whether the value of the '<em>Date Time</em>' attribute is set.
      * @see #unsetDateTime()
      * @see #getDateTime()
-     * @see #setDateTime(XMLGregorianCalendar)
+     * @see #setDateTime(Date)
      * @generated
      */
     boolean isSetDateTime();

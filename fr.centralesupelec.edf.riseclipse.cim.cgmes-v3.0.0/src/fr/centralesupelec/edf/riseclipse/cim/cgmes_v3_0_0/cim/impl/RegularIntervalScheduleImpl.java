@@ -20,8 +20,7 @@
 package fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.impl;
 
 import java.util.Collection;
-
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -89,7 +88,7 @@ public class RegularIntervalScheduleImpl extends BasicIntervalScheduleImpl imple
      * @generated
      * @ordered
      */
-    protected static final XMLGregorianCalendar END_TIME_EDEFAULT = null;
+    protected static final Date END_TIME_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getEndTime() <em>End Time</em>}' attribute.
@@ -99,7 +98,7 @@ public class RegularIntervalScheduleImpl extends BasicIntervalScheduleImpl imple
      * @generated
      * @ordered
      */
-    protected XMLGregorianCalendar endTime = END_TIME_EDEFAULT;
+    protected Date endTime = END_TIME_EDEFAULT;
 
     /**
      * This is true if the End Time attribute has been set.
@@ -232,7 +231,7 @@ public class RegularIntervalScheduleImpl extends BasicIntervalScheduleImpl imple
      * @generated
      */
     @Override
-    public XMLGregorianCalendar getEndTime() {
+    public Date getEndTime() {
         return endTime;
     }
 
@@ -242,8 +241,8 @@ public class RegularIntervalScheduleImpl extends BasicIntervalScheduleImpl imple
      * @generated
      */
     @Override
-    public void setEndTime( XMLGregorianCalendar newEndTime ) {
-        XMLGregorianCalendar oldEndTime = endTime;
+    public void setEndTime( Date newEndTime ) {
+        Date oldEndTime = endTime;
         endTime = newEndTime;
         boolean oldEndTimeESet = endTimeESet;
         endTimeESet = true;
@@ -259,7 +258,7 @@ public class RegularIntervalScheduleImpl extends BasicIntervalScheduleImpl imple
      */
     @Override
     public void unsetEndTime() {
-        XMLGregorianCalendar oldEndTime = endTime;
+        Date oldEndTime = endTime;
         boolean oldEndTimeESet = endTimeESet;
         endTime = END_TIME_EDEFAULT;
         endTimeESet = false;
@@ -339,7 +338,7 @@ public class RegularIntervalScheduleImpl extends BasicIntervalScheduleImpl imple
             setTimeStep( ( Double ) newValue );
             return;
         case CimPackage.REGULAR_INTERVAL_SCHEDULE__END_TIME:
-            setEndTime( ( XMLGregorianCalendar ) newValue );
+            setEndTime( ( Date ) newValue );
             return;
         case CimPackage.REGULAR_INTERVAL_SCHEDULE__TIME_POINTS:
             getTimePoints().clear();
