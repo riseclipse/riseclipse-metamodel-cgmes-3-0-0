@@ -34,7 +34,17 @@ import fr.centralesupelec.edf.riseclipse.util.AbstractRiseClipseModelLoader;
 public class CimModelLoader extends AbstractRiseClipseModelLoader {
     
     public CimModelLoader() {
-        super();
+        super( new CimResourceSet( false ));
+        
+        // Register the appropriate resource factory to handle all file
+        // extensions.
+        resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap()
+            .put( Resource.Factory.Registry.DEFAULT_EXTENSION, new CimResourceFactoryImpl() );
+
+        // Register the package to ensure it is available during loading.
+        resourceSet.getPackageRegistry().put( CimPackage.eNS_URI, CimPackage.eINSTANCE );
+        resourceSet.getPackageRegistry().put( EuPackage.eNS_URI, CimPackage.eINSTANCE );
+        resourceSet.getPackageRegistry().put( ModelDescriptionPackage.eNS_URI, ModelDescriptionPackage.eINSTANCE );
     }
     
     public void reset() {

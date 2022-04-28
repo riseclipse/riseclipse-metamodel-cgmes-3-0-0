@@ -5,8 +5,8 @@ Bundle-SymbolicName: fr.centralesupelec.edf.riseclipse.cim.cgmes-v3.0.0.utilitie
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: fr.centralesupelec.edf.riseclipse.cim.cgmes.v3.0.0.utilities
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Require-Bundle: fr.centralesupelec.edf.riseclipse.main,
- org.eclipse.emf.ecore,
- fr.centralesupelec.edf.riseclipse.cim.headerModel,
- fr.centralesupelec.edf.riseclipse.cim.util,
- fr.centralesupelec.edf.riseclipse.cim.cgmes-v3.0.0
+Require-Bundle: org.eclipse.emf.ecore,
+ fr.centralesupelec.edf.riseclipse.cim.cgmes-v3.0.0;bundle-version="1.0.0",
+ fr.centralesupelec.edf.riseclipse.main;bundle-version="1.2.3",
+ fr.centralesupelec.edf.riseclipse.cim.util;bundle-version="1.2.0",
+ fr.centralesupelec.edf.riseclipse.cim.headerModel;bundle-version="1.2.0"
