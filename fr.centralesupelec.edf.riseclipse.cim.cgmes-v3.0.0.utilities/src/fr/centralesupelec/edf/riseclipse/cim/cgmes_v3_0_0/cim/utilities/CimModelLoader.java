@@ -43,7 +43,7 @@ public class CimModelLoader extends AbstractRiseClipseModelLoader {
 
         // Register the package to ensure it is available during loading.
         resourceSet.getPackageRegistry().put( CimPackage.eNS_URI, CimPackage.eINSTANCE );
-        resourceSet.getPackageRegistry().put( EuPackage.eNS_URI, CimPackage.eINSTANCE );
+        resourceSet.getPackageRegistry().put( EuPackage.eNS_URI, EuPackage.eINSTANCE );
         resourceSet.getPackageRegistry().put( ModelDescriptionPackage.eNS_URI, ModelDescriptionPackage.eINSTANCE );
     }
     
@@ -57,7 +57,7 @@ public class CimModelLoader extends AbstractRiseClipseModelLoader {
 
         // Register the package to ensure it is available during loading.
         resourceSet.getPackageRegistry().put( CimPackage.eNS_URI, CimPackage.eINSTANCE );
-        resourceSet.getPackageRegistry().put( EuPackage.eNS_URI, CimPackage.eINSTANCE );
+        resourceSet.getPackageRegistry().put( EuPackage.eNS_URI, EuPackage.eINSTANCE );
         resourceSet.getPackageRegistry().put( ModelDescriptionPackage.eNS_URI, ModelDescriptionPackage.eINSTANCE );
     }
 
