@@ -4,8 +4,8 @@
     modelDirectory="/fr.centralesupelec.edf.riseclipse.cim.cgmes-v3.0.0/src" modelPluginID="fr.centralesupelec.edf.riseclipse.cim.cgmes-v3.0.0"
     modelName="Cim" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="11.0"
-    copyrightFields="false" operationReflection="true" importOrganizing="true" pluginKey="cgmes-v3.0.0"
-    cleanup="true">
+    copyrightFields="false" runtimeVersion="2.26" operationReflection="true" importOrganizing="true"
+    pluginKey="cgmes-v3.0.0" cleanup="true" eclipsePlatformVersion="2021-12">
   <foreignModel>../../fr.centralesupelec.edf.riseclipse.rdf4j.cim3/cim.ecore</foreignModel>
   <genPackages prefix="Cim" basePackage="fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0"
       resource="XML" disposableProviderFactory="true" loadInitialization="true" literalsInterface="false"

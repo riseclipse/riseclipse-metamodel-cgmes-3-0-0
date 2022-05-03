@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: fr.centralesupelec.edf.riseclipse.cim.cgmes-v3.0.0;singleton:=true
 Automatic-Module-Name: fr.centralesupelec.edf.riseclipse.cim.cgmes-v3.0.0
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.0.1.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
@@ -16,7 +16,8 @@ Export-Package: fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- fr.centralesupelec.edf.riseclipse.main;bundle-version="1.2.3",
+ fr.centralesupelec.edf.riseclipse.main;bundle-version="1.2.5",
  fr.centralesupelec.edf.riseclipse.cim.headerModel;bundle-version="1.2.0",
  fr.centralesupelec.edf.riseclipse.cim.util;bundle-version="1.2.0"
 Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-11
