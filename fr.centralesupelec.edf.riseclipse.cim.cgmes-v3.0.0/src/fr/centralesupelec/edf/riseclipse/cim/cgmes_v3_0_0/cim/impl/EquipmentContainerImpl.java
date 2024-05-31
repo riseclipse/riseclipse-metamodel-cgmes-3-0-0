@@ -96,7 +96,9 @@ public class EquipmentContainerImpl extends ConnectivityNodeContainerImpl implem
      */
     @Override
     public void unsetEquipments() {
-        if( equipments != null ) ( ( InternalEList.Unsettable< ? > ) equipments ).unset();
+        if( equipments != null ) {
+            ( ( InternalEList.Unsettable< ? > ) equipments ).unset();
+        }
     }
 
     /**

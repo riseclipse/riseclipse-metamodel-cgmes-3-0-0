@@ -380,7 +380,9 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
      */
     @Override
     public void unsetClamp() {
-        if( clamp != null ) ( ( InternalEList.Unsettable< ? > ) clamp ).unset();
+        if( clamp != null ) {
+            ( ( InternalEList.Unsettable< ? > ) clamp ).unset();
+        }
     }
 
     /**
@@ -414,9 +416,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         gch = newGch;
         boolean oldGchESet = gchESet;
         gchESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.AC_LINE_SEGMENT__GCH, oldGch, gch,
                     !oldGchESet ) );
+        }
     }
 
     /**
@@ -430,9 +433,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         boolean oldGchESet = gchESet;
         gch = GCH_EDEFAULT;
         gchESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.AC_LINE_SEGMENT__GCH, oldGch,
                     GCH_EDEFAULT, oldGchESet ) );
+        }
     }
 
     /**
@@ -466,9 +470,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         g0ch = newG0ch;
         boolean oldG0chESet = g0chESet;
         g0chESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.AC_LINE_SEGMENT__G0CH, oldG0ch, g0ch,
                     !oldG0chESet ) );
+        }
     }
 
     /**
@@ -482,9 +487,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         boolean oldG0chESet = g0chESet;
         g0ch = G0CH_EDEFAULT;
         g0chESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.AC_LINE_SEGMENT__G0CH, oldG0ch,
                     G0CH_EDEFAULT, oldG0chESet ) );
+        }
     }
 
     /**
@@ -518,10 +524,11 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         shortCircuitEndTemperature = newShortCircuitEndTemperature;
         boolean oldShortCircuitEndTemperatureESet = shortCircuitEndTemperatureESet;
         shortCircuitEndTemperatureESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.AC_LINE_SEGMENT__SHORT_CIRCUIT_END_TEMPERATURE, oldShortCircuitEndTemperature,
                     shortCircuitEndTemperature, !oldShortCircuitEndTemperatureESet ) );
+        }
     }
 
     /**
@@ -535,10 +542,11 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         boolean oldShortCircuitEndTemperatureESet = shortCircuitEndTemperatureESet;
         shortCircuitEndTemperature = SHORT_CIRCUIT_END_TEMPERATURE_EDEFAULT;
         shortCircuitEndTemperatureESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.AC_LINE_SEGMENT__SHORT_CIRCUIT_END_TEMPERATURE, oldShortCircuitEndTemperature,
                     SHORT_CIRCUIT_END_TEMPERATURE_EDEFAULT, oldShortCircuitEndTemperatureESet ) );
+        }
     }
 
     /**
@@ -572,9 +580,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         x0 = newX0;
         boolean oldX0ESet = x0ESet;
         x0ESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.AC_LINE_SEGMENT__X0, oldX0, x0,
                     !oldX0ESet ) );
+        }
     }
 
     /**
@@ -588,9 +597,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         boolean oldX0ESet = x0ESet;
         x0 = X0_EDEFAULT;
         x0ESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.AC_LINE_SEGMENT__X0, oldX0,
                     X0_EDEFAULT, oldX0ESet ) );
+        }
     }
 
     /**
@@ -624,9 +634,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         b0ch = newB0ch;
         boolean oldB0chESet = b0chESet;
         b0chESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.AC_LINE_SEGMENT__B0CH, oldB0ch, b0ch,
                     !oldB0chESet ) );
+        }
     }
 
     /**
@@ -640,9 +651,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         boolean oldB0chESet = b0chESet;
         b0ch = B0CH_EDEFAULT;
         b0chESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.AC_LINE_SEGMENT__B0CH, oldB0ch,
                     B0CH_EDEFAULT, oldB0chESet ) );
+        }
     }
 
     /**
@@ -676,9 +688,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         r0 = newR0;
         boolean oldR0ESet = r0ESet;
         r0ESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.AC_LINE_SEGMENT__R0, oldR0, r0,
                     !oldR0ESet ) );
+        }
     }
 
     /**
@@ -692,9 +705,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         boolean oldR0ESet = r0ESet;
         r0 = R0_EDEFAULT;
         r0ESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.AC_LINE_SEGMENT__R0, oldR0,
                     R0_EDEFAULT, oldR0ESet ) );
+        }
     }
 
     /**
@@ -728,7 +742,9 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
      */
     @Override
     public void unsetCut() {
-        if( cut != null ) ( ( InternalEList.Unsettable< ? > ) cut ).unset();
+        if( cut != null ) {
+            ( ( InternalEList.Unsettable< ? > ) cut ).unset();
+        }
     }
 
     /**
@@ -762,9 +778,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         x = newX;
         boolean oldXESet = xESet;
         xESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.AC_LINE_SEGMENT__X, oldX, x,
                     !oldXESet ) );
+        }
     }
 
     /**
@@ -778,9 +795,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         boolean oldXESet = xESet;
         x = X_EDEFAULT;
         xESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.AC_LINE_SEGMENT__X, oldX, X_EDEFAULT,
                     oldXESet ) );
+        }
     }
 
     /**
@@ -814,9 +832,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         r = newR;
         boolean oldRESet = rESet;
         rESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.AC_LINE_SEGMENT__R, oldR, r,
                     !oldRESet ) );
+        }
     }
 
     /**
@@ -830,9 +849,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         boolean oldRESet = rESet;
         r = R_EDEFAULT;
         rESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.AC_LINE_SEGMENT__R, oldR, R_EDEFAULT,
                     oldRESet ) );
+        }
     }
 
     /**
@@ -866,9 +886,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         bch = newBch;
         boolean oldBchESet = bchESet;
         bchESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.AC_LINE_SEGMENT__BCH, oldBch, bch,
                     !oldBchESet ) );
+        }
     }
 
     /**
@@ -882,9 +903,10 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
         boolean oldBchESet = bchESet;
         bch = BCH_EDEFAULT;
         bchESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.AC_LINE_SEGMENT__BCH, oldBch,
                     BCH_EDEFAULT, oldBchESet ) );
+        }
     }
 
     /**
@@ -1099,54 +1121,74 @@ public class ACLineSegmentImpl extends ConductorImpl implements ACLineSegment {
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (r: " );
-        if( rESet )
+        if( rESet ) {
             result.append( r );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", x: " );
-        if( xESet )
+        if( xESet ) {
             result.append( x );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", bch: " );
-        if( bchESet )
+        if( bchESet ) {
             result.append( bch );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", gch: " );
-        if( gchESet )
+        if( gchESet ) {
             result.append( gch );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", g0ch: " );
-        if( g0chESet )
+        if( g0chESet ) {
             result.append( g0ch );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", shortCircuitEndTemperature: " );
-        if( shortCircuitEndTemperatureESet )
+        if( shortCircuitEndTemperatureESet ) {
             result.append( shortCircuitEndTemperature );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", x0: " );
-        if( x0ESet )
+        if( x0ESet ) {
             result.append( x0 );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", b0ch: " );
-        if( b0chESet )
+        if( b0chESet ) {
             result.append( b0ch );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", r0: " );
-        if( r0ESet )
+        if( r0ESet ) {
             result.append( r0 );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

@@ -128,9 +128,10 @@ public class DCConductingEquipmentImpl extends EquipmentImpl implements DCConduc
         ratedUdc = newRatedUdc;
         boolean oldRatedUdcESet = ratedUdcESet;
         ratedUdcESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DC_CONDUCTING_EQUIPMENT__RATED_UDC,
                     oldRatedUdc, ratedUdc, !oldRatedUdcESet ) );
+        }
     }
 
     /**
@@ -144,9 +145,10 @@ public class DCConductingEquipmentImpl extends EquipmentImpl implements DCConduc
         boolean oldRatedUdcESet = ratedUdcESet;
         ratedUdc = RATED_UDC_EDEFAULT;
         ratedUdcESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DC_CONDUCTING_EQUIPMENT__RATED_UDC,
                     oldRatedUdc, RATED_UDC_EDEFAULT, oldRatedUdcESet ) );
+        }
     }
 
     /**
@@ -180,7 +182,9 @@ public class DCConductingEquipmentImpl extends EquipmentImpl implements DCConduc
      */
     @Override
     public void unsetDCTerminals() {
-        if( dcTerminals != null ) ( ( InternalEList.Unsettable< ? > ) dcTerminals ).unset();
+        if( dcTerminals != null ) {
+            ( ( InternalEList.Unsettable< ? > ) dcTerminals ).unset();
+        }
     }
 
     /**
@@ -300,14 +304,18 @@ public class DCConductingEquipmentImpl extends EquipmentImpl implements DCConduc
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (ratedUdc: " );
-        if( ratedUdcESet )
+        if( ratedUdcESet ) {
             result.append( ratedUdc );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

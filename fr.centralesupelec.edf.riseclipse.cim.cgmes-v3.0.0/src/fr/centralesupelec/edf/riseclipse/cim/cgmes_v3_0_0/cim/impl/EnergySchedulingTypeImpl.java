@@ -97,7 +97,9 @@ public class EnergySchedulingTypeImpl extends IdentifiedObjectImpl implements En
      */
     @Override
     public void unsetEnergySource() {
-        if( energySource != null ) ( ( InternalEList.Unsettable< ? > ) energySource ).unset();
+        if( energySource != null ) {
+            ( ( InternalEList.Unsettable< ? > ) energySource ).unset();
+        }
     }
 
     /**

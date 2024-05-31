@@ -270,9 +270,10 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
         x1InitialView = newX1InitialView;
         boolean oldX1InitialViewESet = x1InitialViewESet;
         x1InitialViewESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM__X1_INITIAL_VIEW,
                     oldX1InitialView, x1InitialView, !oldX1InitialViewESet ) );
+        }
     }
 
     /**
@@ -286,9 +287,10 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
         boolean oldX1InitialViewESet = x1InitialViewESet;
         x1InitialView = X1_INITIAL_VIEW_EDEFAULT;
         x1InitialViewESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DIAGRAM__X1_INITIAL_VIEW,
                     oldX1InitialView, X1_INITIAL_VIEW_EDEFAULT, oldX1InitialViewESet ) );
+        }
     }
 
     /**
@@ -322,9 +324,10 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
         y1InitialView = newY1InitialView;
         boolean oldY1InitialViewESet = y1InitialViewESet;
         y1InitialViewESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM__Y1_INITIAL_VIEW,
                     oldY1InitialView, y1InitialView, !oldY1InitialViewESet ) );
+        }
     }
 
     /**
@@ -338,9 +341,10 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
         boolean oldY1InitialViewESet = y1InitialViewESet;
         y1InitialView = Y1_INITIAL_VIEW_EDEFAULT;
         y1InitialViewESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DIAGRAM__Y1_INITIAL_VIEW,
                     oldY1InitialView, Y1_INITIAL_VIEW_EDEFAULT, oldY1InitialViewESet ) );
+        }
     }
 
     /**
@@ -374,9 +378,10 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
         orientation = newOrientation == null ? ORIENTATION_EDEFAULT : newOrientation;
         boolean oldOrientationESet = orientationESet;
         orientationESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM__ORIENTATION, oldOrientation,
                     orientation, !oldOrientationESet ) );
+        }
     }
 
     /**
@@ -390,9 +395,10 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
         boolean oldOrientationESet = orientationESet;
         orientation = ORIENTATION_EDEFAULT;
         orientationESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DIAGRAM__ORIENTATION, oldOrientation,
                     ORIENTATION_EDEFAULT, oldOrientationESet ) );
+        }
     }
 
     /**
@@ -426,9 +432,10 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
         y2InitialView = newY2InitialView;
         boolean oldY2InitialViewESet = y2InitialViewESet;
         y2InitialViewESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM__Y2_INITIAL_VIEW,
                     oldY2InitialView, y2InitialView, !oldY2InitialViewESet ) );
+        }
     }
 
     /**
@@ -442,9 +449,10 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
         boolean oldY2InitialViewESet = y2InitialViewESet;
         y2InitialView = Y2_INITIAL_VIEW_EDEFAULT;
         y2InitialViewESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DIAGRAM__Y2_INITIAL_VIEW,
                     oldY2InitialView, Y2_INITIAL_VIEW_EDEFAULT, oldY2InitialViewESet ) );
+        }
     }
 
     /**
@@ -478,7 +486,9 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
      */
     @Override
     public void unsetDiagramElements() {
-        if( diagramElements != null ) ( ( InternalEList.Unsettable< ? > ) diagramElements ).unset();
+        if( diagramElements != null ) {
+            ( ( InternalEList.Unsettable< ? > ) diagramElements ).unset();
+        }
     }
 
     /**
@@ -512,9 +522,10 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
         x2InitialView = newX2InitialView;
         boolean oldX2InitialViewESet = x2InitialViewESet;
         x2InitialViewESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM__X2_INITIAL_VIEW,
                     oldX2InitialView, x2InitialView, !oldX2InitialViewESet ) );
+        }
     }
 
     /**
@@ -528,9 +539,10 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
         boolean oldX2InitialViewESet = x2InitialViewESet;
         x2InitialView = X2_INITIAL_VIEW_EDEFAULT;
         x2InitialViewESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DIAGRAM__X2_INITIAL_VIEW,
                     oldX2InitialView, X2_INITIAL_VIEW_EDEFAULT, oldX2InitialViewESet ) );
+        }
     }
 
     /**
@@ -566,10 +578,12 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.DIAGRAM__DIAGRAM_STYLE, oldDiagramStyle, newDiagramStyle, !oldDiagramStyleESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -583,21 +597,26 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
     public void setDiagramStyle( DiagramStyle newDiagramStyle ) {
         if( newDiagramStyle != diagramStyle ) {
             NotificationChain msgs = null;
-            if( diagramStyle != null )
+            if( diagramStyle != null ) {
                 msgs = ( ( InternalEObject ) diagramStyle ).eInverseRemove( this, CimPackage.DIAGRAM_STYLE__DIAGRAM,
                         DiagramStyle.class, msgs );
-            if( newDiagramStyle != null )
+            }
+            if( newDiagramStyle != null ) {
                 msgs = ( ( InternalEObject ) newDiagramStyle ).eInverseAdd( this, CimPackage.DIAGRAM_STYLE__DIAGRAM,
                         DiagramStyle.class, msgs );
+            }
             msgs = basicSetDiagramStyle( newDiagramStyle, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldDiagramStyleESet = diagramStyleESet;
             diagramStyleESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM__DIAGRAM_STYLE,
                         newDiagramStyle, newDiagramStyle, !oldDiagramStyleESet ) );
+            }
         }
     }
 
@@ -614,10 +633,12 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.DIAGRAM__DIAGRAM_STYLE, oldDiagramStyle, null, oldDiagramStyleESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -634,14 +655,17 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
             msgs = ( ( InternalEObject ) diagramStyle ).eInverseRemove( this, CimPackage.DIAGRAM_STYLE__DIAGRAM,
                     DiagramStyle.class, msgs );
             msgs = basicUnsetDiagramStyle( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldDiagramStyleESet = diagramStyleESet;
             diagramStyleESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DIAGRAM__DIAGRAM_STYLE, null, null,
                         oldDiagramStyleESet ) );
+            }
         }
     }
 
@@ -668,9 +692,10 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getDiagramElements() )
                     .basicAdd( otherEnd, msgs );
         case CimPackage.DIAGRAM__DIAGRAM_STYLE:
-            if( diagramStyle != null )
+            if( diagramStyle != null ) {
                 msgs = ( ( InternalEObject ) diagramStyle ).eInverseRemove( this, CimPackage.DIAGRAM_STYLE__DIAGRAM,
                         DiagramStyle.class, msgs );
+            }
             return basicSetDiagramStyle( ( DiagramStyle ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );
@@ -819,34 +844,46 @@ public class DiagramImpl extends IdentifiedObjectImpl implements Diagram {
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (x1InitialView: " );
-        if( x1InitialViewESet )
+        if( x1InitialViewESet ) {
             result.append( x1InitialView );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", y1InitialView: " );
-        if( y1InitialViewESet )
+        if( y1InitialViewESet ) {
             result.append( y1InitialView );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", orientation: " );
-        if( orientationESet )
+        if( orientationESet ) {
             result.append( orientation );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", y2InitialView: " );
-        if( y2InitialViewESet )
+        if( y2InitialViewESet ) {
             result.append( y2InitialView );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", x2InitialView: " );
-        if( x2InitialViewESet )
+        if( x2InitialViewESet ) {
             result.append( x2InitialView );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

@@ -296,7 +296,9 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
      */
     @Override
     public void unsetConverterDCSides() {
-        if( converterDCSides != null ) ( ( InternalEList.Unsettable< ? > ) converterDCSides ).unset();
+        if( converterDCSides != null ) {
+            ( ( InternalEList.Unsettable< ? > ) converterDCSides ).unset();
+        }
     }
 
     /**
@@ -330,7 +332,9 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
      */
     @Override
     public void unsetTransformerEnd() {
-        if( transformerEnd != null ) ( ( InternalEList.Unsettable< ? > ) transformerEnd ).unset();
+        if( transformerEnd != null ) {
+            ( ( InternalEList.Unsettable< ? > ) transformerEnd ).unset();
+        }
     }
 
     /**
@@ -364,9 +368,10 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
         phases = newPhases == null ? PHASES_EDEFAULT : newPhases;
         boolean oldPhasesESet = phasesESet;
         phasesESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.TERMINAL__PHASES, oldPhases, phases,
                     !oldPhasesESet ) );
+        }
     }
 
     /**
@@ -380,9 +385,10 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
         boolean oldPhasesESet = phasesESet;
         phases = PHASES_EDEFAULT;
         phasesESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.TERMINAL__PHASES, oldPhases,
                     PHASES_EDEFAULT, oldPhasesESet ) );
+        }
     }
 
     /**
@@ -420,10 +426,12 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.TERMINAL__CONDUCTING_EQUIPMENT, oldConductingEquipment, newConductingEquipment,
                     !oldConductingEquipmentESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -437,21 +445,26 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
     public void setConductingEquipment( ConductingEquipment newConductingEquipment ) {
         if( newConductingEquipment != conductingEquipment ) {
             NotificationChain msgs = null;
-            if( conductingEquipment != null )
+            if( conductingEquipment != null ) {
                 msgs = ( ( InternalEObject ) conductingEquipment ).eInverseRemove( this,
                         CimPackage.CONDUCTING_EQUIPMENT__TERMINALS, ConductingEquipment.class, msgs );
-            if( newConductingEquipment != null )
+            }
+            if( newConductingEquipment != null ) {
                 msgs = ( ( InternalEObject ) newConductingEquipment ).eInverseAdd( this,
                         CimPackage.CONDUCTING_EQUIPMENT__TERMINALS, ConductingEquipment.class, msgs );
+            }
             msgs = basicSetConductingEquipment( newConductingEquipment, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldConductingEquipmentESet = conductingEquipmentESet;
             conductingEquipmentESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.TERMINAL__CONDUCTING_EQUIPMENT,
                         newConductingEquipment, newConductingEquipment, !oldConductingEquipmentESet ) );
+            }
         }
     }
 
@@ -469,10 +482,12 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.TERMINAL__CONDUCTING_EQUIPMENT, oldConductingEquipment, null,
                     oldConductingEquipmentESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -489,14 +504,17 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
             msgs = ( ( InternalEObject ) conductingEquipment ).eInverseRemove( this,
                     CimPackage.CONDUCTING_EQUIPMENT__TERMINALS, ConductingEquipment.class, msgs );
             msgs = basicUnsetConductingEquipment( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldConductingEquipmentESet = conductingEquipmentESet;
             conductingEquipmentESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.TERMINAL__CONDUCTING_EQUIPMENT,
                         null, null, oldConductingEquipmentESet ) );
+            }
         }
     }
 
@@ -532,7 +550,9 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
      */
     @Override
     public void unsetRegulatingControl() {
-        if( regulatingControl != null ) ( ( InternalEList.Unsettable< ? > ) regulatingControl ).unset();
+        if( regulatingControl != null ) {
+            ( ( InternalEList.Unsettable< ? > ) regulatingControl ).unset();
+        }
     }
 
     /**
@@ -569,10 +589,12 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.TERMINAL__CONNECTIVITY_NODE, oldConnectivityNode, newConnectivityNode,
                     !oldConnectivityNodeESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -586,21 +608,26 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
     public void setConnectivityNode( ConnectivityNode newConnectivityNode ) {
         if( newConnectivityNode != connectivityNode ) {
             NotificationChain msgs = null;
-            if( connectivityNode != null )
+            if( connectivityNode != null ) {
                 msgs = ( ( InternalEObject ) connectivityNode ).eInverseRemove( this,
                         CimPackage.CONNECTIVITY_NODE__TERMINALS, ConnectivityNode.class, msgs );
-            if( newConnectivityNode != null )
+            }
+            if( newConnectivityNode != null ) {
                 msgs = ( ( InternalEObject ) newConnectivityNode ).eInverseAdd( this,
                         CimPackage.CONNECTIVITY_NODE__TERMINALS, ConnectivityNode.class, msgs );
+            }
             msgs = basicSetConnectivityNode( newConnectivityNode, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldConnectivityNodeESet = connectivityNodeESet;
             connectivityNodeESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.TERMINAL__CONNECTIVITY_NODE,
                         newConnectivityNode, newConnectivityNode, !oldConnectivityNodeESet ) );
+            }
         }
     }
 
@@ -617,10 +644,12 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.TERMINAL__CONNECTIVITY_NODE, oldConnectivityNode, null, oldConnectivityNodeESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -637,14 +666,17 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
             msgs = ( ( InternalEObject ) connectivityNode ).eInverseRemove( this,
                     CimPackage.CONNECTIVITY_NODE__TERMINALS, ConnectivityNode.class, msgs );
             msgs = basicUnsetConnectivityNode( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldConnectivityNodeESet = connectivityNodeESet;
             connectivityNodeESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.TERMINAL__CONNECTIVITY_NODE, null,
                         null, oldConnectivityNodeESet ) );
+            }
         }
     }
 
@@ -679,7 +711,9 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
      */
     @Override
     public void unsetTieFlow() {
-        if( tieFlow != null ) ( ( InternalEList.Unsettable< ? > ) tieFlow ).unset();
+        if( tieFlow != null ) {
+            ( ( InternalEList.Unsettable< ? > ) tieFlow ).unset();
+        }
     }
 
     /**
@@ -714,7 +748,9 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
      */
     @Override
     public void unsetRemoteInputSignal() {
-        if( remoteInputSignal != null ) ( ( InternalEList.Unsettable< ? > ) remoteInputSignal ).unset();
+        if( remoteInputSignal != null ) {
+            ( ( InternalEList.Unsettable< ? > ) remoteInputSignal ).unset();
+        }
     }
 
     /**
@@ -749,7 +785,9 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
      */
     @Override
     public void unsetHasSecondMutualCoupling() {
-        if( hasSecondMutualCoupling != null ) ( ( InternalEList.Unsettable< ? > ) hasSecondMutualCoupling ).unset();
+        if( hasSecondMutualCoupling != null ) {
+            ( ( InternalEList.Unsettable< ? > ) hasSecondMutualCoupling ).unset();
+        }
     }
 
     /**
@@ -784,7 +822,9 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
      */
     @Override
     public void unsetHasFirstMutualCoupling() {
-        if( hasFirstMutualCoupling != null ) ( ( InternalEList.Unsettable< ? > ) hasFirstMutualCoupling ).unset();
+        if( hasFirstMutualCoupling != null ) {
+            ( ( InternalEList.Unsettable< ? > ) hasFirstMutualCoupling ).unset();
+        }
     }
 
     /**
@@ -808,9 +848,10 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
             InternalEObject oldSvPowerFlow = ( InternalEObject ) svPowerFlow;
             svPowerFlow = ( SvPowerFlow ) eResolveProxy( oldSvPowerFlow );
             if( svPowerFlow != oldSvPowerFlow ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE, CimPackage.TERMINAL__SV_POWER_FLOW,
                             oldSvPowerFlow, svPowerFlow ) );
+                }
             }
         }
         return svPowerFlow;
@@ -838,10 +879,12 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.TERMINAL__SV_POWER_FLOW, oldSvPowerFlow, newSvPowerFlow, !oldSvPowerFlowESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -855,21 +898,26 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
     public void setSvPowerFlow( SvPowerFlow newSvPowerFlow ) {
         if( newSvPowerFlow != svPowerFlow ) {
             NotificationChain msgs = null;
-            if( svPowerFlow != null )
+            if( svPowerFlow != null ) {
                 msgs = ( ( InternalEObject ) svPowerFlow ).eInverseRemove( this, CimPackage.SV_POWER_FLOW__TERMINAL,
                         SvPowerFlow.class, msgs );
-            if( newSvPowerFlow != null )
+            }
+            if( newSvPowerFlow != null ) {
                 msgs = ( ( InternalEObject ) newSvPowerFlow ).eInverseAdd( this, CimPackage.SV_POWER_FLOW__TERMINAL,
                         SvPowerFlow.class, msgs );
+            }
             msgs = basicSetSvPowerFlow( newSvPowerFlow, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldSvPowerFlowESet = svPowerFlowESet;
             svPowerFlowESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.TERMINAL__SV_POWER_FLOW,
                         newSvPowerFlow, newSvPowerFlow, !oldSvPowerFlowESet ) );
+            }
         }
     }
 
@@ -886,10 +934,12 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.TERMINAL__SV_POWER_FLOW, oldSvPowerFlow, null, oldSvPowerFlowESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -906,14 +956,17 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
             msgs = ( ( InternalEObject ) svPowerFlow ).eInverseRemove( this, CimPackage.SV_POWER_FLOW__TERMINAL,
                     SvPowerFlow.class, msgs );
             msgs = basicUnsetSvPowerFlow( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldSvPowerFlowESet = svPowerFlowESet;
             svPowerFlowESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.TERMINAL__SV_POWER_FLOW, null,
                         null, oldSvPowerFlowESet ) );
+            }
         }
     }
 
@@ -951,10 +1004,12 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.TERMINAL__TOPOLOGICAL_NODE, oldTopologicalNode, newTopologicalNode,
                     !oldTopologicalNodeESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -968,21 +1023,26 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
     public void setTopologicalNode( TopologicalNode newTopologicalNode ) {
         if( newTopologicalNode != topologicalNode ) {
             NotificationChain msgs = null;
-            if( topologicalNode != null )
+            if( topologicalNode != null ) {
                 msgs = ( ( InternalEObject ) topologicalNode ).eInverseRemove( this,
                         CimPackage.TOPOLOGICAL_NODE__TERMINAL, TopologicalNode.class, msgs );
-            if( newTopologicalNode != null )
+            }
+            if( newTopologicalNode != null ) {
                 msgs = ( ( InternalEObject ) newTopologicalNode ).eInverseAdd( this,
                         CimPackage.TOPOLOGICAL_NODE__TERMINAL, TopologicalNode.class, msgs );
+            }
             msgs = basicSetTopologicalNode( newTopologicalNode, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldTopologicalNodeESet = topologicalNodeESet;
             topologicalNodeESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.TERMINAL__TOPOLOGICAL_NODE,
                         newTopologicalNode, newTopologicalNode, !oldTopologicalNodeESet ) );
+            }
         }
     }
 
@@ -999,10 +1059,12 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.TERMINAL__TOPOLOGICAL_NODE, oldTopologicalNode, null, oldTopologicalNodeESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -1019,14 +1081,17 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
             msgs = ( ( InternalEObject ) topologicalNode ).eInverseRemove( this, CimPackage.TOPOLOGICAL_NODE__TERMINAL,
                     TopologicalNode.class, msgs );
             msgs = basicUnsetTopologicalNode( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldTopologicalNodeESet = topologicalNodeESet;
             topologicalNodeESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.TERMINAL__TOPOLOGICAL_NODE, null,
                         null, oldTopologicalNodeESet ) );
+            }
         }
     }
 
@@ -1062,7 +1127,9 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
      */
     @Override
     public void unsetAuxiliaryEquipment() {
-        if( auxiliaryEquipment != null ) ( ( InternalEList.Unsettable< ? > ) auxiliaryEquipment ).unset();
+        if( auxiliaryEquipment != null ) {
+            ( ( InternalEList.Unsettable< ? > ) auxiliaryEquipment ).unset();
+        }
     }
 
     /**
@@ -1088,14 +1155,16 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getTransformerEnd() )
                     .basicAdd( otherEnd, msgs );
         case CimPackage.TERMINAL__CONDUCTING_EQUIPMENT:
-            if( conductingEquipment != null )
+            if( conductingEquipment != null ) {
                 msgs = ( ( InternalEObject ) conductingEquipment ).eInverseRemove( this,
                         CimPackage.CONDUCTING_EQUIPMENT__TERMINALS, ConductingEquipment.class, msgs );
+            }
             return basicSetConductingEquipment( ( ConductingEquipment ) otherEnd, msgs );
         case CimPackage.TERMINAL__CONNECTIVITY_NODE:
-            if( connectivityNode != null )
+            if( connectivityNode != null ) {
                 msgs = ( ( InternalEObject ) connectivityNode ).eInverseRemove( this,
                         CimPackage.CONNECTIVITY_NODE__TERMINALS, ConnectivityNode.class, msgs );
+            }
             return basicSetConnectivityNode( ( ConnectivityNode ) otherEnd, msgs );
         case CimPackage.TERMINAL__AUXILIARY_EQUIPMENT:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getAuxiliaryEquipment() )
@@ -1119,14 +1188,16 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getHasFirstMutualCoupling() )
                     .basicAdd( otherEnd, msgs );
         case CimPackage.TERMINAL__SV_POWER_FLOW:
-            if( svPowerFlow != null )
+            if( svPowerFlow != null ) {
                 msgs = ( ( InternalEObject ) svPowerFlow ).eInverseRemove( this, CimPackage.SV_POWER_FLOW__TERMINAL,
                         SvPowerFlow.class, msgs );
+            }
             return basicSetSvPowerFlow( ( SvPowerFlow ) otherEnd, msgs );
         case CimPackage.TERMINAL__TOPOLOGICAL_NODE:
-            if( topologicalNode != null )
+            if( topologicalNode != null ) {
                 msgs = ( ( InternalEObject ) topologicalNode ).eInverseRemove( this,
                         CimPackage.TOPOLOGICAL_NODE__TERMINAL, TopologicalNode.class, msgs );
+            }
             return basicSetTopologicalNode( ( TopologicalNode ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );
@@ -1199,7 +1270,9 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
         case CimPackage.TERMINAL__HAS_FIRST_MUTUAL_COUPLING:
             return getHasFirstMutualCoupling();
         case CimPackage.TERMINAL__SV_POWER_FLOW:
-            if( resolve ) return getSvPowerFlow();
+            if( resolve ) {
+                return getSvPowerFlow();
+            }
             return basicGetSvPowerFlow();
         case CimPackage.TERMINAL__TOPOLOGICAL_NODE:
             return getTopologicalNode();
@@ -1363,14 +1436,18 @@ public class TerminalImpl extends ACDCTerminalImpl implements Terminal {
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (phases: " );
-        if( phasesESet )
+        if( phasesESet ) {
             result.append( phases );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

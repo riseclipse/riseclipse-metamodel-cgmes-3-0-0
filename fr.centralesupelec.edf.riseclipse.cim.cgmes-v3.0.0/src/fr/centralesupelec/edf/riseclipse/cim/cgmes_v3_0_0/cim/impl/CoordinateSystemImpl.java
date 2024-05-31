@@ -128,9 +128,10 @@ public class CoordinateSystemImpl extends IdentifiedObjectImpl implements Coordi
         crsUrn = newCrsUrn;
         boolean oldCrsUrnESet = crsUrnESet;
         crsUrnESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.COORDINATE_SYSTEM__CRS_URN, oldCrsUrn,
                     crsUrn, !oldCrsUrnESet ) );
+        }
     }
 
     /**
@@ -144,9 +145,10 @@ public class CoordinateSystemImpl extends IdentifiedObjectImpl implements Coordi
         boolean oldCrsUrnESet = crsUrnESet;
         crsUrn = CRS_URN_EDEFAULT;
         crsUrnESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.COORDINATE_SYSTEM__CRS_URN, oldCrsUrn,
                     CRS_URN_EDEFAULT, oldCrsUrnESet ) );
+        }
     }
 
     /**
@@ -180,7 +182,9 @@ public class CoordinateSystemImpl extends IdentifiedObjectImpl implements Coordi
      */
     @Override
     public void unsetLocations() {
-        if( locations != null ) ( ( InternalEList.Unsettable< ? > ) locations ).unset();
+        if( locations != null ) {
+            ( ( InternalEList.Unsettable< ? > ) locations ).unset();
+        }
     }
 
     /**
@@ -300,14 +304,18 @@ public class CoordinateSystemImpl extends IdentifiedObjectImpl implements Coordi
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (crsUrn: " );
-        if( crsUrnESet )
+        if( crsUrnESet ) {
             result.append( crsUrn );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

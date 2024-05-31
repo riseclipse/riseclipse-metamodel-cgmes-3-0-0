@@ -140,7 +140,9 @@ public class ConductingEquipmentImpl extends EquipmentImpl implements Conducting
      */
     @Override
     public void unsetTerminals() {
-        if( terminals != null ) ( ( InternalEList.Unsettable< ? > ) terminals ).unset();
+        if( terminals != null ) {
+            ( ( InternalEList.Unsettable< ? > ) terminals ).unset();
+        }
     }
 
     /**
@@ -177,10 +179,12 @@ public class ConductingEquipmentImpl extends EquipmentImpl implements Conducting
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.CONDUCTING_EQUIPMENT__BASE_VOLTAGE, oldBaseVoltage, newBaseVoltage,
                     !oldBaseVoltageESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -194,21 +198,26 @@ public class ConductingEquipmentImpl extends EquipmentImpl implements Conducting
     public void setBaseVoltage( BaseVoltage newBaseVoltage ) {
         if( newBaseVoltage != baseVoltage ) {
             NotificationChain msgs = null;
-            if( baseVoltage != null )
+            if( baseVoltage != null ) {
                 msgs = ( ( InternalEObject ) baseVoltage ).eInverseRemove( this,
                         CimPackage.BASE_VOLTAGE__CONDUCTING_EQUIPMENT, BaseVoltage.class, msgs );
-            if( newBaseVoltage != null )
+            }
+            if( newBaseVoltage != null ) {
                 msgs = ( ( InternalEObject ) newBaseVoltage ).eInverseAdd( this,
                         CimPackage.BASE_VOLTAGE__CONDUCTING_EQUIPMENT, BaseVoltage.class, msgs );
+            }
             msgs = basicSetBaseVoltage( newBaseVoltage, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldBaseVoltageESet = baseVoltageESet;
             baseVoltageESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.CONDUCTING_EQUIPMENT__BASE_VOLTAGE,
                         newBaseVoltage, newBaseVoltage, !oldBaseVoltageESet ) );
+            }
         }
     }
 
@@ -225,10 +234,12 @@ public class ConductingEquipmentImpl extends EquipmentImpl implements Conducting
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.CONDUCTING_EQUIPMENT__BASE_VOLTAGE, oldBaseVoltage, null, oldBaseVoltageESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -245,14 +256,17 @@ public class ConductingEquipmentImpl extends EquipmentImpl implements Conducting
             msgs = ( ( InternalEObject ) baseVoltage ).eInverseRemove( this,
                     CimPackage.BASE_VOLTAGE__CONDUCTING_EQUIPMENT, BaseVoltage.class, msgs );
             msgs = basicUnsetBaseVoltage( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldBaseVoltageESet = baseVoltageESet;
             baseVoltageESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.CONDUCTING_EQUIPMENT__BASE_VOLTAGE,
                         null, null, oldBaseVoltageESet ) );
+            }
         }
     }
 
@@ -277,9 +291,10 @@ public class ConductingEquipmentImpl extends EquipmentImpl implements Conducting
             InternalEObject oldSvStatus = ( InternalEObject ) svStatus;
             svStatus = ( SvStatus ) eResolveProxy( oldSvStatus );
             if( svStatus != oldSvStatus ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE,
                             CimPackage.CONDUCTING_EQUIPMENT__SV_STATUS, oldSvStatus, svStatus ) );
+                }
             }
         }
         return svStatus;
@@ -307,10 +322,12 @@ public class ConductingEquipmentImpl extends EquipmentImpl implements Conducting
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.CONDUCTING_EQUIPMENT__SV_STATUS, oldSvStatus, newSvStatus, !oldSvStatusESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -324,21 +341,26 @@ public class ConductingEquipmentImpl extends EquipmentImpl implements Conducting
     public void setSvStatus( SvStatus newSvStatus ) {
         if( newSvStatus != svStatus ) {
             NotificationChain msgs = null;
-            if( svStatus != null )
+            if( svStatus != null ) {
                 msgs = ( ( InternalEObject ) svStatus ).eInverseRemove( this,
                         CimPackage.SV_STATUS__CONDUCTING_EQUIPMENT, SvStatus.class, msgs );
-            if( newSvStatus != null )
+            }
+            if( newSvStatus != null ) {
                 msgs = ( ( InternalEObject ) newSvStatus ).eInverseAdd( this,
                         CimPackage.SV_STATUS__CONDUCTING_EQUIPMENT, SvStatus.class, msgs );
+            }
             msgs = basicSetSvStatus( newSvStatus, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldSvStatusESet = svStatusESet;
             svStatusESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.CONDUCTING_EQUIPMENT__SV_STATUS,
                         newSvStatus, newSvStatus, !oldSvStatusESet ) );
+            }
         }
     }
 
@@ -355,10 +377,12 @@ public class ConductingEquipmentImpl extends EquipmentImpl implements Conducting
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.CONDUCTING_EQUIPMENT__SV_STATUS, oldSvStatus, null, oldSvStatusESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -375,14 +399,17 @@ public class ConductingEquipmentImpl extends EquipmentImpl implements Conducting
             msgs = ( ( InternalEObject ) svStatus ).eInverseRemove( this, CimPackage.SV_STATUS__CONDUCTING_EQUIPMENT,
                     SvStatus.class, msgs );
             msgs = basicUnsetSvStatus( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldSvStatusESet = svStatusESet;
             svStatusESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.CONDUCTING_EQUIPMENT__SV_STATUS,
                         null, null, oldSvStatusESet ) );
+            }
         }
     }
 
@@ -409,14 +436,16 @@ public class ConductingEquipmentImpl extends EquipmentImpl implements Conducting
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getTerminals() ).basicAdd( otherEnd,
                     msgs );
         case CimPackage.CONDUCTING_EQUIPMENT__BASE_VOLTAGE:
-            if( baseVoltage != null )
+            if( baseVoltage != null ) {
                 msgs = ( ( InternalEObject ) baseVoltage ).eInverseRemove( this,
                         CimPackage.BASE_VOLTAGE__CONDUCTING_EQUIPMENT, BaseVoltage.class, msgs );
+            }
             return basicSetBaseVoltage( ( BaseVoltage ) otherEnd, msgs );
         case CimPackage.CONDUCTING_EQUIPMENT__SV_STATUS:
-            if( svStatus != null )
+            if( svStatus != null ) {
                 msgs = ( ( InternalEObject ) svStatus ).eInverseRemove( this,
                         CimPackage.SV_STATUS__CONDUCTING_EQUIPMENT, SvStatus.class, msgs );
+            }
             return basicSetSvStatus( ( SvStatus ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );
@@ -453,7 +482,9 @@ public class ConductingEquipmentImpl extends EquipmentImpl implements Conducting
         case CimPackage.CONDUCTING_EQUIPMENT__BASE_VOLTAGE:
             return getBaseVoltage();
         case CimPackage.CONDUCTING_EQUIPMENT__SV_STATUS:
-            if( resolve ) return getSvStatus();
+            if( resolve ) {
+                return getSvStatus();
+            }
             return basicGetSvStatus();
         }
         return super.eGet( featureID, resolve, coreType );

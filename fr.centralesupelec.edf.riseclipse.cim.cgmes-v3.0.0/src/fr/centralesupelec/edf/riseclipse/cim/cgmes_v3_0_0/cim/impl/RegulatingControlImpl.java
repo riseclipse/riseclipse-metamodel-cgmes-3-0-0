@@ -374,7 +374,9 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
      */
     @Override
     public void unsetRegulatingCondEq() {
-        if( regulatingCondEq != null ) ( ( InternalEList.Unsettable< ? > ) regulatingCondEq ).unset();
+        if( regulatingCondEq != null ) {
+            ( ( InternalEList.Unsettable< ? > ) regulatingCondEq ).unset();
+        }
     }
 
     /**
@@ -408,9 +410,10 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         discrete = newDiscrete;
         boolean oldDiscreteESet = discreteESet;
         discreteESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.REGULATING_CONTROL__DISCRETE,
                     oldDiscrete, discrete, !oldDiscreteESet ) );
+        }
     }
 
     /**
@@ -424,9 +427,10 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         boolean oldDiscreteESet = discreteESet;
         discrete = DISCRETE_EDEFAULT;
         discreteESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.REGULATING_CONTROL__DISCRETE,
                     oldDiscrete, DISCRETE_EDEFAULT, oldDiscreteESet ) );
+        }
     }
 
     /**
@@ -460,9 +464,10 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         targetDeadband = newTargetDeadband;
         boolean oldTargetDeadbandESet = targetDeadbandESet;
         targetDeadbandESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.REGULATING_CONTROL__TARGET_DEADBAND,
                     oldTargetDeadband, targetDeadband, !oldTargetDeadbandESet ) );
+        }
     }
 
     /**
@@ -476,9 +481,10 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         boolean oldTargetDeadbandESet = targetDeadbandESet;
         targetDeadband = TARGET_DEADBAND_EDEFAULT;
         targetDeadbandESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.REGULATING_CONTROL__TARGET_DEADBAND,
                     oldTargetDeadband, TARGET_DEADBAND_EDEFAULT, oldTargetDeadbandESet ) );
+        }
     }
 
     /**
@@ -512,10 +518,11 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         maxAllowedTargetValue = newMaxAllowedTargetValue;
         boolean oldMaxAllowedTargetValueESet = maxAllowedTargetValueESet;
         maxAllowedTargetValueESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.REGULATING_CONTROL__MAX_ALLOWED_TARGET_VALUE, oldMaxAllowedTargetValue,
                     maxAllowedTargetValue, !oldMaxAllowedTargetValueESet ) );
+        }
     }
 
     /**
@@ -529,10 +536,11 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         boolean oldMaxAllowedTargetValueESet = maxAllowedTargetValueESet;
         maxAllowedTargetValue = MAX_ALLOWED_TARGET_VALUE_EDEFAULT;
         maxAllowedTargetValueESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.REGULATING_CONTROL__MAX_ALLOWED_TARGET_VALUE, oldMaxAllowedTargetValue,
                     MAX_ALLOWED_TARGET_VALUE_EDEFAULT, oldMaxAllowedTargetValueESet ) );
+        }
     }
 
     /**
@@ -566,9 +574,10 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         enabled = newEnabled;
         boolean oldEnabledESet = enabledESet;
         enabledESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.REGULATING_CONTROL__ENABLED, oldEnabled,
                     enabled, !oldEnabledESet ) );
+        }
     }
 
     /**
@@ -582,9 +591,10 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         boolean oldEnabledESet = enabledESet;
         enabled = ENABLED_EDEFAULT;
         enabledESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.REGULATING_CONTROL__ENABLED,
                     oldEnabled, ENABLED_EDEFAULT, oldEnabledESet ) );
+        }
     }
 
     /**
@@ -619,10 +629,11 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
                 : newTargetValueUnitMultiplier;
         boolean oldTargetValueUnitMultiplierESet = targetValueUnitMultiplierESet;
         targetValueUnitMultiplierESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.REGULATING_CONTROL__TARGET_VALUE_UNIT_MULTIPLIER, oldTargetValueUnitMultiplier,
                     targetValueUnitMultiplier, !oldTargetValueUnitMultiplierESet ) );
+        }
     }
 
     /**
@@ -636,10 +647,11 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         boolean oldTargetValueUnitMultiplierESet = targetValueUnitMultiplierESet;
         targetValueUnitMultiplier = TARGET_VALUE_UNIT_MULTIPLIER_EDEFAULT;
         targetValueUnitMultiplierESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.REGULATING_CONTROL__TARGET_VALUE_UNIT_MULTIPLIER, oldTargetValueUnitMultiplier,
                     TARGET_VALUE_UNIT_MULTIPLIER_EDEFAULT, oldTargetValueUnitMultiplierESet ) );
+        }
     }
 
     /**
@@ -673,10 +685,11 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         minAllowedTargetValue = newMinAllowedTargetValue;
         boolean oldMinAllowedTargetValueESet = minAllowedTargetValueESet;
         minAllowedTargetValueESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.REGULATING_CONTROL__MIN_ALLOWED_TARGET_VALUE, oldMinAllowedTargetValue,
                     minAllowedTargetValue, !oldMinAllowedTargetValueESet ) );
+        }
     }
 
     /**
@@ -690,10 +703,11 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         boolean oldMinAllowedTargetValueESet = minAllowedTargetValueESet;
         minAllowedTargetValue = MIN_ALLOWED_TARGET_VALUE_EDEFAULT;
         minAllowedTargetValueESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.REGULATING_CONTROL__MIN_ALLOWED_TARGET_VALUE, oldMinAllowedTargetValue,
                     MIN_ALLOWED_TARGET_VALUE_EDEFAULT, oldMinAllowedTargetValueESet ) );
+        }
     }
 
     /**
@@ -727,9 +741,10 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         targetValue = newTargetValue;
         boolean oldTargetValueESet = targetValueESet;
         targetValueESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.REGULATING_CONTROL__TARGET_VALUE,
                     oldTargetValue, targetValue, !oldTargetValueESet ) );
+        }
     }
 
     /**
@@ -743,9 +758,10 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         boolean oldTargetValueESet = targetValueESet;
         targetValue = TARGET_VALUE_EDEFAULT;
         targetValueESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.REGULATING_CONTROL__TARGET_VALUE,
                     oldTargetValue, TARGET_VALUE_EDEFAULT, oldTargetValueESet ) );
+        }
     }
 
     /**
@@ -779,9 +795,10 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         mode = newMode == null ? MODE_EDEFAULT : newMode;
         boolean oldModeESet = modeESet;
         modeESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.REGULATING_CONTROL__MODE, oldMode, mode,
                     !oldModeESet ) );
+        }
     }
 
     /**
@@ -795,9 +812,10 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         boolean oldModeESet = modeESet;
         mode = MODE_EDEFAULT;
         modeESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.REGULATING_CONTROL__MODE, oldMode,
                     MODE_EDEFAULT, oldModeESet ) );
+        }
     }
 
     /**
@@ -832,7 +850,9 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
      */
     @Override
     public void unsetRegulationSchedule() {
-        if( regulationSchedule != null ) ( ( InternalEList.Unsettable< ? > ) regulationSchedule ).unset();
+        if( regulationSchedule != null ) {
+            ( ( InternalEList.Unsettable< ? > ) regulationSchedule ).unset();
+        }
     }
 
     /**
@@ -868,10 +888,12 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.REGULATING_CONTROL__TERMINAL, oldTerminal, newTerminal, !oldTerminalESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -885,21 +907,26 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
     public void setTerminal( Terminal newTerminal ) {
         if( newTerminal != terminal ) {
             NotificationChain msgs = null;
-            if( terminal != null )
+            if( terminal != null ) {
                 msgs = ( ( InternalEObject ) terminal ).eInverseRemove( this, CimPackage.TERMINAL__REGULATING_CONTROL,
                         Terminal.class, msgs );
-            if( newTerminal != null )
+            }
+            if( newTerminal != null ) {
                 msgs = ( ( InternalEObject ) newTerminal ).eInverseAdd( this, CimPackage.TERMINAL__REGULATING_CONTROL,
                         Terminal.class, msgs );
+            }
             msgs = basicSetTerminal( newTerminal, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldTerminalESet = terminalESet;
             terminalESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.REGULATING_CONTROL__TERMINAL,
                         newTerminal, newTerminal, !oldTerminalESet ) );
+            }
         }
     }
 
@@ -916,10 +943,12 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.REGULATING_CONTROL__TERMINAL, oldTerminal, null, oldTerminalESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -936,14 +965,17 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
             msgs = ( ( InternalEObject ) terminal ).eInverseRemove( this, CimPackage.TERMINAL__REGULATING_CONTROL,
                     Terminal.class, msgs );
             msgs = basicUnsetTerminal( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldTerminalESet = terminalESet;
             terminalESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.REGULATING_CONTROL__TERMINAL, null,
                         null, oldTerminalESet ) );
+            }
         }
     }
 
@@ -967,9 +999,10 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
     public NotificationChain eInverseAdd( InternalEObject otherEnd, int featureID, NotificationChain msgs ) {
         switch( featureID ) {
         case CimPackage.REGULATING_CONTROL__TERMINAL:
-            if( terminal != null )
+            if( terminal != null ) {
                 msgs = ( ( InternalEObject ) terminal ).eInverseRemove( this, CimPackage.TERMINAL__REGULATING_CONTROL,
                         Terminal.class, msgs );
+            }
             return basicSetTerminal( ( Terminal ) otherEnd, msgs );
         case CimPackage.REGULATING_CONTROL__REGULATION_SCHEDULE:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getRegulationSchedule() )
@@ -1167,49 +1200,67 @@ public class RegulatingControlImpl extends PowerSystemResourceImpl implements Re
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (mode: " );
-        if( modeESet )
+        if( modeESet ) {
             result.append( mode );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", discrete: " );
-        if( discreteESet )
+        if( discreteESet ) {
             result.append( discrete );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", targetDeadband: " );
-        if( targetDeadbandESet )
+        if( targetDeadbandESet ) {
             result.append( targetDeadband );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", maxAllowedTargetValue: " );
-        if( maxAllowedTargetValueESet )
+        if( maxAllowedTargetValueESet ) {
             result.append( maxAllowedTargetValue );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", enabled: " );
-        if( enabledESet )
+        if( enabledESet ) {
             result.append( enabled );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", targetValueUnitMultiplier: " );
-        if( targetValueUnitMultiplierESet )
+        if( targetValueUnitMultiplierESet ) {
             result.append( targetValueUnitMultiplier );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", minAllowedTargetValue: " );
-        if( minAllowedTargetValueESet )
+        if( minAllowedTargetValueESet ) {
             result.append( minAllowedTargetValue );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", targetValue: " );
-        if( targetValueESet )
+        if( targetValueESet ) {
             result.append( targetValue );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

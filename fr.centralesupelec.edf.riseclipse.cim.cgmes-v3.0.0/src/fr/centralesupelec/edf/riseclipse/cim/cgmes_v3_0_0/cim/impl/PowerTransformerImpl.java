@@ -262,7 +262,9 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
      */
     @Override
     public void unsetPowerTransformerEnd() {
-        if( powerTransformerEnd != null ) ( ( InternalEList.Unsettable< ? > ) powerTransformerEnd ).unset();
+        if( powerTransformerEnd != null ) {
+            ( ( InternalEList.Unsettable< ? > ) powerTransformerEnd ).unset();
+        }
     }
 
     /**
@@ -296,11 +298,12 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
         beforeShCircuitHighestOperatingVoltage = newBeforeShCircuitHighestOperatingVoltage;
         boolean oldBeforeShCircuitHighestOperatingVoltageESet = beforeShCircuitHighestOperatingVoltageESet;
         beforeShCircuitHighestOperatingVoltageESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.POWER_TRANSFORMER__BEFORE_SH_CIRCUIT_HIGHEST_OPERATING_VOLTAGE,
                     oldBeforeShCircuitHighestOperatingVoltage, beforeShCircuitHighestOperatingVoltage,
                     !oldBeforeShCircuitHighestOperatingVoltageESet ) );
+        }
     }
 
     /**
@@ -314,11 +317,12 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
         boolean oldBeforeShCircuitHighestOperatingVoltageESet = beforeShCircuitHighestOperatingVoltageESet;
         beforeShCircuitHighestOperatingVoltage = BEFORE_SH_CIRCUIT_HIGHEST_OPERATING_VOLTAGE_EDEFAULT;
         beforeShCircuitHighestOperatingVoltageESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.POWER_TRANSFORMER__BEFORE_SH_CIRCUIT_HIGHEST_OPERATING_VOLTAGE,
                     oldBeforeShCircuitHighestOperatingVoltage, BEFORE_SH_CIRCUIT_HIGHEST_OPERATING_VOLTAGE_EDEFAULT,
                     oldBeforeShCircuitHighestOperatingVoltageESet ) );
+        }
     }
 
     /**
@@ -352,10 +356,11 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
         highSideMinOperatingU = newHighSideMinOperatingU;
         boolean oldHighSideMinOperatingUESet = highSideMinOperatingUESet;
         highSideMinOperatingUESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.POWER_TRANSFORMER__HIGH_SIDE_MIN_OPERATING_U, oldHighSideMinOperatingU,
                     highSideMinOperatingU, !oldHighSideMinOperatingUESet ) );
+        }
     }
 
     /**
@@ -369,10 +374,11 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
         boolean oldHighSideMinOperatingUESet = highSideMinOperatingUESet;
         highSideMinOperatingU = HIGH_SIDE_MIN_OPERATING_U_EDEFAULT;
         highSideMinOperatingUESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.POWER_TRANSFORMER__HIGH_SIDE_MIN_OPERATING_U, oldHighSideMinOperatingU,
                     HIGH_SIDE_MIN_OPERATING_U_EDEFAULT, oldHighSideMinOperatingUESet ) );
+        }
     }
 
     /**
@@ -406,10 +412,11 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
         isPartOfGeneratorUnit = newIsPartOfGeneratorUnit;
         boolean oldIsPartOfGeneratorUnitESet = isPartOfGeneratorUnitESet;
         isPartOfGeneratorUnitESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.POWER_TRANSFORMER__IS_PART_OF_GENERATOR_UNIT, oldIsPartOfGeneratorUnit,
                     isPartOfGeneratorUnit, !oldIsPartOfGeneratorUnitESet ) );
+        }
     }
 
     /**
@@ -423,10 +430,11 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
         boolean oldIsPartOfGeneratorUnitESet = isPartOfGeneratorUnitESet;
         isPartOfGeneratorUnit = IS_PART_OF_GENERATOR_UNIT_EDEFAULT;
         isPartOfGeneratorUnitESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.POWER_TRANSFORMER__IS_PART_OF_GENERATOR_UNIT, oldIsPartOfGeneratorUnit,
                     IS_PART_OF_GENERATOR_UNIT_EDEFAULT, oldIsPartOfGeneratorUnitESet ) );
+        }
     }
 
     /**
@@ -460,11 +468,12 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
         beforeShCircuitHighestOperatingCurrent = newBeforeShCircuitHighestOperatingCurrent;
         boolean oldBeforeShCircuitHighestOperatingCurrentESet = beforeShCircuitHighestOperatingCurrentESet;
         beforeShCircuitHighestOperatingCurrentESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.POWER_TRANSFORMER__BEFORE_SH_CIRCUIT_HIGHEST_OPERATING_CURRENT,
                     oldBeforeShCircuitHighestOperatingCurrent, beforeShCircuitHighestOperatingCurrent,
                     !oldBeforeShCircuitHighestOperatingCurrentESet ) );
+        }
     }
 
     /**
@@ -478,11 +487,12 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
         boolean oldBeforeShCircuitHighestOperatingCurrentESet = beforeShCircuitHighestOperatingCurrentESet;
         beforeShCircuitHighestOperatingCurrent = BEFORE_SH_CIRCUIT_HIGHEST_OPERATING_CURRENT_EDEFAULT;
         beforeShCircuitHighestOperatingCurrentESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.POWER_TRANSFORMER__BEFORE_SH_CIRCUIT_HIGHEST_OPERATING_CURRENT,
                     oldBeforeShCircuitHighestOperatingCurrent, BEFORE_SH_CIRCUIT_HIGHEST_OPERATING_CURRENT_EDEFAULT,
                     oldBeforeShCircuitHighestOperatingCurrentESet ) );
+        }
     }
 
     /**
@@ -516,10 +526,11 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
         operationalValuesConsidered = newOperationalValuesConsidered;
         boolean oldOperationalValuesConsideredESet = operationalValuesConsideredESet;
         operationalValuesConsideredESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.POWER_TRANSFORMER__OPERATIONAL_VALUES_CONSIDERED, oldOperationalValuesConsidered,
                     operationalValuesConsidered, !oldOperationalValuesConsideredESet ) );
+        }
     }
 
     /**
@@ -533,10 +544,11 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
         boolean oldOperationalValuesConsideredESet = operationalValuesConsideredESet;
         operationalValuesConsidered = OPERATIONAL_VALUES_CONSIDERED_EDEFAULT;
         operationalValuesConsideredESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.POWER_TRANSFORMER__OPERATIONAL_VALUES_CONSIDERED, oldOperationalValuesConsidered,
                     OPERATIONAL_VALUES_CONSIDERED_EDEFAULT, oldOperationalValuesConsideredESet ) );
+        }
     }
 
     /**
@@ -570,10 +582,11 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
         beforeShortCircuitAnglePf = newBeforeShortCircuitAnglePf;
         boolean oldBeforeShortCircuitAnglePfESet = beforeShortCircuitAnglePfESet;
         beforeShortCircuitAnglePfESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.POWER_TRANSFORMER__BEFORE_SHORT_CIRCUIT_ANGLE_PF, oldBeforeShortCircuitAnglePf,
                     beforeShortCircuitAnglePf, !oldBeforeShortCircuitAnglePfESet ) );
+        }
     }
 
     /**
@@ -587,10 +600,11 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
         boolean oldBeforeShortCircuitAnglePfESet = beforeShortCircuitAnglePfESet;
         beforeShortCircuitAnglePf = BEFORE_SHORT_CIRCUIT_ANGLE_PF_EDEFAULT;
         beforeShortCircuitAnglePfESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.POWER_TRANSFORMER__BEFORE_SHORT_CIRCUIT_ANGLE_PF, oldBeforeShortCircuitAnglePf,
                     BEFORE_SHORT_CIRCUIT_ANGLE_PF_EDEFAULT, oldBeforeShortCircuitAnglePfESet ) );
+        }
     }
 
     /**
@@ -760,39 +774,53 @@ public class PowerTransformerImpl extends ConductingEquipmentImpl implements Pow
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (beforeShCircuitHighestOperatingVoltage: " );
-        if( beforeShCircuitHighestOperatingVoltageESet )
+        if( beforeShCircuitHighestOperatingVoltageESet ) {
             result.append( beforeShCircuitHighestOperatingVoltage );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", highSideMinOperatingU: " );
-        if( highSideMinOperatingUESet )
+        if( highSideMinOperatingUESet ) {
             result.append( highSideMinOperatingU );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", isPartOfGeneratorUnit: " );
-        if( isPartOfGeneratorUnitESet )
+        if( isPartOfGeneratorUnitESet ) {
             result.append( isPartOfGeneratorUnit );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", beforeShCircuitHighestOperatingCurrent: " );
-        if( beforeShCircuitHighestOperatingCurrentESet )
+        if( beforeShCircuitHighestOperatingCurrentESet ) {
             result.append( beforeShCircuitHighestOperatingCurrent );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", operationalValuesConsidered: " );
-        if( operationalValuesConsideredESet )
+        if( operationalValuesConsideredESet ) {
             result.append( operationalValuesConsidered );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", beforeShortCircuitAnglePf: " );
-        if( beforeShortCircuitAnglePfESet )
+        if( beforeShortCircuitAnglePfESet ) {
             result.append( beforeShortCircuitAnglePf );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

@@ -222,7 +222,9 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
      */
     @Override
     public void unsetTieFlow() {
-        if( tieFlow != null ) ( ( InternalEList.Unsettable< ? > ) tieFlow ).unset();
+        if( tieFlow != null ) {
+            ( ( InternalEList.Unsettable< ? > ) tieFlow ).unset();
+        }
     }
 
     /**
@@ -258,10 +260,12 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.CONTROL_AREA__ENERGY_AREA, oldEnergyArea, newEnergyArea, !oldEnergyAreaESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -275,21 +279,26 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
     public void setEnergyArea( EnergyArea newEnergyArea ) {
         if( newEnergyArea != energyArea ) {
             NotificationChain msgs = null;
-            if( energyArea != null )
+            if( energyArea != null ) {
                 msgs = ( ( InternalEObject ) energyArea ).eInverseRemove( this, CimPackage.ENERGY_AREA__CONTROL_AREA,
                         EnergyArea.class, msgs );
-            if( newEnergyArea != null )
+            }
+            if( newEnergyArea != null ) {
                 msgs = ( ( InternalEObject ) newEnergyArea ).eInverseAdd( this, CimPackage.ENERGY_AREA__CONTROL_AREA,
                         EnergyArea.class, msgs );
+            }
             msgs = basicSetEnergyArea( newEnergyArea, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldEnergyAreaESet = energyAreaESet;
             energyAreaESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.CONTROL_AREA__ENERGY_AREA,
                         newEnergyArea, newEnergyArea, !oldEnergyAreaESet ) );
+            }
         }
     }
 
@@ -306,10 +315,12 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.CONTROL_AREA__ENERGY_AREA, oldEnergyArea, null, oldEnergyAreaESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -326,14 +337,17 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
             msgs = ( ( InternalEObject ) energyArea ).eInverseRemove( this, CimPackage.ENERGY_AREA__CONTROL_AREA,
                     EnergyArea.class, msgs );
             msgs = basicUnsetEnergyArea( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldEnergyAreaESet = energyAreaESet;
             energyAreaESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.CONTROL_AREA__ENERGY_AREA, null,
                         null, oldEnergyAreaESet ) );
+            }
         }
     }
 
@@ -368,9 +382,10 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
         pTolerance = newPTolerance;
         boolean oldPToleranceESet = pToleranceESet;
         pToleranceESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.CONTROL_AREA__PTOLERANCE, oldPTolerance,
                     pTolerance, !oldPToleranceESet ) );
+        }
     }
 
     /**
@@ -384,9 +399,10 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
         boolean oldPToleranceESet = pToleranceESet;
         pTolerance = PTOLERANCE_EDEFAULT;
         pToleranceESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.CONTROL_AREA__PTOLERANCE,
                     oldPTolerance, PTOLERANCE_EDEFAULT, oldPToleranceESet ) );
+        }
     }
 
     /**
@@ -420,9 +436,10 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
         netInterchange = newNetInterchange;
         boolean oldNetInterchangeESet = netInterchangeESet;
         netInterchangeESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.CONTROL_AREA__NET_INTERCHANGE,
                     oldNetInterchange, netInterchange, !oldNetInterchangeESet ) );
+        }
     }
 
     /**
@@ -436,9 +453,10 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
         boolean oldNetInterchangeESet = netInterchangeESet;
         netInterchange = NET_INTERCHANGE_EDEFAULT;
         netInterchangeESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.CONTROL_AREA__NET_INTERCHANGE,
                     oldNetInterchange, NET_INTERCHANGE_EDEFAULT, oldNetInterchangeESet ) );
+        }
     }
 
     /**
@@ -473,7 +491,9 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
      */
     @Override
     public void unsetControlAreaGeneratingUnit() {
-        if( controlAreaGeneratingUnit != null ) ( ( InternalEList.Unsettable< ? > ) controlAreaGeneratingUnit ).unset();
+        if( controlAreaGeneratingUnit != null ) {
+            ( ( InternalEList.Unsettable< ? > ) controlAreaGeneratingUnit ).unset();
+        }
     }
 
     /**
@@ -508,9 +528,10 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
         type = newType == null ? TYPE_EDEFAULT : newType;
         boolean oldTypeESet = typeESet;
         typeESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.CONTROL_AREA__TYPE, oldType, type,
                     !oldTypeESet ) );
+        }
     }
 
     /**
@@ -524,9 +545,10 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
         boolean oldTypeESet = typeESet;
         type = TYPE_EDEFAULT;
         typeESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.CONTROL_AREA__TYPE, oldType,
                     TYPE_EDEFAULT, oldTypeESet ) );
+        }
     }
 
     /**
@@ -555,9 +577,10 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getTieFlow() ).basicAdd( otherEnd,
                     msgs );
         case CimPackage.CONTROL_AREA__ENERGY_AREA:
-            if( energyArea != null )
+            if( energyArea != null ) {
                 msgs = ( ( InternalEObject ) energyArea ).eInverseRemove( this, CimPackage.ENERGY_AREA__CONTROL_AREA,
                         EnergyArea.class, msgs );
+            }
             return basicSetEnergyArea( ( EnergyArea ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );
@@ -699,24 +722,32 @@ public class ControlAreaImpl extends PowerSystemResourceImpl implements ControlA
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (type: " );
-        if( typeESet )
+        if( typeESet ) {
             result.append( type );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", pTolerance: " );
-        if( pToleranceESet )
+        if( pToleranceESet ) {
             result.append( pTolerance );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", netInterchange: " );
-        if( netInterchangeESet )
+        if( netInterchangeESet ) {
             result.append( netInterchange );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

@@ -161,7 +161,9 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
      */
     @Override
     public void unsetFossilFuels() {
-        if( fossilFuels != null ) ( ( InternalEList.Unsettable< ? > ) fossilFuels ).unset();
+        if( fossilFuels != null ) {
+            ( ( InternalEList.Unsettable< ? > ) fossilFuels ).unset();
+        }
     }
 
     /**
@@ -197,10 +199,12 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.THERMAL_GENERATING_UNIT__CAES_PLANT, oldCAESPlant, newCAESPlant, !oldCAESPlantESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -214,21 +218,26 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
     public void setCAESPlant( CAESPlant newCAESPlant ) {
         if( newCAESPlant != caesPlant ) {
             NotificationChain msgs = null;
-            if( caesPlant != null )
+            if( caesPlant != null ) {
                 msgs = ( ( InternalEObject ) caesPlant ).eInverseRemove( this,
                         CimPackage.CAES_PLANT__THERMAL_GENERATING_UNIT, CAESPlant.class, msgs );
-            if( newCAESPlant != null )
+            }
+            if( newCAESPlant != null ) {
                 msgs = ( ( InternalEObject ) newCAESPlant ).eInverseAdd( this,
                         CimPackage.CAES_PLANT__THERMAL_GENERATING_UNIT, CAESPlant.class, msgs );
+            }
             msgs = basicSetCAESPlant( newCAESPlant, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldCAESPlantESet = caesPlantESet;
             caesPlantESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.THERMAL_GENERATING_UNIT__CAES_PLANT,
                         newCAESPlant, newCAESPlant, !oldCAESPlantESet ) );
+            }
         }
     }
 
@@ -245,10 +254,12 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.THERMAL_GENERATING_UNIT__CAES_PLANT, oldCAESPlant, null, oldCAESPlantESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -265,14 +276,17 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
             msgs = ( ( InternalEObject ) caesPlant ).eInverseRemove( this,
                     CimPackage.CAES_PLANT__THERMAL_GENERATING_UNIT, CAESPlant.class, msgs );
             msgs = basicUnsetCAESPlant( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldCAESPlantESet = caesPlantESet;
             caesPlantESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.THERMAL_GENERATING_UNIT__CAES_PLANT, null, null, oldCAESPlantESet ) );
+            }
         }
     }
 
@@ -311,10 +325,12 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.THERMAL_GENERATING_UNIT__COMBINED_CYCLE_PLANT, oldCombinedCyclePlant,
                     newCombinedCyclePlant, !oldCombinedCyclePlantESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -328,22 +344,27 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
     public void setCombinedCyclePlant( CombinedCyclePlant newCombinedCyclePlant ) {
         if( newCombinedCyclePlant != combinedCyclePlant ) {
             NotificationChain msgs = null;
-            if( combinedCyclePlant != null )
+            if( combinedCyclePlant != null ) {
                 msgs = ( ( InternalEObject ) combinedCyclePlant ).eInverseRemove( this,
                         CimPackage.COMBINED_CYCLE_PLANT__THERMAL_GENERATING_UNITS, CombinedCyclePlant.class, msgs );
-            if( newCombinedCyclePlant != null )
+            }
+            if( newCombinedCyclePlant != null ) {
                 msgs = ( ( InternalEObject ) newCombinedCyclePlant ).eInverseAdd( this,
                         CimPackage.COMBINED_CYCLE_PLANT__THERMAL_GENERATING_UNITS, CombinedCyclePlant.class, msgs );
+            }
             msgs = basicSetCombinedCyclePlant( newCombinedCyclePlant, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldCombinedCyclePlantESet = combinedCyclePlantESet;
             combinedCyclePlantESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET,
                         CimPackage.THERMAL_GENERATING_UNIT__COMBINED_CYCLE_PLANT, newCombinedCyclePlant,
                         newCombinedCyclePlant, !oldCombinedCyclePlantESet ) );
+            }
         }
     }
 
@@ -361,10 +382,12 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.THERMAL_GENERATING_UNIT__COMBINED_CYCLE_PLANT, oldCombinedCyclePlant, null,
                     oldCombinedCyclePlantESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -381,15 +404,18 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
             msgs = ( ( InternalEObject ) combinedCyclePlant ).eInverseRemove( this,
                     CimPackage.COMBINED_CYCLE_PLANT__THERMAL_GENERATING_UNITS, CombinedCyclePlant.class, msgs );
             msgs = basicUnsetCombinedCyclePlant( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldCombinedCyclePlantESet = combinedCyclePlantESet;
             combinedCyclePlantESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.THERMAL_GENERATING_UNIT__COMBINED_CYCLE_PLANT, null, null,
                         oldCombinedCyclePlantESet ) );
+            }
         }
     }
 
@@ -428,10 +454,12 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.THERMAL_GENERATING_UNIT__COGENERATION_PLANT, oldCogenerationPlant, newCogenerationPlant,
                     !oldCogenerationPlantESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -445,22 +473,27 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
     public void setCogenerationPlant( CogenerationPlant newCogenerationPlant ) {
         if( newCogenerationPlant != cogenerationPlant ) {
             NotificationChain msgs = null;
-            if( cogenerationPlant != null )
+            if( cogenerationPlant != null ) {
                 msgs = ( ( InternalEObject ) cogenerationPlant ).eInverseRemove( this,
                         CimPackage.COGENERATION_PLANT__THERMAL_GENERATING_UNITS, CogenerationPlant.class, msgs );
-            if( newCogenerationPlant != null )
+            }
+            if( newCogenerationPlant != null ) {
                 msgs = ( ( InternalEObject ) newCogenerationPlant ).eInverseAdd( this,
                         CimPackage.COGENERATION_PLANT__THERMAL_GENERATING_UNITS, CogenerationPlant.class, msgs );
+            }
             msgs = basicSetCogenerationPlant( newCogenerationPlant, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldCogenerationPlantESet = cogenerationPlantESet;
             cogenerationPlantESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET,
                         CimPackage.THERMAL_GENERATING_UNIT__COGENERATION_PLANT, newCogenerationPlant,
                         newCogenerationPlant, !oldCogenerationPlantESet ) );
+            }
         }
     }
 
@@ -478,10 +511,12 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.THERMAL_GENERATING_UNIT__COGENERATION_PLANT, oldCogenerationPlant, null,
                     oldCogenerationPlantESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -498,15 +533,18 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
             msgs = ( ( InternalEObject ) cogenerationPlant ).eInverseRemove( this,
                     CimPackage.COGENERATION_PLANT__THERMAL_GENERATING_UNITS, CogenerationPlant.class, msgs );
             msgs = basicUnsetCogenerationPlant( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldCogenerationPlantESet = cogenerationPlantESet;
             cogenerationPlantESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.THERMAL_GENERATING_UNIT__COGENERATION_PLANT, null, null,
                         oldCogenerationPlantESet ) );
+            }
         }
     }
 
@@ -533,19 +571,22 @@ public class ThermalGeneratingUnitImpl extends GeneratingUnitImpl implements The
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getFossilFuels() ).basicAdd( otherEnd,
                     msgs );
         case CimPackage.THERMAL_GENERATING_UNIT__COMBINED_CYCLE_PLANT:
-            if( combinedCyclePlant != null )
+            if( combinedCyclePlant != null ) {
                 msgs = ( ( InternalEObject ) combinedCyclePlant ).eInverseRemove( this,
                         CimPackage.COMBINED_CYCLE_PLANT__THERMAL_GENERATING_UNITS, CombinedCyclePlant.class, msgs );
+            }
             return basicSetCombinedCyclePlant( ( CombinedCyclePlant ) otherEnd, msgs );
         case CimPackage.THERMAL_GENERATING_UNIT__COGENERATION_PLANT:
-            if( cogenerationPlant != null )
+            if( cogenerationPlant != null ) {
                 msgs = ( ( InternalEObject ) cogenerationPlant ).eInverseRemove( this,
                         CimPackage.COGENERATION_PLANT__THERMAL_GENERATING_UNITS, CogenerationPlant.class, msgs );
+            }
             return basicSetCogenerationPlant( ( CogenerationPlant ) otherEnd, msgs );
         case CimPackage.THERMAL_GENERATING_UNIT__CAES_PLANT:
-            if( caesPlant != null )
+            if( caesPlant != null ) {
                 msgs = ( ( InternalEObject ) caesPlant ).eInverseRemove( this,
                         CimPackage.CAES_PLANT__THERMAL_GENERATING_UNIT, CAESPlant.class, msgs );
+            }
             return basicSetCAESPlant( ( CAESPlant ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );

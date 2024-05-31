@@ -109,7 +109,9 @@ public class ConnectivityNodeContainerImpl extends PowerSystemResourceImpl imple
      */
     @Override
     public void unsetConnectivityNodes() {
-        if( connectivityNodes != null ) ( ( InternalEList.Unsettable< ? > ) connectivityNodes ).unset();
+        if( connectivityNodes != null ) {
+            ( ( InternalEList.Unsettable< ? > ) connectivityNodes ).unset();
+        }
     }
 
     /**
@@ -144,7 +146,9 @@ public class ConnectivityNodeContainerImpl extends PowerSystemResourceImpl imple
      */
     @Override
     public void unsetTopologicalNode() {
-        if( topologicalNode != null ) ( ( InternalEList.Unsettable< ? > ) topologicalNode ).unset();
+        if( topologicalNode != null ) {
+            ( ( InternalEList.Unsettable< ? > ) topologicalNode ).unset();
+        }
     }
 
     /**

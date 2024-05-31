@@ -109,7 +109,9 @@ public class NonConformLoadGroupImpl extends LoadGroupImpl implements NonConform
      */
     @Override
     public void unsetNonConformLoadSchedules() {
-        if( nonConformLoadSchedules != null ) ( ( InternalEList.Unsettable< ? > ) nonConformLoadSchedules ).unset();
+        if( nonConformLoadSchedules != null ) {
+            ( ( InternalEList.Unsettable< ? > ) nonConformLoadSchedules ).unset();
+        }
     }
 
     /**
@@ -144,7 +146,9 @@ public class NonConformLoadGroupImpl extends LoadGroupImpl implements NonConform
      */
     @Override
     public void unsetEnergyConsumers() {
-        if( energyConsumers != null ) ( ( InternalEList.Unsettable< ? > ) energyConsumers ).unset();
+        if( energyConsumers != null ) {
+            ( ( InternalEList.Unsettable< ? > ) energyConsumers ).unset();
+        }
     }
 
     /**

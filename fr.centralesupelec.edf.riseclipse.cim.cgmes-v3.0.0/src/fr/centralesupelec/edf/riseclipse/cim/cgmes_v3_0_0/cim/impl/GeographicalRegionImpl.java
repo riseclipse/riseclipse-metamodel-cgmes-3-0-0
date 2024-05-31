@@ -97,7 +97,9 @@ public class GeographicalRegionImpl extends IdentifiedObjectImpl implements Geog
      */
     @Override
     public void unsetRegions() {
-        if( regions != null ) ( ( InternalEList.Unsettable< ? > ) regions ).unset();
+        if( regions != null ) {
+            ( ( InternalEList.Unsettable< ? > ) regions ).unset();
+        }
     }
 
     /**

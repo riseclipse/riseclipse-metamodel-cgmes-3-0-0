@@ -3739,7 +3739,9 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
      * @generated
      */
     public static CimPackage init() {
-        if( isInited ) return ( CimPackage ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI );
+        if( isInited ) {
+            return ( CimPackage ) EPackage.Registry.INSTANCE.getEPackage( CimPackage.eNS_URI );
+        }
 
         // Obtain or create and register package
         Object registeredCimPackage = EPackage.Registry.INSTANCE.get( eNS_URI );
@@ -47064,13 +47066,15 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
     private boolean isLoaded = false;
 
     /**
-     * Laods the package and any sub-packages from their serialized form.
+     * Loads the package and any sub-packages from their serialized form.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     public void loadPackage() {
-        if( isLoaded ) return;
+        if( isLoaded ) {
+            return;
+        }
         isLoaded = true;
 
         URL url = getClass().getResource( packageFilename );
@@ -47103,7 +47107,9 @@ public class CimPackageImpl extends EPackageImpl implements CimPackage {
      * @generated
      */
     public void fixPackageContents() {
-        if( isFixed ) return;
+        if( isFixed ) {
+            return;
+        }
         isFixed = true;
         fixEClassifiers();
     }

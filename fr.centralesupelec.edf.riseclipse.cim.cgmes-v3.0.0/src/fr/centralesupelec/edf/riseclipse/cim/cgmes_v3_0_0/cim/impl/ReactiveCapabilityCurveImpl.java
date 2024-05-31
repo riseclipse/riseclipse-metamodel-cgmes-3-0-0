@@ -110,8 +110,9 @@ public class ReactiveCapabilityCurveImpl extends CurveImpl implements ReactiveCa
      */
     @Override
     public void unsetInitiallyUsedBySynchronousMachines() {
-        if( initiallyUsedBySynchronousMachines != null )
+        if( initiallyUsedBySynchronousMachines != null ) {
             ( ( InternalEList.Unsettable< ? > ) initiallyUsedBySynchronousMachines ).unset();
+        }
     }
 
     /**
@@ -147,7 +148,9 @@ public class ReactiveCapabilityCurveImpl extends CurveImpl implements ReactiveCa
      */
     @Override
     public void unsetEquivalentInjection() {
-        if( equivalentInjection != null ) ( ( InternalEList.Unsettable< ? > ) equivalentInjection ).unset();
+        if( equivalentInjection != null ) {
+            ( ( InternalEList.Unsettable< ? > ) equivalentInjection ).unset();
+        }
     }
 
     /**

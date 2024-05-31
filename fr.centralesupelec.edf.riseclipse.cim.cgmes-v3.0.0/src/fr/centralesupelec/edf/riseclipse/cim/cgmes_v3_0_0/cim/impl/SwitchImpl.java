@@ -260,9 +260,10 @@ public class SwitchImpl extends ConductingEquipmentImpl implements Switch {
         ratedCurrent = newRatedCurrent;
         boolean oldRatedCurrentESet = ratedCurrentESet;
         ratedCurrentESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.SWITCH__RATED_CURRENT, oldRatedCurrent,
                     ratedCurrent, !oldRatedCurrentESet ) );
+        }
     }
 
     /**
@@ -276,9 +277,10 @@ public class SwitchImpl extends ConductingEquipmentImpl implements Switch {
         boolean oldRatedCurrentESet = ratedCurrentESet;
         ratedCurrent = RATED_CURRENT_EDEFAULT;
         ratedCurrentESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.SWITCH__RATED_CURRENT, oldRatedCurrent,
                     RATED_CURRENT_EDEFAULT, oldRatedCurrentESet ) );
+        }
     }
 
     /**
@@ -312,9 +314,10 @@ public class SwitchImpl extends ConductingEquipmentImpl implements Switch {
         open = newOpen;
         boolean oldOpenESet = openESet;
         openESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.SWITCH__OPEN, oldOpen, open,
                     !oldOpenESet ) );
+        }
     }
 
     /**
@@ -328,9 +331,10 @@ public class SwitchImpl extends ConductingEquipmentImpl implements Switch {
         boolean oldOpenESet = openESet;
         open = OPEN_EDEFAULT;
         openESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.SWITCH__OPEN, oldOpen, OPEN_EDEFAULT,
                     oldOpenESet ) );
+        }
     }
 
     /**
@@ -364,9 +368,10 @@ public class SwitchImpl extends ConductingEquipmentImpl implements Switch {
         locked = newLocked;
         boolean oldLockedESet = lockedESet;
         lockedESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.SWITCH__LOCKED, oldLocked, locked,
                     !oldLockedESet ) );
+        }
     }
 
     /**
@@ -380,9 +385,10 @@ public class SwitchImpl extends ConductingEquipmentImpl implements Switch {
         boolean oldLockedESet = lockedESet;
         locked = LOCKED_EDEFAULT;
         lockedESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.SWITCH__LOCKED, oldLocked,
                     LOCKED_EDEFAULT, oldLockedESet ) );
+        }
     }
 
     /**
@@ -416,7 +422,9 @@ public class SwitchImpl extends ConductingEquipmentImpl implements Switch {
      */
     @Override
     public void unsetSvSwitch() {
-        if( svSwitch != null ) ( ( InternalEList.Unsettable< ? > ) svSwitch ).unset();
+        if( svSwitch != null ) {
+            ( ( InternalEList.Unsettable< ? > ) svSwitch ).unset();
+        }
     }
 
     /**
@@ -450,7 +458,9 @@ public class SwitchImpl extends ConductingEquipmentImpl implements Switch {
      */
     @Override
     public void unsetSwitchSchedules() {
-        if( switchSchedules != null ) ( ( InternalEList.Unsettable< ? > ) switchSchedules ).unset();
+        if( switchSchedules != null ) {
+            ( ( InternalEList.Unsettable< ? > ) switchSchedules ).unset();
+        }
     }
 
     /**
@@ -484,9 +494,10 @@ public class SwitchImpl extends ConductingEquipmentImpl implements Switch {
         normalOpen = newNormalOpen;
         boolean oldNormalOpenESet = normalOpenESet;
         normalOpenESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.SWITCH__NORMAL_OPEN, oldNormalOpen,
                     normalOpen, !oldNormalOpenESet ) );
+        }
     }
 
     /**
@@ -500,9 +511,10 @@ public class SwitchImpl extends ConductingEquipmentImpl implements Switch {
         boolean oldNormalOpenESet = normalOpenESet;
         normalOpen = NORMAL_OPEN_EDEFAULT;
         normalOpenESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.SWITCH__NORMAL_OPEN, oldNormalOpen,
                     NORMAL_OPEN_EDEFAULT, oldNormalOpenESet ) );
+        }
     }
 
     /**
@@ -536,9 +548,10 @@ public class SwitchImpl extends ConductingEquipmentImpl implements Switch {
         retained = newRetained;
         boolean oldRetainedESet = retainedESet;
         retainedESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.SWITCH__RETAINED, oldRetained, retained,
                     !oldRetainedESet ) );
+        }
     }
 
     /**
@@ -552,9 +565,10 @@ public class SwitchImpl extends ConductingEquipmentImpl implements Switch {
         boolean oldRetainedESet = retainedESet;
         retained = RETAINED_EDEFAULT;
         retainedESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.SWITCH__RETAINED, oldRetained,
                     RETAINED_EDEFAULT, oldRetainedESet ) );
+        }
     }
 
     /**
@@ -730,34 +744,46 @@ public class SwitchImpl extends ConductingEquipmentImpl implements Switch {
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (normalOpen: " );
-        if( normalOpenESet )
+        if( normalOpenESet ) {
             result.append( normalOpen );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", retained: " );
-        if( retainedESet )
+        if( retainedESet ) {
             result.append( retained );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", ratedCurrent: " );
-        if( ratedCurrentESet )
+        if( ratedCurrentESet ) {
             result.append( ratedCurrent );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", open: " );
-        if( openESet )
+        if( openESet ) {
             result.append( open );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", locked: " );
-        if( lockedESet )
+        if( lockedESet ) {
             result.append( locked );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

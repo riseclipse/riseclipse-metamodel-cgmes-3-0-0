@@ -119,7 +119,9 @@ public class DiscreteImpl extends MeasurementImpl implements Discrete {
      */
     @Override
     public void unsetDiscreteValues() {
-        if( discreteValues != null ) ( ( InternalEList.Unsettable< ? > ) discreteValues ).unset();
+        if( discreteValues != null ) {
+            ( ( InternalEList.Unsettable< ? > ) discreteValues ).unset();
+        }
     }
 
     /**
@@ -155,10 +157,12 @@ public class DiscreteImpl extends MeasurementImpl implements Discrete {
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.DISCRETE__VALUE_ALIAS_SET, oldValueAliasSet, newValueAliasSet, !oldValueAliasSetESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -172,21 +176,26 @@ public class DiscreteImpl extends MeasurementImpl implements Discrete {
     public void setValueAliasSet( ValueAliasSet newValueAliasSet ) {
         if( newValueAliasSet != valueAliasSet ) {
             NotificationChain msgs = null;
-            if( valueAliasSet != null )
+            if( valueAliasSet != null ) {
                 msgs = ( ( InternalEObject ) valueAliasSet ).eInverseRemove( this,
                         CimPackage.VALUE_ALIAS_SET__DISCRETES, ValueAliasSet.class, msgs );
-            if( newValueAliasSet != null )
+            }
+            if( newValueAliasSet != null ) {
                 msgs = ( ( InternalEObject ) newValueAliasSet ).eInverseAdd( this,
                         CimPackage.VALUE_ALIAS_SET__DISCRETES, ValueAliasSet.class, msgs );
+            }
             msgs = basicSetValueAliasSet( newValueAliasSet, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldValueAliasSetESet = valueAliasSetESet;
             valueAliasSetESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DISCRETE__VALUE_ALIAS_SET,
                         newValueAliasSet, newValueAliasSet, !oldValueAliasSetESet ) );
+            }
         }
     }
 
@@ -203,10 +212,12 @@ public class DiscreteImpl extends MeasurementImpl implements Discrete {
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.DISCRETE__VALUE_ALIAS_SET, oldValueAliasSet, null, oldValueAliasSetESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -223,14 +234,17 @@ public class DiscreteImpl extends MeasurementImpl implements Discrete {
             msgs = ( ( InternalEObject ) valueAliasSet ).eInverseRemove( this, CimPackage.VALUE_ALIAS_SET__DISCRETES,
                     ValueAliasSet.class, msgs );
             msgs = basicUnsetValueAliasSet( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldValueAliasSetESet = valueAliasSetESet;
             valueAliasSetESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DISCRETE__VALUE_ALIAS_SET, null,
                         null, oldValueAliasSetESet ) );
+            }
         }
     }
 
@@ -257,9 +271,10 @@ public class DiscreteImpl extends MeasurementImpl implements Discrete {
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getDiscreteValues() )
                     .basicAdd( otherEnd, msgs );
         case CimPackage.DISCRETE__VALUE_ALIAS_SET:
-            if( valueAliasSet != null )
+            if( valueAliasSet != null ) {
                 msgs = ( ( InternalEObject ) valueAliasSet ).eInverseRemove( this,
                         CimPackage.VALUE_ALIAS_SET__DISCRETES, ValueAliasSet.class, msgs );
+            }
             return basicSetValueAliasSet( ( ValueAliasSet ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );

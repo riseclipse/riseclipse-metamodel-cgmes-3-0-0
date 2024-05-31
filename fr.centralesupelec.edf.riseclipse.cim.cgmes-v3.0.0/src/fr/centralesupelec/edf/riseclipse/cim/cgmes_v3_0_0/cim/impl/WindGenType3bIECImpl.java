@@ -189,7 +189,9 @@ public class WindGenType3bIECImpl extends WindGenType3IECImpl implements WindGen
      */
     @Override
     public void unsetWindDynamicsLookupTable() {
-        if( windDynamicsLookupTable != null ) ( ( InternalEList.Unsettable< ? > ) windDynamicsLookupTable ).unset();
+        if( windDynamicsLookupTable != null ) {
+            ( ( InternalEList.Unsettable< ? > ) windDynamicsLookupTable ).unset();
+        }
     }
 
     /**
@@ -223,9 +225,10 @@ public class WindGenType3bIECImpl extends WindGenType3IECImpl implements WindGen
         two = newTwo;
         boolean oldTwoESet = twoESet;
         twoESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_GEN_TYPE3B_IEC__TWO, oldTwo, two,
                     !oldTwoESet ) );
+        }
     }
 
     /**
@@ -239,9 +242,10 @@ public class WindGenType3bIECImpl extends WindGenType3IECImpl implements WindGen
         boolean oldTwoESet = twoESet;
         two = TWO_EDEFAULT;
         twoESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_GEN_TYPE3B_IEC__TWO, oldTwo,
                     TWO_EDEFAULT, oldTwoESet ) );
+        }
     }
 
     /**
@@ -275,9 +279,10 @@ public class WindGenType3bIECImpl extends WindGenType3IECImpl implements WindGen
         tg = newTg;
         boolean oldTgESet = tgESet;
         tgESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_GEN_TYPE3B_IEC__TG, oldTg, tg,
                     !oldTgESet ) );
+        }
     }
 
     /**
@@ -291,9 +296,10 @@ public class WindGenType3bIECImpl extends WindGenType3IECImpl implements WindGen
         boolean oldTgESet = tgESet;
         tg = TG_EDEFAULT;
         tgESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_GEN_TYPE3B_IEC__TG, oldTg,
                     TG_EDEFAULT, oldTgESet ) );
+        }
     }
 
     /**
@@ -327,9 +333,10 @@ public class WindGenType3bIECImpl extends WindGenType3IECImpl implements WindGen
         mwtcwp = newMwtcwp;
         boolean oldMwtcwpESet = mwtcwpESet;
         mwtcwpESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_GEN_TYPE3B_IEC__MWTCWP, oldMwtcwp,
                     mwtcwp, !oldMwtcwpESet ) );
+        }
     }
 
     /**
@@ -343,9 +350,10 @@ public class WindGenType3bIECImpl extends WindGenType3IECImpl implements WindGen
         boolean oldMwtcwpESet = mwtcwpESet;
         mwtcwp = MWTCWP_EDEFAULT;
         mwtcwpESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_GEN_TYPE3B_IEC__MWTCWP, oldMwtcwp,
                     MWTCWP_EDEFAULT, oldMwtcwpESet ) );
+        }
     }
 
     /**
@@ -485,24 +493,32 @@ public class WindGenType3bIECImpl extends WindGenType3IECImpl implements WindGen
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (two: " );
-        if( twoESet )
+        if( twoESet ) {
             result.append( two );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", tg: " );
-        if( tgESet )
+        if( tgESet ) {
             result.append( tg );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", mwtcwp: " );
-        if( mwtcwpESet )
+        if( mwtcwpESet ) {
             result.append( mwtcwp );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

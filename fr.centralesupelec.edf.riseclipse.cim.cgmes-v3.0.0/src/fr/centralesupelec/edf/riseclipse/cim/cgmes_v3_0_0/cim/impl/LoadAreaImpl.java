@@ -96,7 +96,9 @@ public class LoadAreaImpl extends EnergyAreaImpl implements LoadArea {
      */
     @Override
     public void unsetSubLoadAreas() {
-        if( subLoadAreas != null ) ( ( InternalEList.Unsettable< ? > ) subLoadAreas ).unset();
+        if( subLoadAreas != null ) {
+            ( ( InternalEList.Unsettable< ? > ) subLoadAreas ).unset();
+        }
     }
 
     /**

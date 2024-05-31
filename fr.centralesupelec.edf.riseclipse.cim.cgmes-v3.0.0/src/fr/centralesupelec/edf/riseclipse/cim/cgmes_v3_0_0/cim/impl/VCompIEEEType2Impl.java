@@ -129,7 +129,9 @@ public class VCompIEEEType2Impl extends VoltageCompensatorDynamicsImpl implement
      */
     @Override
     public void unsetGenICompensationForGenJ() {
-        if( genICompensationForGenJ != null ) ( ( InternalEList.Unsettable< ? > ) genICompensationForGenJ ).unset();
+        if( genICompensationForGenJ != null ) {
+            ( ( InternalEList.Unsettable< ? > ) genICompensationForGenJ ).unset();
+        }
     }
 
     /**
@@ -163,9 +165,10 @@ public class VCompIEEEType2Impl extends VoltageCompensatorDynamicsImpl implement
         tr = newTr;
         boolean oldTrESet = trESet;
         trESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.VCOMP_IEEE_TYPE2__TR, oldTr, tr,
                     !oldTrESet ) );
+        }
     }
 
     /**
@@ -179,9 +182,10 @@ public class VCompIEEEType2Impl extends VoltageCompensatorDynamicsImpl implement
         boolean oldTrESet = trESet;
         tr = TR_EDEFAULT;
         trESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.VCOMP_IEEE_TYPE2__TR, oldTr,
                     TR_EDEFAULT, oldTrESet ) );
+        }
     }
 
     /**
@@ -301,14 +305,18 @@ public class VCompIEEEType2Impl extends VoltageCompensatorDynamicsImpl implement
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (tr: " );
-        if( trESet )
+        if( trESet ) {
             result.append( tr );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

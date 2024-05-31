@@ -349,10 +349,11 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
             InternalEObject oldWindGenTurbineType2IEC = ( InternalEObject ) windGenTurbineType2IEC;
             windGenTurbineType2IEC = ( WindGenTurbineType2IEC ) eResolveProxy( oldWindGenTurbineType2IEC );
             if( windGenTurbineType2IEC != oldWindGenTurbineType2IEC ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE,
                             CimPackage.WIND_CONT_ROTOR_RIEC__WIND_GEN_TURBINE_TYPE2_IEC, oldWindGenTurbineType2IEC,
                             windGenTurbineType2IEC ) );
+                }
             }
         }
         return windGenTurbineType2IEC;
@@ -382,10 +383,12 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.WIND_CONT_ROTOR_RIEC__WIND_GEN_TURBINE_TYPE2_IEC, oldWindGenTurbineType2IEC,
                     newWindGenTurbineType2IEC, !oldWindGenTurbineType2IECESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -399,24 +402,29 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
     public void setWindGenTurbineType2IEC( WindGenTurbineType2IEC newWindGenTurbineType2IEC ) {
         if( newWindGenTurbineType2IEC != windGenTurbineType2IEC ) {
             NotificationChain msgs = null;
-            if( windGenTurbineType2IEC != null )
+            if( windGenTurbineType2IEC != null ) {
                 msgs = ( ( InternalEObject ) windGenTurbineType2IEC ).eInverseRemove( this,
                         CimPackage.WIND_GEN_TURBINE_TYPE2_IEC__WIND_CONT_ROTOR_RIEC, WindGenTurbineType2IEC.class,
                         msgs );
-            if( newWindGenTurbineType2IEC != null )
+            }
+            if( newWindGenTurbineType2IEC != null ) {
                 msgs = ( ( InternalEObject ) newWindGenTurbineType2IEC ).eInverseAdd( this,
                         CimPackage.WIND_GEN_TURBINE_TYPE2_IEC__WIND_CONT_ROTOR_RIEC, WindGenTurbineType2IEC.class,
                         msgs );
+            }
             msgs = basicSetWindGenTurbineType2IEC( newWindGenTurbineType2IEC, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldWindGenTurbineType2IECESet = windGenTurbineType2IECESet;
             windGenTurbineType2IECESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET,
                         CimPackage.WIND_CONT_ROTOR_RIEC__WIND_GEN_TURBINE_TYPE2_IEC, newWindGenTurbineType2IEC,
                         newWindGenTurbineType2IEC, !oldWindGenTurbineType2IECESet ) );
+            }
         }
     }
 
@@ -434,10 +442,12 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.WIND_CONT_ROTOR_RIEC__WIND_GEN_TURBINE_TYPE2_IEC, oldWindGenTurbineType2IEC, null,
                     oldWindGenTurbineType2IECESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -454,15 +464,18 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
             msgs = ( ( InternalEObject ) windGenTurbineType2IEC ).eInverseRemove( this,
                     CimPackage.WIND_GEN_TURBINE_TYPE2_IEC__WIND_CONT_ROTOR_RIEC, WindGenTurbineType2IEC.class, msgs );
             msgs = basicUnsetWindGenTurbineType2IEC( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldWindGenTurbineType2IECESet = windGenTurbineType2IECESet;
             windGenTurbineType2IECESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.WIND_CONT_ROTOR_RIEC__WIND_GEN_TURBINE_TYPE2_IEC, null, null,
                         oldWindGenTurbineType2IECESet ) );
+            }
         }
     }
 
@@ -498,7 +511,9 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
      */
     @Override
     public void unsetWindDynamicsLookupTable() {
-        if( windDynamicsLookupTable != null ) ( ( InternalEList.Unsettable< ? > ) windDynamicsLookupTable ).unset();
+        if( windDynamicsLookupTable != null ) {
+            ( ( InternalEList.Unsettable< ? > ) windDynamicsLookupTable ).unset();
+        }
     }
 
     /**
@@ -532,9 +547,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         tpfiltrr = newTpfiltrr;
         boolean oldTpfiltrrESet = tpfiltrrESet;
         tpfiltrrESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_ROTOR_RIEC__TPFILTRR,
                     oldTpfiltrr, tpfiltrr, !oldTpfiltrrESet ) );
+        }
     }
 
     /**
@@ -548,9 +564,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         boolean oldTpfiltrrESet = tpfiltrrESet;
         tpfiltrr = TPFILTRR_EDEFAULT;
         tpfiltrrESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_ROTOR_RIEC__TPFILTRR,
                     oldTpfiltrr, TPFILTRR_EDEFAULT, oldTpfiltrrESet ) );
+        }
     }
 
     /**
@@ -584,9 +601,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         rmax = newRmax;
         boolean oldRmaxESet = rmaxESet;
         rmaxESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_ROTOR_RIEC__RMAX, oldRmax,
                     rmax, !oldRmaxESet ) );
+        }
     }
 
     /**
@@ -600,9 +618,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         boolean oldRmaxESet = rmaxESet;
         rmax = RMAX_EDEFAULT;
         rmaxESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_ROTOR_RIEC__RMAX, oldRmax,
                     RMAX_EDEFAULT, oldRmaxESet ) );
+        }
     }
 
     /**
@@ -636,9 +655,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         rmin = newRmin;
         boolean oldRminESet = rminESet;
         rminESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_ROTOR_RIEC__RMIN, oldRmin,
                     rmin, !oldRminESet ) );
+        }
     }
 
     /**
@@ -652,9 +672,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         boolean oldRminESet = rminESet;
         rmin = RMIN_EDEFAULT;
         rminESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_ROTOR_RIEC__RMIN, oldRmin,
                     RMIN_EDEFAULT, oldRminESet ) );
+        }
     }
 
     /**
@@ -688,9 +709,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         kpfilt = newKpfilt;
         boolean oldKpfiltESet = kpfiltESet;
         kpfiltESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_ROTOR_RIEC__KPFILT, oldKpfilt,
                     kpfilt, !oldKpfiltESet ) );
+        }
     }
 
     /**
@@ -704,9 +726,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         boolean oldKpfiltESet = kpfiltESet;
         kpfilt = KPFILT_EDEFAULT;
         kpfiltESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_ROTOR_RIEC__KPFILT,
                     oldKpfilt, KPFILT_EDEFAULT, oldKpfiltESet ) );
+        }
     }
 
     /**
@@ -740,9 +763,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         kirr = newKirr;
         boolean oldKirrESet = kirrESet;
         kirrESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_ROTOR_RIEC__KIRR, oldKirr,
                     kirr, !oldKirrESet ) );
+        }
     }
 
     /**
@@ -756,9 +780,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         boolean oldKirrESet = kirrESet;
         kirr = KIRR_EDEFAULT;
         kirrESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_ROTOR_RIEC__KIRR, oldKirr,
                     KIRR_EDEFAULT, oldKirrESet ) );
+        }
     }
 
     /**
@@ -792,9 +817,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         kprr = newKprr;
         boolean oldKprrESet = kprrESet;
         kprrESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_ROTOR_RIEC__KPRR, oldKprr,
                     kprr, !oldKprrESet ) );
+        }
     }
 
     /**
@@ -808,9 +834,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         boolean oldKprrESet = kprrESet;
         kprr = KPRR_EDEFAULT;
         kprrESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_ROTOR_RIEC__KPRR, oldKprr,
                     KPRR_EDEFAULT, oldKprrESet ) );
+        }
     }
 
     /**
@@ -844,9 +871,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         komegafilt = newKomegafilt;
         boolean oldKomegafiltESet = komegafiltESet;
         komegafiltESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_ROTOR_RIEC__KOMEGAFILT,
                     oldKomegafilt, komegafilt, !oldKomegafiltESet ) );
+        }
     }
 
     /**
@@ -860,9 +888,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         boolean oldKomegafiltESet = komegafiltESet;
         komegafilt = KOMEGAFILT_EDEFAULT;
         komegafiltESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_ROTOR_RIEC__KOMEGAFILT,
                     oldKomegafilt, KOMEGAFILT_EDEFAULT, oldKomegafiltESet ) );
+        }
     }
 
     /**
@@ -896,9 +925,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         tomegafiltrr = newTomegafiltrr;
         boolean oldTomegafiltrrESet = tomegafiltrrESet;
         tomegafiltrrESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_ROTOR_RIEC__TOMEGAFILTRR,
                     oldTomegafiltrr, tomegafiltrr, !oldTomegafiltrrESet ) );
+        }
     }
 
     /**
@@ -912,9 +942,10 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
         boolean oldTomegafiltrrESet = tomegafiltrrESet;
         tomegafiltrr = TOMEGAFILTRR_EDEFAULT;
         tomegafiltrrESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_ROTOR_RIEC__TOMEGAFILTRR,
                     oldTomegafiltrr, TOMEGAFILTRR_EDEFAULT, oldTomegafiltrrESet ) );
+        }
     }
 
     /**
@@ -937,10 +968,11 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
     public NotificationChain eInverseAdd( InternalEObject otherEnd, int featureID, NotificationChain msgs ) {
         switch( featureID ) {
         case CimPackage.WIND_CONT_ROTOR_RIEC__WIND_GEN_TURBINE_TYPE2_IEC:
-            if( windGenTurbineType2IEC != null )
+            if( windGenTurbineType2IEC != null ) {
                 msgs = ( ( InternalEObject ) windGenTurbineType2IEC ).eInverseRemove( this,
                         CimPackage.WIND_GEN_TURBINE_TYPE2_IEC__WIND_CONT_ROTOR_RIEC, WindGenTurbineType2IEC.class,
                         msgs );
+            }
             return basicSetWindGenTurbineType2IEC( ( WindGenTurbineType2IEC ) otherEnd, msgs );
         case CimPackage.WIND_CONT_ROTOR_RIEC__WIND_DYNAMICS_LOOKUP_TABLE:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getWindDynamicsLookupTable() )
@@ -974,7 +1006,9 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
     public Object eGet( int featureID, boolean resolve, boolean coreType ) {
         switch( featureID ) {
         case CimPackage.WIND_CONT_ROTOR_RIEC__WIND_GEN_TURBINE_TYPE2_IEC:
-            if( resolve ) return getWindGenTurbineType2IEC();
+            if( resolve ) {
+                return getWindGenTurbineType2IEC();
+            }
             return basicGetWindGenTurbineType2IEC();
         case CimPackage.WIND_CONT_ROTOR_RIEC__WIND_DYNAMICS_LOOKUP_TABLE:
             return getWindDynamicsLookupTable();
@@ -1123,49 +1157,67 @@ public class WindContRotorRIECImpl extends IdentifiedObjectImpl implements WindC
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (tpfiltrr: " );
-        if( tpfiltrrESet )
+        if( tpfiltrrESet ) {
             result.append( tpfiltrr );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", rmax: " );
-        if( rmaxESet )
+        if( rmaxESet ) {
             result.append( rmax );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", rmin: " );
-        if( rminESet )
+        if( rminESet ) {
             result.append( rmin );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", kpfilt: " );
-        if( kpfiltESet )
+        if( kpfiltESet ) {
             result.append( kpfilt );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", kirr: " );
-        if( kirrESet )
+        if( kirrESet ) {
             result.append( kirr );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", kprr: " );
-        if( kprrESet )
+        if( kprrESet ) {
             result.append( kprr );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", komegafilt: " );
-        if( komegafiltESet )
+        if( komegafiltESet ) {
             result.append( komegafilt );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", tomegafiltrr: " );
-        if( tomegafiltrrESet )
+        if( tomegafiltrrESet ) {
             result.append( tomegafiltrr );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

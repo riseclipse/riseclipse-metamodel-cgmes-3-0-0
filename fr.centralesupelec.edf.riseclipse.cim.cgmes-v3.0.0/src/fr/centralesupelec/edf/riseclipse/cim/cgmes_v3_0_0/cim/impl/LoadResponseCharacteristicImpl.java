@@ -428,10 +428,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         pVoltageExponent = newPVoltageExponent;
         boolean oldPVoltageExponentESet = pVoltageExponentESet;
         pVoltageExponentESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__PVOLTAGE_EXPONENT, oldPVoltageExponent, pVoltageExponent,
                     !oldPVoltageExponentESet ) );
+        }
     }
 
     /**
@@ -445,10 +446,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         boolean oldPVoltageExponentESet = pVoltageExponentESet;
         pVoltageExponent = PVOLTAGE_EXPONENT_EDEFAULT;
         pVoltageExponentESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__PVOLTAGE_EXPONENT, oldPVoltageExponent,
                     PVOLTAGE_EXPONENT_EDEFAULT, oldPVoltageExponentESet ) );
+        }
     }
 
     /**
@@ -482,10 +484,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         exponentModel = newExponentModel;
         boolean oldExponentModelESet = exponentModelESet;
         exponentModelESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__EXPONENT_MODEL, oldExponentModel, exponentModel,
                     !oldExponentModelESet ) );
+        }
     }
 
     /**
@@ -499,10 +502,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         boolean oldExponentModelESet = exponentModelESet;
         exponentModel = EXPONENT_MODEL_EDEFAULT;
         exponentModelESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__EXPONENT_MODEL, oldExponentModel, EXPONENT_MODEL_EDEFAULT,
                     oldExponentModelESet ) );
+        }
     }
 
     /**
@@ -536,10 +540,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         qConstantImpedance = newQConstantImpedance;
         boolean oldQConstantImpedanceESet = qConstantImpedanceESet;
         qConstantImpedanceESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__QCONSTANT_IMPEDANCE, oldQConstantImpedance,
                     qConstantImpedance, !oldQConstantImpedanceESet ) );
+        }
     }
 
     /**
@@ -553,10 +558,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         boolean oldQConstantImpedanceESet = qConstantImpedanceESet;
         qConstantImpedance = QCONSTANT_IMPEDANCE_EDEFAULT;
         qConstantImpedanceESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__QCONSTANT_IMPEDANCE, oldQConstantImpedance,
                     QCONSTANT_IMPEDANCE_EDEFAULT, oldQConstantImpedanceESet ) );
+        }
     }
 
     /**
@@ -591,7 +597,9 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
      */
     @Override
     public void unsetEnergyConsumer() {
-        if( energyConsumer != null ) ( ( InternalEList.Unsettable< ? > ) energyConsumer ).unset();
+        if( energyConsumer != null ) {
+            ( ( InternalEList.Unsettable< ? > ) energyConsumer ).unset();
+        }
     }
 
     /**
@@ -625,10 +633,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         pConstantImpedance = newPConstantImpedance;
         boolean oldPConstantImpedanceESet = pConstantImpedanceESet;
         pConstantImpedanceESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__PCONSTANT_IMPEDANCE, oldPConstantImpedance,
                     pConstantImpedance, !oldPConstantImpedanceESet ) );
+        }
     }
 
     /**
@@ -642,10 +651,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         boolean oldPConstantImpedanceESet = pConstantImpedanceESet;
         pConstantImpedance = PCONSTANT_IMPEDANCE_EDEFAULT;
         pConstantImpedanceESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__PCONSTANT_IMPEDANCE, oldPConstantImpedance,
                     PCONSTANT_IMPEDANCE_EDEFAULT, oldPConstantImpedanceESet ) );
+        }
     }
 
     /**
@@ -679,10 +689,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         qConstantCurrent = newQConstantCurrent;
         boolean oldQConstantCurrentESet = qConstantCurrentESet;
         qConstantCurrentESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__QCONSTANT_CURRENT, oldQConstantCurrent, qConstantCurrent,
                     !oldQConstantCurrentESet ) );
+        }
     }
 
     /**
@@ -696,10 +707,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         boolean oldQConstantCurrentESet = qConstantCurrentESet;
         qConstantCurrent = QCONSTANT_CURRENT_EDEFAULT;
         qConstantCurrentESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__QCONSTANT_CURRENT, oldQConstantCurrent,
                     QCONSTANT_CURRENT_EDEFAULT, oldQConstantCurrentESet ) );
+        }
     }
 
     /**
@@ -733,10 +745,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         pConstantCurrent = newPConstantCurrent;
         boolean oldPConstantCurrentESet = pConstantCurrentESet;
         pConstantCurrentESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__PCONSTANT_CURRENT, oldPConstantCurrent, pConstantCurrent,
                     !oldPConstantCurrentESet ) );
+        }
     }
 
     /**
@@ -750,10 +763,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         boolean oldPConstantCurrentESet = pConstantCurrentESet;
         pConstantCurrent = PCONSTANT_CURRENT_EDEFAULT;
         pConstantCurrentESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__PCONSTANT_CURRENT, oldPConstantCurrent,
                     PCONSTANT_CURRENT_EDEFAULT, oldPConstantCurrentESet ) );
+        }
     }
 
     /**
@@ -787,10 +801,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         qConstantPower = newQConstantPower;
         boolean oldQConstantPowerESet = qConstantPowerESet;
         qConstantPowerESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__QCONSTANT_POWER, oldQConstantPower, qConstantPower,
                     !oldQConstantPowerESet ) );
+        }
     }
 
     /**
@@ -804,10 +819,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         boolean oldQConstantPowerESet = qConstantPowerESet;
         qConstantPower = QCONSTANT_POWER_EDEFAULT;
         qConstantPowerESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__QCONSTANT_POWER, oldQConstantPower,
                     QCONSTANT_POWER_EDEFAULT, oldQConstantPowerESet ) );
+        }
     }
 
     /**
@@ -841,10 +857,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         pConstantPower = newPConstantPower;
         boolean oldPConstantPowerESet = pConstantPowerESet;
         pConstantPowerESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__PCONSTANT_POWER, oldPConstantPower, pConstantPower,
                     !oldPConstantPowerESet ) );
+        }
     }
 
     /**
@@ -858,10 +875,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         boolean oldPConstantPowerESet = pConstantPowerESet;
         pConstantPower = PCONSTANT_POWER_EDEFAULT;
         pConstantPowerESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__PCONSTANT_POWER, oldPConstantPower,
                     PCONSTANT_POWER_EDEFAULT, oldPConstantPowerESet ) );
+        }
     }
 
     /**
@@ -895,10 +913,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         qVoltageExponent = newQVoltageExponent;
         boolean oldQVoltageExponentESet = qVoltageExponentESet;
         qVoltageExponentESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__QVOLTAGE_EXPONENT, oldQVoltageExponent, qVoltageExponent,
                     !oldQVoltageExponentESet ) );
+        }
     }
 
     /**
@@ -912,10 +931,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         boolean oldQVoltageExponentESet = qVoltageExponentESet;
         qVoltageExponent = QVOLTAGE_EXPONENT_EDEFAULT;
         qVoltageExponentESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__QVOLTAGE_EXPONENT, oldQVoltageExponent,
                     QVOLTAGE_EXPONENT_EDEFAULT, oldQVoltageExponentESet ) );
+        }
     }
 
     /**
@@ -949,10 +969,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         qFrequencyExponent = newQFrequencyExponent;
         boolean oldQFrequencyExponentESet = qFrequencyExponentESet;
         qFrequencyExponentESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__QFREQUENCY_EXPONENT, oldQFrequencyExponent,
                     qFrequencyExponent, !oldQFrequencyExponentESet ) );
+        }
     }
 
     /**
@@ -966,10 +987,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         boolean oldQFrequencyExponentESet = qFrequencyExponentESet;
         qFrequencyExponent = QFREQUENCY_EXPONENT_EDEFAULT;
         qFrequencyExponentESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__QFREQUENCY_EXPONENT, oldQFrequencyExponent,
                     QFREQUENCY_EXPONENT_EDEFAULT, oldQFrequencyExponentESet ) );
+        }
     }
 
     /**
@@ -1003,10 +1025,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         pFrequencyExponent = newPFrequencyExponent;
         boolean oldPFrequencyExponentESet = pFrequencyExponentESet;
         pFrequencyExponentESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__PFREQUENCY_EXPONENT, oldPFrequencyExponent,
                     pFrequencyExponent, !oldPFrequencyExponentESet ) );
+        }
     }
 
     /**
@@ -1020,10 +1043,11 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
         boolean oldPFrequencyExponentESet = pFrequencyExponentESet;
         pFrequencyExponent = PFREQUENCY_EXPONENT_EDEFAULT;
         pFrequencyExponentESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.LOAD_RESPONSE_CHARACTERISTIC__PFREQUENCY_EXPONENT, oldPFrequencyExponent,
                     PFREQUENCY_EXPONENT_EDEFAULT, oldPFrequencyExponentESet ) );
+        }
     }
 
     /**
@@ -1243,64 +1267,88 @@ public class LoadResponseCharacteristicImpl extends IdentifiedObjectImpl impleme
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (pConstantImpedance: " );
-        if( pConstantImpedanceESet )
+        if( pConstantImpedanceESet ) {
             result.append( pConstantImpedance );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", pVoltageExponent: " );
-        if( pVoltageExponentESet )
+        if( pVoltageExponentESet ) {
             result.append( pVoltageExponent );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", qConstantCurrent: " );
-        if( qConstantCurrentESet )
+        if( qConstantCurrentESet ) {
             result.append( qConstantCurrent );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", pConstantPower: " );
-        if( pConstantPowerESet )
+        if( pConstantPowerESet ) {
             result.append( pConstantPower );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", qConstantPower: " );
-        if( qConstantPowerESet )
+        if( qConstantPowerESet ) {
             result.append( qConstantPower );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", exponentModel: " );
-        if( exponentModelESet )
+        if( exponentModelESet ) {
             result.append( exponentModel );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", qConstantImpedance: " );
-        if( qConstantImpedanceESet )
+        if( qConstantImpedanceESet ) {
             result.append( qConstantImpedance );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", pConstantCurrent: " );
-        if( pConstantCurrentESet )
+        if( pConstantCurrentESet ) {
             result.append( pConstantCurrent );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", qVoltageExponent: " );
-        if( qVoltageExponentESet )
+        if( qVoltageExponentESet ) {
             result.append( qVoltageExponent );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", qFrequencyExponent: " );
-        if( qFrequencyExponentESet )
+        if( qFrequencyExponentESet ) {
             result.append( qFrequencyExponent );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", pFrequencyExponent: " );
-        if( pFrequencyExponentESet )
+        if( pFrequencyExponentESet ) {
             result.append( pFrequencyExponent );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

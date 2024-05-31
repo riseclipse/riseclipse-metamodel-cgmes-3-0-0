@@ -110,7 +110,9 @@ public class PhaseTapChangerTableImpl extends IdentifiedObjectImpl implements Ph
      */
     @Override
     public void unsetPhaseTapChangerTablePoint() {
-        if( phaseTapChangerTablePoint != null ) ( ( InternalEList.Unsettable< ? > ) phaseTapChangerTablePoint ).unset();
+        if( phaseTapChangerTablePoint != null ) {
+            ( ( InternalEList.Unsettable< ? > ) phaseTapChangerTablePoint ).unset();
+        }
     }
 
     /**
@@ -146,7 +148,9 @@ public class PhaseTapChangerTableImpl extends IdentifiedObjectImpl implements Ph
      */
     @Override
     public void unsetPhaseTapChangerTabular() {
-        if( phaseTapChangerTabular != null ) ( ( InternalEList.Unsettable< ? > ) phaseTapChangerTabular ).unset();
+        if( phaseTapChangerTabular != null ) {
+            ( ( InternalEList.Unsettable< ? > ) phaseTapChangerTabular ).unset();
+        }
     }
 
     /**

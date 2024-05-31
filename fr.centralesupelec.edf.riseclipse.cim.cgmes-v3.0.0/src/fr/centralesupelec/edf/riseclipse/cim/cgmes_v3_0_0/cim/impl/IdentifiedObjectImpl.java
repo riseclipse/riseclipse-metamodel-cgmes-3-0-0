@@ -248,9 +248,10 @@ public class IdentifiedObjectImpl extends CimObjectWithIDImpl implements Identif
         mRID = newMRID;
         boolean oldMRIDESet = mRIDESet;
         mRIDESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.IDENTIFIED_OBJECT__MRID, oldMRID, mRID,
                     !oldMRIDESet ) );
+        }
     }
 
     /**
@@ -264,9 +265,10 @@ public class IdentifiedObjectImpl extends CimObjectWithIDImpl implements Identif
         boolean oldMRIDESet = mRIDESet;
         mRID = MRID_EDEFAULT;
         mRIDESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.IDENTIFIED_OBJECT__MRID, oldMRID,
                     MRID_EDEFAULT, oldMRIDESet ) );
+        }
     }
 
     /**
@@ -300,9 +302,10 @@ public class IdentifiedObjectImpl extends CimObjectWithIDImpl implements Identif
         shortName = newShortName;
         boolean oldShortNameESet = shortNameESet;
         shortNameESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.IDENTIFIED_OBJECT__SHORT_NAME,
                     oldShortName, shortName, !oldShortNameESet ) );
+        }
     }
 
     /**
@@ -316,9 +319,10 @@ public class IdentifiedObjectImpl extends CimObjectWithIDImpl implements Identif
         boolean oldShortNameESet = shortNameESet;
         shortName = SHORT_NAME_EDEFAULT;
         shortNameESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.IDENTIFIED_OBJECT__SHORT_NAME,
                     oldShortName, SHORT_NAME_EDEFAULT, oldShortNameESet ) );
+        }
     }
 
     /**
@@ -352,7 +356,9 @@ public class IdentifiedObjectImpl extends CimObjectWithIDImpl implements Identif
      */
     @Override
     public void unsetDiagramObjects() {
-        if( diagramObjects != null ) ( ( InternalEList.Unsettable< ? > ) diagramObjects ).unset();
+        if( diagramObjects != null ) {
+            ( ( InternalEList.Unsettable< ? > ) diagramObjects ).unset();
+        }
     }
 
     /**
@@ -416,9 +422,10 @@ public class IdentifiedObjectImpl extends CimObjectWithIDImpl implements Identif
         energyIdentCodeEic = newEnergyIdentCodeEic;
         boolean oldEnergyIdentCodeEicESet = energyIdentCodeEicESet;
         energyIdentCodeEicESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.IDENTIFIED_OBJECT__ENERGY_IDENT_CODE_EIC,
                     oldEnergyIdentCodeEic, energyIdentCodeEic, !oldEnergyIdentCodeEicESet ) );
+        }
     }
 
     /**
@@ -432,10 +439,11 @@ public class IdentifiedObjectImpl extends CimObjectWithIDImpl implements Identif
         boolean oldEnergyIdentCodeEicESet = energyIdentCodeEicESet;
         energyIdentCodeEic = ENERGY_IDENT_CODE_EIC_EDEFAULT;
         energyIdentCodeEicESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.IDENTIFIED_OBJECT__ENERGY_IDENT_CODE_EIC, oldEnergyIdentCodeEic,
                     ENERGY_IDENT_CODE_EIC_EDEFAULT, oldEnergyIdentCodeEicESet ) );
+        }
     }
 
     /**
@@ -469,9 +477,10 @@ public class IdentifiedObjectImpl extends CimObjectWithIDImpl implements Identif
         name = newName;
         boolean oldNameESet = nameESet;
         nameESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.IDENTIFIED_OBJECT__NAME, oldName, name,
                     !oldNameESet ) );
+        }
     }
 
     /**
@@ -485,9 +494,10 @@ public class IdentifiedObjectImpl extends CimObjectWithIDImpl implements Identif
         boolean oldNameESet = nameESet;
         name = NAME_EDEFAULT;
         nameESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.IDENTIFIED_OBJECT__NAME, oldName,
                     NAME_EDEFAULT, oldNameESet ) );
+        }
     }
 
     /**
@@ -521,9 +531,10 @@ public class IdentifiedObjectImpl extends CimObjectWithIDImpl implements Identif
         description = newDescription;
         boolean oldDescriptionESet = descriptionESet;
         descriptionESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.IDENTIFIED_OBJECT__DESCRIPTION,
                     oldDescription, description, !oldDescriptionESet ) );
+        }
     }
 
     /**
@@ -537,9 +548,10 @@ public class IdentifiedObjectImpl extends CimObjectWithIDImpl implements Identif
         boolean oldDescriptionESet = descriptionESet;
         description = DESCRIPTION_EDEFAULT;
         descriptionESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.IDENTIFIED_OBJECT__DESCRIPTION,
                     oldDescription, DESCRIPTION_EDEFAULT, oldDescriptionESet ) );
+        }
     }
 
     /**
@@ -669,34 +681,46 @@ public class IdentifiedObjectImpl extends CimObjectWithIDImpl implements Identif
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (energyIdentCodeEic: " );
-        if( energyIdentCodeEicESet )
+        if( energyIdentCodeEicESet ) {
             result.append( energyIdentCodeEic );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", description: " );
-        if( descriptionESet )
+        if( descriptionESet ) {
             result.append( description );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", mRID: " );
-        if( mRIDESet )
+        if( mRIDESet ) {
             result.append( mRID );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", name: " );
-        if( nameESet )
+        if( nameESet ) {
             result.append( name );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", shortName: " );
-        if( shortNameESet )
+        if( shortNameESet ) {
             result.append( shortName );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

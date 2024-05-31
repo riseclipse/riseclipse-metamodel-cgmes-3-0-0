@@ -144,10 +144,12 @@ public class DCNodeImpl extends IdentifiedObjectImpl implements DCNode {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.DC_NODE__DC_EQUIPMENT_CONTAINER, oldDCEquipmentContainer, newDCEquipmentContainer,
                     !oldDCEquipmentContainerESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -161,21 +163,26 @@ public class DCNodeImpl extends IdentifiedObjectImpl implements DCNode {
     public void setDCEquipmentContainer( DCEquipmentContainer newDCEquipmentContainer ) {
         if( newDCEquipmentContainer != dcEquipmentContainer ) {
             NotificationChain msgs = null;
-            if( dcEquipmentContainer != null )
+            if( dcEquipmentContainer != null ) {
                 msgs = ( ( InternalEObject ) dcEquipmentContainer ).eInverseRemove( this,
                         CimPackage.DC_EQUIPMENT_CONTAINER__DC_NODES, DCEquipmentContainer.class, msgs );
-            if( newDCEquipmentContainer != null )
+            }
+            if( newDCEquipmentContainer != null ) {
                 msgs = ( ( InternalEObject ) newDCEquipmentContainer ).eInverseAdd( this,
                         CimPackage.DC_EQUIPMENT_CONTAINER__DC_NODES, DCEquipmentContainer.class, msgs );
+            }
             msgs = basicSetDCEquipmentContainer( newDCEquipmentContainer, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldDCEquipmentContainerESet = dcEquipmentContainerESet;
             dcEquipmentContainerESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DC_NODE__DC_EQUIPMENT_CONTAINER,
                         newDCEquipmentContainer, newDCEquipmentContainer, !oldDCEquipmentContainerESet ) );
+            }
         }
     }
 
@@ -193,10 +200,12 @@ public class DCNodeImpl extends IdentifiedObjectImpl implements DCNode {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.DC_NODE__DC_EQUIPMENT_CONTAINER, oldDCEquipmentContainer, null,
                     oldDCEquipmentContainerESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -213,14 +222,17 @@ public class DCNodeImpl extends IdentifiedObjectImpl implements DCNode {
             msgs = ( ( InternalEObject ) dcEquipmentContainer ).eInverseRemove( this,
                     CimPackage.DC_EQUIPMENT_CONTAINER__DC_NODES, DCEquipmentContainer.class, msgs );
             msgs = basicUnsetDCEquipmentContainer( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldDCEquipmentContainerESet = dcEquipmentContainerESet;
             dcEquipmentContainerESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DC_NODE__DC_EQUIPMENT_CONTAINER,
                         null, null, oldDCEquipmentContainerESet ) );
+            }
         }
     }
 
@@ -255,7 +267,9 @@ public class DCNodeImpl extends IdentifiedObjectImpl implements DCNode {
      */
     @Override
     public void unsetDCTerminals() {
-        if( dcTerminals != null ) ( ( InternalEList.Unsettable< ? > ) dcTerminals ).unset();
+        if( dcTerminals != null ) {
+            ( ( InternalEList.Unsettable< ? > ) dcTerminals ).unset();
+        }
     }
 
     /**
@@ -293,10 +307,12 @@ public class DCNodeImpl extends IdentifiedObjectImpl implements DCNode {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.DC_NODE__DC_TOPOLOGICAL_NODE, oldDCTopologicalNode, newDCTopologicalNode,
                     !oldDCTopologicalNodeESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -310,21 +326,26 @@ public class DCNodeImpl extends IdentifiedObjectImpl implements DCNode {
     public void setDCTopologicalNode( DCTopologicalNode newDCTopologicalNode ) {
         if( newDCTopologicalNode != dcTopologicalNode ) {
             NotificationChain msgs = null;
-            if( dcTopologicalNode != null )
+            if( dcTopologicalNode != null ) {
                 msgs = ( ( InternalEObject ) dcTopologicalNode ).eInverseRemove( this,
                         CimPackage.DC_TOPOLOGICAL_NODE__DC_NODES, DCTopologicalNode.class, msgs );
-            if( newDCTopologicalNode != null )
+            }
+            if( newDCTopologicalNode != null ) {
                 msgs = ( ( InternalEObject ) newDCTopologicalNode ).eInverseAdd( this,
                         CimPackage.DC_TOPOLOGICAL_NODE__DC_NODES, DCTopologicalNode.class, msgs );
+            }
             msgs = basicSetDCTopologicalNode( newDCTopologicalNode, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldDCTopologicalNodeESet = dcTopologicalNodeESet;
             dcTopologicalNodeESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DC_NODE__DC_TOPOLOGICAL_NODE,
                         newDCTopologicalNode, newDCTopologicalNode, !oldDCTopologicalNodeESet ) );
+            }
         }
     }
 
@@ -341,10 +362,12 @@ public class DCNodeImpl extends IdentifiedObjectImpl implements DCNode {
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.DC_NODE__DC_TOPOLOGICAL_NODE, oldDCTopologicalNode, null, oldDCTopologicalNodeESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -361,14 +384,17 @@ public class DCNodeImpl extends IdentifiedObjectImpl implements DCNode {
             msgs = ( ( InternalEObject ) dcTopologicalNode ).eInverseRemove( this,
                     CimPackage.DC_TOPOLOGICAL_NODE__DC_NODES, DCTopologicalNode.class, msgs );
             msgs = basicUnsetDCTopologicalNode( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldDCTopologicalNodeESet = dcTopologicalNodeESet;
             dcTopologicalNodeESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DC_NODE__DC_TOPOLOGICAL_NODE, null,
                         null, oldDCTopologicalNodeESet ) );
+            }
         }
     }
 
@@ -392,17 +418,19 @@ public class DCNodeImpl extends IdentifiedObjectImpl implements DCNode {
     public NotificationChain eInverseAdd( InternalEObject otherEnd, int featureID, NotificationChain msgs ) {
         switch( featureID ) {
         case CimPackage.DC_NODE__DC_EQUIPMENT_CONTAINER:
-            if( dcEquipmentContainer != null )
+            if( dcEquipmentContainer != null ) {
                 msgs = ( ( InternalEObject ) dcEquipmentContainer ).eInverseRemove( this,
                         CimPackage.DC_EQUIPMENT_CONTAINER__DC_NODES, DCEquipmentContainer.class, msgs );
+            }
             return basicSetDCEquipmentContainer( ( DCEquipmentContainer ) otherEnd, msgs );
         case CimPackage.DC_NODE__DC_TERMINALS:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getDCTerminals() ).basicAdd( otherEnd,
                     msgs );
         case CimPackage.DC_NODE__DC_TOPOLOGICAL_NODE:
-            if( dcTopologicalNode != null )
+            if( dcTopologicalNode != null ) {
                 msgs = ( ( InternalEObject ) dcTopologicalNode ).eInverseRemove( this,
                         CimPackage.DC_TOPOLOGICAL_NODE__DC_NODES, DCTopologicalNode.class, msgs );
+            }
             return basicSetDCTopologicalNode( ( DCTopologicalNode ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );

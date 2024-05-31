@@ -246,10 +246,11 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             InternalEObject oldAngleRefTopologicalIsland = ( InternalEObject ) angleRefTopologicalIsland;
             angleRefTopologicalIsland = ( TopologicalIsland ) eResolveProxy( oldAngleRefTopologicalIsland );
             if( angleRefTopologicalIsland != oldAngleRefTopologicalIsland ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE,
                             CimPackage.TOPOLOGICAL_NODE__ANGLE_REF_TOPOLOGICAL_ISLAND, oldAngleRefTopologicalIsland,
                             angleRefTopologicalIsland ) );
+                }
             }
         }
         return angleRefTopologicalIsland;
@@ -279,10 +280,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.TOPOLOGICAL_NODE__ANGLE_REF_TOPOLOGICAL_ISLAND, oldAngleRefTopologicalIsland,
                     newAngleRefTopologicalIsland, !oldAngleRefTopologicalIslandESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -296,22 +299,27 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
     public void setAngleRefTopologicalIsland( TopologicalIsland newAngleRefTopologicalIsland ) {
         if( newAngleRefTopologicalIsland != angleRefTopologicalIsland ) {
             NotificationChain msgs = null;
-            if( angleRefTopologicalIsland != null )
+            if( angleRefTopologicalIsland != null ) {
                 msgs = ( ( InternalEObject ) angleRefTopologicalIsland ).eInverseRemove( this,
                         CimPackage.TOPOLOGICAL_ISLAND__ANGLE_REF_TOPOLOGICAL_NODE, TopologicalIsland.class, msgs );
-            if( newAngleRefTopologicalIsland != null )
+            }
+            if( newAngleRefTopologicalIsland != null ) {
                 msgs = ( ( InternalEObject ) newAngleRefTopologicalIsland ).eInverseAdd( this,
                         CimPackage.TOPOLOGICAL_ISLAND__ANGLE_REF_TOPOLOGICAL_NODE, TopologicalIsland.class, msgs );
+            }
             msgs = basicSetAngleRefTopologicalIsland( newAngleRefTopologicalIsland, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldAngleRefTopologicalIslandESet = angleRefTopologicalIslandESet;
             angleRefTopologicalIslandESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET,
                         CimPackage.TOPOLOGICAL_NODE__ANGLE_REF_TOPOLOGICAL_ISLAND, newAngleRefTopologicalIsland,
                         newAngleRefTopologicalIsland, !oldAngleRefTopologicalIslandESet ) );
+            }
         }
     }
 
@@ -329,10 +337,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.TOPOLOGICAL_NODE__ANGLE_REF_TOPOLOGICAL_ISLAND, oldAngleRefTopologicalIsland, null,
                     oldAngleRefTopologicalIslandESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -349,15 +359,18 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             msgs = ( ( InternalEObject ) angleRefTopologicalIsland ).eInverseRemove( this,
                     CimPackage.TOPOLOGICAL_ISLAND__ANGLE_REF_TOPOLOGICAL_NODE, TopologicalIsland.class, msgs );
             msgs = basicUnsetAngleRefTopologicalIsland( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldAngleRefTopologicalIslandESet = angleRefTopologicalIslandESet;
             angleRefTopologicalIslandESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.TOPOLOGICAL_NODE__ANGLE_REF_TOPOLOGICAL_ISLAND, null, null,
                         oldAngleRefTopologicalIslandESet ) );
+            }
         }
     }
 
@@ -382,9 +395,10 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             InternalEObject oldSvInjection = ( InternalEObject ) svInjection;
             svInjection = ( SvInjection ) eResolveProxy( oldSvInjection );
             if( svInjection != oldSvInjection ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE,
                             CimPackage.TOPOLOGICAL_NODE__SV_INJECTION, oldSvInjection, svInjection ) );
+                }
             }
         }
         return svInjection;
@@ -412,10 +426,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.TOPOLOGICAL_NODE__SV_INJECTION, oldSvInjection, newSvInjection, !oldSvInjectionESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -429,21 +445,26 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
     public void setSvInjection( SvInjection newSvInjection ) {
         if( newSvInjection != svInjection ) {
             NotificationChain msgs = null;
-            if( svInjection != null )
+            if( svInjection != null ) {
                 msgs = ( ( InternalEObject ) svInjection ).eInverseRemove( this,
                         CimPackage.SV_INJECTION__TOPOLOGICAL_NODE, SvInjection.class, msgs );
-            if( newSvInjection != null )
+            }
+            if( newSvInjection != null ) {
                 msgs = ( ( InternalEObject ) newSvInjection ).eInverseAdd( this,
                         CimPackage.SV_INJECTION__TOPOLOGICAL_NODE, SvInjection.class, msgs );
+            }
             msgs = basicSetSvInjection( newSvInjection, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldSvInjectionESet = svInjectionESet;
             svInjectionESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.TOPOLOGICAL_NODE__SV_INJECTION,
                         newSvInjection, newSvInjection, !oldSvInjectionESet ) );
+            }
         }
     }
 
@@ -460,10 +481,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.TOPOLOGICAL_NODE__SV_INJECTION, oldSvInjection, null, oldSvInjectionESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -480,14 +503,17 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             msgs = ( ( InternalEObject ) svInjection ).eInverseRemove( this, CimPackage.SV_INJECTION__TOPOLOGICAL_NODE,
                     SvInjection.class, msgs );
             msgs = basicUnsetSvInjection( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldSvInjectionESet = svInjectionESet;
             svInjectionESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.TOPOLOGICAL_NODE__SV_INJECTION,
                         null, null, oldSvInjectionESet ) );
+            }
         }
     }
 
@@ -512,9 +538,10 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             InternalEObject oldSvVoltage = ( InternalEObject ) svVoltage;
             svVoltage = ( SvVoltage ) eResolveProxy( oldSvVoltage );
             if( svVoltage != oldSvVoltage ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE, CimPackage.TOPOLOGICAL_NODE__SV_VOLTAGE,
                             oldSvVoltage, svVoltage ) );
+                }
             }
         }
         return svVoltage;
@@ -542,10 +569,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.TOPOLOGICAL_NODE__SV_VOLTAGE, oldSvVoltage, newSvVoltage, !oldSvVoltageESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -559,21 +588,26 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
     public void setSvVoltage( SvVoltage newSvVoltage ) {
         if( newSvVoltage != svVoltage ) {
             NotificationChain msgs = null;
-            if( svVoltage != null )
+            if( svVoltage != null ) {
                 msgs = ( ( InternalEObject ) svVoltage ).eInverseRemove( this, CimPackage.SV_VOLTAGE__TOPOLOGICAL_NODE,
                         SvVoltage.class, msgs );
-            if( newSvVoltage != null )
+            }
+            if( newSvVoltage != null ) {
                 msgs = ( ( InternalEObject ) newSvVoltage ).eInverseAdd( this, CimPackage.SV_VOLTAGE__TOPOLOGICAL_NODE,
                         SvVoltage.class, msgs );
+            }
             msgs = basicSetSvVoltage( newSvVoltage, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldSvVoltageESet = svVoltageESet;
             svVoltageESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.TOPOLOGICAL_NODE__SV_VOLTAGE,
                         newSvVoltage, newSvVoltage, !oldSvVoltageESet ) );
+            }
         }
     }
 
@@ -590,10 +624,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.TOPOLOGICAL_NODE__SV_VOLTAGE, oldSvVoltage, null, oldSvVoltageESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -610,14 +646,17 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             msgs = ( ( InternalEObject ) svVoltage ).eInverseRemove( this, CimPackage.SV_VOLTAGE__TOPOLOGICAL_NODE,
                     SvVoltage.class, msgs );
             msgs = basicUnsetSvVoltage( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldSvVoltageESet = svVoltageESet;
             svVoltageESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.TOPOLOGICAL_NODE__SV_VOLTAGE, null,
                         null, oldSvVoltageESet ) );
+            }
         }
     }
 
@@ -642,10 +681,11 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             InternalEObject oldTopologicalIsland = ( InternalEObject ) topologicalIsland;
             topologicalIsland = ( TopologicalIsland ) eResolveProxy( oldTopologicalIsland );
             if( topologicalIsland != oldTopologicalIsland ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE,
                             CimPackage.TOPOLOGICAL_NODE__TOPOLOGICAL_ISLAND, oldTopologicalIsland,
                             topologicalIsland ) );
+                }
             }
         }
         return topologicalIsland;
@@ -675,10 +715,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.TOPOLOGICAL_NODE__TOPOLOGICAL_ISLAND, oldTopologicalIsland, newTopologicalIsland,
                     !oldTopologicalIslandESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -692,21 +734,26 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
     public void setTopologicalIsland( TopologicalIsland newTopologicalIsland ) {
         if( newTopologicalIsland != topologicalIsland ) {
             NotificationChain msgs = null;
-            if( topologicalIsland != null )
+            if( topologicalIsland != null ) {
                 msgs = ( ( InternalEObject ) topologicalIsland ).eInverseRemove( this,
                         CimPackage.TOPOLOGICAL_ISLAND__TOPOLOGICAL_NODES, TopologicalIsland.class, msgs );
-            if( newTopologicalIsland != null )
+            }
+            if( newTopologicalIsland != null ) {
                 msgs = ( ( InternalEObject ) newTopologicalIsland ).eInverseAdd( this,
                         CimPackage.TOPOLOGICAL_ISLAND__TOPOLOGICAL_NODES, TopologicalIsland.class, msgs );
+            }
             msgs = basicSetTopologicalIsland( newTopologicalIsland, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldTopologicalIslandESet = topologicalIslandESet;
             topologicalIslandESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.TOPOLOGICAL_NODE__TOPOLOGICAL_ISLAND,
                         newTopologicalIsland, newTopologicalIsland, !oldTopologicalIslandESet ) );
+            }
         }
     }
 
@@ -724,10 +771,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.TOPOLOGICAL_NODE__TOPOLOGICAL_ISLAND, oldTopologicalIsland, null,
                     oldTopologicalIslandESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -744,14 +793,17 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             msgs = ( ( InternalEObject ) topologicalIsland ).eInverseRemove( this,
                     CimPackage.TOPOLOGICAL_ISLAND__TOPOLOGICAL_NODES, TopologicalIsland.class, msgs );
             msgs = basicUnsetTopologicalIsland( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldTopologicalIslandESet = topologicalIslandESet;
             topologicalIslandESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.TOPOLOGICAL_NODE__TOPOLOGICAL_ISLAND, null, null, oldTopologicalIslandESet ) );
+            }
         }
     }
 
@@ -787,7 +839,9 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
      */
     @Override
     public void unsetConnectivityNodes() {
-        if( connectivityNodes != null ) ( ( InternalEList.Unsettable< ? > ) connectivityNodes ).unset();
+        if( connectivityNodes != null ) {
+            ( ( InternalEList.Unsettable< ? > ) connectivityNodes ).unset();
+        }
     }
 
     /**
@@ -824,10 +878,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.TOPOLOGICAL_NODE__REPORTING_GROUP, oldReportingGroup, newReportingGroup,
                     !oldReportingGroupESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -841,21 +897,26 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
     public void setReportingGroup( ReportingGroup newReportingGroup ) {
         if( newReportingGroup != reportingGroup ) {
             NotificationChain msgs = null;
-            if( reportingGroup != null )
+            if( reportingGroup != null ) {
                 msgs = ( ( InternalEObject ) reportingGroup ).eInverseRemove( this,
                         CimPackage.REPORTING_GROUP__TOPOLOGICAL_NODE, ReportingGroup.class, msgs );
-            if( newReportingGroup != null )
+            }
+            if( newReportingGroup != null ) {
                 msgs = ( ( InternalEObject ) newReportingGroup ).eInverseAdd( this,
                         CimPackage.REPORTING_GROUP__TOPOLOGICAL_NODE, ReportingGroup.class, msgs );
+            }
             msgs = basicSetReportingGroup( newReportingGroup, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldReportingGroupESet = reportingGroupESet;
             reportingGroupESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.TOPOLOGICAL_NODE__REPORTING_GROUP,
                         newReportingGroup, newReportingGroup, !oldReportingGroupESet ) );
+            }
         }
     }
 
@@ -872,10 +933,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.TOPOLOGICAL_NODE__REPORTING_GROUP, oldReportingGroup, null, oldReportingGroupESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -892,14 +955,17 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             msgs = ( ( InternalEObject ) reportingGroup ).eInverseRemove( this,
                     CimPackage.REPORTING_GROUP__TOPOLOGICAL_NODE, ReportingGroup.class, msgs );
             msgs = basicUnsetReportingGroup( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldReportingGroupESet = reportingGroupESet;
             reportingGroupESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.TOPOLOGICAL_NODE__REPORTING_GROUP,
                         null, null, oldReportingGroupESet ) );
+            }
         }
     }
 
@@ -936,10 +1002,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.TOPOLOGICAL_NODE__BASE_VOLTAGE, oldBaseVoltage, newBaseVoltage, !oldBaseVoltageESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -953,21 +1021,26 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
     public void setBaseVoltage( BaseVoltage newBaseVoltage ) {
         if( newBaseVoltage != baseVoltage ) {
             NotificationChain msgs = null;
-            if( baseVoltage != null )
+            if( baseVoltage != null ) {
                 msgs = ( ( InternalEObject ) baseVoltage ).eInverseRemove( this,
                         CimPackage.BASE_VOLTAGE__TOPOLOGICAL_NODE, BaseVoltage.class, msgs );
-            if( newBaseVoltage != null )
+            }
+            if( newBaseVoltage != null ) {
                 msgs = ( ( InternalEObject ) newBaseVoltage ).eInverseAdd( this,
                         CimPackage.BASE_VOLTAGE__TOPOLOGICAL_NODE, BaseVoltage.class, msgs );
+            }
             msgs = basicSetBaseVoltage( newBaseVoltage, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldBaseVoltageESet = baseVoltageESet;
             baseVoltageESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.TOPOLOGICAL_NODE__BASE_VOLTAGE,
                         newBaseVoltage, newBaseVoltage, !oldBaseVoltageESet ) );
+            }
         }
     }
 
@@ -984,10 +1057,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.TOPOLOGICAL_NODE__BASE_VOLTAGE, oldBaseVoltage, null, oldBaseVoltageESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -1004,14 +1079,17 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             msgs = ( ( InternalEObject ) baseVoltage ).eInverseRemove( this, CimPackage.BASE_VOLTAGE__TOPOLOGICAL_NODE,
                     BaseVoltage.class, msgs );
             msgs = basicUnsetBaseVoltage( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldBaseVoltageESet = baseVoltageESet;
             baseVoltageESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.TOPOLOGICAL_NODE__BASE_VOLTAGE,
                         null, null, oldBaseVoltageESet ) );
+            }
         }
     }
 
@@ -1046,7 +1124,9 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
      */
     @Override
     public void unsetTerminal() {
-        if( terminal != null ) ( ( InternalEList.Unsettable< ? > ) terminal ).unset();
+        if( terminal != null ) {
+            ( ( InternalEList.Unsettable< ? > ) terminal ).unset();
+        }
     }
 
     /**
@@ -1084,10 +1164,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.TOPOLOGICAL_NODE__CONNECTIVITY_NODE_CONTAINER, oldConnectivityNodeContainer,
                     newConnectivityNodeContainer, !oldConnectivityNodeContainerESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -1101,24 +1183,29 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
     public void setConnectivityNodeContainer( ConnectivityNodeContainer newConnectivityNodeContainer ) {
         if( newConnectivityNodeContainer != connectivityNodeContainer ) {
             NotificationChain msgs = null;
-            if( connectivityNodeContainer != null )
+            if( connectivityNodeContainer != null ) {
                 msgs = ( ( InternalEObject ) connectivityNodeContainer ).eInverseRemove( this,
                         CimPackage.CONNECTIVITY_NODE_CONTAINER__TOPOLOGICAL_NODE, ConnectivityNodeContainer.class,
                         msgs );
-            if( newConnectivityNodeContainer != null )
+            }
+            if( newConnectivityNodeContainer != null ) {
                 msgs = ( ( InternalEObject ) newConnectivityNodeContainer ).eInverseAdd( this,
                         CimPackage.CONNECTIVITY_NODE_CONTAINER__TOPOLOGICAL_NODE, ConnectivityNodeContainer.class,
                         msgs );
+            }
             msgs = basicSetConnectivityNodeContainer( newConnectivityNodeContainer, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldConnectivityNodeContainerESet = connectivityNodeContainerESet;
             connectivityNodeContainerESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET,
                         CimPackage.TOPOLOGICAL_NODE__CONNECTIVITY_NODE_CONTAINER, newConnectivityNodeContainer,
                         newConnectivityNodeContainer, !oldConnectivityNodeContainerESet ) );
+            }
         }
     }
 
@@ -1136,10 +1223,12 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.TOPOLOGICAL_NODE__CONNECTIVITY_NODE_CONTAINER, oldConnectivityNodeContainer, null,
                     oldConnectivityNodeContainerESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -1156,15 +1245,18 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
             msgs = ( ( InternalEObject ) connectivityNodeContainer ).eInverseRemove( this,
                     CimPackage.CONNECTIVITY_NODE_CONTAINER__TOPOLOGICAL_NODE, ConnectivityNodeContainer.class, msgs );
             msgs = basicUnsetConnectivityNodeContainer( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldConnectivityNodeContainerESet = connectivityNodeContainerESet;
             connectivityNodeContainerESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.TOPOLOGICAL_NODE__CONNECTIVITY_NODE_CONTAINER, null, null,
                         oldConnectivityNodeContainerESet ) );
+            }
         }
     }
 
@@ -1188,46 +1280,53 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
     public NotificationChain eInverseAdd( InternalEObject otherEnd, int featureID, NotificationChain msgs ) {
         switch( featureID ) {
         case CimPackage.TOPOLOGICAL_NODE__ANGLE_REF_TOPOLOGICAL_ISLAND:
-            if( angleRefTopologicalIsland != null )
+            if( angleRefTopologicalIsland != null ) {
                 msgs = ( ( InternalEObject ) angleRefTopologicalIsland ).eInverseRemove( this,
                         CimPackage.TOPOLOGICAL_ISLAND__ANGLE_REF_TOPOLOGICAL_NODE, TopologicalIsland.class, msgs );
+            }
             return basicSetAngleRefTopologicalIsland( ( TopologicalIsland ) otherEnd, msgs );
         case CimPackage.TOPOLOGICAL_NODE__SV_INJECTION:
-            if( svInjection != null )
+            if( svInjection != null ) {
                 msgs = ( ( InternalEObject ) svInjection ).eInverseRemove( this,
                         CimPackage.SV_INJECTION__TOPOLOGICAL_NODE, SvInjection.class, msgs );
+            }
             return basicSetSvInjection( ( SvInjection ) otherEnd, msgs );
         case CimPackage.TOPOLOGICAL_NODE__SV_VOLTAGE:
-            if( svVoltage != null )
+            if( svVoltage != null ) {
                 msgs = ( ( InternalEObject ) svVoltage ).eInverseRemove( this, CimPackage.SV_VOLTAGE__TOPOLOGICAL_NODE,
                         SvVoltage.class, msgs );
+            }
             return basicSetSvVoltage( ( SvVoltage ) otherEnd, msgs );
         case CimPackage.TOPOLOGICAL_NODE__TOPOLOGICAL_ISLAND:
-            if( topologicalIsland != null )
+            if( topologicalIsland != null ) {
                 msgs = ( ( InternalEObject ) topologicalIsland ).eInverseRemove( this,
                         CimPackage.TOPOLOGICAL_ISLAND__TOPOLOGICAL_NODES, TopologicalIsland.class, msgs );
+            }
             return basicSetTopologicalIsland( ( TopologicalIsland ) otherEnd, msgs );
         case CimPackage.TOPOLOGICAL_NODE__CONNECTIVITY_NODES:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getConnectivityNodes() )
                     .basicAdd( otherEnd, msgs );
         case CimPackage.TOPOLOGICAL_NODE__REPORTING_GROUP:
-            if( reportingGroup != null )
+            if( reportingGroup != null ) {
                 msgs = ( ( InternalEObject ) reportingGroup ).eInverseRemove( this,
                         CimPackage.REPORTING_GROUP__TOPOLOGICAL_NODE, ReportingGroup.class, msgs );
+            }
             return basicSetReportingGroup( ( ReportingGroup ) otherEnd, msgs );
         case CimPackage.TOPOLOGICAL_NODE__BASE_VOLTAGE:
-            if( baseVoltage != null )
+            if( baseVoltage != null ) {
                 msgs = ( ( InternalEObject ) baseVoltage ).eInverseRemove( this,
                         CimPackage.BASE_VOLTAGE__TOPOLOGICAL_NODE, BaseVoltage.class, msgs );
+            }
             return basicSetBaseVoltage( ( BaseVoltage ) otherEnd, msgs );
         case CimPackage.TOPOLOGICAL_NODE__TERMINAL:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getTerminal() ).basicAdd( otherEnd,
                     msgs );
         case CimPackage.TOPOLOGICAL_NODE__CONNECTIVITY_NODE_CONTAINER:
-            if( connectivityNodeContainer != null )
+            if( connectivityNodeContainer != null ) {
                 msgs = ( ( InternalEObject ) connectivityNodeContainer ).eInverseRemove( this,
                         CimPackage.CONNECTIVITY_NODE_CONTAINER__TOPOLOGICAL_NODE, ConnectivityNodeContainer.class,
                         msgs );
+            }
             return basicSetConnectivityNodeContainer( ( ConnectivityNodeContainer ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );
@@ -1272,16 +1371,24 @@ public class TopologicalNodeImpl extends IdentifiedObjectImpl implements Topolog
     public Object eGet( int featureID, boolean resolve, boolean coreType ) {
         switch( featureID ) {
         case CimPackage.TOPOLOGICAL_NODE__ANGLE_REF_TOPOLOGICAL_ISLAND:
-            if( resolve ) return getAngleRefTopologicalIsland();
+            if( resolve ) {
+                return getAngleRefTopologicalIsland();
+            }
             return basicGetAngleRefTopologicalIsland();
         case CimPackage.TOPOLOGICAL_NODE__SV_INJECTION:
-            if( resolve ) return getSvInjection();
+            if( resolve ) {
+                return getSvInjection();
+            }
             return basicGetSvInjection();
         case CimPackage.TOPOLOGICAL_NODE__SV_VOLTAGE:
-            if( resolve ) return getSvVoltage();
+            if( resolve ) {
+                return getSvVoltage();
+            }
             return basicGetSvVoltage();
         case CimPackage.TOPOLOGICAL_NODE__TOPOLOGICAL_ISLAND:
-            if( resolve ) return getTopologicalIsland();
+            if( resolve ) {
+                return getTopologicalIsland();
+            }
             return basicGetTopologicalIsland();
         case CimPackage.TOPOLOGICAL_NODE__CONNECTIVITY_NODES:
             return getConnectivityNodes();

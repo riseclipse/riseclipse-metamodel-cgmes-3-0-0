@@ -110,7 +110,9 @@ public class RatioTapChangerTableImpl extends IdentifiedObjectImpl implements Ra
      */
     @Override
     public void unsetRatioTapChangerTablePoint() {
-        if( ratioTapChangerTablePoint != null ) ( ( InternalEList.Unsettable< ? > ) ratioTapChangerTablePoint ).unset();
+        if( ratioTapChangerTablePoint != null ) {
+            ( ( InternalEList.Unsettable< ? > ) ratioTapChangerTablePoint ).unset();
+        }
     }
 
     /**
@@ -146,7 +148,9 @@ public class RatioTapChangerTableImpl extends IdentifiedObjectImpl implements Ra
      */
     @Override
     public void unsetRatioTapChanger() {
-        if( ratioTapChanger != null ) ( ( InternalEList.Unsettable< ? > ) ratioTapChanger ).unset();
+        if( ratioTapChanger != null ) {
+            ( ( InternalEList.Unsettable< ? > ) ratioTapChanger ).unset();
+        }
     }
 
     /**

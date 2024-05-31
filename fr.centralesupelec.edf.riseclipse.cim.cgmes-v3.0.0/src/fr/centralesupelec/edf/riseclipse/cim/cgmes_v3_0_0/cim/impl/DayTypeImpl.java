@@ -97,7 +97,9 @@ public class DayTypeImpl extends IdentifiedObjectImpl implements DayType {
      */
     @Override
     public void unsetSeasonDayTypeSchedules() {
-        if( seasonDayTypeSchedules != null ) ( ( InternalEList.Unsettable< ? > ) seasonDayTypeSchedules ).unset();
+        if( seasonDayTypeSchedules != null ) {
+            ( ( InternalEList.Unsettable< ? > ) seasonDayTypeSchedules ).unset();
+        }
     }
 
     /**

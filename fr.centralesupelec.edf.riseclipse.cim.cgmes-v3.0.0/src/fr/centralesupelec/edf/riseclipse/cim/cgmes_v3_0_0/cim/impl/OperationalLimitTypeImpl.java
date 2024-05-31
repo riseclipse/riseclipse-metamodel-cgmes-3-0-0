@@ -220,9 +220,10 @@ public class OperationalLimitTypeImpl extends IdentifiedObjectImpl implements Op
         direction = newDirection == null ? DIRECTION_EDEFAULT : newDirection;
         boolean oldDirectionESet = directionESet;
         directionESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.OPERATIONAL_LIMIT_TYPE__DIRECTION,
                     oldDirection, direction, !oldDirectionESet ) );
+        }
     }
 
     /**
@@ -236,9 +237,10 @@ public class OperationalLimitTypeImpl extends IdentifiedObjectImpl implements Op
         boolean oldDirectionESet = directionESet;
         direction = DIRECTION_EDEFAULT;
         directionESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.OPERATIONAL_LIMIT_TYPE__DIRECTION,
                     oldDirection, DIRECTION_EDEFAULT, oldDirectionESet ) );
+        }
     }
 
     /**
@@ -272,9 +274,10 @@ public class OperationalLimitTypeImpl extends IdentifiedObjectImpl implements Op
         kind = newKind == null ? KIND_EDEFAULT : newKind;
         boolean oldKindESet = kindESet;
         kindESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.OPERATIONAL_LIMIT_TYPE__KIND, oldKind,
                     kind, !oldKindESet ) );
+        }
     }
 
     /**
@@ -288,9 +291,10 @@ public class OperationalLimitTypeImpl extends IdentifiedObjectImpl implements Op
         boolean oldKindESet = kindESet;
         kind = KIND_EDEFAULT;
         kindESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.OPERATIONAL_LIMIT_TYPE__KIND, oldKind,
                     KIND_EDEFAULT, oldKindESet ) );
+        }
     }
 
     /**
@@ -324,10 +328,11 @@ public class OperationalLimitTypeImpl extends IdentifiedObjectImpl implements Op
         acceptableDuration = newAcceptableDuration;
         boolean oldAcceptableDurationESet = acceptableDurationESet;
         acceptableDurationESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.OPERATIONAL_LIMIT_TYPE__ACCEPTABLE_DURATION, oldAcceptableDuration, acceptableDuration,
                     !oldAcceptableDurationESet ) );
+        }
     }
 
     /**
@@ -341,10 +346,11 @@ public class OperationalLimitTypeImpl extends IdentifiedObjectImpl implements Op
         boolean oldAcceptableDurationESet = acceptableDurationESet;
         acceptableDuration = ACCEPTABLE_DURATION_EDEFAULT;
         acceptableDurationESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.OPERATIONAL_LIMIT_TYPE__ACCEPTABLE_DURATION, oldAcceptableDuration,
                     ACCEPTABLE_DURATION_EDEFAULT, oldAcceptableDurationESet ) );
+        }
     }
 
     /**
@@ -379,7 +385,9 @@ public class OperationalLimitTypeImpl extends IdentifiedObjectImpl implements Op
      */
     @Override
     public void unsetOperationalLimit() {
-        if( operationalLimit != null ) ( ( InternalEList.Unsettable< ? > ) operationalLimit ).unset();
+        if( operationalLimit != null ) {
+            ( ( InternalEList.Unsettable< ? > ) operationalLimit ).unset();
+        }
     }
 
     /**
@@ -413,10 +421,11 @@ public class OperationalLimitTypeImpl extends IdentifiedObjectImpl implements Op
         isInfiniteDuration = newIsInfiniteDuration;
         boolean oldIsInfiniteDurationESet = isInfiniteDurationESet;
         isInfiniteDurationESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.OPERATIONAL_LIMIT_TYPE__IS_INFINITE_DURATION, oldIsInfiniteDuration, isInfiniteDuration,
                     !oldIsInfiniteDurationESet ) );
+        }
     }
 
     /**
@@ -430,10 +439,11 @@ public class OperationalLimitTypeImpl extends IdentifiedObjectImpl implements Op
         boolean oldIsInfiniteDurationESet = isInfiniteDurationESet;
         isInfiniteDuration = IS_INFINITE_DURATION_EDEFAULT;
         isInfiniteDurationESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.OPERATIONAL_LIMIT_TYPE__IS_INFINITE_DURATION, oldIsInfiniteDuration,
                     IS_INFINITE_DURATION_EDEFAULT, oldIsInfiniteDurationESet ) );
+        }
     }
 
     /**
@@ -583,29 +593,39 @@ public class OperationalLimitTypeImpl extends IdentifiedObjectImpl implements Op
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (direction: " );
-        if( directionESet )
+        if( directionESet ) {
             result.append( direction );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", kind: " );
-        if( kindESet )
+        if( kindESet ) {
             result.append( kind );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", acceptableDuration: " );
-        if( acceptableDurationESet )
+        if( acceptableDurationESet ) {
             result.append( acceptableDuration );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", isInfiniteDuration: " );
-        if( isInfiniteDurationESet )
+        if( isInfiniteDurationESet ) {
             result.append( isInfiniteDuration );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

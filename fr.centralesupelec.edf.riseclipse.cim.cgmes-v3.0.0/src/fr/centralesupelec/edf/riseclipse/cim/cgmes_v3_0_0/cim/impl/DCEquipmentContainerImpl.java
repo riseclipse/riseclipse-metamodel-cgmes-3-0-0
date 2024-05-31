@@ -108,7 +108,9 @@ public class DCEquipmentContainerImpl extends EquipmentContainerImpl implements 
      */
     @Override
     public void unsetDCNodes() {
-        if( dcNodes != null ) ( ( InternalEList.Unsettable< ? > ) dcNodes ).unset();
+        if( dcNodes != null ) {
+            ( ( InternalEList.Unsettable< ? > ) dcNodes ).unset();
+        }
     }
 
     /**
@@ -143,7 +145,9 @@ public class DCEquipmentContainerImpl extends EquipmentContainerImpl implements 
      */
     @Override
     public void unsetDCTopologicalNode() {
-        if( dcTopologicalNode != null ) ( ( InternalEList.Unsettable< ? > ) dcTopologicalNode ).unset();
+        if( dcTopologicalNode != null ) {
+            ( ( InternalEList.Unsettable< ? > ) dcTopologicalNode ).unset();
+        }
     }
 
     /**

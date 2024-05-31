@@ -324,9 +324,10 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
         rotation = newRotation;
         boolean oldRotationESet = rotationESet;
         rotationESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM_OBJECT__ROTATION, oldRotation,
                     rotation, !oldRotationESet ) );
+        }
     }
 
     /**
@@ -340,9 +341,10 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
         boolean oldRotationESet = rotationESet;
         rotation = ROTATION_EDEFAULT;
         rotationESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DIAGRAM_OBJECT__ROTATION, oldRotation,
                     ROTATION_EDEFAULT, oldRotationESet ) );
+        }
     }
 
     /**
@@ -380,10 +382,12 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.DIAGRAM_OBJECT__DIAGRAM_OBJECT_STYLE, oldDiagramObjectStyle, newDiagramObjectStyle,
                     !oldDiagramObjectStyleESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -397,21 +401,26 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
     public void setDiagramObjectStyle( DiagramObjectStyle newDiagramObjectStyle ) {
         if( newDiagramObjectStyle != diagramObjectStyle ) {
             NotificationChain msgs = null;
-            if( diagramObjectStyle != null )
+            if( diagramObjectStyle != null ) {
                 msgs = ( ( InternalEObject ) diagramObjectStyle ).eInverseRemove( this,
                         CimPackage.DIAGRAM_OBJECT_STYLE__STYLED_OBJECTS, DiagramObjectStyle.class, msgs );
-            if( newDiagramObjectStyle != null )
+            }
+            if( newDiagramObjectStyle != null ) {
                 msgs = ( ( InternalEObject ) newDiagramObjectStyle ).eInverseAdd( this,
                         CimPackage.DIAGRAM_OBJECT_STYLE__STYLED_OBJECTS, DiagramObjectStyle.class, msgs );
+            }
             msgs = basicSetDiagramObjectStyle( newDiagramObjectStyle, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldDiagramObjectStyleESet = diagramObjectStyleESet;
             diagramObjectStyleESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM_OBJECT__DIAGRAM_OBJECT_STYLE,
                         newDiagramObjectStyle, newDiagramObjectStyle, !oldDiagramObjectStyleESet ) );
+            }
         }
     }
 
@@ -429,10 +438,12 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.DIAGRAM_OBJECT__DIAGRAM_OBJECT_STYLE, oldDiagramObjectStyle, null,
                     oldDiagramObjectStyleESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -449,14 +460,17 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
             msgs = ( ( InternalEObject ) diagramObjectStyle ).eInverseRemove( this,
                     CimPackage.DIAGRAM_OBJECT_STYLE__STYLED_OBJECTS, DiagramObjectStyle.class, msgs );
             msgs = basicUnsetDiagramObjectStyle( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldDiagramObjectStyleESet = diagramObjectStyleESet;
             diagramObjectStyleESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.DIAGRAM_OBJECT__DIAGRAM_OBJECT_STYLE, null, null, oldDiagramObjectStyleESet ) );
+            }
         }
     }
 
@@ -494,10 +508,12 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.DIAGRAM_OBJECT__IDENTIFIED_OBJECT, oldIdentifiedObject, newIdentifiedObject,
                     !oldIdentifiedObjectESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -511,21 +527,26 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
     public void setIdentifiedObject( IdentifiedObject newIdentifiedObject ) {
         if( newIdentifiedObject != identifiedObject ) {
             NotificationChain msgs = null;
-            if( identifiedObject != null )
+            if( identifiedObject != null ) {
                 msgs = ( ( InternalEObject ) identifiedObject ).eInverseRemove( this,
                         CimPackage.IDENTIFIED_OBJECT__DIAGRAM_OBJECTS, IdentifiedObject.class, msgs );
-            if( newIdentifiedObject != null )
+            }
+            if( newIdentifiedObject != null ) {
                 msgs = ( ( InternalEObject ) newIdentifiedObject ).eInverseAdd( this,
                         CimPackage.IDENTIFIED_OBJECT__DIAGRAM_OBJECTS, IdentifiedObject.class, msgs );
+            }
             msgs = basicSetIdentifiedObject( newIdentifiedObject, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldIdentifiedObjectESet = identifiedObjectESet;
             identifiedObjectESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM_OBJECT__IDENTIFIED_OBJECT,
                         newIdentifiedObject, newIdentifiedObject, !oldIdentifiedObjectESet ) );
+            }
         }
     }
 
@@ -542,10 +563,12 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.DIAGRAM_OBJECT__IDENTIFIED_OBJECT, oldIdentifiedObject, null, oldIdentifiedObjectESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -562,14 +585,17 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
             msgs = ( ( InternalEObject ) identifiedObject ).eInverseRemove( this,
                     CimPackage.IDENTIFIED_OBJECT__DIAGRAM_OBJECTS, IdentifiedObject.class, msgs );
             msgs = basicUnsetIdentifiedObject( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldIdentifiedObjectESet = identifiedObjectESet;
             identifiedObjectESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DIAGRAM_OBJECT__IDENTIFIED_OBJECT,
                         null, null, oldIdentifiedObjectESet ) );
+            }
         }
     }
 
@@ -604,9 +630,10 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
         isPolygon = newIsPolygon;
         boolean oldIsPolygonESet = isPolygonESet;
         isPolygonESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM_OBJECT__IS_POLYGON, oldIsPolygon,
                     isPolygon, !oldIsPolygonESet ) );
+        }
     }
 
     /**
@@ -620,9 +647,10 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
         boolean oldIsPolygonESet = isPolygonESet;
         isPolygon = IS_POLYGON_EDEFAULT;
         isPolygonESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DIAGRAM_OBJECT__IS_POLYGON,
                     oldIsPolygon, IS_POLYGON_EDEFAULT, oldIsPolygonESet ) );
+        }
     }
 
     /**
@@ -656,9 +684,10 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
         drawingOrder = newDrawingOrder;
         boolean oldDrawingOrderESet = drawingOrderESet;
         drawingOrderESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM_OBJECT__DRAWING_ORDER,
                     oldDrawingOrder, drawingOrder, !oldDrawingOrderESet ) );
+        }
     }
 
     /**
@@ -672,9 +701,10 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
         boolean oldDrawingOrderESet = drawingOrderESet;
         drawingOrder = DRAWING_ORDER_EDEFAULT;
         drawingOrderESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DIAGRAM_OBJECT__DRAWING_ORDER,
                     oldDrawingOrder, DRAWING_ORDER_EDEFAULT, oldDrawingOrderESet ) );
+        }
     }
 
     /**
@@ -708,9 +738,10 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
         offsetY = newOffsetY;
         boolean oldOffsetYESet = offsetYESet;
         offsetYESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM_OBJECT__OFFSET_Y, oldOffsetY,
                     offsetY, !oldOffsetYESet ) );
+        }
     }
 
     /**
@@ -724,9 +755,10 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
         boolean oldOffsetYESet = offsetYESet;
         offsetY = OFFSET_Y_EDEFAULT;
         offsetYESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DIAGRAM_OBJECT__OFFSET_Y, oldOffsetY,
                     OFFSET_Y_EDEFAULT, oldOffsetYESet ) );
+        }
     }
 
     /**
@@ -760,9 +792,10 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
         offsetX = newOffsetX;
         boolean oldOffsetXESet = offsetXESet;
         offsetXESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM_OBJECT__OFFSET_X, oldOffsetX,
                     offsetX, !oldOffsetXESet ) );
+        }
     }
 
     /**
@@ -776,9 +809,10 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
         boolean oldOffsetXESet = offsetXESet;
         offsetX = OFFSET_X_EDEFAULT;
         offsetXESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DIAGRAM_OBJECT__OFFSET_X, oldOffsetX,
                     OFFSET_X_EDEFAULT, oldOffsetXESet ) );
+        }
     }
 
     /**
@@ -814,10 +848,12 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.DIAGRAM_OBJECT__DIAGRAM, oldDiagram, newDiagram, !oldDiagramESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -831,21 +867,26 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
     public void setDiagram( Diagram newDiagram ) {
         if( newDiagram != diagram ) {
             NotificationChain msgs = null;
-            if( diagram != null )
+            if( diagram != null ) {
                 msgs = ( ( InternalEObject ) diagram ).eInverseRemove( this, CimPackage.DIAGRAM__DIAGRAM_ELEMENTS,
                         Diagram.class, msgs );
-            if( newDiagram != null )
+            }
+            if( newDiagram != null ) {
                 msgs = ( ( InternalEObject ) newDiagram ).eInverseAdd( this, CimPackage.DIAGRAM__DIAGRAM_ELEMENTS,
                         Diagram.class, msgs );
+            }
             msgs = basicSetDiagram( newDiagram, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldDiagramESet = diagramESet;
             diagramESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.DIAGRAM_OBJECT__DIAGRAM, newDiagram,
                         newDiagram, !oldDiagramESet ) );
+            }
         }
     }
 
@@ -862,10 +903,12 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.DIAGRAM_OBJECT__DIAGRAM, oldDiagram, null, oldDiagramESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -882,14 +925,17 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
             msgs = ( ( InternalEObject ) diagram ).eInverseRemove( this, CimPackage.DIAGRAM__DIAGRAM_ELEMENTS,
                     Diagram.class, msgs );
             msgs = basicUnsetDiagram( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldDiagramESet = diagramESet;
             diagramESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.DIAGRAM_OBJECT__DIAGRAM, null,
                         null, oldDiagramESet ) );
+            }
         }
     }
 
@@ -925,7 +971,9 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
      */
     @Override
     public void unsetVisibilityLayers() {
-        if( visibilityLayers != null ) ( ( InternalEList.Unsettable< ? > ) visibilityLayers ).unset();
+        if( visibilityLayers != null ) {
+            ( ( InternalEList.Unsettable< ? > ) visibilityLayers ).unset();
+        }
     }
 
     /**
@@ -960,7 +1008,9 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
      */
     @Override
     public void unsetDiagramObjectPoints() {
-        if( diagramObjectPoints != null ) ( ( InternalEList.Unsettable< ? > ) diagramObjectPoints ).unset();
+        if( diagramObjectPoints != null ) {
+            ( ( InternalEList.Unsettable< ? > ) diagramObjectPoints ).unset();
+        }
     }
 
     /**
@@ -983,19 +1033,22 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
     public NotificationChain eInverseAdd( InternalEObject otherEnd, int featureID, NotificationChain msgs ) {
         switch( featureID ) {
         case CimPackage.DIAGRAM_OBJECT__DIAGRAM_OBJECT_STYLE:
-            if( diagramObjectStyle != null )
+            if( diagramObjectStyle != null ) {
                 msgs = ( ( InternalEObject ) diagramObjectStyle ).eInverseRemove( this,
                         CimPackage.DIAGRAM_OBJECT_STYLE__STYLED_OBJECTS, DiagramObjectStyle.class, msgs );
+            }
             return basicSetDiagramObjectStyle( ( DiagramObjectStyle ) otherEnd, msgs );
         case CimPackage.DIAGRAM_OBJECT__IDENTIFIED_OBJECT:
-            if( identifiedObject != null )
+            if( identifiedObject != null ) {
                 msgs = ( ( InternalEObject ) identifiedObject ).eInverseRemove( this,
                         CimPackage.IDENTIFIED_OBJECT__DIAGRAM_OBJECTS, IdentifiedObject.class, msgs );
+            }
             return basicSetIdentifiedObject( ( IdentifiedObject ) otherEnd, msgs );
         case CimPackage.DIAGRAM_OBJECT__DIAGRAM:
-            if( diagram != null )
+            if( diagram != null ) {
                 msgs = ( ( InternalEObject ) diagram ).eInverseRemove( this, CimPackage.DIAGRAM__DIAGRAM_ELEMENTS,
                         Diagram.class, msgs );
+            }
             return basicSetDiagram( ( Diagram ) otherEnd, msgs );
         case CimPackage.DIAGRAM_OBJECT__VISIBILITY_LAYERS:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getVisibilityLayers() )
@@ -1187,34 +1240,46 @@ public class DiagramObjectImpl extends IdentifiedObjectImpl implements DiagramOb
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (rotation: " );
-        if( rotationESet )
+        if( rotationESet ) {
             result.append( rotation );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", isPolygon: " );
-        if( isPolygonESet )
+        if( isPolygonESet ) {
             result.append( isPolygon );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", drawingOrder: " );
-        if( drawingOrderESet )
+        if( drawingOrderESet ) {
             result.append( drawingOrder );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", offsetY: " );
-        if( offsetYESet )
+        if( offsetYESet ) {
             result.append( offsetY );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", offsetX: " );
-        if( offsetXESet )
+        if( offsetXESet ) {
             result.append( offsetX );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

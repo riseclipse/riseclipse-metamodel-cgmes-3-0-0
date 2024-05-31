@@ -97,7 +97,9 @@ public class VsCapabilityCurveImpl extends CurveImpl implements VsCapabilityCurv
      */
     @Override
     public void unsetVsConverterDCSides() {
-        if( vsConverterDCSides != null ) ( ( InternalEList.Unsettable< ? > ) vsConverterDCSides ).unset();
+        if( vsConverterDCSides != null ) {
+            ( ( InternalEList.Unsettable< ? > ) vsConverterDCSides ).unset();
+        }
     }
 
     /**

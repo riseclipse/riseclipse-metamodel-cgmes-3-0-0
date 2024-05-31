@@ -209,9 +209,10 @@ public class EquipmentImpl extends PowerSystemResourceImpl implements Equipment 
         normallyInService = newNormallyInService;
         boolean oldNormallyInServiceESet = normallyInServiceESet;
         normallyInServiceESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.EQUIPMENT__NORMALLY_IN_SERVICE,
                     oldNormallyInService, normallyInService, !oldNormallyInServiceESet ) );
+        }
     }
 
     /**
@@ -225,9 +226,10 @@ public class EquipmentImpl extends PowerSystemResourceImpl implements Equipment 
         boolean oldNormallyInServiceESet = normallyInServiceESet;
         normallyInService = NORMALLY_IN_SERVICE_EDEFAULT;
         normallyInServiceESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.EQUIPMENT__NORMALLY_IN_SERVICE,
                     oldNormallyInService, NORMALLY_IN_SERVICE_EDEFAULT, oldNormallyInServiceESet ) );
+        }
     }
 
     /**
@@ -261,9 +263,10 @@ public class EquipmentImpl extends PowerSystemResourceImpl implements Equipment 
         inService = newInService;
         boolean oldInServiceESet = inServiceESet;
         inServiceESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.EQUIPMENT__IN_SERVICE, oldInService,
                     inService, !oldInServiceESet ) );
+        }
     }
 
     /**
@@ -277,9 +280,10 @@ public class EquipmentImpl extends PowerSystemResourceImpl implements Equipment 
         boolean oldInServiceESet = inServiceESet;
         inService = IN_SERVICE_EDEFAULT;
         inServiceESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.EQUIPMENT__IN_SERVICE, oldInService,
                     IN_SERVICE_EDEFAULT, oldInServiceESet ) );
+        }
     }
 
     /**
@@ -313,9 +317,10 @@ public class EquipmentImpl extends PowerSystemResourceImpl implements Equipment 
         aggregate = newAggregate;
         boolean oldAggregateESet = aggregateESet;
         aggregateESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.EQUIPMENT__AGGREGATE, oldAggregate,
                     aggregate, !oldAggregateESet ) );
+        }
     }
 
     /**
@@ -329,9 +334,10 @@ public class EquipmentImpl extends PowerSystemResourceImpl implements Equipment 
         boolean oldAggregateESet = aggregateESet;
         aggregate = AGGREGATE_EDEFAULT;
         aggregateESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.EQUIPMENT__AGGREGATE, oldAggregate,
                     AGGREGATE_EDEFAULT, oldAggregateESet ) );
+        }
     }
 
     /**
@@ -369,10 +375,12 @@ public class EquipmentImpl extends PowerSystemResourceImpl implements Equipment 
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.EQUIPMENT__EQUIPMENT_CONTAINER, oldEquipmentContainer, newEquipmentContainer,
                     !oldEquipmentContainerESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -386,21 +394,26 @@ public class EquipmentImpl extends PowerSystemResourceImpl implements Equipment 
     public void setEquipmentContainer( EquipmentContainer newEquipmentContainer ) {
         if( newEquipmentContainer != equipmentContainer ) {
             NotificationChain msgs = null;
-            if( equipmentContainer != null )
+            if( equipmentContainer != null ) {
                 msgs = ( ( InternalEObject ) equipmentContainer ).eInverseRemove( this,
                         CimPackage.EQUIPMENT_CONTAINER__EQUIPMENTS, EquipmentContainer.class, msgs );
-            if( newEquipmentContainer != null )
+            }
+            if( newEquipmentContainer != null ) {
                 msgs = ( ( InternalEObject ) newEquipmentContainer ).eInverseAdd( this,
                         CimPackage.EQUIPMENT_CONTAINER__EQUIPMENTS, EquipmentContainer.class, msgs );
+            }
             msgs = basicSetEquipmentContainer( newEquipmentContainer, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldEquipmentContainerESet = equipmentContainerESet;
             equipmentContainerESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.EQUIPMENT__EQUIPMENT_CONTAINER,
                         newEquipmentContainer, newEquipmentContainer, !oldEquipmentContainerESet ) );
+            }
         }
     }
 
@@ -417,10 +430,12 @@ public class EquipmentImpl extends PowerSystemResourceImpl implements Equipment 
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.EQUIPMENT__EQUIPMENT_CONTAINER, oldEquipmentContainer, null, oldEquipmentContainerESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -437,14 +452,17 @@ public class EquipmentImpl extends PowerSystemResourceImpl implements Equipment 
             msgs = ( ( InternalEObject ) equipmentContainer ).eInverseRemove( this,
                     CimPackage.EQUIPMENT_CONTAINER__EQUIPMENTS, EquipmentContainer.class, msgs );
             msgs = basicUnsetEquipmentContainer( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldEquipmentContainerESet = equipmentContainerESet;
             equipmentContainerESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.EQUIPMENT__EQUIPMENT_CONTAINER,
                         null, null, oldEquipmentContainerESet ) );
+            }
         }
     }
 
@@ -480,7 +498,9 @@ public class EquipmentImpl extends PowerSystemResourceImpl implements Equipment 
      */
     @Override
     public void unsetOperationalLimitSet() {
-        if( operationalLimitSet != null ) ( ( InternalEList.Unsettable< ? > ) operationalLimitSet ).unset();
+        if( operationalLimitSet != null ) {
+            ( ( InternalEList.Unsettable< ? > ) operationalLimitSet ).unset();
+        }
     }
 
     /**
@@ -503,9 +523,10 @@ public class EquipmentImpl extends PowerSystemResourceImpl implements Equipment 
     public NotificationChain eInverseAdd( InternalEObject otherEnd, int featureID, NotificationChain msgs ) {
         switch( featureID ) {
         case CimPackage.EQUIPMENT__EQUIPMENT_CONTAINER:
-            if( equipmentContainer != null )
+            if( equipmentContainer != null ) {
                 msgs = ( ( InternalEObject ) equipmentContainer ).eInverseRemove( this,
                         CimPackage.EQUIPMENT_CONTAINER__EQUIPMENTS, EquipmentContainer.class, msgs );
+            }
             return basicSetEquipmentContainer( ( EquipmentContainer ) otherEnd, msgs );
         case CimPackage.EQUIPMENT__OPERATIONAL_LIMIT_SET:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getOperationalLimitSet() )
@@ -637,24 +658,32 @@ public class EquipmentImpl extends PowerSystemResourceImpl implements Equipment 
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (aggregate: " );
-        if( aggregateESet )
+        if( aggregateESet ) {
             result.append( aggregate );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", normallyInService: " );
-        if( normallyInServiceESet )
+        if( normallyInServiceESet ) {
             result.append( normallyInService );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", inService: " );
-        if( inServiceESet )
+        if( inServiceESet ) {
             result.append( inService );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

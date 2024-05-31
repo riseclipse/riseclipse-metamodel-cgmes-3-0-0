@@ -164,7 +164,9 @@ public class BaseVoltageImpl extends IdentifiedObjectImpl implements BaseVoltage
      */
     @Override
     public void unsetTransformerEnds() {
-        if( transformerEnds != null ) ( ( InternalEList.Unsettable< ? > ) transformerEnds ).unset();
+        if( transformerEnds != null ) {
+            ( ( InternalEList.Unsettable< ? > ) transformerEnds ).unset();
+        }
     }
 
     /**
@@ -198,7 +200,9 @@ public class BaseVoltageImpl extends IdentifiedObjectImpl implements BaseVoltage
      */
     @Override
     public void unsetTopologicalNode() {
-        if( topologicalNode != null ) ( ( InternalEList.Unsettable< ? > ) topologicalNode ).unset();
+        if( topologicalNode != null ) {
+            ( ( InternalEList.Unsettable< ? > ) topologicalNode ).unset();
+        }
     }
 
     /**
@@ -233,7 +237,9 @@ public class BaseVoltageImpl extends IdentifiedObjectImpl implements BaseVoltage
      */
     @Override
     public void unsetConductingEquipment() {
-        if( conductingEquipment != null ) ( ( InternalEList.Unsettable< ? > ) conductingEquipment ).unset();
+        if( conductingEquipment != null ) {
+            ( ( InternalEList.Unsettable< ? > ) conductingEquipment ).unset();
+        }
     }
 
     /**
@@ -267,9 +273,10 @@ public class BaseVoltageImpl extends IdentifiedObjectImpl implements BaseVoltage
         nominalVoltage = newNominalVoltage;
         boolean oldNominalVoltageESet = nominalVoltageESet;
         nominalVoltageESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.BASE_VOLTAGE__NOMINAL_VOLTAGE,
                     oldNominalVoltage, nominalVoltage, !oldNominalVoltageESet ) );
+        }
     }
 
     /**
@@ -283,9 +290,10 @@ public class BaseVoltageImpl extends IdentifiedObjectImpl implements BaseVoltage
         boolean oldNominalVoltageESet = nominalVoltageESet;
         nominalVoltage = NOMINAL_VOLTAGE_EDEFAULT;
         nominalVoltageESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.BASE_VOLTAGE__NOMINAL_VOLTAGE,
                     oldNominalVoltage, NOMINAL_VOLTAGE_EDEFAULT, oldNominalVoltageESet ) );
+        }
     }
 
     /**
@@ -319,7 +327,9 @@ public class BaseVoltageImpl extends IdentifiedObjectImpl implements BaseVoltage
      */
     @Override
     public void unsetVoltageLevel() {
-        if( voltageLevel != null ) ( ( InternalEList.Unsettable< ? > ) voltageLevel ).unset();
+        if( voltageLevel != null ) {
+            ( ( InternalEList.Unsettable< ? > ) voltageLevel ).unset();
+        }
     }
 
     /**
@@ -487,14 +497,18 @@ public class BaseVoltageImpl extends IdentifiedObjectImpl implements BaseVoltage
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (nominalVoltage: " );
-        if( nominalVoltageESet )
+        if( nominalVoltageESet ) {
             result.append( nominalVoltage );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

@@ -96,7 +96,9 @@ public class LoadDynamicsImpl extends IdentifiedObjectImpl implements LoadDynami
      */
     @Override
     public void unsetEnergyConsumer() {
-        if( energyConsumer != null ) ( ( InternalEList.Unsettable< ? > ) energyConsumer ).unset();
+        if( energyConsumer != null ) {
+            ( ( InternalEList.Unsettable< ? > ) energyConsumer ).unset();
+        }
     }
 
     /**

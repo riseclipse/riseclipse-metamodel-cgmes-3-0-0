@@ -97,7 +97,9 @@ public class MeasurementValueSourceImpl extends IdentifiedObjectImpl implements 
      */
     @Override
     public void unsetMeasurementValues() {
-        if( measurementValues != null ) ( ( InternalEList.Unsettable< ? > ) measurementValues ).unset();
+        if( measurementValues != null ) {
+            ( ( InternalEList.Unsettable< ? > ) measurementValues ).unset();
+        }
     }
 
     /**

@@ -96,7 +96,9 @@ public class DiagramStyleImpl extends IdentifiedObjectImpl implements DiagramSty
      */
     @Override
     public void unsetDiagram() {
-        if( diagram != null ) ( ( InternalEList.Unsettable< ? > ) diagram ).unset();
+        if( diagram != null ) {
+            ( ( InternalEList.Unsettable< ? > ) diagram ).unset();
+        }
     }
 
     /**

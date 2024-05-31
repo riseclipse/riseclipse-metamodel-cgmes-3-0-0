@@ -97,7 +97,9 @@ public class DCTopologicalIslandImpl extends IdentifiedObjectImpl implements DCT
      */
     @Override
     public void unsetDCTopologicalNodes() {
-        if( dcTopologicalNodes != null ) ( ( InternalEList.Unsettable< ? > ) dcTopologicalNodes ).unset();
+        if( dcTopologicalNodes != null ) {
+            ( ( InternalEList.Unsettable< ? > ) dcTopologicalNodes ).unset();
+        }
     }
 
     /**

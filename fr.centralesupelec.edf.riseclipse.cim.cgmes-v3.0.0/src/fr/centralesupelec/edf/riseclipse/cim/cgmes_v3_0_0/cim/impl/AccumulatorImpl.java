@@ -109,7 +109,9 @@ public class AccumulatorImpl extends MeasurementImpl implements Accumulator {
      */
     @Override
     public void unsetAccumulatorValues() {
-        if( accumulatorValues != null ) ( ( InternalEList.Unsettable< ? > ) accumulatorValues ).unset();
+        if( accumulatorValues != null ) {
+            ( ( InternalEList.Unsettable< ? > ) accumulatorValues ).unset();
+        }
     }
 
     /**
@@ -144,7 +146,9 @@ public class AccumulatorImpl extends MeasurementImpl implements Accumulator {
      */
     @Override
     public void unsetLimitSets() {
-        if( limitSets != null ) ( ( InternalEList.Unsettable< ? > ) limitSets ).unset();
+        if( limitSets != null ) {
+            ( ( InternalEList.Unsettable< ? > ) limitSets ).unset();
+        }
     }
 
     /**

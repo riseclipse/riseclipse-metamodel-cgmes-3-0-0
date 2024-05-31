@@ -569,9 +569,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         kwppref = newKwppref;
         boolean oldKwpprefESet = kwpprefESet;
         kwpprefESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__KWPPREF,
                     oldKwppref, kwppref, !oldKwpprefESet ) );
+        }
     }
 
     /**
@@ -585,9 +586,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldKwpprefESet = kwpprefESet;
         kwppref = KWPPREF_EDEFAULT;
         kwpprefESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__KWPPREF,
                     oldKwppref, KWPPREF_EDEFAULT, oldKwpprefESet ) );
+        }
     }
 
     /**
@@ -623,7 +625,9 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
      */
     @Override
     public void unsetWindDynamicsLookupTable() {
-        if( windDynamicsLookupTable != null ) ( ( InternalEList.Unsettable< ? > ) windDynamicsLookupTable ).unset();
+        if( windDynamicsLookupTable != null ) {
+            ( ( InternalEList.Unsettable< ? > ) windDynamicsLookupTable ).unset();
+        }
     }
 
     /**
@@ -657,9 +661,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         twpffiltp = newTwpffiltp;
         boolean oldTwpffiltpESet = twpffiltpESet;
         twpffiltpESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__TWPFFILTP,
                     oldTwpffiltp, twpffiltp, !oldTwpffiltpESet ) );
+        }
     }
 
     /**
@@ -673,10 +678,11 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldTwpffiltpESet = twpffiltpESet;
         twpffiltp = TWPFFILTP_EDEFAULT;
         twpffiltpESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__TWPFFILTP, oldTwpffiltp, TWPFFILTP_EDEFAULT,
                     oldTwpffiltpESet ) );
+        }
     }
 
     /**
@@ -710,9 +716,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         kiwpp = newKiwpp;
         boolean oldKiwppESet = kiwppESet;
         kiwppESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__KIWPP,
                     oldKiwpp, kiwpp, !oldKiwppESet ) );
+        }
     }
 
     /**
@@ -726,9 +733,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldKiwppESet = kiwppESet;
         kiwpp = KIWPP_EDEFAULT;
         kiwppESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__KIWPP,
                     oldKiwpp, KIWPP_EDEFAULT, oldKiwppESet ) );
+        }
     }
 
     /**
@@ -762,9 +770,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         prefmin = newPrefmin;
         boolean oldPrefminESet = prefminESet;
         prefminESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__PREFMIN,
                     oldPrefmin, prefmin, !oldPrefminESet ) );
+        }
     }
 
     /**
@@ -778,9 +787,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldPrefminESet = prefminESet;
         prefmin = PREFMIN_EDEFAULT;
         prefminESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__PREFMIN,
                     oldPrefmin, PREFMIN_EDEFAULT, oldPrefminESet ) );
+        }
     }
 
     /**
@@ -814,9 +824,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         prefmax = newPrefmax;
         boolean oldPrefmaxESet = prefmaxESet;
         prefmaxESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__PREFMAX,
                     oldPrefmax, prefmax, !oldPrefmaxESet ) );
+        }
     }
 
     /**
@@ -830,9 +841,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldPrefmaxESet = prefmaxESet;
         prefmax = PREFMAX_EDEFAULT;
         prefmaxESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__PREFMAX,
                     oldPrefmax, PREFMAX_EDEFAULT, oldPrefmaxESet ) );
+        }
     }
 
     /**
@@ -866,9 +878,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         kiwppmin = newKiwppmin;
         boolean oldKiwppminESet = kiwppminESet;
         kiwppminESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__KIWPPMIN,
                     oldKiwppmin, kiwppmin, !oldKiwppminESet ) );
+        }
     }
 
     /**
@@ -882,9 +895,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldKiwppminESet = kiwppminESet;
         kiwppmin = KIWPPMIN_EDEFAULT;
         kiwppminESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__KIWPPMIN,
                     oldKiwppmin, KIWPPMIN_EDEFAULT, oldKiwppminESet ) );
+        }
     }
 
     /**
@@ -918,9 +932,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         kiwppmax = newKiwppmax;
         boolean oldKiwppmaxESet = kiwppmaxESet;
         kiwppmaxESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__KIWPPMAX,
                     oldKiwppmax, kiwppmax, !oldKiwppmaxESet ) );
+        }
     }
 
     /**
@@ -934,9 +949,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldKiwppmaxESet = kiwppmaxESet;
         kiwppmax = KIWPPMAX_EDEFAULT;
         kiwppmaxESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__KIWPPMAX,
                     oldKiwppmax, KIWPPMAX_EDEFAULT, oldKiwppmaxESet ) );
+        }
     }
 
     /**
@@ -970,9 +986,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         tpft = newTpft;
         boolean oldTpftESet = tpftESet;
         tpftESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__TPFT,
                     oldTpft, tpft, !oldTpftESet ) );
+        }
     }
 
     /**
@@ -986,9 +1003,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldTpftESet = tpftESet;
         tpft = TPFT_EDEFAULT;
         tpftESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__TPFT,
                     oldTpft, TPFT_EDEFAULT, oldTpftESet ) );
+        }
     }
 
     /**
@@ -1022,9 +1040,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         tpfv = newTpfv;
         boolean oldTpfvESet = tpfvESet;
         tpfvESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__TPFV,
                     oldTpfv, tpfv, !oldTpfvESet ) );
+        }
     }
 
     /**
@@ -1038,9 +1057,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldTpfvESet = tpfvESet;
         tpfv = TPFV_EDEFAULT;
         tpfvESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__TPFV,
                     oldTpfv, TPFV_EDEFAULT, oldTpfvESet ) );
+        }
     }
 
     /**
@@ -1074,9 +1094,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         twppfiltp = newTwppfiltp;
         boolean oldTwppfiltpESet = twppfiltpESet;
         twppfiltpESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__TWPPFILTP,
                     oldTwppfiltp, twppfiltp, !oldTwppfiltpESet ) );
+        }
     }
 
     /**
@@ -1090,10 +1111,11 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldTwppfiltpESet = twppfiltpESet;
         twppfiltp = TWPPFILTP_EDEFAULT;
         twppfiltpESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__TWPPFILTP, oldTwppfiltp, TWPPFILTP_EDEFAULT,
                     oldTwppfiltpESet ) );
+        }
     }
 
     /**
@@ -1127,9 +1149,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         dprefmin = newDprefmin;
         boolean oldDprefminESet = dprefminESet;
         dprefminESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__DPREFMIN,
                     oldDprefmin, dprefmin, !oldDprefminESet ) );
+        }
     }
 
     /**
@@ -1143,9 +1166,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldDprefminESet = dprefminESet;
         dprefmin = DPREFMIN_EDEFAULT;
         dprefminESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__DPREFMIN,
                     oldDprefmin, DPREFMIN_EDEFAULT, oldDprefminESet ) );
+        }
     }
 
     /**
@@ -1179,9 +1203,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         dprefmax = newDprefmax;
         boolean oldDprefmaxESet = dprefmaxESet;
         dprefmaxESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__DPREFMAX,
                     oldDprefmax, dprefmax, !oldDprefmaxESet ) );
+        }
     }
 
     /**
@@ -1195,9 +1220,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldDprefmaxESet = dprefmaxESet;
         dprefmax = DPREFMAX_EDEFAULT;
         dprefmaxESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__DPREFMAX,
                     oldDprefmax, DPREFMAX_EDEFAULT, oldDprefmaxESet ) );
+        }
     }
 
     /**
@@ -1231,9 +1257,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         dpwprefmin = newDpwprefmin;
         boolean oldDpwprefminESet = dpwprefminESet;
         dpwprefminESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__DPWPREFMIN,
                     oldDpwprefmin, dpwprefmin, !oldDpwprefminESet ) );
+        }
     }
 
     /**
@@ -1247,10 +1274,11 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldDpwprefminESet = dpwprefminESet;
         dpwprefmin = DPWPREFMIN_EDEFAULT;
         dpwprefminESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__DPWPREFMIN, oldDpwprefmin, DPWPREFMIN_EDEFAULT,
                     oldDpwprefminESet ) );
+        }
     }
 
     /**
@@ -1284,9 +1312,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         dpwprefmax = newDpwprefmax;
         boolean oldDpwprefmaxESet = dpwprefmaxESet;
         dpwprefmaxESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__DPWPREFMAX,
                     oldDpwprefmax, dpwprefmax, !oldDpwprefmaxESet ) );
+        }
     }
 
     /**
@@ -1300,10 +1329,11 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldDpwprefmaxESet = dpwprefmaxESet;
         dpwprefmax = DPWPREFMAX_EDEFAULT;
         dpwprefmaxESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__DPWPREFMAX, oldDpwprefmax, DPWPREFMAX_EDEFAULT,
                     oldDpwprefmaxESet ) );
+        }
     }
 
     /**
@@ -1327,9 +1357,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
             InternalEObject oldWindPlantIEC = ( InternalEObject ) windPlantIEC;
             windPlantIEC = ( WindPlantIEC ) eResolveProxy( oldWindPlantIEC );
             if( windPlantIEC != oldWindPlantIEC ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE,
                             CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__WIND_PLANT_IEC, oldWindPlantIEC, windPlantIEC ) );
+                }
             }
         }
         return windPlantIEC;
@@ -1358,10 +1389,12 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__WIND_PLANT_IEC, oldWindPlantIEC, newWindPlantIEC,
                     !oldWindPlantIECESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -1375,22 +1408,27 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
     public void setWindPlantIEC( WindPlantIEC newWindPlantIEC ) {
         if( newWindPlantIEC != windPlantIEC ) {
             NotificationChain msgs = null;
-            if( windPlantIEC != null )
+            if( windPlantIEC != null ) {
                 msgs = ( ( InternalEObject ) windPlantIEC ).eInverseRemove( this,
                         CimPackage.WIND_PLANT_IEC__WIND_PLANT_FREQ_PCONTROL_IEC, WindPlantIEC.class, msgs );
-            if( newWindPlantIEC != null )
+            }
+            if( newWindPlantIEC != null ) {
                 msgs = ( ( InternalEObject ) newWindPlantIEC ).eInverseAdd( this,
                         CimPackage.WIND_PLANT_IEC__WIND_PLANT_FREQ_PCONTROL_IEC, WindPlantIEC.class, msgs );
+            }
             msgs = basicSetWindPlantIEC( newWindPlantIEC, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldWindPlantIECESet = windPlantIECESet;
             windPlantIECESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET,
                         CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__WIND_PLANT_IEC, newWindPlantIEC, newWindPlantIEC,
                         !oldWindPlantIECESet ) );
+            }
         }
     }
 
@@ -1408,10 +1446,12 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__WIND_PLANT_IEC, oldWindPlantIEC, null,
                     oldWindPlantIECESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -1428,14 +1468,17 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
             msgs = ( ( InternalEObject ) windPlantIEC ).eInverseRemove( this,
                     CimPackage.WIND_PLANT_IEC__WIND_PLANT_FREQ_PCONTROL_IEC, WindPlantIEC.class, msgs );
             msgs = basicUnsetWindPlantIEC( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldWindPlantIECESet = windPlantIECESet;
             windPlantIECESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__WIND_PLANT_IEC, null, null, oldWindPlantIECESet ) );
+            }
         }
     }
 
@@ -1470,9 +1513,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         kpwpp = newKpwpp;
         boolean oldKpwppESet = kpwppESet;
         kpwppESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__KPWPP,
                     oldKpwpp, kpwpp, !oldKpwppESet ) );
+        }
     }
 
     /**
@@ -1486,9 +1530,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         boolean oldKpwppESet = kpwppESet;
         kpwpp = KPWPP_EDEFAULT;
         kpwppESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__KPWPP,
                     oldKpwpp, KPWPP_EDEFAULT, oldKpwppESet ) );
+        }
     }
 
     /**
@@ -1514,9 +1559,10 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getWindDynamicsLookupTable() )
                     .basicAdd( otherEnd, msgs );
         case CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__WIND_PLANT_IEC:
-            if( windPlantIEC != null )
+            if( windPlantIEC != null ) {
                 msgs = ( ( InternalEObject ) windPlantIEC ).eInverseRemove( this,
                         CimPackage.WIND_PLANT_IEC__WIND_PLANT_FREQ_PCONTROL_IEC, WindPlantIEC.class, msgs );
+            }
             return basicSetWindPlantIEC( ( WindPlantIEC ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );
@@ -1577,7 +1623,9 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
         case CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__DPWPREFMAX:
             return getDpwprefmax();
         case CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__WIND_PLANT_IEC:
-            if( resolve ) return getWindPlantIEC();
+            if( resolve ) {
+                return getWindPlantIEC();
+            }
             return basicGetWindPlantIEC();
         case CimPackage.WIND_PLANT_FREQ_PCONTROL_IEC__KPWPP:
             return getKpwpp();
@@ -1766,84 +1814,116 @@ public class WindPlantFreqPcontrolIECImpl extends IdentifiedObjectImpl implement
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (kwppref: " );
-        if( kwpprefESet )
+        if( kwpprefESet ) {
             result.append( kwppref );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", twpffiltp: " );
-        if( twpffiltpESet )
+        if( twpffiltpESet ) {
             result.append( twpffiltp );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", kiwpp: " );
-        if( kiwppESet )
+        if( kiwppESet ) {
             result.append( kiwpp );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", prefmin: " );
-        if( prefminESet )
+        if( prefminESet ) {
             result.append( prefmin );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", prefmax: " );
-        if( prefmaxESet )
+        if( prefmaxESet ) {
             result.append( prefmax );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", kiwppmin: " );
-        if( kiwppminESet )
+        if( kiwppminESet ) {
             result.append( kiwppmin );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", kiwppmax: " );
-        if( kiwppmaxESet )
+        if( kiwppmaxESet ) {
             result.append( kiwppmax );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", tpft: " );
-        if( tpftESet )
+        if( tpftESet ) {
             result.append( tpft );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", tpfv: " );
-        if( tpfvESet )
+        if( tpfvESet ) {
             result.append( tpfv );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", twppfiltp: " );
-        if( twppfiltpESet )
+        if( twppfiltpESet ) {
             result.append( twppfiltp );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", dprefmin: " );
-        if( dprefminESet )
+        if( dprefminESet ) {
             result.append( dprefmin );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", dprefmax: " );
-        if( dprefmaxESet )
+        if( dprefmaxESet ) {
             result.append( dprefmax );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", dpwprefmin: " );
-        if( dpwprefminESet )
+        if( dpwprefminESet ) {
             result.append( dpwprefmin );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", dpwprefmax: " );
-        if( dpwprefmaxESet )
+        if( dpwprefmaxESet ) {
             result.append( dpwprefmax );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", kpwpp: " );
-        if( kpwppESet )
+        if( kpwppESet ) {
             result.append( kpwpp );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

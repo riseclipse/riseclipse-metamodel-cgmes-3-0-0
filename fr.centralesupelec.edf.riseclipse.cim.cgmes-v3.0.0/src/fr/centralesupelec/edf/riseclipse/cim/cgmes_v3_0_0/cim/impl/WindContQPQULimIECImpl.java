@@ -180,7 +180,9 @@ public class WindContQPQULimIECImpl extends IdentifiedObjectImpl implements Wind
      */
     @Override
     public void unsetWindDynamicsLookupTable() {
-        if( windDynamicsLookupTable != null ) ( ( InternalEList.Unsettable< ? > ) windDynamicsLookupTable ).unset();
+        if( windDynamicsLookupTable != null ) {
+            ( ( InternalEList.Unsettable< ? > ) windDynamicsLookupTable ).unset();
+        }
     }
 
     /**
@@ -214,9 +216,10 @@ public class WindContQPQULimIECImpl extends IdentifiedObjectImpl implements Wind
         tufiltql = newTufiltql;
         boolean oldTufiltqlESet = tufiltqlESet;
         tufiltqlESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_QPQU_LIM_IEC__TUFILTQL,
                     oldTufiltql, tufiltql, !oldTufiltqlESet ) );
+        }
     }
 
     /**
@@ -230,9 +233,10 @@ public class WindContQPQULimIECImpl extends IdentifiedObjectImpl implements Wind
         boolean oldTufiltqlESet = tufiltqlESet;
         tufiltql = TUFILTQL_EDEFAULT;
         tufiltqlESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_QPQU_LIM_IEC__TUFILTQL,
                     oldTufiltql, TUFILTQL_EDEFAULT, oldTufiltqlESet ) );
+        }
     }
 
     /**
@@ -266,9 +270,10 @@ public class WindContQPQULimIECImpl extends IdentifiedObjectImpl implements Wind
         tpfiltql = newTpfiltql;
         boolean oldTpfiltqlESet = tpfiltqlESet;
         tpfiltqlESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_QPQU_LIM_IEC__TPFILTQL,
                     oldTpfiltql, tpfiltql, !oldTpfiltqlESet ) );
+        }
     }
 
     /**
@@ -282,9 +287,10 @@ public class WindContQPQULimIECImpl extends IdentifiedObjectImpl implements Wind
         boolean oldTpfiltqlESet = tpfiltqlESet;
         tpfiltql = TPFILTQL_EDEFAULT;
         tpfiltqlESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_QPQU_LIM_IEC__TPFILTQL,
                     oldTpfiltql, TPFILTQL_EDEFAULT, oldTpfiltqlESet ) );
+        }
     }
 
     /**
@@ -308,10 +314,11 @@ public class WindContQPQULimIECImpl extends IdentifiedObjectImpl implements Wind
             InternalEObject oldWindTurbineType3or4IEC = ( InternalEObject ) windTurbineType3or4IEC;
             windTurbineType3or4IEC = ( WindTurbineType3or4IEC ) eResolveProxy( oldWindTurbineType3or4IEC );
             if( windTurbineType3or4IEC != oldWindTurbineType3or4IEC ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE,
                             CimPackage.WIND_CONT_QPQU_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC, oldWindTurbineType3or4IEC,
                             windTurbineType3or4IEC ) );
+                }
             }
         }
         return windTurbineType3or4IEC;
@@ -341,10 +348,12 @@ public class WindContQPQULimIECImpl extends IdentifiedObjectImpl implements Wind
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.WIND_CONT_QPQU_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC, oldWindTurbineType3or4IEC,
                     newWindTurbineType3or4IEC, !oldWindTurbineType3or4IECESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -358,24 +367,29 @@ public class WindContQPQULimIECImpl extends IdentifiedObjectImpl implements Wind
     public void setWindTurbineType3or4IEC( WindTurbineType3or4IEC newWindTurbineType3or4IEC ) {
         if( newWindTurbineType3or4IEC != windTurbineType3or4IEC ) {
             NotificationChain msgs = null;
-            if( windTurbineType3or4IEC != null )
+            if( windTurbineType3or4IEC != null ) {
                 msgs = ( ( InternalEObject ) windTurbineType3or4IEC ).eInverseRemove( this,
                         CimPackage.WIND_TURBINE_TYPE3OR4_IEC__WIND_CONT_QPQU_LIM_IEC, WindTurbineType3or4IEC.class,
                         msgs );
-            if( newWindTurbineType3or4IEC != null )
+            }
+            if( newWindTurbineType3or4IEC != null ) {
                 msgs = ( ( InternalEObject ) newWindTurbineType3or4IEC ).eInverseAdd( this,
                         CimPackage.WIND_TURBINE_TYPE3OR4_IEC__WIND_CONT_QPQU_LIM_IEC, WindTurbineType3or4IEC.class,
                         msgs );
+            }
             msgs = basicSetWindTurbineType3or4IEC( newWindTurbineType3or4IEC, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldWindTurbineType3or4IECESet = windTurbineType3or4IECESet;
             windTurbineType3or4IECESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET,
                         CimPackage.WIND_CONT_QPQU_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC, newWindTurbineType3or4IEC,
                         newWindTurbineType3or4IEC, !oldWindTurbineType3or4IECESet ) );
+            }
         }
     }
 
@@ -393,10 +407,12 @@ public class WindContQPQULimIECImpl extends IdentifiedObjectImpl implements Wind
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.WIND_CONT_QPQU_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC, oldWindTurbineType3or4IEC, null,
                     oldWindTurbineType3or4IECESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -413,15 +429,18 @@ public class WindContQPQULimIECImpl extends IdentifiedObjectImpl implements Wind
             msgs = ( ( InternalEObject ) windTurbineType3or4IEC ).eInverseRemove( this,
                     CimPackage.WIND_TURBINE_TYPE3OR4_IEC__WIND_CONT_QPQU_LIM_IEC, WindTurbineType3or4IEC.class, msgs );
             msgs = basicUnsetWindTurbineType3or4IEC( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldWindTurbineType3or4IECESet = windTurbineType3or4IECESet;
             windTurbineType3or4IECESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.WIND_CONT_QPQU_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC, null, null,
                         oldWindTurbineType3or4IECESet ) );
+            }
         }
     }
 
@@ -448,10 +467,11 @@ public class WindContQPQULimIECImpl extends IdentifiedObjectImpl implements Wind
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getWindDynamicsLookupTable() )
                     .basicAdd( otherEnd, msgs );
         case CimPackage.WIND_CONT_QPQU_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC:
-            if( windTurbineType3or4IEC != null )
+            if( windTurbineType3or4IEC != null ) {
                 msgs = ( ( InternalEObject ) windTurbineType3or4IEC ).eInverseRemove( this,
                         CimPackage.WIND_TURBINE_TYPE3OR4_IEC__WIND_CONT_QPQU_LIM_IEC, WindTurbineType3or4IEC.class,
                         msgs );
+            }
             return basicSetWindTurbineType3or4IEC( ( WindTurbineType3or4IEC ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );
@@ -488,7 +508,9 @@ public class WindContQPQULimIECImpl extends IdentifiedObjectImpl implements Wind
         case CimPackage.WIND_CONT_QPQU_LIM_IEC__TPFILTQL:
             return getTpfiltql();
         case CimPackage.WIND_CONT_QPQU_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC:
-            if( resolve ) return getWindTurbineType3or4IEC();
+            if( resolve ) {
+                return getWindTurbineType3or4IEC();
+            }
             return basicGetWindTurbineType3or4IEC();
         }
         return super.eGet( featureID, resolve, coreType );
@@ -571,19 +593,25 @@ public class WindContQPQULimIECImpl extends IdentifiedObjectImpl implements Wind
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (tufiltql: " );
-        if( tufiltqlESet )
+        if( tufiltqlESet ) {
             result.append( tufiltql );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", tpfiltql: " );
-        if( tpfiltqlESet )
+        if( tpfiltqlESet ) {
             result.append( tpfiltql );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }
