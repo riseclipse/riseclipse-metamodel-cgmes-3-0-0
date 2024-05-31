@@ -96,7 +96,9 @@ public class DiagramObjectStyleImpl extends IdentifiedObjectImpl implements Diag
      */
     @Override
     public void unsetStyledObjects() {
-        if( styledObjects != null ) ( ( InternalEList.Unsettable< ? > ) styledObjects ).unset();
+        if( styledObjects != null ) {
+            ( ( InternalEList.Unsettable< ? > ) styledObjects ).unset();
+        }
     }
 
     /**

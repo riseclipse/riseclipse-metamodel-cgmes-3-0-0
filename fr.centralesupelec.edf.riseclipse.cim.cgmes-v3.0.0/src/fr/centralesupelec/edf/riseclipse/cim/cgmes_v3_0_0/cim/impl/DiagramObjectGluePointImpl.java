@@ -97,7 +97,9 @@ public class DiagramObjectGluePointImpl extends CimObjectWithIDImpl implements D
      */
     @Override
     public void unsetDiagramObjectPoints() {
-        if( diagramObjectPoints != null ) ( ( InternalEList.Unsettable< ? > ) diagramObjectPoints ).unset();
+        if( diagramObjectPoints != null ) {
+            ( ( InternalEList.Unsettable< ? > ) diagramObjectPoints ).unset();
+        }
     }
 
     /**

@@ -97,7 +97,9 @@ public class EquivalentNetworkImpl extends ConnectivityNodeContainerImpl impleme
      */
     @Override
     public void unsetEquivalentEquipments() {
-        if( equivalentEquipments != null ) ( ( InternalEList.Unsettable< ? > ) equivalentEquipments ).unset();
+        if( equivalentEquipments != null ) {
+            ( ( InternalEList.Unsettable< ? > ) equivalentEquipments ).unset();
+        }
     }
 
     /**

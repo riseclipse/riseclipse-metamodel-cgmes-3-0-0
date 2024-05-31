@@ -130,8 +130,9 @@ public class SVCUserDefinedImpl extends StaticVarCompensatorDynamicsImpl impleme
      */
     @Override
     public void unsetProprietaryParameterDynamics() {
-        if( proprietaryParameterDynamics != null )
+        if( proprietaryParameterDynamics != null ) {
             ( ( InternalEList.Unsettable< ? > ) proprietaryParameterDynamics ).unset();
+        }
     }
 
     /**
@@ -166,9 +167,10 @@ public class SVCUserDefinedImpl extends StaticVarCompensatorDynamicsImpl impleme
         proprietary = newProprietary;
         boolean oldProprietaryESet = proprietaryESet;
         proprietaryESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.SVC_USER_DEFINED__PROPRIETARY,
                     oldProprietary, proprietary, !oldProprietaryESet ) );
+        }
     }
 
     /**
@@ -182,9 +184,10 @@ public class SVCUserDefinedImpl extends StaticVarCompensatorDynamicsImpl impleme
         boolean oldProprietaryESet = proprietaryESet;
         proprietary = PROPRIETARY_EDEFAULT;
         proprietaryESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.SVC_USER_DEFINED__PROPRIETARY,
                     oldProprietary, PROPRIETARY_EDEFAULT, oldProprietaryESet ) );
+        }
     }
 
     /**
@@ -305,14 +308,18 @@ public class SVCUserDefinedImpl extends StaticVarCompensatorDynamicsImpl impleme
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (proprietary: " );
-        if( proprietaryESet )
+        if( proprietaryESet ) {
             result.append( proprietary );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

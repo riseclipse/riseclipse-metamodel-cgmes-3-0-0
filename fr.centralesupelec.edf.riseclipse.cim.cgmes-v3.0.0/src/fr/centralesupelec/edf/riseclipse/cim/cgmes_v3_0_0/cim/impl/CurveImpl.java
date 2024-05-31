@@ -220,9 +220,10 @@ public class CurveImpl extends IdentifiedObjectImpl implements Curve {
         y1Unit = newY1Unit == null ? Y1_UNIT_EDEFAULT : newY1Unit;
         boolean oldY1UnitESet = y1UnitESet;
         y1UnitESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.CURVE__Y1_UNIT, oldY1Unit, y1Unit,
                     !oldY1UnitESet ) );
+        }
     }
 
     /**
@@ -236,9 +237,10 @@ public class CurveImpl extends IdentifiedObjectImpl implements Curve {
         boolean oldY1UnitESet = y1UnitESet;
         y1Unit = Y1_UNIT_EDEFAULT;
         y1UnitESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.CURVE__Y1_UNIT, oldY1Unit,
                     Y1_UNIT_EDEFAULT, oldY1UnitESet ) );
+        }
     }
 
     /**
@@ -272,9 +274,10 @@ public class CurveImpl extends IdentifiedObjectImpl implements Curve {
         xUnit = newXUnit == null ? XUNIT_EDEFAULT : newXUnit;
         boolean oldXUnitESet = xUnitESet;
         xUnitESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.CURVE__XUNIT, oldXUnit, xUnit,
                     !oldXUnitESet ) );
+        }
     }
 
     /**
@@ -288,9 +291,10 @@ public class CurveImpl extends IdentifiedObjectImpl implements Curve {
         boolean oldXUnitESet = xUnitESet;
         xUnit = XUNIT_EDEFAULT;
         xUnitESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.CURVE__XUNIT, oldXUnit, XUNIT_EDEFAULT,
                     oldXUnitESet ) );
+        }
     }
 
     /**
@@ -324,9 +328,10 @@ public class CurveImpl extends IdentifiedObjectImpl implements Curve {
         y2Unit = newY2Unit == null ? Y2_UNIT_EDEFAULT : newY2Unit;
         boolean oldY2UnitESet = y2UnitESet;
         y2UnitESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.CURVE__Y2_UNIT, oldY2Unit, y2Unit,
                     !oldY2UnitESet ) );
+        }
     }
 
     /**
@@ -340,9 +345,10 @@ public class CurveImpl extends IdentifiedObjectImpl implements Curve {
         boolean oldY2UnitESet = y2UnitESet;
         y2Unit = Y2_UNIT_EDEFAULT;
         y2UnitESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.CURVE__Y2_UNIT, oldY2Unit,
                     Y2_UNIT_EDEFAULT, oldY2UnitESet ) );
+        }
     }
 
     /**
@@ -376,9 +382,10 @@ public class CurveImpl extends IdentifiedObjectImpl implements Curve {
         curveStyle = newCurveStyle == null ? CURVE_STYLE_EDEFAULT : newCurveStyle;
         boolean oldCurveStyleESet = curveStyleESet;
         curveStyleESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.CURVE__CURVE_STYLE, oldCurveStyle,
                     curveStyle, !oldCurveStyleESet ) );
+        }
     }
 
     /**
@@ -392,9 +399,10 @@ public class CurveImpl extends IdentifiedObjectImpl implements Curve {
         boolean oldCurveStyleESet = curveStyleESet;
         curveStyle = CURVE_STYLE_EDEFAULT;
         curveStyleESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.CURVE__CURVE_STYLE, oldCurveStyle,
                     CURVE_STYLE_EDEFAULT, oldCurveStyleESet ) );
+        }
     }
 
     /**
@@ -428,7 +436,9 @@ public class CurveImpl extends IdentifiedObjectImpl implements Curve {
      */
     @Override
     public void unsetCurveDatas() {
-        if( curveDatas != null ) ( ( InternalEList.Unsettable< ? > ) curveDatas ).unset();
+        if( curveDatas != null ) {
+            ( ( InternalEList.Unsettable< ? > ) curveDatas ).unset();
+        }
     }
 
     /**
@@ -578,29 +588,39 @@ public class CurveImpl extends IdentifiedObjectImpl implements Curve {
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (curveStyle: " );
-        if( curveStyleESet )
+        if( curveStyleESet ) {
             result.append( curveStyle );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", y1Unit: " );
-        if( y1UnitESet )
+        if( y1UnitESet ) {
             result.append( y1Unit );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", y2Unit: " );
-        if( y2UnitESet )
+        if( y2UnitESet ) {
             result.append( y2Unit );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", xUnit: " );
-        if( xUnitESet )
+        if( xUnitESet ) {
             result.append( xUnit );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

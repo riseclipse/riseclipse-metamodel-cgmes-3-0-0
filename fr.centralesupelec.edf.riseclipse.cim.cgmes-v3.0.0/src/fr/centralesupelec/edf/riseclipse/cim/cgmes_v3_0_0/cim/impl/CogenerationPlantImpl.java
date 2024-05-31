@@ -97,7 +97,9 @@ public class CogenerationPlantImpl extends PowerSystemResourceImpl implements Co
      */
     @Override
     public void unsetThermalGeneratingUnits() {
-        if( thermalGeneratingUnits != null ) ( ( InternalEList.Unsettable< ? > ) thermalGeneratingUnits ).unset();
+        if( thermalGeneratingUnits != null ) {
+            ( ( InternalEList.Unsettable< ? > ) thermalGeneratingUnits ).unset();
+        }
     }
 
     /**

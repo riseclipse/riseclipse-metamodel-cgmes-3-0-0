@@ -141,7 +141,9 @@ public class HydroPowerPlantImpl extends PowerSystemResourceImpl implements Hydr
      */
     @Override
     public void unsetHydroPumps() {
-        if( hydroPumps != null ) ( ( InternalEList.Unsettable< ? > ) hydroPumps ).unset();
+        if( hydroPumps != null ) {
+            ( ( InternalEList.Unsettable< ? > ) hydroPumps ).unset();
+        }
     }
 
     /**
@@ -176,10 +178,11 @@ public class HydroPowerPlantImpl extends PowerSystemResourceImpl implements Hydr
                 : newHydroPlantStorageType;
         boolean oldHydroPlantStorageTypeESet = hydroPlantStorageTypeESet;
         hydroPlantStorageTypeESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET,
                     CimPackage.HYDRO_POWER_PLANT__HYDRO_PLANT_STORAGE_TYPE, oldHydroPlantStorageType,
                     hydroPlantStorageType, !oldHydroPlantStorageTypeESet ) );
+        }
     }
 
     /**
@@ -193,10 +196,11 @@ public class HydroPowerPlantImpl extends PowerSystemResourceImpl implements Hydr
         boolean oldHydroPlantStorageTypeESet = hydroPlantStorageTypeESet;
         hydroPlantStorageType = HYDRO_PLANT_STORAGE_TYPE_EDEFAULT;
         hydroPlantStorageTypeESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.HYDRO_POWER_PLANT__HYDRO_PLANT_STORAGE_TYPE, oldHydroPlantStorageType,
                     HYDRO_PLANT_STORAGE_TYPE_EDEFAULT, oldHydroPlantStorageTypeESet ) );
+        }
     }
 
     /**
@@ -231,7 +235,9 @@ public class HydroPowerPlantImpl extends PowerSystemResourceImpl implements Hydr
      */
     @Override
     public void unsetHydroGeneratingUnits() {
-        if( hydroGeneratingUnits != null ) ( ( InternalEList.Unsettable< ? > ) hydroGeneratingUnits ).unset();
+        if( hydroGeneratingUnits != null ) {
+            ( ( InternalEList.Unsettable< ? > ) hydroGeneratingUnits ).unset();
+        }
     }
 
     /**
@@ -367,14 +373,18 @@ public class HydroPowerPlantImpl extends PowerSystemResourceImpl implements Hydr
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (hydroPlantStorageType: " );
-        if( hydroPlantStorageTypeESet )
+        if( hydroPlantStorageTypeESet ) {
             result.append( hydroPlantStorageType );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

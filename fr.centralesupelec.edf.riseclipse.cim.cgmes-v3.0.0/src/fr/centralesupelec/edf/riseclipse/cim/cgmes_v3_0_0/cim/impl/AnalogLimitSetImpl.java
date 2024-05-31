@@ -109,7 +109,9 @@ public class AnalogLimitSetImpl extends LimitSetImpl implements AnalogLimitSet {
      */
     @Override
     public void unsetMeasurements() {
-        if( measurements != null ) ( ( InternalEList.Unsettable< ? > ) measurements ).unset();
+        if( measurements != null ) {
+            ( ( InternalEList.Unsettable< ? > ) measurements ).unset();
+        }
     }
 
     /**
@@ -143,7 +145,9 @@ public class AnalogLimitSetImpl extends LimitSetImpl implements AnalogLimitSet {
      */
     @Override
     public void unsetLimits() {
-        if( limits != null ) ( ( InternalEList.Unsettable< ? > ) limits ).unset();
+        if( limits != null ) {
+            ( ( InternalEList.Unsettable< ? > ) limits ).unset();
+        }
     }
 
     /**

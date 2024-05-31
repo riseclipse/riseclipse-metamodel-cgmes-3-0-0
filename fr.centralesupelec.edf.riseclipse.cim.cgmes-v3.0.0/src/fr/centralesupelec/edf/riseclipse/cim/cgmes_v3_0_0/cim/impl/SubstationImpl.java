@@ -133,10 +133,12 @@ public class SubstationImpl extends EquipmentContainerImpl implements Substation
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.SUBSTATION__REGION, oldRegion, newRegion, !oldRegionESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -150,21 +152,26 @@ public class SubstationImpl extends EquipmentContainerImpl implements Substation
     public void setRegion( SubGeographicalRegion newRegion ) {
         if( newRegion != region ) {
             NotificationChain msgs = null;
-            if( region != null )
+            if( region != null ) {
                 msgs = ( ( InternalEObject ) region ).eInverseRemove( this,
                         CimPackage.SUB_GEOGRAPHICAL_REGION__SUBSTATIONS, SubGeographicalRegion.class, msgs );
-            if( newRegion != null )
+            }
+            if( newRegion != null ) {
                 msgs = ( ( InternalEObject ) newRegion ).eInverseAdd( this,
                         CimPackage.SUB_GEOGRAPHICAL_REGION__SUBSTATIONS, SubGeographicalRegion.class, msgs );
+            }
             msgs = basicSetRegion( newRegion, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldRegionESet = regionESet;
             regionESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.SUBSTATION__REGION, newRegion,
                         newRegion, !oldRegionESet ) );
+            }
         }
     }
 
@@ -181,10 +188,12 @@ public class SubstationImpl extends EquipmentContainerImpl implements Substation
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.SUBSTATION__REGION, oldRegion, null, oldRegionESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -201,14 +210,17 @@ public class SubstationImpl extends EquipmentContainerImpl implements Substation
             msgs = ( ( InternalEObject ) region ).eInverseRemove( this, CimPackage.SUB_GEOGRAPHICAL_REGION__SUBSTATIONS,
                     SubGeographicalRegion.class, msgs );
             msgs = basicUnsetRegion( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldRegionESet = regionESet;
             regionESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.SUBSTATION__REGION, null, null,
                         oldRegionESet ) );
+            }
         }
     }
 
@@ -243,7 +255,9 @@ public class SubstationImpl extends EquipmentContainerImpl implements Substation
      */
     @Override
     public void unsetVoltageLevels() {
-        if( voltageLevels != null ) ( ( InternalEList.Unsettable< ? > ) voltageLevels ).unset();
+        if( voltageLevels != null ) {
+            ( ( InternalEList.Unsettable< ? > ) voltageLevels ).unset();
+        }
     }
 
     /**
@@ -277,7 +291,9 @@ public class SubstationImpl extends EquipmentContainerImpl implements Substation
      */
     @Override
     public void unsetDCConverterUnit() {
-        if( dcConverterUnit != null ) ( ( InternalEList.Unsettable< ? > ) dcConverterUnit ).unset();
+        if( dcConverterUnit != null ) {
+            ( ( InternalEList.Unsettable< ? > ) dcConverterUnit ).unset();
+        }
     }
 
     /**
@@ -300,9 +316,10 @@ public class SubstationImpl extends EquipmentContainerImpl implements Substation
     public NotificationChain eInverseAdd( InternalEObject otherEnd, int featureID, NotificationChain msgs ) {
         switch( featureID ) {
         case CimPackage.SUBSTATION__REGION:
-            if( region != null )
+            if( region != null ) {
                 msgs = ( ( InternalEObject ) region ).eInverseRemove( this,
                         CimPackage.SUB_GEOGRAPHICAL_REGION__SUBSTATIONS, SubGeographicalRegion.class, msgs );
+            }
             return basicSetRegion( ( SubGeographicalRegion ) otherEnd, msgs );
         case CimPackage.SUBSTATION__VOLTAGE_LEVELS:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getVoltageLevels() )

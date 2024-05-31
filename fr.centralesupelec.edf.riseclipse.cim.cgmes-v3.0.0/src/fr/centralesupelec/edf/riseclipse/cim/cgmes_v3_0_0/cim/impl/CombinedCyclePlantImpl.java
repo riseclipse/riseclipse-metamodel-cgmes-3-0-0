@@ -97,7 +97,9 @@ public class CombinedCyclePlantImpl extends PowerSystemResourceImpl implements C
      */
     @Override
     public void unsetThermalGeneratingUnits() {
-        if( thermalGeneratingUnits != null ) ( ( InternalEList.Unsettable< ? > ) thermalGeneratingUnits ).unset();
+        if( thermalGeneratingUnits != null ) {
+            ( ( InternalEList.Unsettable< ? > ) thermalGeneratingUnits ).unset();
+        }
     }
 
     /**

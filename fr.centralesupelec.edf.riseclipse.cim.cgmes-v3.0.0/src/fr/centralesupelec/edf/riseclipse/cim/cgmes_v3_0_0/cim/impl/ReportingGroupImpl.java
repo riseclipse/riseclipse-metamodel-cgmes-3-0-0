@@ -108,7 +108,9 @@ public class ReportingGroupImpl extends IdentifiedObjectImpl implements Reportin
      */
     @Override
     public void unsetBusNameMarker() {
-        if( busNameMarker != null ) ( ( InternalEList.Unsettable< ? > ) busNameMarker ).unset();
+        if( busNameMarker != null ) {
+            ( ( InternalEList.Unsettable< ? > ) busNameMarker ).unset();
+        }
     }
 
     /**
@@ -142,7 +144,9 @@ public class ReportingGroupImpl extends IdentifiedObjectImpl implements Reportin
      */
     @Override
     public void unsetTopologicalNode() {
-        if( topologicalNode != null ) ( ( InternalEList.Unsettable< ? > ) topologicalNode ).unset();
+        if( topologicalNode != null ) {
+            ( ( InternalEList.Unsettable< ? > ) topologicalNode ).unset();
+        }
     }
 
     /**

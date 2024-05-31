@@ -153,10 +153,12 @@ public class BusNameMarkerImpl extends IdentifiedObjectImpl implements BusNameMa
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.BUS_NAME_MARKER__REPORTING_GROUP, oldReportingGroup, newReportingGroup,
                     !oldReportingGroupESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -170,21 +172,26 @@ public class BusNameMarkerImpl extends IdentifiedObjectImpl implements BusNameMa
     public void setReportingGroup( ReportingGroup newReportingGroup ) {
         if( newReportingGroup != reportingGroup ) {
             NotificationChain msgs = null;
-            if( reportingGroup != null )
+            if( reportingGroup != null ) {
                 msgs = ( ( InternalEObject ) reportingGroup ).eInverseRemove( this,
                         CimPackage.REPORTING_GROUP__BUS_NAME_MARKER, ReportingGroup.class, msgs );
-            if( newReportingGroup != null )
+            }
+            if( newReportingGroup != null ) {
                 msgs = ( ( InternalEObject ) newReportingGroup ).eInverseAdd( this,
                         CimPackage.REPORTING_GROUP__BUS_NAME_MARKER, ReportingGroup.class, msgs );
+            }
             msgs = basicSetReportingGroup( newReportingGroup, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldReportingGroupESet = reportingGroupESet;
             reportingGroupESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.BUS_NAME_MARKER__REPORTING_GROUP,
                         newReportingGroup, newReportingGroup, !oldReportingGroupESet ) );
+            }
         }
     }
 
@@ -201,10 +208,12 @@ public class BusNameMarkerImpl extends IdentifiedObjectImpl implements BusNameMa
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.BUS_NAME_MARKER__REPORTING_GROUP, oldReportingGroup, null, oldReportingGroupESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -221,14 +230,17 @@ public class BusNameMarkerImpl extends IdentifiedObjectImpl implements BusNameMa
             msgs = ( ( InternalEObject ) reportingGroup ).eInverseRemove( this,
                     CimPackage.REPORTING_GROUP__BUS_NAME_MARKER, ReportingGroup.class, msgs );
             msgs = basicUnsetReportingGroup( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldReportingGroupESet = reportingGroupESet;
             reportingGroupESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.BUS_NAME_MARKER__REPORTING_GROUP,
                         null, null, oldReportingGroupESet ) );
+            }
         }
     }
 
@@ -263,7 +275,9 @@ public class BusNameMarkerImpl extends IdentifiedObjectImpl implements BusNameMa
      */
     @Override
     public void unsetTerminal() {
-        if( terminal != null ) ( ( InternalEList.Unsettable< ? > ) terminal ).unset();
+        if( terminal != null ) {
+            ( ( InternalEList.Unsettable< ? > ) terminal ).unset();
+        }
     }
 
     /**
@@ -297,9 +311,10 @@ public class BusNameMarkerImpl extends IdentifiedObjectImpl implements BusNameMa
         priority = newPriority;
         boolean oldPriorityESet = priorityESet;
         priorityESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.BUS_NAME_MARKER__PRIORITY, oldPriority,
                     priority, !oldPriorityESet ) );
+        }
     }
 
     /**
@@ -313,9 +328,10 @@ public class BusNameMarkerImpl extends IdentifiedObjectImpl implements BusNameMa
         boolean oldPriorityESet = priorityESet;
         priority = PRIORITY_EDEFAULT;
         priorityESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.BUS_NAME_MARKER__PRIORITY, oldPriority,
                     PRIORITY_EDEFAULT, oldPriorityESet ) );
+        }
     }
 
     /**
@@ -338,9 +354,10 @@ public class BusNameMarkerImpl extends IdentifiedObjectImpl implements BusNameMa
     public NotificationChain eInverseAdd( InternalEObject otherEnd, int featureID, NotificationChain msgs ) {
         switch( featureID ) {
         case CimPackage.BUS_NAME_MARKER__REPORTING_GROUP:
-            if( reportingGroup != null )
+            if( reportingGroup != null ) {
                 msgs = ( ( InternalEObject ) reportingGroup ).eInverseRemove( this,
                         CimPackage.REPORTING_GROUP__BUS_NAME_MARKER, ReportingGroup.class, msgs );
+            }
             return basicSetReportingGroup( ( ReportingGroup ) otherEnd, msgs );
         case CimPackage.BUS_NAME_MARKER__TERMINAL:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getTerminal() ).basicAdd( otherEnd,
@@ -452,14 +469,18 @@ public class BusNameMarkerImpl extends IdentifiedObjectImpl implements BusNameMa
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (priority: " );
-        if( priorityESet )
+        if( priorityESet ) {
             result.append( priority );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

@@ -162,7 +162,9 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
      */
     @Override
     public void unsetTerminals() {
-        if( terminals != null ) ( ( InternalEList.Unsettable< ? > ) terminals ).unset();
+        if( terminals != null ) {
+            ( ( InternalEList.Unsettable< ? > ) terminals ).unset();
+        }
     }
 
     /**
@@ -186,9 +188,10 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
             InternalEObject oldBoundaryPoint = ( InternalEObject ) boundaryPoint;
             boundaryPoint = ( BoundaryPoint ) eResolveProxy( oldBoundaryPoint );
             if( boundaryPoint != oldBoundaryPoint ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE,
                             CimPackage.CONNECTIVITY_NODE__BOUNDARY_POINT, oldBoundaryPoint, boundaryPoint ) );
+                }
             }
         }
         return boundaryPoint;
@@ -217,10 +220,12 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.CONNECTIVITY_NODE__BOUNDARY_POINT, oldBoundaryPoint, newBoundaryPoint,
                     !oldBoundaryPointESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -234,21 +239,26 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
     public void setBoundaryPoint( BoundaryPoint newBoundaryPoint ) {
         if( newBoundaryPoint != boundaryPoint ) {
             NotificationChain msgs = null;
-            if( boundaryPoint != null )
+            if( boundaryPoint != null ) {
                 msgs = ( ( InternalEObject ) boundaryPoint ).eInverseRemove( this,
                         EuPackage.BOUNDARY_POINT__CONNECTIVITY_NODE, BoundaryPoint.class, msgs );
-            if( newBoundaryPoint != null )
+            }
+            if( newBoundaryPoint != null ) {
                 msgs = ( ( InternalEObject ) newBoundaryPoint ).eInverseAdd( this,
                         EuPackage.BOUNDARY_POINT__CONNECTIVITY_NODE, BoundaryPoint.class, msgs );
+            }
             msgs = basicSetBoundaryPoint( newBoundaryPoint, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldBoundaryPointESet = boundaryPointESet;
             boundaryPointESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.CONNECTIVITY_NODE__BOUNDARY_POINT,
                         newBoundaryPoint, newBoundaryPoint, !oldBoundaryPointESet ) );
+            }
         }
     }
 
@@ -265,10 +275,12 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.CONNECTIVITY_NODE__BOUNDARY_POINT, oldBoundaryPoint, null, oldBoundaryPointESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -285,14 +297,17 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
             msgs = ( ( InternalEObject ) boundaryPoint ).eInverseRemove( this,
                     EuPackage.BOUNDARY_POINT__CONNECTIVITY_NODE, BoundaryPoint.class, msgs );
             msgs = basicUnsetBoundaryPoint( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldBoundaryPointESet = boundaryPointESet;
             boundaryPointESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.CONNECTIVITY_NODE__BOUNDARY_POINT,
                         null, null, oldBoundaryPointESet ) );
+            }
         }
     }
 
@@ -331,10 +346,12 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.CONNECTIVITY_NODE__CONNECTIVITY_NODE_CONTAINER, oldConnectivityNodeContainer,
                     newConnectivityNodeContainer, !oldConnectivityNodeContainerESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -348,24 +365,29 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
     public void setConnectivityNodeContainer( ConnectivityNodeContainer newConnectivityNodeContainer ) {
         if( newConnectivityNodeContainer != connectivityNodeContainer ) {
             NotificationChain msgs = null;
-            if( connectivityNodeContainer != null )
+            if( connectivityNodeContainer != null ) {
                 msgs = ( ( InternalEObject ) connectivityNodeContainer ).eInverseRemove( this,
                         CimPackage.CONNECTIVITY_NODE_CONTAINER__CONNECTIVITY_NODES, ConnectivityNodeContainer.class,
                         msgs );
-            if( newConnectivityNodeContainer != null )
+            }
+            if( newConnectivityNodeContainer != null ) {
                 msgs = ( ( InternalEObject ) newConnectivityNodeContainer ).eInverseAdd( this,
                         CimPackage.CONNECTIVITY_NODE_CONTAINER__CONNECTIVITY_NODES, ConnectivityNodeContainer.class,
                         msgs );
+            }
             msgs = basicSetConnectivityNodeContainer( newConnectivityNodeContainer, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldConnectivityNodeContainerESet = connectivityNodeContainerESet;
             connectivityNodeContainerESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET,
                         CimPackage.CONNECTIVITY_NODE__CONNECTIVITY_NODE_CONTAINER, newConnectivityNodeContainer,
                         newConnectivityNodeContainer, !oldConnectivityNodeContainerESet ) );
+            }
         }
     }
 
@@ -383,10 +405,12 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.CONNECTIVITY_NODE__CONNECTIVITY_NODE_CONTAINER, oldConnectivityNodeContainer, null,
                     oldConnectivityNodeContainerESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -403,15 +427,18 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
             msgs = ( ( InternalEObject ) connectivityNodeContainer ).eInverseRemove( this,
                     CimPackage.CONNECTIVITY_NODE_CONTAINER__CONNECTIVITY_NODES, ConnectivityNodeContainer.class, msgs );
             msgs = basicUnsetConnectivityNodeContainer( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldConnectivityNodeContainerESet = connectivityNodeContainerESet;
             connectivityNodeContainerESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.CONNECTIVITY_NODE__CONNECTIVITY_NODE_CONTAINER, null, null,
                         oldConnectivityNodeContainerESet ) );
+            }
         }
     }
 
@@ -449,10 +476,12 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.CONNECTIVITY_NODE__TOPOLOGICAL_NODE, oldTopologicalNode, newTopologicalNode,
                     !oldTopologicalNodeESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -466,21 +495,26 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
     public void setTopologicalNode( TopologicalNode newTopologicalNode ) {
         if( newTopologicalNode != topologicalNode ) {
             NotificationChain msgs = null;
-            if( topologicalNode != null )
+            if( topologicalNode != null ) {
                 msgs = ( ( InternalEObject ) topologicalNode ).eInverseRemove( this,
                         CimPackage.TOPOLOGICAL_NODE__CONNECTIVITY_NODES, TopologicalNode.class, msgs );
-            if( newTopologicalNode != null )
+            }
+            if( newTopologicalNode != null ) {
                 msgs = ( ( InternalEObject ) newTopologicalNode ).eInverseAdd( this,
                         CimPackage.TOPOLOGICAL_NODE__CONNECTIVITY_NODES, TopologicalNode.class, msgs );
+            }
             msgs = basicSetTopologicalNode( newTopologicalNode, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldTopologicalNodeESet = topologicalNodeESet;
             topologicalNodeESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.CONNECTIVITY_NODE__TOPOLOGICAL_NODE,
                         newTopologicalNode, newTopologicalNode, !oldTopologicalNodeESet ) );
+            }
         }
     }
 
@@ -497,10 +531,12 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.CONNECTIVITY_NODE__TOPOLOGICAL_NODE, oldTopologicalNode, null, oldTopologicalNodeESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -517,14 +553,17 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
             msgs = ( ( InternalEObject ) topologicalNode ).eInverseRemove( this,
                     CimPackage.TOPOLOGICAL_NODE__CONNECTIVITY_NODES, TopologicalNode.class, msgs );
             msgs = basicUnsetTopologicalNode( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldTopologicalNodeESet = topologicalNodeESet;
             topologicalNodeESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.CONNECTIVITY_NODE__TOPOLOGICAL_NODE, null, null, oldTopologicalNodeESet ) );
+            }
         }
     }
 
@@ -548,23 +587,26 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
     public NotificationChain eInverseAdd( InternalEObject otherEnd, int featureID, NotificationChain msgs ) {
         switch( featureID ) {
         case CimPackage.CONNECTIVITY_NODE__BOUNDARY_POINT:
-            if( boundaryPoint != null )
+            if( boundaryPoint != null ) {
                 msgs = ( ( InternalEObject ) boundaryPoint ).eInverseRemove( this,
                         EuPackage.BOUNDARY_POINT__CONNECTIVITY_NODE, BoundaryPoint.class, msgs );
+            }
             return basicSetBoundaryPoint( ( BoundaryPoint ) otherEnd, msgs );
         case CimPackage.CONNECTIVITY_NODE__TERMINALS:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getTerminals() ).basicAdd( otherEnd,
                     msgs );
         case CimPackage.CONNECTIVITY_NODE__CONNECTIVITY_NODE_CONTAINER:
-            if( connectivityNodeContainer != null )
+            if( connectivityNodeContainer != null ) {
                 msgs = ( ( InternalEObject ) connectivityNodeContainer ).eInverseRemove( this,
                         CimPackage.CONNECTIVITY_NODE_CONTAINER__CONNECTIVITY_NODES, ConnectivityNodeContainer.class,
                         msgs );
+            }
             return basicSetConnectivityNodeContainer( ( ConnectivityNodeContainer ) otherEnd, msgs );
         case CimPackage.CONNECTIVITY_NODE__TOPOLOGICAL_NODE:
-            if( topologicalNode != null )
+            if( topologicalNode != null ) {
                 msgs = ( ( InternalEObject ) topologicalNode ).eInverseRemove( this,
                         CimPackage.TOPOLOGICAL_NODE__CONNECTIVITY_NODES, TopologicalNode.class, msgs );
+            }
             return basicSetTopologicalNode( ( TopologicalNode ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );
@@ -599,7 +641,9 @@ public class ConnectivityNodeImpl extends IdentifiedObjectImpl implements Connec
     public Object eGet( int featureID, boolean resolve, boolean coreType ) {
         switch( featureID ) {
         case CimPackage.CONNECTIVITY_NODE__BOUNDARY_POINT:
-            if( resolve ) return getBoundaryPoint();
+            if( resolve ) {
+                return getBoundaryPoint();
+            }
             return basicGetBoundaryPoint();
         case CimPackage.CONNECTIVITY_NODE__TERMINALS:
             return getTerminals();

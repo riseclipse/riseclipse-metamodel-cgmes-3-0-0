@@ -99,7 +99,9 @@ public class SolarPowerPlantImpl extends PowerSystemResourceImpl implements Sola
      */
     @Override
     public void unsetSolarGeneratingUnits() {
-        if( solarGeneratingUnits != null ) ( ( InternalEList.Unsettable< ? > ) solarGeneratingUnits ).unset();
+        if( solarGeneratingUnits != null ) {
+            ( ( InternalEList.Unsettable< ? > ) solarGeneratingUnits ).unset();
+        }
     }
 
     /**

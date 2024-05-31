@@ -133,7 +133,9 @@ public class ValueAliasSetImpl extends IdentifiedObjectImpl implements ValueAlia
      */
     @Override
     public void unsetRaiseLowerCommands() {
-        if( raiseLowerCommands != null ) ( ( InternalEList.Unsettable< ? > ) raiseLowerCommands ).unset();
+        if( raiseLowerCommands != null ) {
+            ( ( InternalEList.Unsettable< ? > ) raiseLowerCommands ).unset();
+        }
     }
 
     /**
@@ -167,7 +169,9 @@ public class ValueAliasSetImpl extends IdentifiedObjectImpl implements ValueAlia
      */
     @Override
     public void unsetDiscretes() {
-        if( discretes != null ) ( ( InternalEList.Unsettable< ? > ) discretes ).unset();
+        if( discretes != null ) {
+            ( ( InternalEList.Unsettable< ? > ) discretes ).unset();
+        }
     }
 
     /**
@@ -201,7 +205,9 @@ public class ValueAliasSetImpl extends IdentifiedObjectImpl implements ValueAlia
      */
     @Override
     public void unsetCommands() {
-        if( commands != null ) ( ( InternalEList.Unsettable< ? > ) commands ).unset();
+        if( commands != null ) {
+            ( ( InternalEList.Unsettable< ? > ) commands ).unset();
+        }
     }
 
     /**
@@ -235,7 +241,9 @@ public class ValueAliasSetImpl extends IdentifiedObjectImpl implements ValueAlia
      */
     @Override
     public void unsetValues() {
-        if( values != null ) ( ( InternalEList.Unsettable< ? > ) values ).unset();
+        if( values != null ) {
+            ( ( InternalEList.Unsettable< ? > ) values ).unset();
+        }
     }
 
     /**

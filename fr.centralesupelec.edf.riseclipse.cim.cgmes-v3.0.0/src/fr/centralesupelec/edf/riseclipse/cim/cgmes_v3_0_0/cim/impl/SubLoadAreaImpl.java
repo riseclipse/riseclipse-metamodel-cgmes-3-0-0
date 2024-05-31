@@ -121,10 +121,12 @@ public class SubLoadAreaImpl extends EnergyAreaImpl implements SubLoadArea {
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.SUB_LOAD_AREA__LOAD_AREA, oldLoadArea, newLoadArea, !oldLoadAreaESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -138,21 +140,26 @@ public class SubLoadAreaImpl extends EnergyAreaImpl implements SubLoadArea {
     public void setLoadArea( LoadArea newLoadArea ) {
         if( newLoadArea != loadArea ) {
             NotificationChain msgs = null;
-            if( loadArea != null )
+            if( loadArea != null ) {
                 msgs = ( ( InternalEObject ) loadArea ).eInverseRemove( this, CimPackage.LOAD_AREA__SUB_LOAD_AREAS,
                         LoadArea.class, msgs );
-            if( newLoadArea != null )
+            }
+            if( newLoadArea != null ) {
                 msgs = ( ( InternalEObject ) newLoadArea ).eInverseAdd( this, CimPackage.LOAD_AREA__SUB_LOAD_AREAS,
                         LoadArea.class, msgs );
+            }
             msgs = basicSetLoadArea( newLoadArea, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldLoadAreaESet = loadAreaESet;
             loadAreaESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.SUB_LOAD_AREA__LOAD_AREA,
                         newLoadArea, newLoadArea, !oldLoadAreaESet ) );
+            }
         }
     }
 
@@ -169,10 +176,12 @@ public class SubLoadAreaImpl extends EnergyAreaImpl implements SubLoadArea {
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.SUB_LOAD_AREA__LOAD_AREA, oldLoadArea, null, oldLoadAreaESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -189,14 +198,17 @@ public class SubLoadAreaImpl extends EnergyAreaImpl implements SubLoadArea {
             msgs = ( ( InternalEObject ) loadArea ).eInverseRemove( this, CimPackage.LOAD_AREA__SUB_LOAD_AREAS,
                     LoadArea.class, msgs );
             msgs = basicUnsetLoadArea( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldLoadAreaESet = loadAreaESet;
             loadAreaESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.SUB_LOAD_AREA__LOAD_AREA, null,
                         null, oldLoadAreaESet ) );
+            }
         }
     }
 
@@ -231,7 +243,9 @@ public class SubLoadAreaImpl extends EnergyAreaImpl implements SubLoadArea {
      */
     @Override
     public void unsetLoadGroups() {
-        if( loadGroups != null ) ( ( InternalEList.Unsettable< ? > ) loadGroups ).unset();
+        if( loadGroups != null ) {
+            ( ( InternalEList.Unsettable< ? > ) loadGroups ).unset();
+        }
     }
 
     /**
@@ -257,9 +271,10 @@ public class SubLoadAreaImpl extends EnergyAreaImpl implements SubLoadArea {
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getLoadGroups() ).basicAdd( otherEnd,
                     msgs );
         case CimPackage.SUB_LOAD_AREA__LOAD_AREA:
-            if( loadArea != null )
+            if( loadArea != null ) {
                 msgs = ( ( InternalEObject ) loadArea ).eInverseRemove( this, CimPackage.LOAD_AREA__SUB_LOAD_AREAS,
                         LoadArea.class, msgs );
+            }
             return basicSetLoadArea( ( LoadArea ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );

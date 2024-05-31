@@ -118,9 +118,10 @@ public class PowerSystemResourceImpl extends IdentifiedObjectImpl implements Pow
             InternalEObject oldLocation = ( InternalEObject ) location;
             location = ( Location ) eResolveProxy( oldLocation );
             if( location != oldLocation ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE,
                             CimPackage.POWER_SYSTEM_RESOURCE__LOCATION, oldLocation, location ) );
+                }
             }
         }
         return location;
@@ -148,10 +149,12 @@ public class PowerSystemResourceImpl extends IdentifiedObjectImpl implements Pow
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.POWER_SYSTEM_RESOURCE__LOCATION, oldLocation, newLocation, !oldLocationESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -165,21 +168,26 @@ public class PowerSystemResourceImpl extends IdentifiedObjectImpl implements Pow
     public void setLocation( Location newLocation ) {
         if( newLocation != location ) {
             NotificationChain msgs = null;
-            if( location != null )
+            if( location != null ) {
                 msgs = ( ( InternalEObject ) location ).eInverseRemove( this,
                         CimPackage.LOCATION__POWER_SYSTEM_RESOURCES, Location.class, msgs );
-            if( newLocation != null )
+            }
+            if( newLocation != null ) {
                 msgs = ( ( InternalEObject ) newLocation ).eInverseAdd( this,
                         CimPackage.LOCATION__POWER_SYSTEM_RESOURCES, Location.class, msgs );
+            }
             msgs = basicSetLocation( newLocation, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldLocationESet = locationESet;
             locationESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.POWER_SYSTEM_RESOURCE__LOCATION,
                         newLocation, newLocation, !oldLocationESet ) );
+            }
         }
     }
 
@@ -196,10 +204,12 @@ public class PowerSystemResourceImpl extends IdentifiedObjectImpl implements Pow
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.POWER_SYSTEM_RESOURCE__LOCATION, oldLocation, null, oldLocationESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -216,14 +226,17 @@ public class PowerSystemResourceImpl extends IdentifiedObjectImpl implements Pow
             msgs = ( ( InternalEObject ) location ).eInverseRemove( this, CimPackage.LOCATION__POWER_SYSTEM_RESOURCES,
                     Location.class, msgs );
             msgs = basicUnsetLocation( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldLocationESet = locationESet;
             locationESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.POWER_SYSTEM_RESOURCE__LOCATION,
                         null, null, oldLocationESet ) );
+            }
         }
     }
 
@@ -258,7 +271,9 @@ public class PowerSystemResourceImpl extends IdentifiedObjectImpl implements Pow
      */
     @Override
     public void unsetMeasurements() {
-        if( measurements != null ) ( ( InternalEList.Unsettable< ? > ) measurements ).unset();
+        if( measurements != null ) {
+            ( ( InternalEList.Unsettable< ? > ) measurements ).unset();
+        }
     }
 
     /**
@@ -292,7 +307,9 @@ public class PowerSystemResourceImpl extends IdentifiedObjectImpl implements Pow
      */
     @Override
     public void unsetControls() {
-        if( controls != null ) ( ( InternalEList.Unsettable< ? > ) controls ).unset();
+        if( controls != null ) {
+            ( ( InternalEList.Unsettable< ? > ) controls ).unset();
+        }
     }
 
     /**
@@ -315,9 +332,10 @@ public class PowerSystemResourceImpl extends IdentifiedObjectImpl implements Pow
     public NotificationChain eInverseAdd( InternalEObject otherEnd, int featureID, NotificationChain msgs ) {
         switch( featureID ) {
         case CimPackage.POWER_SYSTEM_RESOURCE__LOCATION:
-            if( location != null )
+            if( location != null ) {
                 msgs = ( ( InternalEObject ) location ).eInverseRemove( this,
                         CimPackage.LOCATION__POWER_SYSTEM_RESOURCES, Location.class, msgs );
+            }
             return basicSetLocation( ( Location ) otherEnd, msgs );
         case CimPackage.POWER_SYSTEM_RESOURCE__MEASUREMENTS:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getMeasurements() ).basicAdd( otherEnd,
@@ -356,7 +374,9 @@ public class PowerSystemResourceImpl extends IdentifiedObjectImpl implements Pow
     public Object eGet( int featureID, boolean resolve, boolean coreType ) {
         switch( featureID ) {
         case CimPackage.POWER_SYSTEM_RESOURCE__LOCATION:
-            if( resolve ) return getLocation();
+            if( resolve ) {
+                return getLocation();
+            }
             return basicGetLocation();
         case CimPackage.POWER_SYSTEM_RESOURCE__MEASUREMENTS:
             return getMeasurements();

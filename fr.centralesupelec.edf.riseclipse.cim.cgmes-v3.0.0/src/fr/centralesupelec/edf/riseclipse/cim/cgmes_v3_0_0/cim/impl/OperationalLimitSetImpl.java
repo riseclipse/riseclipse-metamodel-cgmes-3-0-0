@@ -142,10 +142,12 @@ public class OperationalLimitSetImpl extends IdentifiedObjectImpl implements Ope
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.OPERATIONAL_LIMIT_SET__EQUIPMENT, oldEquipment, newEquipment, !oldEquipmentESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -159,21 +161,26 @@ public class OperationalLimitSetImpl extends IdentifiedObjectImpl implements Ope
     public void setEquipment( Equipment newEquipment ) {
         if( newEquipment != equipment ) {
             NotificationChain msgs = null;
-            if( equipment != null )
+            if( equipment != null ) {
                 msgs = ( ( InternalEObject ) equipment ).eInverseRemove( this,
                         CimPackage.EQUIPMENT__OPERATIONAL_LIMIT_SET, Equipment.class, msgs );
-            if( newEquipment != null )
+            }
+            if( newEquipment != null ) {
                 msgs = ( ( InternalEObject ) newEquipment ).eInverseAdd( this,
                         CimPackage.EQUIPMENT__OPERATIONAL_LIMIT_SET, Equipment.class, msgs );
+            }
             msgs = basicSetEquipment( newEquipment, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldEquipmentESet = equipmentESet;
             equipmentESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.OPERATIONAL_LIMIT_SET__EQUIPMENT,
                         newEquipment, newEquipment, !oldEquipmentESet ) );
+            }
         }
     }
 
@@ -190,10 +197,12 @@ public class OperationalLimitSetImpl extends IdentifiedObjectImpl implements Ope
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.OPERATIONAL_LIMIT_SET__EQUIPMENT, oldEquipment, null, oldEquipmentESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -210,14 +219,17 @@ public class OperationalLimitSetImpl extends IdentifiedObjectImpl implements Ope
             msgs = ( ( InternalEObject ) equipment ).eInverseRemove( this, CimPackage.EQUIPMENT__OPERATIONAL_LIMIT_SET,
                     Equipment.class, msgs );
             msgs = basicUnsetEquipment( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldEquipmentESet = equipmentESet;
             equipmentESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.OPERATIONAL_LIMIT_SET__EQUIPMENT,
                         null, null, oldEquipmentESet ) );
+            }
         }
     }
 
@@ -254,10 +266,12 @@ public class OperationalLimitSetImpl extends IdentifiedObjectImpl implements Ope
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.OPERATIONAL_LIMIT_SET__TERMINAL, oldTerminal, newTerminal, !oldTerminalESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -271,21 +285,26 @@ public class OperationalLimitSetImpl extends IdentifiedObjectImpl implements Ope
     public void setTerminal( ACDCTerminal newTerminal ) {
         if( newTerminal != terminal ) {
             NotificationChain msgs = null;
-            if( terminal != null )
+            if( terminal != null ) {
                 msgs = ( ( InternalEObject ) terminal ).eInverseRemove( this,
                         CimPackage.ACDC_TERMINAL__OPERATIONAL_LIMIT_SET, ACDCTerminal.class, msgs );
-            if( newTerminal != null )
+            }
+            if( newTerminal != null ) {
                 msgs = ( ( InternalEObject ) newTerminal ).eInverseAdd( this,
                         CimPackage.ACDC_TERMINAL__OPERATIONAL_LIMIT_SET, ACDCTerminal.class, msgs );
+            }
             msgs = basicSetTerminal( newTerminal, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldTerminalESet = terminalESet;
             terminalESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.OPERATIONAL_LIMIT_SET__TERMINAL,
                         newTerminal, newTerminal, !oldTerminalESet ) );
+            }
         }
     }
 
@@ -302,10 +321,12 @@ public class OperationalLimitSetImpl extends IdentifiedObjectImpl implements Ope
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.OPERATIONAL_LIMIT_SET__TERMINAL, oldTerminal, null, oldTerminalESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -322,14 +343,17 @@ public class OperationalLimitSetImpl extends IdentifiedObjectImpl implements Ope
             msgs = ( ( InternalEObject ) terminal ).eInverseRemove( this,
                     CimPackage.ACDC_TERMINAL__OPERATIONAL_LIMIT_SET, ACDCTerminal.class, msgs );
             msgs = basicUnsetTerminal( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldTerminalESet = terminalESet;
             terminalESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.OPERATIONAL_LIMIT_SET__TERMINAL,
                         null, null, oldTerminalESet ) );
+            }
         }
     }
 
@@ -365,7 +389,9 @@ public class OperationalLimitSetImpl extends IdentifiedObjectImpl implements Ope
      */
     @Override
     public void unsetOperationalLimitValue() {
-        if( operationalLimitValue != null ) ( ( InternalEList.Unsettable< ? > ) operationalLimitValue ).unset();
+        if( operationalLimitValue != null ) {
+            ( ( InternalEList.Unsettable< ? > ) operationalLimitValue ).unset();
+        }
     }
 
     /**
@@ -391,14 +417,16 @@ public class OperationalLimitSetImpl extends IdentifiedObjectImpl implements Ope
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getOperationalLimitValue() )
                     .basicAdd( otherEnd, msgs );
         case CimPackage.OPERATIONAL_LIMIT_SET__TERMINAL:
-            if( terminal != null )
+            if( terminal != null ) {
                 msgs = ( ( InternalEObject ) terminal ).eInverseRemove( this,
                         CimPackage.ACDC_TERMINAL__OPERATIONAL_LIMIT_SET, ACDCTerminal.class, msgs );
+            }
             return basicSetTerminal( ( ACDCTerminal ) otherEnd, msgs );
         case CimPackage.OPERATIONAL_LIMIT_SET__EQUIPMENT:
-            if( equipment != null )
+            if( equipment != null ) {
                 msgs = ( ( InternalEObject ) equipment ).eInverseRemove( this,
                         CimPackage.EQUIPMENT__OPERATIONAL_LIMIT_SET, Equipment.class, msgs );
+            }
             return basicSetEquipment( ( Equipment ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );

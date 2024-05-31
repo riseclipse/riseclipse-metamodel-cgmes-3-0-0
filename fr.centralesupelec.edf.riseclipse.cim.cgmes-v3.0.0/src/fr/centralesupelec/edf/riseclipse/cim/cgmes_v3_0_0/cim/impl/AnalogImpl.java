@@ -140,7 +140,9 @@ public class AnalogImpl extends MeasurementImpl implements Analog {
      */
     @Override
     public void unsetAnalogValues() {
-        if( analogValues != null ) ( ( InternalEList.Unsettable< ? > ) analogValues ).unset();
+        if( analogValues != null ) {
+            ( ( InternalEList.Unsettable< ? > ) analogValues ).unset();
+        }
     }
 
     /**
@@ -174,9 +176,10 @@ public class AnalogImpl extends MeasurementImpl implements Analog {
         positiveFlowIn = newPositiveFlowIn;
         boolean oldPositiveFlowInESet = positiveFlowInESet;
         positiveFlowInESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.ANALOG__POSITIVE_FLOW_IN,
                     oldPositiveFlowIn, positiveFlowIn, !oldPositiveFlowInESet ) );
+        }
     }
 
     /**
@@ -190,9 +193,10 @@ public class AnalogImpl extends MeasurementImpl implements Analog {
         boolean oldPositiveFlowInESet = positiveFlowInESet;
         positiveFlowIn = POSITIVE_FLOW_IN_EDEFAULT;
         positiveFlowInESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.ANALOG__POSITIVE_FLOW_IN,
                     oldPositiveFlowIn, POSITIVE_FLOW_IN_EDEFAULT, oldPositiveFlowInESet ) );
+        }
     }
 
     /**
@@ -227,7 +231,9 @@ public class AnalogImpl extends MeasurementImpl implements Analog {
      */
     @Override
     public void unsetLimitSets() {
-        if( limitSets != null ) ( ( InternalEList.Unsettable< ? > ) limitSets ).unset();
+        if( limitSets != null ) {
+            ( ( InternalEList.Unsettable< ? > ) limitSets ).unset();
+        }
     }
 
     /**
@@ -363,14 +369,18 @@ public class AnalogImpl extends MeasurementImpl implements Analog {
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (positiveFlowIn: " );
-        if( positiveFlowInESet )
+        if( positiveFlowInESet ) {
             result.append( positiveFlowIn );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

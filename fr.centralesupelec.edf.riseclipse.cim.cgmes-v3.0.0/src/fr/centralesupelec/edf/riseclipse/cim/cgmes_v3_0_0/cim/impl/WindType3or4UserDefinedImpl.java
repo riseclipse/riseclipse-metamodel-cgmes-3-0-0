@@ -130,8 +130,9 @@ public class WindType3or4UserDefinedImpl extends WindTurbineType3or4DynamicsImpl
      */
     @Override
     public void unsetProprietaryParameterDynamics() {
-        if( proprietaryParameterDynamics != null )
+        if( proprietaryParameterDynamics != null ) {
             ( ( InternalEList.Unsettable< ? > ) proprietaryParameterDynamics ).unset();
+        }
     }
 
     /**
@@ -166,9 +167,10 @@ public class WindType3or4UserDefinedImpl extends WindTurbineType3or4DynamicsImpl
         proprietary = newProprietary;
         boolean oldProprietaryESet = proprietaryESet;
         proprietaryESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_TYPE3OR4_USER_DEFINED__PROPRIETARY,
                     oldProprietary, proprietary, !oldProprietaryESet ) );
+        }
     }
 
     /**
@@ -182,10 +184,11 @@ public class WindType3or4UserDefinedImpl extends WindTurbineType3or4DynamicsImpl
         boolean oldProprietaryESet = proprietaryESet;
         proprietary = PROPRIETARY_EDEFAULT;
         proprietaryESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.WIND_TYPE3OR4_USER_DEFINED__PROPRIETARY, oldProprietary, PROPRIETARY_EDEFAULT,
                     oldProprietaryESet ) );
+        }
     }
 
     /**
@@ -306,14 +309,18 @@ public class WindType3or4UserDefinedImpl extends WindTurbineType3or4DynamicsImpl
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (proprietary: " );
-        if( proprietaryESet )
+        if( proprietaryESet ) {
             result.append( proprietary );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

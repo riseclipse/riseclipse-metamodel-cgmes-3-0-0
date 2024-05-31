@@ -329,9 +329,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         upqumax = newUpqumax;
         boolean oldUpqumaxESet = upqumaxESet;
         upqumaxESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_CURR_LIM_IEC__UPQUMAX,
                     oldUpqumax, upqumax, !oldUpqumaxESet ) );
+        }
     }
 
     /**
@@ -345,9 +346,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         boolean oldUpqumaxESet = upqumaxESet;
         upqumax = UPQUMAX_EDEFAULT;
         upqumaxESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_CURR_LIM_IEC__UPQUMAX,
                     oldUpqumax, UPQUMAX_EDEFAULT, oldUpqumaxESet ) );
+        }
     }
 
     /**
@@ -381,9 +383,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         kpqu = newKpqu;
         boolean oldKpquESet = kpquESet;
         kpquESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_CURR_LIM_IEC__KPQU, oldKpqu,
                     kpqu, !oldKpquESet ) );
+        }
     }
 
     /**
@@ -397,9 +400,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         boolean oldKpquESet = kpquESet;
         kpqu = KPQU_EDEFAULT;
         kpquESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_CURR_LIM_IEC__KPQU, oldKpqu,
                     KPQU_EDEFAULT, oldKpquESet ) );
+        }
     }
 
     /**
@@ -434,7 +438,9 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
      */
     @Override
     public void unsetWindDynamicsLookupTable() {
-        if( windDynamicsLookupTable != null ) ( ( InternalEList.Unsettable< ? > ) windDynamicsLookupTable ).unset();
+        if( windDynamicsLookupTable != null ) {
+            ( ( InternalEList.Unsettable< ? > ) windDynamicsLookupTable ).unset();
+        }
     }
 
     /**
@@ -468,9 +474,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         mqpri = newMqpri;
         boolean oldMqpriESet = mqpriESet;
         mqpriESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_CURR_LIM_IEC__MQPRI, oldMqpri,
                     mqpri, !oldMqpriESet ) );
+        }
     }
 
     /**
@@ -484,9 +491,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         boolean oldMqpriESet = mqpriESet;
         mqpri = MQPRI_EDEFAULT;
         mqpriESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_CURR_LIM_IEC__MQPRI,
                     oldMqpri, MQPRI_EDEFAULT, oldMqpriESet ) );
+        }
     }
 
     /**
@@ -510,10 +518,11 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
             InternalEObject oldWindTurbineType3or4IEC = ( InternalEObject ) windTurbineType3or4IEC;
             windTurbineType3or4IEC = ( WindTurbineType3or4IEC ) eResolveProxy( oldWindTurbineType3or4IEC );
             if( windTurbineType3or4IEC != oldWindTurbineType3or4IEC ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE,
                             CimPackage.WIND_CONT_CURR_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC, oldWindTurbineType3or4IEC,
                             windTurbineType3or4IEC ) );
+                }
             }
         }
         return windTurbineType3or4IEC;
@@ -543,10 +552,12 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.WIND_CONT_CURR_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC, oldWindTurbineType3or4IEC,
                     newWindTurbineType3or4IEC, !oldWindTurbineType3or4IECESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -560,24 +571,29 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
     public void setWindTurbineType3or4IEC( WindTurbineType3or4IEC newWindTurbineType3or4IEC ) {
         if( newWindTurbineType3or4IEC != windTurbineType3or4IEC ) {
             NotificationChain msgs = null;
-            if( windTurbineType3or4IEC != null )
+            if( windTurbineType3or4IEC != null ) {
                 msgs = ( ( InternalEObject ) windTurbineType3or4IEC ).eInverseRemove( this,
                         CimPackage.WIND_TURBINE_TYPE3OR4_IEC__WIND_CONT_CURR_LIM_IEC, WindTurbineType3or4IEC.class,
                         msgs );
-            if( newWindTurbineType3or4IEC != null )
+            }
+            if( newWindTurbineType3or4IEC != null ) {
                 msgs = ( ( InternalEObject ) newWindTurbineType3or4IEC ).eInverseAdd( this,
                         CimPackage.WIND_TURBINE_TYPE3OR4_IEC__WIND_CONT_CURR_LIM_IEC, WindTurbineType3or4IEC.class,
                         msgs );
+            }
             msgs = basicSetWindTurbineType3or4IEC( newWindTurbineType3or4IEC, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldWindTurbineType3or4IECESet = windTurbineType3or4IECESet;
             windTurbineType3or4IECESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET,
                         CimPackage.WIND_CONT_CURR_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC, newWindTurbineType3or4IEC,
                         newWindTurbineType3or4IEC, !oldWindTurbineType3or4IECESet ) );
+            }
         }
     }
 
@@ -595,10 +611,12 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.WIND_CONT_CURR_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC, oldWindTurbineType3or4IEC, null,
                     oldWindTurbineType3or4IECESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -615,15 +633,18 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
             msgs = ( ( InternalEObject ) windTurbineType3or4IEC ).eInverseRemove( this,
                     CimPackage.WIND_TURBINE_TYPE3OR4_IEC__WIND_CONT_CURR_LIM_IEC, WindTurbineType3or4IEC.class, msgs );
             msgs = basicUnsetWindTurbineType3or4IEC( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldWindTurbineType3or4IECESet = windTurbineType3or4IECESet;
             windTurbineType3or4IECESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.WIND_CONT_CURR_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC, null, null,
                         oldWindTurbineType3or4IECESet ) );
+            }
         }
     }
 
@@ -658,9 +679,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         imax = newImax;
         boolean oldImaxESet = imaxESet;
         imaxESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_CURR_LIM_IEC__IMAX, oldImax,
                     imax, !oldImaxESet ) );
+        }
     }
 
     /**
@@ -674,9 +696,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         boolean oldImaxESet = imaxESet;
         imax = IMAX_EDEFAULT;
         imaxESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_CURR_LIM_IEC__IMAX, oldImax,
                     IMAX_EDEFAULT, oldImaxESet ) );
+        }
     }
 
     /**
@@ -710,9 +733,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         tufiltcl = newTufiltcl;
         boolean oldTufiltclESet = tufiltclESet;
         tufiltclESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_CURR_LIM_IEC__TUFILTCL,
                     oldTufiltcl, tufiltcl, !oldTufiltclESet ) );
+        }
     }
 
     /**
@@ -726,9 +750,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         boolean oldTufiltclESet = tufiltclESet;
         tufiltcl = TUFILTCL_EDEFAULT;
         tufiltclESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_CURR_LIM_IEC__TUFILTCL,
                     oldTufiltcl, TUFILTCL_EDEFAULT, oldTufiltclESet ) );
+        }
     }
 
     /**
@@ -762,9 +787,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         mdfslim = newMdfslim;
         boolean oldMdfslimESet = mdfslimESet;
         mdfslimESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_CURR_LIM_IEC__MDFSLIM,
                     oldMdfslim, mdfslim, !oldMdfslimESet ) );
+        }
     }
 
     /**
@@ -778,9 +804,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         boolean oldMdfslimESet = mdfslimESet;
         mdfslim = MDFSLIM_EDEFAULT;
         mdfslimESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_CURR_LIM_IEC__MDFSLIM,
                     oldMdfslim, MDFSLIM_EDEFAULT, oldMdfslimESet ) );
+        }
     }
 
     /**
@@ -814,9 +841,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         imaxdip = newImaxdip;
         boolean oldImaxdipESet = imaxdipESet;
         imaxdipESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_CONT_CURR_LIM_IEC__IMAXDIP,
                     oldImaxdip, imaxdip, !oldImaxdipESet ) );
+        }
     }
 
     /**
@@ -830,9 +858,10 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         boolean oldImaxdipESet = imaxdipESet;
         imaxdip = IMAXDIP_EDEFAULT;
         imaxdipESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_CONT_CURR_LIM_IEC__IMAXDIP,
                     oldImaxdip, IMAXDIP_EDEFAULT, oldImaxdipESet ) );
+        }
     }
 
     /**
@@ -858,10 +887,11 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getWindDynamicsLookupTable() )
                     .basicAdd( otherEnd, msgs );
         case CimPackage.WIND_CONT_CURR_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC:
-            if( windTurbineType3or4IEC != null )
+            if( windTurbineType3or4IEC != null ) {
                 msgs = ( ( InternalEObject ) windTurbineType3or4IEC ).eInverseRemove( this,
                         CimPackage.WIND_TURBINE_TYPE3OR4_IEC__WIND_CONT_CURR_LIM_IEC, WindTurbineType3or4IEC.class,
                         msgs );
+            }
             return basicSetWindTurbineType3or4IEC( ( WindTurbineType3or4IEC ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );
@@ -900,7 +930,9 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
         case CimPackage.WIND_CONT_CURR_LIM_IEC__MQPRI:
             return getMqpri();
         case CimPackage.WIND_CONT_CURR_LIM_IEC__WIND_TURBINE_TYPE3OR4_IEC:
-            if( resolve ) return getWindTurbineType3or4IEC();
+            if( resolve ) {
+                return getWindTurbineType3or4IEC();
+            }
             return basicGetWindTurbineType3or4IEC();
         case CimPackage.WIND_CONT_CURR_LIM_IEC__IMAX:
             return getImax();
@@ -1031,44 +1063,60 @@ public class WindContCurrLimIECImpl extends IdentifiedObjectImpl implements Wind
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (upqumax: " );
-        if( upqumaxESet )
+        if( upqumaxESet ) {
             result.append( upqumax );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", kpqu: " );
-        if( kpquESet )
+        if( kpquESet ) {
             result.append( kpqu );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", mqpri: " );
-        if( mqpriESet )
+        if( mqpriESet ) {
             result.append( mqpri );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", imax: " );
-        if( imaxESet )
+        if( imaxESet ) {
             result.append( imax );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", tufiltcl: " );
-        if( tufiltclESet )
+        if( tufiltclESet ) {
             result.append( tufiltcl );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", mdfslim: " );
-        if( mdfslimESet )
+        if( mdfslimESet ) {
             result.append( mdfslim );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", imaxdip: " );
-        if( imaxdipESet )
+        if( imaxdipESet ) {
             result.append( imaxdip );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

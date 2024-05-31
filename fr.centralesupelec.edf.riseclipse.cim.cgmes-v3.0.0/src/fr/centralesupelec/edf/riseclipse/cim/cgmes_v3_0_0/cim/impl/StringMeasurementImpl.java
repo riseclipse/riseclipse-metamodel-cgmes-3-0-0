@@ -97,7 +97,9 @@ public class StringMeasurementImpl extends MeasurementImpl implements StringMeas
      */
     @Override
     public void unsetStringMeasurementValues() {
-        if( stringMeasurementValues != null ) ( ( InternalEList.Unsettable< ? > ) stringMeasurementValues ).unset();
+        if( stringMeasurementValues != null ) {
+            ( ( InternalEList.Unsettable< ? > ) stringMeasurementValues ).unset();
+        }
     }
 
     /**

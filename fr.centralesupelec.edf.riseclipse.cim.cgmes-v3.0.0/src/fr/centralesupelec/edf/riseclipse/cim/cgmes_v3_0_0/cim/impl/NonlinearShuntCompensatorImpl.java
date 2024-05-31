@@ -98,8 +98,9 @@ public class NonlinearShuntCompensatorImpl extends ShuntCompensatorImpl implemen
      */
     @Override
     public void unsetNonlinearShuntCompensatorPoints() {
-        if( nonlinearShuntCompensatorPoints != null )
+        if( nonlinearShuntCompensatorPoints != null ) {
             ( ( InternalEList.Unsettable< ? > ) nonlinearShuntCompensatorPoints ).unset();
+        }
     }
 
     /**

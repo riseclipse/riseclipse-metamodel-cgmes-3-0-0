@@ -164,10 +164,12 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.LOCATION__COORDINATE_SYSTEM, oldCoordinateSystem, newCoordinateSystem,
                     !oldCoordinateSystemESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -181,21 +183,26 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
     public void setCoordinateSystem( CoordinateSystem newCoordinateSystem ) {
         if( newCoordinateSystem != coordinateSystem ) {
             NotificationChain msgs = null;
-            if( coordinateSystem != null )
+            if( coordinateSystem != null ) {
                 msgs = ( ( InternalEObject ) coordinateSystem ).eInverseRemove( this,
                         CimPackage.COORDINATE_SYSTEM__LOCATIONS, CoordinateSystem.class, msgs );
-            if( newCoordinateSystem != null )
+            }
+            if( newCoordinateSystem != null ) {
                 msgs = ( ( InternalEObject ) newCoordinateSystem ).eInverseAdd( this,
                         CimPackage.COORDINATE_SYSTEM__LOCATIONS, CoordinateSystem.class, msgs );
+            }
             msgs = basicSetCoordinateSystem( newCoordinateSystem, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldCoordinateSystemESet = coordinateSystemESet;
             coordinateSystemESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.LOCATION__COORDINATE_SYSTEM,
                         newCoordinateSystem, newCoordinateSystem, !oldCoordinateSystemESet ) );
+            }
         }
     }
 
@@ -212,10 +219,12 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.LOCATION__COORDINATE_SYSTEM, oldCoordinateSystem, null, oldCoordinateSystemESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -232,14 +241,17 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
             msgs = ( ( InternalEObject ) coordinateSystem ).eInverseRemove( this,
                     CimPackage.COORDINATE_SYSTEM__LOCATIONS, CoordinateSystem.class, msgs );
             msgs = basicUnsetCoordinateSystem( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldCoordinateSystemESet = coordinateSystemESet;
             coordinateSystemESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.LOCATION__COORDINATE_SYSTEM, null,
                         null, oldCoordinateSystemESet ) );
+            }
         }
     }
 
@@ -278,10 +290,12 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.LOCATION__POWER_SYSTEM_RESOURCES, oldPowerSystemResources, newPowerSystemResources,
                     !oldPowerSystemResourcesESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -295,21 +309,26 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
     public void setPowerSystemResources( PowerSystemResource newPowerSystemResources ) {
         if( newPowerSystemResources != powerSystemResources ) {
             NotificationChain msgs = null;
-            if( powerSystemResources != null )
+            if( powerSystemResources != null ) {
                 msgs = ( ( InternalEObject ) powerSystemResources ).eInverseRemove( this,
                         CimPackage.POWER_SYSTEM_RESOURCE__LOCATION, PowerSystemResource.class, msgs );
-            if( newPowerSystemResources != null )
+            }
+            if( newPowerSystemResources != null ) {
                 msgs = ( ( InternalEObject ) newPowerSystemResources ).eInverseAdd( this,
                         CimPackage.POWER_SYSTEM_RESOURCE__LOCATION, PowerSystemResource.class, msgs );
+            }
             msgs = basicSetPowerSystemResources( newPowerSystemResources, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldPowerSystemResourcesESet = powerSystemResourcesESet;
             powerSystemResourcesESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.LOCATION__POWER_SYSTEM_RESOURCES,
                         newPowerSystemResources, newPowerSystemResources, !oldPowerSystemResourcesESet ) );
+            }
         }
     }
 
@@ -327,10 +346,12 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.LOCATION__POWER_SYSTEM_RESOURCES, oldPowerSystemResources, null,
                     oldPowerSystemResourcesESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -347,14 +368,17 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
             msgs = ( ( InternalEObject ) powerSystemResources ).eInverseRemove( this,
                     CimPackage.POWER_SYSTEM_RESOURCE__LOCATION, PowerSystemResource.class, msgs );
             msgs = basicUnsetPowerSystemResources( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldPowerSystemResourcesESet = powerSystemResourcesESet;
             powerSystemResourcesESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.LOCATION__POWER_SYSTEM_RESOURCES,
                         null, null, oldPowerSystemResourcesESet ) );
+            }
         }
     }
 
@@ -389,7 +413,9 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
      */
     @Override
     public void unsetPositionPoints() {
-        if( positionPoints != null ) ( ( InternalEList.Unsettable< ? > ) positionPoints ).unset();
+        if( positionPoints != null ) {
+            ( ( InternalEList.Unsettable< ? > ) positionPoints ).unset();
+        }
     }
 
     /**
@@ -413,9 +439,10 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
             InternalEObject oldMainAddress = ( InternalEObject ) mainAddress;
             mainAddress = ( StreetAddress ) eResolveProxy( oldMainAddress );
             if( mainAddress != oldMainAddress ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE, CimPackage.LOCATION__MAIN_ADDRESS,
                             oldMainAddress, mainAddress ) );
+                }
             }
         }
         return mainAddress;
@@ -441,9 +468,10 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
         mainAddress = newMainAddress;
         boolean oldMainAddressESet = mainAddressESet;
         mainAddressESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.LOCATION__MAIN_ADDRESS, oldMainAddress,
                     mainAddress, !oldMainAddressESet ) );
+        }
     }
 
     /**
@@ -457,9 +485,10 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
         boolean oldMainAddressESet = mainAddressESet;
         mainAddress = null;
         mainAddressESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.LOCATION__MAIN_ADDRESS, oldMainAddress,
                     null, oldMainAddressESet ) );
+        }
     }
 
     /**
@@ -482,14 +511,16 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
     public NotificationChain eInverseAdd( InternalEObject otherEnd, int featureID, NotificationChain msgs ) {
         switch( featureID ) {
         case CimPackage.LOCATION__COORDINATE_SYSTEM:
-            if( coordinateSystem != null )
+            if( coordinateSystem != null ) {
                 msgs = ( ( InternalEObject ) coordinateSystem ).eInverseRemove( this,
                         CimPackage.COORDINATE_SYSTEM__LOCATIONS, CoordinateSystem.class, msgs );
+            }
             return basicSetCoordinateSystem( ( CoordinateSystem ) otherEnd, msgs );
         case CimPackage.LOCATION__POWER_SYSTEM_RESOURCES:
-            if( powerSystemResources != null )
+            if( powerSystemResources != null ) {
                 msgs = ( ( InternalEObject ) powerSystemResources ).eInverseRemove( this,
                         CimPackage.POWER_SYSTEM_RESOURCE__LOCATION, PowerSystemResource.class, msgs );
+            }
             return basicSetPowerSystemResources( ( PowerSystemResource ) otherEnd, msgs );
         case CimPackage.LOCATION__POSITION_POINTS:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getPositionPoints() )
@@ -531,7 +562,9 @@ public class LocationImpl extends IdentifiedObjectImpl implements Location {
         case CimPackage.LOCATION__POSITION_POINTS:
             return getPositionPoints();
         case CimPackage.LOCATION__MAIN_ADDRESS:
-            if( resolve ) return getMainAddress();
+            if( resolve ) {
+                return getMainAddress();
+            }
             return basicGetMainAddress();
         }
         return super.eGet( featureID, resolve, coreType );

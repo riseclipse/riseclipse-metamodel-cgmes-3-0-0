@@ -350,9 +350,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         pset = newPset;
         boolean oldPsetESet = psetESet;
         psetESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PITCH_CONT_POWER_IEC__PSET, oldPset,
                     pset, !oldPsetESet ) );
+        }
     }
 
     /**
@@ -366,9 +367,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         boolean oldPsetESet = psetESet;
         pset = PSET_EDEFAULT;
         psetESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PITCH_CONT_POWER_IEC__PSET,
                     oldPset, PSET_EDEFAULT, oldPsetESet ) );
+        }
     }
 
     /**
@@ -404,7 +406,9 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
      */
     @Override
     public void unsetWindDynamicsLookupTable() {
-        if( windDynamicsLookupTable != null ) ( ( InternalEList.Unsettable< ? > ) windDynamicsLookupTable ).unset();
+        if( windDynamicsLookupTable != null ) {
+            ( ( InternalEList.Unsettable< ? > ) windDynamicsLookupTable ).unset();
+        }
     }
 
     /**
@@ -438,9 +442,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         dpmax = newDpmax;
         boolean oldDpmaxESet = dpmaxESet;
         dpmaxESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PITCH_CONT_POWER_IEC__DPMAX,
                     oldDpmax, dpmax, !oldDpmaxESet ) );
+        }
     }
 
     /**
@@ -454,9 +459,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         boolean oldDpmaxESet = dpmaxESet;
         dpmax = DPMAX_EDEFAULT;
         dpmaxESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PITCH_CONT_POWER_IEC__DPMAX,
                     oldDpmax, DPMAX_EDEFAULT, oldDpmaxESet ) );
+        }
     }
 
     /**
@@ -490,9 +496,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         dpmin = newDpmin;
         boolean oldDpminESet = dpminESet;
         dpminESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PITCH_CONT_POWER_IEC__DPMIN,
                     oldDpmin, dpmin, !oldDpminESet ) );
+        }
     }
 
     /**
@@ -506,9 +513,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         boolean oldDpminESet = dpminESet;
         dpmin = DPMIN_EDEFAULT;
         dpminESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PITCH_CONT_POWER_IEC__DPMIN,
                     oldDpmin, DPMIN_EDEFAULT, oldDpminESet ) );
+        }
     }
 
     /**
@@ -532,10 +540,11 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
             InternalEObject oldWindGenTurbineType2IEC = ( InternalEObject ) windGenTurbineType2IEC;
             windGenTurbineType2IEC = ( WindGenTurbineType2IEC ) eResolveProxy( oldWindGenTurbineType2IEC );
             if( windGenTurbineType2IEC != oldWindGenTurbineType2IEC ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE,
                             CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE2_IEC, oldWindGenTurbineType2IEC,
                             windGenTurbineType2IEC ) );
+                }
             }
         }
         return windGenTurbineType2IEC;
@@ -565,10 +574,12 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE2_IEC, oldWindGenTurbineType2IEC,
                     newWindGenTurbineType2IEC, !oldWindGenTurbineType2IECESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -582,24 +593,29 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
     public void setWindGenTurbineType2IEC( WindGenTurbineType2IEC newWindGenTurbineType2IEC ) {
         if( newWindGenTurbineType2IEC != windGenTurbineType2IEC ) {
             NotificationChain msgs = null;
-            if( windGenTurbineType2IEC != null )
+            if( windGenTurbineType2IEC != null ) {
                 msgs = ( ( InternalEObject ) windGenTurbineType2IEC ).eInverseRemove( this,
                         CimPackage.WIND_GEN_TURBINE_TYPE2_IEC__WIND_PITCH_CONT_POWER_IEC, WindGenTurbineType2IEC.class,
                         msgs );
-            if( newWindGenTurbineType2IEC != null )
+            }
+            if( newWindGenTurbineType2IEC != null ) {
                 msgs = ( ( InternalEObject ) newWindGenTurbineType2IEC ).eInverseAdd( this,
                         CimPackage.WIND_GEN_TURBINE_TYPE2_IEC__WIND_PITCH_CONT_POWER_IEC, WindGenTurbineType2IEC.class,
                         msgs );
+            }
             msgs = basicSetWindGenTurbineType2IEC( newWindGenTurbineType2IEC, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldWindGenTurbineType2IECESet = windGenTurbineType2IECESet;
             windGenTurbineType2IECESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET,
                         CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE2_IEC, newWindGenTurbineType2IEC,
                         newWindGenTurbineType2IEC, !oldWindGenTurbineType2IECESet ) );
+            }
         }
     }
 
@@ -617,10 +633,12 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE2_IEC, oldWindGenTurbineType2IEC, null,
                     oldWindGenTurbineType2IECESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -638,15 +656,18 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
                     CimPackage.WIND_GEN_TURBINE_TYPE2_IEC__WIND_PITCH_CONT_POWER_IEC, WindGenTurbineType2IEC.class,
                     msgs );
             msgs = basicUnsetWindGenTurbineType2IEC( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldWindGenTurbineType2IECESet = windGenTurbineType2IECESet;
             windGenTurbineType2IECESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE2_IEC, null, null,
                         oldWindGenTurbineType2IECESet ) );
+            }
         }
     }
 
@@ -681,9 +702,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         uuvrt = newUuvrt;
         boolean oldUuvrtESet = uuvrtESet;
         uuvrtESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PITCH_CONT_POWER_IEC__UUVRT,
                     oldUuvrt, uuvrt, !oldUuvrtESet ) );
+        }
     }
 
     /**
@@ -697,9 +719,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         boolean oldUuvrtESet = uuvrtESet;
         uuvrt = UUVRT_EDEFAULT;
         uuvrtESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PITCH_CONT_POWER_IEC__UUVRT,
                     oldUuvrt, UUVRT_EDEFAULT, oldUuvrtESet ) );
+        }
     }
 
     /**
@@ -723,10 +746,11 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
             InternalEObject oldWindGenTurbineType1bIEC = ( InternalEObject ) windGenTurbineType1bIEC;
             windGenTurbineType1bIEC = ( WindGenTurbineType1bIEC ) eResolveProxy( oldWindGenTurbineType1bIEC );
             if( windGenTurbineType1bIEC != oldWindGenTurbineType1bIEC ) {
-                if( eNotificationRequired() )
+                if( eNotificationRequired() ) {
                     eNotify( new ENotificationImpl( this, Notification.RESOLVE,
                             CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE1B_IEC,
                             oldWindGenTurbineType1bIEC, windGenTurbineType1bIEC ) );
+                }
             }
         }
         return windGenTurbineType1bIEC;
@@ -756,10 +780,12 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE1B_IEC, oldWindGenTurbineType1bIEC,
                     newWindGenTurbineType1bIEC, !oldWindGenTurbineType1bIECESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -773,24 +799,29 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
     public void setWindGenTurbineType1bIEC( WindGenTurbineType1bIEC newWindGenTurbineType1bIEC ) {
         if( newWindGenTurbineType1bIEC != windGenTurbineType1bIEC ) {
             NotificationChain msgs = null;
-            if( windGenTurbineType1bIEC != null )
+            if( windGenTurbineType1bIEC != null ) {
                 msgs = ( ( InternalEObject ) windGenTurbineType1bIEC ).eInverseRemove( this,
                         CimPackage.WIND_GEN_TURBINE_TYPE1B_IEC__WIND_PITCH_CONT_POWER_IEC,
                         WindGenTurbineType1bIEC.class, msgs );
-            if( newWindGenTurbineType1bIEC != null )
+            }
+            if( newWindGenTurbineType1bIEC != null ) {
                 msgs = ( ( InternalEObject ) newWindGenTurbineType1bIEC ).eInverseAdd( this,
                         CimPackage.WIND_GEN_TURBINE_TYPE1B_IEC__WIND_PITCH_CONT_POWER_IEC,
                         WindGenTurbineType1bIEC.class, msgs );
+            }
             msgs = basicSetWindGenTurbineType1bIEC( newWindGenTurbineType1bIEC, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldWindGenTurbineType1bIECESet = windGenTurbineType1bIECESet;
             windGenTurbineType1bIECESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET,
                         CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE1B_IEC, newWindGenTurbineType1bIEC,
                         newWindGenTurbineType1bIEC, !oldWindGenTurbineType1bIECESet ) );
+            }
         }
     }
 
@@ -808,10 +839,12 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE1B_IEC, oldWindGenTurbineType1bIEC, null,
                     oldWindGenTurbineType1bIECESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -829,15 +862,18 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
                     CimPackage.WIND_GEN_TURBINE_TYPE1B_IEC__WIND_PITCH_CONT_POWER_IEC, WindGenTurbineType1bIEC.class,
                     msgs );
             msgs = basicUnsetWindGenTurbineType1bIEC( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldWindGenTurbineType1bIECESet = windGenTurbineType1bIECESet;
             windGenTurbineType1bIECESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE1B_IEC, null, null,
                         oldWindGenTurbineType1bIECESet ) );
+            }
         }
     }
 
@@ -872,9 +908,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         tr = newTr;
         boolean oldTrESet = trESet;
         trESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PITCH_CONT_POWER_IEC__TR, oldTr, tr,
                     !oldTrESet ) );
+        }
     }
 
     /**
@@ -888,9 +925,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         boolean oldTrESet = trESet;
         tr = TR_EDEFAULT;
         trESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PITCH_CONT_POWER_IEC__TR, oldTr,
                     TR_EDEFAULT, oldTrESet ) );
+        }
     }
 
     /**
@@ -924,9 +962,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         t1 = newT1;
         boolean oldT1ESet = t1ESet;
         t1ESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PITCH_CONT_POWER_IEC__T1, oldT1, t1,
                     !oldT1ESet ) );
+        }
     }
 
     /**
@@ -940,9 +979,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         boolean oldT1ESet = t1ESet;
         t1 = T1_EDEFAULT;
         t1ESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PITCH_CONT_POWER_IEC__T1, oldT1,
                     T1_EDEFAULT, oldT1ESet ) );
+        }
     }
 
     /**
@@ -976,9 +1016,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         pmin = newPmin;
         boolean oldPminESet = pminESet;
         pminESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.WIND_PITCH_CONT_POWER_IEC__PMIN, oldPmin,
                     pmin, !oldPminESet ) );
+        }
     }
 
     /**
@@ -992,9 +1033,10 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         boolean oldPminESet = pminESet;
         pmin = PMIN_EDEFAULT;
         pminESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.WIND_PITCH_CONT_POWER_IEC__PMIN,
                     oldPmin, PMIN_EDEFAULT, oldPminESet ) );
+        }
     }
 
     /**
@@ -1020,16 +1062,18 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getWindDynamicsLookupTable() )
                     .basicAdd( otherEnd, msgs );
         case CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE2_IEC:
-            if( windGenTurbineType2IEC != null )
+            if( windGenTurbineType2IEC != null ) {
                 msgs = ( ( InternalEObject ) windGenTurbineType2IEC ).eInverseRemove( this,
                         CimPackage.WIND_GEN_TURBINE_TYPE2_IEC__WIND_PITCH_CONT_POWER_IEC, WindGenTurbineType2IEC.class,
                         msgs );
+            }
             return basicSetWindGenTurbineType2IEC( ( WindGenTurbineType2IEC ) otherEnd, msgs );
         case CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE1B_IEC:
-            if( windGenTurbineType1bIEC != null )
+            if( windGenTurbineType1bIEC != null ) {
                 msgs = ( ( InternalEObject ) windGenTurbineType1bIEC ).eInverseRemove( this,
                         CimPackage.WIND_GEN_TURBINE_TYPE1B_IEC__WIND_PITCH_CONT_POWER_IEC,
                         WindGenTurbineType1bIEC.class, msgs );
+            }
             return basicSetWindGenTurbineType1bIEC( ( WindGenTurbineType1bIEC ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );
@@ -1070,12 +1114,16 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
         case CimPackage.WIND_PITCH_CONT_POWER_IEC__DPMIN:
             return getDpmin();
         case CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE2_IEC:
-            if( resolve ) return getWindGenTurbineType2IEC();
+            if( resolve ) {
+                return getWindGenTurbineType2IEC();
+            }
             return basicGetWindGenTurbineType2IEC();
         case CimPackage.WIND_PITCH_CONT_POWER_IEC__UUVRT:
             return getUuvrt();
         case CimPackage.WIND_PITCH_CONT_POWER_IEC__WIND_GEN_TURBINE_TYPE1B_IEC:
-            if( resolve ) return getWindGenTurbineType1bIEC();
+            if( resolve ) {
+                return getWindGenTurbineType1bIEC();
+            }
             return basicGetWindGenTurbineType1bIEC();
         case CimPackage.WIND_PITCH_CONT_POWER_IEC__TR:
             return getTr();
@@ -1212,44 +1260,60 @@ public class WindPitchContPowerIECImpl extends IdentifiedObjectImpl implements W
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (pset: " );
-        if( psetESet )
+        if( psetESet ) {
             result.append( pset );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", dpmax: " );
-        if( dpmaxESet )
+        if( dpmaxESet ) {
             result.append( dpmax );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", dpmin: " );
-        if( dpminESet )
+        if( dpminESet ) {
             result.append( dpmin );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", uuvrt: " );
-        if( uuvrtESet )
+        if( uuvrtESet ) {
             result.append( uuvrt );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", tr: " );
-        if( trESet )
+        if( trESet ) {
             result.append( tr );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", t1: " );
-        if( t1ESet )
+        if( t1ESet ) {
             result.append( t1 );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", pmin: " );
-        if( pminESet )
+        if( pminESet ) {
             result.append( pmin );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

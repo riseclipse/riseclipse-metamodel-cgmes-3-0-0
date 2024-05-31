@@ -262,9 +262,15 @@ public class EuItemProviderAdapterFactory extends EuAdapterFactory
      */
     @Override
     public void dispose() {
-        if( windPowerPlantItemProvider != null ) windPowerPlantItemProvider.dispose();
-        if( solarPowerPlantItemProvider != null ) solarPowerPlantItemProvider.dispose();
-        if( boundaryPointItemProvider != null ) boundaryPointItemProvider.dispose();
+        if( windPowerPlantItemProvider != null ) {
+            windPowerPlantItemProvider.dispose();
+        }
+        if( solarPowerPlantItemProvider != null ) {
+            solarPowerPlantItemProvider.dispose();
+        }
+        if( boundaryPointItemProvider != null ) {
+            boundaryPointItemProvider.dispose();
+        }
     }
 
 }

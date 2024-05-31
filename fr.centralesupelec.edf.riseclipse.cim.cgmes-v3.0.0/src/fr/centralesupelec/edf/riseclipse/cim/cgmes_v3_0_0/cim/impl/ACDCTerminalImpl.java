@@ -193,7 +193,9 @@ public class ACDCTerminalImpl extends IdentifiedObjectImpl implements ACDCTermin
      */
     @Override
     public void unsetOperationalLimitSet() {
-        if( operationalLimitSet != null ) ( ( InternalEList.Unsettable< ? > ) operationalLimitSet ).unset();
+        if( operationalLimitSet != null ) {
+            ( ( InternalEList.Unsettable< ? > ) operationalLimitSet ).unset();
+        }
     }
 
     /**
@@ -230,10 +232,12 @@ public class ACDCTerminalImpl extends IdentifiedObjectImpl implements ACDCTermin
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.ACDC_TERMINAL__BUS_NAME_MARKER, oldBusNameMarker, newBusNameMarker,
                     !oldBusNameMarkerESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -247,21 +251,26 @@ public class ACDCTerminalImpl extends IdentifiedObjectImpl implements ACDCTermin
     public void setBusNameMarker( BusNameMarker newBusNameMarker ) {
         if( newBusNameMarker != busNameMarker ) {
             NotificationChain msgs = null;
-            if( busNameMarker != null )
+            if( busNameMarker != null ) {
                 msgs = ( ( InternalEObject ) busNameMarker ).eInverseRemove( this, CimPackage.BUS_NAME_MARKER__TERMINAL,
                         BusNameMarker.class, msgs );
-            if( newBusNameMarker != null )
+            }
+            if( newBusNameMarker != null ) {
                 msgs = ( ( InternalEObject ) newBusNameMarker ).eInverseAdd( this, CimPackage.BUS_NAME_MARKER__TERMINAL,
                         BusNameMarker.class, msgs );
+            }
             msgs = basicSetBusNameMarker( newBusNameMarker, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldBusNameMarkerESet = busNameMarkerESet;
             busNameMarkerESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.ACDC_TERMINAL__BUS_NAME_MARKER,
                         newBusNameMarker, newBusNameMarker, !oldBusNameMarkerESet ) );
+            }
         }
     }
 
@@ -278,10 +287,12 @@ public class ACDCTerminalImpl extends IdentifiedObjectImpl implements ACDCTermin
         if( eNotificationRequired() ) {
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.ACDC_TERMINAL__BUS_NAME_MARKER, oldBusNameMarker, null, oldBusNameMarkerESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -298,14 +309,17 @@ public class ACDCTerminalImpl extends IdentifiedObjectImpl implements ACDCTermin
             msgs = ( ( InternalEObject ) busNameMarker ).eInverseRemove( this, CimPackage.BUS_NAME_MARKER__TERMINAL,
                     BusNameMarker.class, msgs );
             msgs = basicUnsetBusNameMarker( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldBusNameMarkerESet = busNameMarkerESet;
             busNameMarkerESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.ACDC_TERMINAL__BUS_NAME_MARKER,
                         null, null, oldBusNameMarkerESet ) );
+            }
         }
     }
 
@@ -340,9 +354,10 @@ public class ACDCTerminalImpl extends IdentifiedObjectImpl implements ACDCTermin
         sequenceNumber = newSequenceNumber;
         boolean oldSequenceNumberESet = sequenceNumberESet;
         sequenceNumberESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.ACDC_TERMINAL__SEQUENCE_NUMBER,
                     oldSequenceNumber, sequenceNumber, !oldSequenceNumberESet ) );
+        }
     }
 
     /**
@@ -356,9 +371,10 @@ public class ACDCTerminalImpl extends IdentifiedObjectImpl implements ACDCTermin
         boolean oldSequenceNumberESet = sequenceNumberESet;
         sequenceNumber = SEQUENCE_NUMBER_EDEFAULT;
         sequenceNumberESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.ACDC_TERMINAL__SEQUENCE_NUMBER,
                     oldSequenceNumber, SEQUENCE_NUMBER_EDEFAULT, oldSequenceNumberESet ) );
+        }
     }
 
     /**
@@ -392,7 +408,9 @@ public class ACDCTerminalImpl extends IdentifiedObjectImpl implements ACDCTermin
      */
     @Override
     public void unsetMeasurements() {
-        if( measurements != null ) ( ( InternalEList.Unsettable< ? > ) measurements ).unset();
+        if( measurements != null ) {
+            ( ( InternalEList.Unsettable< ? > ) measurements ).unset();
+        }
     }
 
     /**
@@ -426,9 +444,10 @@ public class ACDCTerminalImpl extends IdentifiedObjectImpl implements ACDCTermin
         connected = newConnected;
         boolean oldConnectedESet = connectedESet;
         connectedESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.ACDC_TERMINAL__CONNECTED, oldConnected,
                     connected, !oldConnectedESet ) );
+        }
     }
 
     /**
@@ -442,9 +461,10 @@ public class ACDCTerminalImpl extends IdentifiedObjectImpl implements ACDCTermin
         boolean oldConnectedESet = connectedESet;
         connected = CONNECTED_EDEFAULT;
         connectedESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.ACDC_TERMINAL__CONNECTED, oldConnected,
                     CONNECTED_EDEFAULT, oldConnectedESet ) );
+        }
     }
 
     /**
@@ -470,9 +490,10 @@ public class ACDCTerminalImpl extends IdentifiedObjectImpl implements ACDCTermin
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getOperationalLimitSet() )
                     .basicAdd( otherEnd, msgs );
         case CimPackage.ACDC_TERMINAL__BUS_NAME_MARKER:
-            if( busNameMarker != null )
+            if( busNameMarker != null ) {
                 msgs = ( ( InternalEObject ) busNameMarker ).eInverseRemove( this, CimPackage.BUS_NAME_MARKER__TERMINAL,
                         BusNameMarker.class, msgs );
+            }
             return basicSetBusNameMarker( ( BusNameMarker ) otherEnd, msgs );
         case CimPackage.ACDC_TERMINAL__MEASUREMENTS:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getMeasurements() ).basicAdd( otherEnd,
@@ -607,19 +628,25 @@ public class ACDCTerminalImpl extends IdentifiedObjectImpl implements ACDCTermin
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (sequenceNumber: " );
-        if( sequenceNumberESet )
+        if( sequenceNumberESet ) {
             result.append( sequenceNumber );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ", connected: " );
-        if( connectedESet )
+        if( connectedESet ) {
             result.append( connected );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }

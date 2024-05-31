@@ -109,7 +109,9 @@ public class ConformLoadGroupImpl extends LoadGroupImpl implements ConformLoadGr
      */
     @Override
     public void unsetConformLoadSchedules() {
-        if( conformLoadSchedules != null ) ( ( InternalEList.Unsettable< ? > ) conformLoadSchedules ).unset();
+        if( conformLoadSchedules != null ) {
+            ( ( InternalEList.Unsettable< ? > ) conformLoadSchedules ).unset();
+        }
     }
 
     /**
@@ -143,7 +145,9 @@ public class ConformLoadGroupImpl extends LoadGroupImpl implements ConformLoadGr
      */
     @Override
     public void unsetEnergyConsumers() {
-        if( energyConsumers != null ) ( ( InternalEList.Unsettable< ? > ) energyConsumers ).unset();
+        if( energyConsumers != null ) {
+            ( ( InternalEList.Unsettable< ? > ) energyConsumers ).unset();
+        }
     }
 
     /**

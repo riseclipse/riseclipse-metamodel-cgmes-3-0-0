@@ -96,7 +96,9 @@ public class TapChangerControlImpl extends RegulatingControlImpl implements TapC
      */
     @Override
     public void unsetTapChanger() {
-        if( tapChanger != null ) ( ( InternalEList.Unsettable< ? > ) tapChanger ).unset();
+        if( tapChanger != null ) {
+            ( ( InternalEList.Unsettable< ? > ) tapChanger ).unset();
+        }
     }
 
     /**

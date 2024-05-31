@@ -122,10 +122,12 @@ public class TopologicalIslandImpl extends IdentifiedObjectImpl implements Topol
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.TOPOLOGICAL_ISLAND__ANGLE_REF_TOPOLOGICAL_NODE, oldAngleRefTopologicalNode,
                     newAngleRefTopologicalNode, !oldAngleRefTopologicalNodeESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -139,22 +141,27 @@ public class TopologicalIslandImpl extends IdentifiedObjectImpl implements Topol
     public void setAngleRefTopologicalNode( TopologicalNode newAngleRefTopologicalNode ) {
         if( newAngleRefTopologicalNode != angleRefTopologicalNode ) {
             NotificationChain msgs = null;
-            if( angleRefTopologicalNode != null )
+            if( angleRefTopologicalNode != null ) {
                 msgs = ( ( InternalEObject ) angleRefTopologicalNode ).eInverseRemove( this,
                         CimPackage.TOPOLOGICAL_NODE__ANGLE_REF_TOPOLOGICAL_ISLAND, TopologicalNode.class, msgs );
-            if( newAngleRefTopologicalNode != null )
+            }
+            if( newAngleRefTopologicalNode != null ) {
                 msgs = ( ( InternalEObject ) newAngleRefTopologicalNode ).eInverseAdd( this,
                         CimPackage.TOPOLOGICAL_NODE__ANGLE_REF_TOPOLOGICAL_ISLAND, TopologicalNode.class, msgs );
+            }
             msgs = basicSetAngleRefTopologicalNode( newAngleRefTopologicalNode, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldAngleRefTopologicalNodeESet = angleRefTopologicalNodeESet;
             angleRefTopologicalNodeESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET,
                         CimPackage.TOPOLOGICAL_ISLAND__ANGLE_REF_TOPOLOGICAL_NODE, newAngleRefTopologicalNode,
                         newAngleRefTopologicalNode, !oldAngleRefTopologicalNodeESet ) );
+            }
         }
     }
 
@@ -172,10 +179,12 @@ public class TopologicalIslandImpl extends IdentifiedObjectImpl implements Topol
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.TOPOLOGICAL_ISLAND__ANGLE_REF_TOPOLOGICAL_NODE, oldAngleRefTopologicalNode, null,
                     oldAngleRefTopologicalNodeESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -192,15 +201,18 @@ public class TopologicalIslandImpl extends IdentifiedObjectImpl implements Topol
             msgs = ( ( InternalEObject ) angleRefTopologicalNode ).eInverseRemove( this,
                     CimPackage.TOPOLOGICAL_NODE__ANGLE_REF_TOPOLOGICAL_ISLAND, TopologicalNode.class, msgs );
             msgs = basicUnsetAngleRefTopologicalNode( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldAngleRefTopologicalNodeESet = angleRefTopologicalNodeESet;
             angleRefTopologicalNodeESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.TOPOLOGICAL_ISLAND__ANGLE_REF_TOPOLOGICAL_NODE, null, null,
                         oldAngleRefTopologicalNodeESet ) );
+            }
         }
     }
 
@@ -235,7 +247,9 @@ public class TopologicalIslandImpl extends IdentifiedObjectImpl implements Topol
      */
     @Override
     public void unsetTopologicalNodes() {
-        if( topologicalNodes != null ) ( ( InternalEList.Unsettable< ? > ) topologicalNodes ).unset();
+        if( topologicalNodes != null ) {
+            ( ( InternalEList.Unsettable< ? > ) topologicalNodes ).unset();
+        }
     }
 
     /**
@@ -258,9 +272,10 @@ public class TopologicalIslandImpl extends IdentifiedObjectImpl implements Topol
     public NotificationChain eInverseAdd( InternalEObject otherEnd, int featureID, NotificationChain msgs ) {
         switch( featureID ) {
         case CimPackage.TOPOLOGICAL_ISLAND__ANGLE_REF_TOPOLOGICAL_NODE:
-            if( angleRefTopologicalNode != null )
+            if( angleRefTopologicalNode != null ) {
                 msgs = ( ( InternalEObject ) angleRefTopologicalNode ).eInverseRemove( this,
                         CimPackage.TOPOLOGICAL_NODE__ANGLE_REF_TOPOLOGICAL_ISLAND, TopologicalNode.class, msgs );
+            }
             return basicSetAngleRefTopologicalNode( ( TopologicalNode ) otherEnd, msgs );
         case CimPackage.TOPOLOGICAL_ISLAND__TOPOLOGICAL_NODES:
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getTopologicalNodes() )

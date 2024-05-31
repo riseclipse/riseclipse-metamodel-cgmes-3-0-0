@@ -99,7 +99,9 @@ public class WindPowerPlantImpl extends PowerSystemResourceImpl implements WindP
      */
     @Override
     public void unsetWindGeneratingUnits() {
-        if( windGeneratingUnits != null ) ( ( InternalEList.Unsettable< ? > ) windGeneratingUnits ).unset();
+        if( windGeneratingUnits != null ) {
+            ( ( InternalEList.Unsettable< ? > ) windGeneratingUnits ).unset();
+        }
     }
 
     /**

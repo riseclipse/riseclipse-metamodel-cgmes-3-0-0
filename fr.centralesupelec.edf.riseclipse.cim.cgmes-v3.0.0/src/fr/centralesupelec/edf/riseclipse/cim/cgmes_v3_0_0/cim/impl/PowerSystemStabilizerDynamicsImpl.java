@@ -121,7 +121,9 @@ public class PowerSystemStabilizerDynamicsImpl extends DynamicsFunctionBlockImpl
      */
     @Override
     public void unsetRemoteInputSignal() {
-        if( remoteInputSignal != null ) ( ( InternalEList.Unsettable< ? > ) remoteInputSignal ).unset();
+        if( remoteInputSignal != null ) {
+            ( ( InternalEList.Unsettable< ? > ) remoteInputSignal ).unset();
+        }
     }
 
     /**
@@ -159,10 +161,12 @@ public class PowerSystemStabilizerDynamicsImpl extends DynamicsFunctionBlockImpl
             ENotificationImpl notification = new ENotificationImpl( this, Notification.SET,
                     CimPackage.POWER_SYSTEM_STABILIZER_DYNAMICS__EXCITATION_SYSTEM_DYNAMICS,
                     oldExcitationSystemDynamics, newExcitationSystemDynamics, !oldExcitationSystemDynamicsESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -176,24 +180,29 @@ public class PowerSystemStabilizerDynamicsImpl extends DynamicsFunctionBlockImpl
     public void setExcitationSystemDynamics( ExcitationSystemDynamics newExcitationSystemDynamics ) {
         if( newExcitationSystemDynamics != excitationSystemDynamics ) {
             NotificationChain msgs = null;
-            if( excitationSystemDynamics != null )
+            if( excitationSystemDynamics != null ) {
                 msgs = ( ( InternalEObject ) excitationSystemDynamics ).eInverseRemove( this,
                         CimPackage.EXCITATION_SYSTEM_DYNAMICS__POWER_SYSTEM_STABILIZER_DYNAMICS,
                         ExcitationSystemDynamics.class, msgs );
-            if( newExcitationSystemDynamics != null )
+            }
+            if( newExcitationSystemDynamics != null ) {
                 msgs = ( ( InternalEObject ) newExcitationSystemDynamics ).eInverseAdd( this,
                         CimPackage.EXCITATION_SYSTEM_DYNAMICS__POWER_SYSTEM_STABILIZER_DYNAMICS,
                         ExcitationSystemDynamics.class, msgs );
+            }
             msgs = basicSetExcitationSystemDynamics( newExcitationSystemDynamics, msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldExcitationSystemDynamicsESet = excitationSystemDynamicsESet;
             excitationSystemDynamicsESet = true;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.SET,
                         CimPackage.POWER_SYSTEM_STABILIZER_DYNAMICS__EXCITATION_SYSTEM_DYNAMICS,
                         newExcitationSystemDynamics, newExcitationSystemDynamics, !oldExcitationSystemDynamicsESet ) );
+            }
         }
     }
 
@@ -211,10 +220,12 @@ public class PowerSystemStabilizerDynamicsImpl extends DynamicsFunctionBlockImpl
             ENotificationImpl notification = new ENotificationImpl( this, Notification.UNSET,
                     CimPackage.POWER_SYSTEM_STABILIZER_DYNAMICS__EXCITATION_SYSTEM_DYNAMICS,
                     oldExcitationSystemDynamics, null, oldExcitationSystemDynamicsESet );
-            if( msgs == null )
+            if( msgs == null ) {
                 msgs = notification;
-            else
+            }
+            else {
                 msgs.add( notification );
+            }
         }
         return msgs;
     }
@@ -232,15 +243,18 @@ public class PowerSystemStabilizerDynamicsImpl extends DynamicsFunctionBlockImpl
                     CimPackage.EXCITATION_SYSTEM_DYNAMICS__POWER_SYSTEM_STABILIZER_DYNAMICS,
                     ExcitationSystemDynamics.class, msgs );
             msgs = basicUnsetExcitationSystemDynamics( msgs );
-            if( msgs != null ) msgs.dispatch();
+            if( msgs != null ) {
+                msgs.dispatch();
+            }
         }
         else {
             boolean oldExcitationSystemDynamicsESet = excitationSystemDynamicsESet;
             excitationSystemDynamicsESet = false;
-            if( eNotificationRequired() )
+            if( eNotificationRequired() ) {
                 eNotify( new ENotificationImpl( this, Notification.UNSET,
                         CimPackage.POWER_SYSTEM_STABILIZER_DYNAMICS__EXCITATION_SYSTEM_DYNAMICS, null, null,
                         oldExcitationSystemDynamicsESet ) );
+            }
         }
     }
 
@@ -267,10 +281,11 @@ public class PowerSystemStabilizerDynamicsImpl extends DynamicsFunctionBlockImpl
             return ( ( InternalEList< InternalEObject > ) ( InternalEList< ? > ) getRemoteInputSignal() )
                     .basicAdd( otherEnd, msgs );
         case CimPackage.POWER_SYSTEM_STABILIZER_DYNAMICS__EXCITATION_SYSTEM_DYNAMICS:
-            if( excitationSystemDynamics != null )
+            if( excitationSystemDynamics != null ) {
                 msgs = ( ( InternalEObject ) excitationSystemDynamics ).eInverseRemove( this,
                         CimPackage.EXCITATION_SYSTEM_DYNAMICS__POWER_SYSTEM_STABILIZER_DYNAMICS,
                         ExcitationSystemDynamics.class, msgs );
+            }
             return basicSetExcitationSystemDynamics( ( ExcitationSystemDynamics ) otherEnd, msgs );
         }
         return super.eInverseAdd( otherEnd, featureID, msgs );

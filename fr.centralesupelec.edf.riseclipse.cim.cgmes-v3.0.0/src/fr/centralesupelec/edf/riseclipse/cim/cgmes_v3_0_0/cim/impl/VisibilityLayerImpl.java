@@ -129,7 +129,9 @@ public class VisibilityLayerImpl extends IdentifiedObjectImpl implements Visibil
      */
     @Override
     public void unsetVisibleObjects() {
-        if( visibleObjects != null ) ( ( InternalEList.Unsettable< ? > ) visibleObjects ).unset();
+        if( visibleObjects != null ) {
+            ( ( InternalEList.Unsettable< ? > ) visibleObjects ).unset();
+        }
     }
 
     /**
@@ -163,9 +165,10 @@ public class VisibilityLayerImpl extends IdentifiedObjectImpl implements Visibil
         drawingOrder = newDrawingOrder;
         boolean oldDrawingOrderESet = drawingOrderESet;
         drawingOrderESet = true;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.SET, CimPackage.VISIBILITY_LAYER__DRAWING_ORDER,
                     oldDrawingOrder, drawingOrder, !oldDrawingOrderESet ) );
+        }
     }
 
     /**
@@ -179,9 +182,10 @@ public class VisibilityLayerImpl extends IdentifiedObjectImpl implements Visibil
         boolean oldDrawingOrderESet = drawingOrderESet;
         drawingOrder = DRAWING_ORDER_EDEFAULT;
         drawingOrderESet = false;
-        if( eNotificationRequired() )
+        if( eNotificationRequired() ) {
             eNotify( new ENotificationImpl( this, Notification.UNSET, CimPackage.VISIBILITY_LAYER__DRAWING_ORDER,
                     oldDrawingOrder, DRAWING_ORDER_EDEFAULT, oldDrawingOrderESet ) );
+        }
     }
 
     /**
@@ -301,14 +305,18 @@ public class VisibilityLayerImpl extends IdentifiedObjectImpl implements Visibil
      */
     @Override
     public String toString() {
-        if( eIsProxy() ) return super.toString();
+        if( eIsProxy() ) {
+            return super.toString();
+        }
 
         StringBuilder result = new StringBuilder( super.toString() );
         result.append( " (drawingOrder: " );
-        if( drawingOrderESet )
+        if( drawingOrderESet ) {
             result.append( drawingOrder );
-        else
+        }
+        else {
             result.append( "<unset>" );
+        }
         result.append( ')' );
         return result.toString();
     }
