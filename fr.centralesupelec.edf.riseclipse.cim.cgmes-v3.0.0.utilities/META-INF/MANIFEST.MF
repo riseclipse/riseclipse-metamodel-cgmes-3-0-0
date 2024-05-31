@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Utilities
 Bundle-SymbolicName: fr.centralesupelec.edf.riseclipse.cim.cgmes-v3.0.0.utilities
-Bundle-Version: 1.0.2.qualifier
+Bundle-Version: 1.0.2
 Automatic-Module-Name: fr.centralesupelec.edf.riseclipse.cim.cgmes.v3.0.0.utilities
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.eclipse.emf.ecore,

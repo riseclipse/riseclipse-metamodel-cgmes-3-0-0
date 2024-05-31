@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: fr.centralesupelec.edf.riseclipse.cim.cgmes-v3.0.0.edit;singleton:=true
 Automatic-Module-Name: fr.centralesupelec.edf.riseclipse.cim.cgmes-v3.0.0.edit
-Bundle-Version: 1.0.2.qualifier
+Bundle-Version: 1.0.2
 Bundle-ClassPath: .
 Bundle-Activator: fr.centralesupelec.edf.riseclipse.cim.cgmes_v3_0_0.cim.provider.CimEditPlugin$Implementation
 Bundle-Vendor: %providerName
