@@ -26,13 +26,13 @@
  
   <groupId>io.github.riseclipse</groupId>
   <artifactId>fr.centralesupelec.edf.riseclipse.cim.cgmes-v3.0.0</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
 
   <parent>
     <groupId>io.github.riseclipse</groupId>
     <artifactId>riseclipse-metamodel-cgmes-3-0-0</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3-SNAPSHOT</version>
   </parent>
 
   <build>
