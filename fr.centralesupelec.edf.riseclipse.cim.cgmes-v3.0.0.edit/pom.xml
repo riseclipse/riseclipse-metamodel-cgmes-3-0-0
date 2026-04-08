@@ -28,6 +28,7 @@
   <artifactId>fr.centralesupelec.edf.riseclipse.cim.cgmes-v3.0.0.edit</artifactId>
   <version>1.0.3-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
+  <name>[bundle] RiseClipse Metamodel CGMES 3.0.0 Edit Support</name>
 
   <parent>
     <groupId>io.github.riseclipse</groupId>
