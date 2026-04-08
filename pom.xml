@@ -26,7 +26,7 @@
  
   <groupId>io.github.riseclipse</groupId>
   <artifactId>riseclipse-metamodel-cgmes-3-0-0</artifactId>
-  <version>1.0.3-SNAPSHOT</version>
+  <version>1.0.4-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>[aggregator] RiseClipse Metamodel CGMES 3.0.0</name>
   
